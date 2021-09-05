@@ -1,0 +1,20 @@
+/* set the overal check variables. This is done ONCE */
+
+/* "C#RtD_CaelarWantsPC" */
+/* 2 - Knows that Caelar has plans for the PC / wants the PC for [something] */
+IF
+	GlobalLT("C#RtD_CaelarWantsPC","GLOBAL",2)
+	Global("C#RtD_CaelarWantsPC_SET","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CaelarWantsPC","GLOBAL",2)
+END
+/* 1 - assumes that Caelar wants to capture the PC [alive] */
+IF
+	Global("C#RtD_CaelarWantsPC","GLOBAL",0)
+	Global("C#RtD_CaelarWantsPC_SET","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CaelarWantsPC","GLOBAL",1)
+END
+

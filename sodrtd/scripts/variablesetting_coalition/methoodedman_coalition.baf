@@ -1,0 +1,38 @@
+/* set the overal check variables. This is done ONCE */
+
+/* "C#RtD_CoalMetHoodedMan" */
+
+/* 4 - know that PC met Hooded Man more than once - heard it elsewhere */
+IF
+	GlobalLT("C#RtD_CoalMetHoodedMan","GLOBAL",4)
+	GlobalGT("C#RtD_CoalMetHoodedMan_SET","GLOBAL",4)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalMetHoodedMan","GLOBAL",4)
+END
+/* 3 - know that PC met Hooded Man more than once - PC told them */
+IF
+	GlobalLT("C#RtD_CoalMetHoodedMan","GLOBAL",3)
+	Global("C#RtD_CoalMetHoodedMan_SET","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalMetHoodedMan","GLOBAL",3)
+END
+
+/* 2 - know that PC met Hooded Man - heard it elsewhere */
+IF
+	GlobalLT("C#RtD_CoalMetHoodedMan","GLOBAL",2)
+	GlobalGT("C#RtD_CoalMetHoodedMan_SET","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalMetHoodedMan","GLOBAL",2)
+END
+/* 1 - know that PC met Hooded Man - PC told them */
+IF
+	Global("C#RtD_CoalMetHoodedMan","GLOBAL",0)
+	Global("C#RtD_CoalMetHoodedMan_SET","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalMetHoodedMan","GLOBAL",1)
+END
+

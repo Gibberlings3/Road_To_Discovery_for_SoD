@@ -1,0 +1,69 @@
+////////////////////////////////////////////////////////
+// Optional stat based observations and quest options //
+// for the SoD campaign only                          //
+////////////////////////////////////////////////////////
+
+DEFINE_ACTION_FUNCTION sod_stat_options BEGIN
+	// #L_SoDStatOptions Global set to indicate we want to use PC stats for dialogue and quest options (to be used by other components)
+	// #L_SoDStat_WeakPoison Global used to track if PC knows Caelar didn't try to kill her 0 or 1
+	// #L_SoDStat_HephUmbral Global used to track if PC knows about Hephernaan being an agent of the Umbral Accord 1 = face, 2 = name and face
+	// #L_SodStat_HephAdvisor Global used to track if PC know about Hephernaan from Edwin 1 = name, 2 = name and face
+	// #L_SoDStat_DaustonTalk Global used to track if PC talked to Dauston, followed up on it, and received an answer 0 1 2 or 3
+	// #L_SoDStat_DaustonPrompt Area bd0102 variable used to track if PC has been prompted to ask Eltan about Dauston
+	// #L_SoDStat_TreatiseFound Global used to track if PC has found the book 'A Historical Treatise of Dragonspear Castle 1 = found, 2 = read
+	// #L_GenericDialogueOk LOCAL used on stock NPCs to allow or disallow participation in generic dialogues
+	
+	// Allow for modded NPCs to not participate in generic dialogue
+	ACTION_DEFINE_ARRAY npc_list BEGIN
+		Ajantis
+		Jaheira
+		Khalid
+		Dorn
+		Edwin
+		Neera
+		Baeloth
+		Garrick
+		Xan
+		Dynaheir
+		Minsc
+		Alora
+		Branwen
+		Coran
+		Eldoth
+		Montaron
+		Xzar
+		Faldorn
+		Kagain
+		Kivan
+		Quayle
+		Rasaad
+		Safana
+		Sharteel
+		Skie
+		Tiax
+		Viconia
+		Yeslick
+	END
+	OUTER_FOR (npc_num = 0; VARIABLE_IS_SET $npc_list(~%npc_num%~); ++npc_num) BEGIN
+		OUTER_SPRINT npc_name $npc_list("%npc_num%")
+		OUTER_SPRINT upper_name "%npc_name%"
+		ACTION_TO_UPPER upper_name
+		OUTER_SPRINT bcs_file EVAL EVAL ~%%upper_name%_BCS%~
+		EXTEND_BOTTOM "%bcs_file%.BCS" ~%mod_root%/scripts/sod_stat_options_generic_dlg.baf~
+	END
+	
+	EXTEND_TOP ~BD0120.BCS~ ~%mod_root%/scripts/sod_stat_options.baf~ // Set global to use stat-based options
+	EXTEND_TOP ~BD0103.BCS~ ~%mod_root%/scripts/sod_stat_options.baf~ // In case they skip Korlasz
+
+	COMPILE EVALUATE_BUFFER ~%mod_root%/dialogues/sod_stat_weak_poison.d~ USING ~%tra_loc%/%s/sod_stat_weak_poison.tra~ // Lots of changes so separate file
+	COMPILE EVALUATE_BUFFER ~%mod_root%/dialogues/sod_stat_other.d~ USING ~%tra_loc%/%s/sod_stat_other.tra~
+
+   	// Define the journal entries 
+	ADD_JOURNAL @3000 @3005 USING ~%tra_loc%/%s/sod_stat_other.tra~	// Historical Treatise
+	ADD_JOURNAL @3001 @3002 @3003 @3004 USING ~%tra_loc%/%s/sod_stat_other.tra~ // Dauston Talk
+	
+	// Compile the area scripts
+	EXTEND_TOP ~BD0060.BCS~ ~%mod_root%/scripts/sod_stat_options_bd0060.baf~ USING ~%tra_loc%/%s/sod_stat_other.tra~	// Historical Treatise
+	EXTEND_BOTTOM ~BD0102.BCS~ ~%mod_root%/scripts/sod_stat_options_bd0102.baf~ USING ~%tra_loc%/%s/sod_stat_other.tra~	// Prompt PC to talk to Eltan about Dauston
+	EXTEND_BOTTOM ~BD1200.BCS~ ~%mod_root%/scripts/sod_stat_options_bd1200.baf~ USING ~%tra_loc%/%s/sod_stat_other.tra~ // Have Edwin expose Hephernaan
+END

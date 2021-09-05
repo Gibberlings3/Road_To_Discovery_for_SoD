@@ -1,0 +1,21 @@
+/* set the overal check variables. This is done ONCE */
+
+/* "C#RtD_KnowsHoodedMan" */
+
+/* 2 - knows that Hooded Man killed Skie */
+IF
+	GlobalLT("C#RtD_KnowsHoodedMan","GLOBAL",2)
+	Global("C#RtD_KnowsHoodedMan_SET","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_KnowsHoodedMan","GLOBAL",2)
+END
+/* 1 - knows that Hooded Man is stalking PC because of Bhaal heritage */
+IF
+	Global("C#RtD_KnowsHoodedMan","GLOBAL",0)
+	Global("C#RtD_KnowsHoodedMan_SET","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_KnowsHoodedMan","GLOBAL",1)
+END
+

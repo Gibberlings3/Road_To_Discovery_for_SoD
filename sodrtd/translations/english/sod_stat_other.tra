@@ -1,0 +1,91 @@
+//////////////////////////////////////////////////////////////////////////////////
+// Make sure the player notices the interesting bits in the Historical Treatise //
+//////////////////////////////////////////////////////////////////////////////////
+@2000	= ~What is this?  Did you see this, <CHARNAME>?~
+@2001	= ~This book you found says there's a portal leading to Avernus under Dragonspear Castle.~
+@2002	= ~Not only that, but that it can be opened using blood that contains the essense of a god.~
+@2003	= ~Is that what Caelar has in mind?  Opening a portal to Avernus?  Is she mad?!~
+@2004	= ~Ugh, so that's what she's up to.  I think you're right.  I think she's lost her mind.~
+@2005	= ~What is this?  This book I found says there's a portal leading to Avernus under Dragonspear Castle.~
+@2006	= ~Ugh, so that's what she's up to.  She wants to open that portal.  She must mad!~
+@2007	= ~If Caelar was a child of Bhaal as rumors suggest, she'd have opened the portal already.  It appears the rumors are false.~
+
+/////////////////////////////////////////////////////////////////////////////
+// Have a member of the group prompt the PC to talk to Eltan about Dauston //
+/////////////////////////////////////////////////////////////////////////////
+@2010	= ~<CHARNAME>, perhaps you should talk to Duke Eltan about that fallen paladin we spoke to...Dauston.~
+@2011	= ~<CHARNAME>, perhaps thou shouldst talk to Duke Eltan about the unfortunate fallen paladin we spoke to...Dauston.~
+
+//////////////////////////////////////////////////////
+// Ask Eltan to interview Dauston when he sobers up //
+//////////////////////////////////////////////////////
+@2020	= ~Well enough, sir. But I have a favor to ask of you concerning the fallen paladin named Dauston that is currently sleeping it off in your cells.~
+@2021	= ~Of course.  What can I do for the Hero of Baldur's Gate?~
+@2022	= ~Can you interview him when he is awake.  He knows something of Caelar's past that might prove useful.~
+@2023	= ~Easy enough.  Consider it done.  I'll send a messenger with the results to Corwin at the first opportunity.~
+@2024	= ~Thank you, sir.  How are you holding up through all of this?~
+
+///////////////////////////////////////////////////////////////
+// Dialogue with Caelar after the Coast Way Bridge explosion //
+///////////////////////////////////////////////////////////////
+@2030	= ~I know your 'truth' already. There is a portal to Avernus within Dragonspear Castle that you mean to open in a futile attempt to assuage your guilt over your uncle.~
+@2031	= ~Still you attempt to hold the moral high ground!  Do you deceive even yourself? Your motives are not even remotely altruistic.  To risk thousands more being unjustly imprisoned for the sake of easing your own guilt is the height of selfishness and arrogance.~
+@2032	= ~If you plan on fighting these fiends, then why is one of their servants standing right behind you?~
+@2033	= ~(*cough*)~
+@2034	= ~Hephernaan? No. I will not listen to unfounded accusations against my most trusted advisor!~
+@2035	= ~I know your 'truth' already, or enough of it. There is a portal to Avernus within Dragonspear Castle and you mean to open it.~
+@2036	= ~How is the fact you tried to kidnap me instead of kill me make you any less an enemy?~
+@2037	= ~Since your goal was to capture and not kill me we should the be best of friends? Seriously?~
+@2038	= ~That agent of the Umbral Accord is your most trusted advisor?  Oh, this just keeps getting better and better!~
+@2039	= ~Then you're a fool as well.  It's not gods that are on your side, but demons.~
+@2040	= ~You were what brought me here-your attack on the palace in Baldur's Gate, the damage you've wrought across the land.~
+@2041	= ~Destiny, and the poison dripping from the blades of your elites in the palace in Baldur's Gate were what brought me here.~
+@2042	= ~In fairness, you did attack me first.~
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+// Dialogue with Edwin when he is in the group during the scrying on the hooded man and Hephernaan //
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+@2060	= ~I knew something was off with that hedge wizard! (I always know.)~
+@2061	= ~Which hedge wizard, Edwin?~
+@2062	= ~You know him, Edwin?~
+@2063	= ~That poor excuse for a wizard talking to that man in the hood.  That's Hephernaan.  Caelar's most trusted advisor. (Unbelievable...what a fool.)~
+@2064	= ~Yes yes, I know him.  That poor excuse for a wizard talking to the hooded figure is Hephernaan.  Caelar's most trusted advisor. (Unbelievable...what a fool.)~
+@2065	= ~Pieces of the puzzle are falling into place.  Thank you, Edwin.  You've been invaluable.~
+@2066	= ~Of course I have.  I always am.~
+@2067	= ~Of course he is.  This just keeps getting better and better.  Thank you, Edwin.  That was an invaluable piece of information.~
+@2068	= ~Of course.  You expected anything less from me? (I should hope not!)~
+
+/////////////////////
+// Journal Entries //
+/////////////////////
+@3000	= ~A Historical Treatise of Dragonspear Castle
+
+I found a book that outlines what I believe are Caelar's plans concerning me.  She wants to use my blood to open a portal to Avernus.  The only conclusion is that she has lost her mind.~
+@3001	= ~Alas Poor Dauston
+
+The fallen paladin who is currently sleeping it off in the Flaming Fist cells may have important information about Caelar.  I don't have time to wait for him to sober up.  Maybe Duke Eltan can learn more from him.~
+@3002	= ~Alas Poor Dauston
+
+A member of my group suggested I talk to Duke Eltan about the fallen paladin passed out in the Flaming Fist cells.~
+@3003	= ~Alas Poor Dauston
+
+Duke Eltan said he would interview Dauston once the fallen paladin has sobered up and send what he learns to Corwin.~
+@3004	= ~Alas Poor Dauston
+
+We learned that Dauston's mentor, Caelar's uncle, volunteered to take Caelar's place as a prisoner in Avernus.~
+@3005	= ~A Historical Treatise of Dragonspear Castle
+
+I found a book that outlines what I believe are Caelar's plans.  She wants to open a portal to Avernus.  The only conclusion is that she has lost her mind.~
+
+/////////////////////////////////////////
+// Corwin relays Eltan's message to PC //
+/////////////////////////////////////////
+// THESE ARE ALSO IN SOD_COASTWAY_CROSSING.TRA
+// IF CHANGED HERE, NEED TO CHANGE THERE AS WELL
+@4030	= ~By the way, I have a message for you from Duke Eltan, <CHARNAME>.~
+@4031	= ~Excellent!  What did he find out?~
+@4032	= ~Better late than never I guess.  What did he find out?~
+@4033	= ~Had you kept in contact with the camp, you'd have received it much sooner.  We've had it for a while now.~
+@4034	= ~He found out that Caelar, through some fault of her own, wound up a prisoner in Avernus.~
+@4035	= ~Her uncle managed to get her out by sacrificing himself.  He is now a prisoner in Avernus...in her place.~
+@4036	= ~How awful.  But that explains a lot.~

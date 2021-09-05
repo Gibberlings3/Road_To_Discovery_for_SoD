@@ -1,0 +1,52 @@
+/* set the overal check variables. This is done ONCE */
+
+/* "C#RtD_CaelarPlan" */
+/* 6 - knows that the whole purpose of the crusade is all for Aun Argent */
+IF
+	GlobalLT("C#RtD_CaelarPlan","GLOBAL",6)
+	Global("C#RtD_CaelarPlan_SET","GLOBAL",6)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CaelarPlan","GLOBAL",6)
+END
+/* 5 - speculates that Caelar wants to save her uncle Aun Argent from Avernus */
+IF
+	GlobalLT("C#RtD_CaelarPlan","GLOBAL",5)
+	Global("C#RtD_CaelarPlan_SET","GLOBAL",5)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CaelarPlan","GLOBAL",5)
+END
+/* 4 - knows that they are planning on opening a portal at Dragonspear Castle to enter Avernus */
+IF
+	GlobalLT("C#RtD_CaelarPlan","GLOBAL",4)
+	Global("C#RtD_CaelarPlan_SET","GLOBAL",4)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CaelarPlan","GLOBAL",4)
+END
+/* 3 - knows that they are planning on marching into Avernus */
+IF
+	GlobalLT("C#RtD_CaelarPlan","GLOBAL",3)
+	Global("C#RtD_CaelarPlan_SET","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CaelarPlan","GLOBAL",3)
+END
+/* 2 - knows that they want to free souls from Dragonspear War from Avernus */
+IF
+	GlobalLT("C#RtD_CaelarPlan","GLOBAL",2)
+	Global("C#RtD_CaelarPlan_SET","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CaelarPlan","GLOBAL",2)
+END
+/* 1 - acknowledges the existance of the crusade which is rampaging through the lands */
+IF
+	Global("C#RtD_CaelarPlan","GLOBAL",0)
+	Global("C#RtD_CaelarPlan_SET","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CaelarPlan","GLOBAL",1)
+END
+

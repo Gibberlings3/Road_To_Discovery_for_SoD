@@ -1,0 +1,28 @@
+// Get state for bdcorwin %update_corwin_03% (in add_inform_officers_basic.d)
+/* ~Is there anything you want to add to our status of information regarding Caelar's plans?~
+*/
+OUTER_SET update_corwin_03 = STATE_WHICH_SAYS 37 IN ~sodrtd/translations/autotra/%s/dialogue.tra~ FROM ~bdcorwin~
+
+
+// Get state for bddelanc %update_delancie% (in add_inform_officers_basic.d)
+/* ~Is there anything you want to add to our status of information regarding Caelar's plans?~
+*/
+OUTER_SET update_delancie = STATE_WHICH_SAYS 2 IN ~sodrtd/translations/autotra/%s/dialogue.tra~ FROM ~bddelanc~
+
+// Get state for bddelanc %update_delancie_01% (in add_inform_officers_basic.d)
+/* ~Do you have anything else you want to share?~
+*/
+OUTER_SET update_delancie_01 = STATE_WHICH_SAYS 3 IN ~sodrtd/translations/autotra/%s/dialogue.tra~ FROM ~bddelanc~
+
+// Get state for bddelanc %update_delancie_04% (in add_inform_officers_basic.d)
+/* A functioning portal to Avernus, right beneath the castle - and it will pop right open with just your blood?! This is grave news. This is very grave, indeed!
+*/
+OUTER_SET update_delancie_04 = STATE_WHICH_SAYS 6 IN ~sodrtd/translations/autotra/%s/dialogue.tra~ FROM ~bddelanc~
+
+
+// Get state for bdnederl %update_nederlok_05% (in add_inform_officers_basic.d)
+/* ~[Marshal Nederlok]The information you gathered is grave news, <CHARNAME>. The danger from Caelar's crusade is much more severe than the rampaging army we set out to stop! You did well to gather this intel in time.~
+*/
+OUTER_SET update_nederlok_05 = STATE_WHICH_SAYS 20 IN ~sodrtd/translations/autotra/%s/dialogue.tra~ FROM ~bdnederl~
+
+

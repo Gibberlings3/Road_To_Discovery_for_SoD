@@ -1,0 +1,310 @@
+/* bdcaelar: ask about her Bhaal heritage only if PC heard about it */
+<<<<<<<< .../inlined/sodrtd_bdcaelar.d
+/* #59534 /* ~Some say the blood of Bhaal runs through your veins, Caelar Argent. Is it true?~ */ */
+ADD_TRANS_TRIGGER bdcaelar 16 ~OR(2)
+Global("C#RtD_CaelarBhaalChild","GLOBAL",1)
+Global("C#RtD_CaelarBhaalChild","GLOBAL",2)~ DO %responses_16% //1
+>>>>>>>>
+
+// List of all potential response strrefs to check
+ACTION_DEFINE_ASSOCIATIVE_ARRAY response_strrefs BEGIN
+  ~%eet_2%59534~ => 1
+END
+  
+COPY_EXISTING ~bdcaelar.dlg~ ~override~
+  // scanning listed dialog states
+  PATCH_FOR_EACH state IN 16 BEGIN
+    LPF GET_RESPONSE_STRREFS INT_VAR state RET strrefs RET_ARRAY strrefs END
+    TEXT_SPRINT indices ~~  // a temporary variable for building the index list
+    FOR (i = 0; i < strrefs; ++i) BEGIN
+      SET value = $strrefs(~%i%~)
+      // Include index only if strref is listed in the response_strrefs array
+      PATCH_IF (VARIABLE_IS_SET $response_strrefs(~%value%~)) BEGIN
+        TEXT_SPRINT indices ~%indices% %i%~ // building list of indices
+      END
+    END
+    // prevent adding a trigger if index list is empty
+    PATCH_IF (~%indices%~ STR_EQ ~~) BEGIN
+      TEXT_SPRINT indices "IF ~False()~"
+    END
+    // initialize variables responses_39, responses_40, ...
+    // EVAL is used to create the variable name dynamically
+    TEXT_SPRINT EVAL ~responses_%state%~ ~%indices%~ 
+    PATCH_PRINT ~Variable %state%: %indices%~ 
+  END
+BUT_ONLY
+
+COMPILE EVAL ~.../inlined/sodrtd_bdcaelar.d~
+
+
+/* disable question about incident in Order of Aster if PC already knows about Aun */
+<<<<<<<< .../inlined/sodrtd_bddelanc.d
+/* De Lancie - bddelanc */
+
+/* #43940 /* ~Do we know anything of this incident?~ */ GOTO 36 */
+ADD_TRANS_TRIGGER bddelanc 34 ~GlobalLT("C#RtD_KnowsAunArgent","GLOBAL",2)~ DO %responses_34% //1
+>>>>>>>>
+
+// List of all potential response strrefs to check
+ACTION_DEFINE_ASSOCIATIVE_ARRAY response_strrefs BEGIN
+  ~%eet_2%43940~ => 1
+END
+  
+COPY_EXISTING ~bddelanc.dlg~ ~override~
+  // scanning listed dialog states
+  PATCH_FOR_EACH state IN 34 BEGIN
+    LPF GET_RESPONSE_STRREFS INT_VAR state RET strrefs RET_ARRAY strrefs END
+    TEXT_SPRINT indices ~~  // a temporary variable for building the index list
+    FOR (i = 0; i < strrefs; ++i) BEGIN
+      SET value = $strrefs(~%i%~)
+      // Include index only if strref is listed in the response_strrefs array
+      PATCH_IF (VARIABLE_IS_SET $response_strrefs(~%value%~)) BEGIN
+        TEXT_SPRINT indices ~%indices% %i%~ // building list of indices
+      END
+    END
+    // prevent adding a trigger if index list is empty
+    PATCH_IF (~%indices%~ STR_EQ ~~) BEGIN
+      TEXT_SPRINT indices "IF ~False()~"
+    END
+    // initialize variables responses_39, responses_40, ...
+    // EVAL is used to create the variable name dynamically
+    TEXT_SPRINT EVAL ~responses_%state%~ ~%indices%~
+    PATCH_PRINT ~Variable %state%: %indices%~
+  END
+BUT_ONLY
+
+COMPILE EVAL ~.../inlined/sodrtd_bddelanc.d~
+
+/* bdedwin */
+/* bdedwin 46 */
+/* "Hepher-who?" needs trigger in case PC already heard from Hephernaan 
+  IF ~  IsValidForPartyDialogue("RASAAD")
+~ THEN REPLY #42207 /* ~Hepher-who?~ */ DO ~SetGlobal("bd_edwin_talk","global",2)
+~ EXTERN ~BDRASAAJ~ 7
+  IF ~  !IsValidForPartyDialogue("RASAAD")
+~ THEN REPLY #42207 /* ~Hepher-who?~ */ DO ~SetGlobal("bd_edwin_talk","global",2)
+~ GOTO 48
+*/
+<<<<<<<< .../inlined/sodrtd_bdedwin.d
+
+/* #42207 /* ~Hepher-who?~ */ */
+ADD_TRANS_TRIGGER bdedwin 46 ~Global("C#RtD_HephernaanIdentity","GLOBAL",0)~ DO %responses_46% //2 3
+>>>>>>>>
+
+OUTER_SET strref_42207 = eet_200000 + 42207
+
+COPY_EXISTING ~BDEDWIN.DLG~ ~override~
+  LPF GET_RESPONSE_STRREFS
+    INT_VAR state = 46
+    RET strrefs
+    RET_ARRAY strrefs
+  END
+
+  // assembling response list
+  TEXT_SPRINT responses_46 ~~
+  FOR (i = 0; i < strrefs; ++i) BEGIN
+    PATCH_IF ($strrefs(~%i%~) = strref_42207) BEGIN
+      TEXT_SPRINT responses_46 ~%responses_46% %i%~
+    END
+  END
+
+  // safety measure if no matching responses are found
+  PATCH_IF (~%responses_46%~ STR_EQ ~~) BEGIN
+    TEXT_SPRINT responses_46 "IF ~False()~"
+  END
+BUT_ONLY
+
+// Variable "responses_46" should contain " 2 3"
+COMPILE EVAL ~.../inlined/sodrtd_bdedwin.d~
+
+/* bdferrus */
+/* bdferrus 15
+#41485 /* ~It should. Caelar seeks to open a gate to the Nine Hells. Infernal fiends will swarm the land, ravaging the Sword Coast and beyond.~ */
+*/
+<<<<<<<< .../inlined/sodrtd_bdferrus.d
+
+/* #41485 /* ~It should. Caelar seeks to open a gate to the Nine Hells. Infernal fiends will swarm the land, ravaging the Sword Coast and beyond.~ */ */
+ADD_TRANS_TRIGGER bdferrus 15 ~GlobalGT("C#RtD_CaelarPlan","GLOBAL",2)~ DO %responses_15% 
+>>>>>>>>
+
+OUTER_SET strref_41485 = eet_200000 + 41485
+
+COPY_EXISTING ~bdferrus.DLG~ ~override~
+  LPF GET_RESPONSE_STRREFS
+    INT_VAR state = 15
+    RET strrefs
+    RET_ARRAY strrefs
+  END
+
+  // assembling response list
+  TEXT_SPRINT responses_15 ~~
+  FOR (i = 0; i < strrefs; ++i) BEGIN
+    PATCH_IF ($strrefs(~%i%~) = strref_41485) BEGIN
+      TEXT_SPRINT responses_15 ~%responses_15% %i%~
+    PATCH_PRINT ~Variable %state%: %indices%~ 
+    END
+  END
+
+  // safety measure if no matching responses are found
+  PATCH_IF (~%responses_15%~ STR_EQ ~~) BEGIN
+    TEXT_SPRINT responses_15 "IF ~False()~"
+  END
+BUT_ONLY
+
+COMPILE EVAL ~.../inlined/sodrtd_bdferrus.d~
+
+
+/* bdhalat */
+<<<<<<<< .../inlined/sodrtd_bdhalat.d
+/* #50349 /* ~But Hephernaan serves Caelar...~ */ */
+ADD_TRANS_TRIGGER bdhalat 8 ~Global("C#RtD_HephernaanBetrayal","GLOBAL",0)~ DO %responses_8% //1 2
+>>>>>>>>
+  
+OUTER_SET strref_50349 = eet_200000 + 50349
+
+COPY_EXISTING ~bdhalat.DLG~ ~override~
+  LPF GET_RESPONSE_STRREFS
+    INT_VAR state = 8
+    RET strrefs
+    RET_ARRAY strrefs
+  END
+
+  // assembling response list
+  TEXT_SPRINT responses_8 ~~
+  FOR (i = 0; i < strrefs; ++i) BEGIN
+    PATCH_IF ($strrefs(~%i%~) = strref_50349) BEGIN
+      TEXT_SPRINT responses_8 ~%responses_8% %i%~
+    PATCH_PRINT ~Variable %state%: %indices%~ 
+    END
+  END
+
+  // safety measure if no matching responses are found
+  PATCH_IF (~%responses_8%~ STR_EQ ~~) BEGIN
+    TEXT_SPRINT responses_8 "IF ~False()~"
+  END
+BUT_ONLY
+
+COMPILE EVAL ~.../inlined/sodrtd_bdhalat.d~
+
+
+/* bdimoen */
+/* bdimoen 67 */
+/* This also covers doubled reply option by I4E
+IF ~  Global("BD_MDD007","BD0103",1)
+~ THEN BEGIN 67 // from:
+  SAY #35301 /* ~I... Oh, you're back. Sorry if I don't seem excited to see you. Poison really takes a toll...~ [BD35301] */
+  IF ~~ THEN REPLY #35302 /* ~Imoen. It's good to see you up and about. How are you doing?~ */ DO ~SetGlobal("BD_MDD007","BD0103",2)
+~ GOTO 74
+  IF ~~ THEN REPLY #55721 /* ~What was that man in the hood doing here?~ */ DO ~SetGlobal("BD_MDD007","BD0103",2)
+~ GOTO 68
+  IF ~~ THEN REPLY #35304 /* ~You look well, Imoen. Are you ready to pay Caelar back?~ */ DO ~SetGlobal("BD_MDD007","BD0103",2)
+~ GOTO 76
+END
+*/
+<<<<<<<< .../inlined/sodrtd_bdimoen.d
+
+/* #55721 /* ~What was that man in the hood doing here?~ */ */
+ADD_TRANS_TRIGGER bdimoen 67 ~GlobalGT("C#RtD_MetHoodedMan","GLOBAL",0)~ DO %responses_67% //
+>>>>>>>>
+  
+OUTER_SET strref_55721 = eet_200000 + 55721
+
+COPY_EXISTING ~bdimoen.DLG~ ~override~
+  LPF GET_RESPONSE_STRREFS
+    INT_VAR state = 67
+    RET strrefs
+    RET_ARRAY strrefs
+  END
+
+  // assembling response list
+  TEXT_SPRINT responses_67 ~~
+  FOR (i = 0; i < strrefs; ++i) BEGIN
+    PATCH_IF ($strrefs(~%i%~) = strref_55721) BEGIN
+      TEXT_SPRINT responses_67 ~%responses_67% %i%~
+    END
+  END
+
+  // safety measure if no matching responses are found
+  PATCH_IF (~%responses_67%~ STR_EQ ~~) BEGIN
+    TEXT_SPRINT responses_67 "IF ~False()~"
+  END
+BUT_ONLY
+
+COMPILE EVAL ~.../inlined/sodrtd_bdimoen.d~
+
+
+/* bdnederl */
+/* disable reply options in case PC already knows what Caelar wants with them */
+<<<<<<<< .../inlined/sodrtd_bdnederl.d
+/* Nederlock - bdnederl */
+
+/* #37870 /* ~What could she want with me?~ */ */
+ADD_TRANS_TRIGGER bdnederl 46 ~!GlobalGT("C#RtD_CoalKnowsPortalBlood","GLOBAL",4)~ DO %responses_46% //1
+>>>>>>>>
+
+// List of all potential response strrefs to check
+ACTION_DEFINE_ASSOCIATIVE_ARRAY response_strrefs BEGIN
+  ~%eet_2%37870~ => 1
+END
+  
+COPY_EXISTING ~bdnederl.dlg~ ~override~
+  // scanning listed dialog states
+  PATCH_FOR_EACH state IN 46 BEGIN
+    LPF GET_RESPONSE_STRREFS INT_VAR state RET strrefs RET_ARRAY strrefs END
+    TEXT_SPRINT indices ~~  // a temporary variable for building the index list
+    FOR (i = 0; i < strrefs; ++i) BEGIN
+      SET value = $strrefs(~%i%~)
+      // Include index only if strref is listed in the response_strrefs array
+      PATCH_IF (VARIABLE_IS_SET $response_strrefs(~%value%~)) BEGIN
+        TEXT_SPRINT indices ~%indices% %i%~ // building list of indices
+      END
+    END
+    // prevent adding a trigger if index list is empty
+    PATCH_IF (~%indices%~ STR_EQ ~~) BEGIN
+      TEXT_SPRINT indices "IF ~False()~"
+    END
+    // initialize variables responses_39, responses_40, ...
+    // EVAL is used to create the variable name dynamically
+    TEXT_SPRINT EVAL ~responses_%state%~ ~%indices%~
+    PATCH_PRINT ~Variable %state%: %indices%~
+  END
+BUT_ONLY
+
+COMPILE EVAL ~.../inlined/sodrtd_bdnederl.d~
+
+
+/* scry pool: scene with the Hooded man is only available if the PC met him */
+<<<<<<<< .../inlined/sodrtd_BDSCRY.d
+/* #63918 ~The Hooded Man...~ */
+ADD_TRANS_TRIGGER BDSCRY 0 ~GlobalGT("C#RtD_KnowsHoodedMan","GLOBAL",0)~ DO %responses_0% //2
+>>>>>>>>
+
+// List of all potential response strrefs to check
+ACTION_DEFINE_ASSOCIATIVE_ARRAY response_strrefs BEGIN
+  ~%eet_2%63918~ => 1
+END
+  
+COPY_EXISTING ~BDSCRY.dlg~ ~override~
+  // scanning listed dialog states
+  PATCH_FOR_EACH state IN 0 BEGIN
+    LPF GET_RESPONSE_STRREFS INT_VAR state RET strrefs RET_ARRAY strrefs END
+    TEXT_SPRINT indices ~~  // a temporary variable for building the index list
+    FOR (i = 0; i < strrefs; ++i) BEGIN
+      SET value = $strrefs(~%i%~)
+      // Include index only if strref is listed in the response_strrefs array
+      PATCH_IF (VARIABLE_IS_SET $response_strrefs(~%value%~)) BEGIN
+        TEXT_SPRINT indices ~%indices% %i%~ // building list of indices
+      END
+    END
+    // prevent adding a trigger if index list is empty
+    PATCH_IF (~%indices%~ STR_EQ ~~) BEGIN
+      TEXT_SPRINT indices "IF ~False()~"
+    END
+    // initialize variables responses_39, responses_40, ...
+    // EVAL is used to create the variable name dynamically
+    TEXT_SPRINT EVAL ~responses_%state%~ ~%indices%~ 
+    PATCH_PRINT ~Variable %state%: %indices%~ 
+  END
+BUT_ONLY
+
+COMPILE EVAL ~.../inlined/sodrtd_BDSCRY.d~

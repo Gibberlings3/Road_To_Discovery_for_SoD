@@ -1,0 +1,21 @@
+/* set the overal check variables. This is done ONCE */
+
+/* "C#RtD_CoalCaelarBetrayal" */
+/* 2 - knows that Caelar is betrayed by someone in her crusade, that there is a deeper level to the crusade's purpose - heard it elsewhere */ 
+IF
+	GlobalLT("C#RtD_CoalCaelarBetrayal","GLOBAL",2)
+	Global("C#RtD_CoalCaelarBetrayal_SET","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalCaelarBetrayal","GLOBAL",2)
+END
+
+/* 1 - knows that Caelar is betrayed by someone in her crusade, that there is a deeper level to the crusade's purpose */
+IF
+	Global("C#RtD_CoalCaelarBetrayal","GLOBAL",0)
+	Global("C#RtD_CoalCaelarBetrayal_SET","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalCaelarBetrayal","GLOBAL",1)
+END
+

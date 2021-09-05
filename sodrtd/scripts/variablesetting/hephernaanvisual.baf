@@ -1,0 +1,12 @@
+/* set the overal check variables. This is done ONCE */
+
+/* "C#RtD_HephernaanVisual" */
+/* 1 - knows that [a man looking like] Hephernaan is working with Umbral/a fiend */
+IF
+	Global("C#RtD_HephernaanVisual","GLOBAL",0)
+	Global("C#RtD_HephernaanVisual_SET","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_HephernaanVisual","GLOBAL",1)
+END
+

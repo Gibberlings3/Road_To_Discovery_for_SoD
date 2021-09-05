@@ -1,0 +1,1069 @@
+
+BACKUP ~sodrtd/backup~
+AUTHOR ~##~ 
+
+
+VERSION ~0.1 (Beta)~
+
+
+README ~sodrtd/readme.sodrtd.%LANGUAGE%.txt~ ~sodrtd/readme.sodrtd.english.txt~
+
+
+AUTO_TRA ~sodrtd/translations/autotra/%s~
+
+ALWAYS
+
+/* check for a ready SoD */
+
+ACTION_IF ((FILE_EXISTS ~dlc/sod-dlc.zip~) OR (FILE_EXISTS ~sod-dlc.zip~)) THEN BEGIN
+  FAIL ~Modmerge or Argent's DLC Merger is required before mods can be installed on this game.~ 
+END
+
+INCLUDE ~sodrtd/lib/get_respone_strrefs.tph~
+INCLUDE ~sodrtd/lib/get_dlg_respones.tph~
+
+OUTER_SPRINT newline ~%WNL%%LNL%%MNL%%TAB% ~
+
+OUTER_SET eet_200000 = GAME_IS ~eet~ ? 200000 : 0
+
+ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+  OUTER_SPRINT ~eet_2~ ~~
+  INCLUDE ~sodrtd/lib/g3_bgee_cpmvars.tpa~
+END
+ACTION_IF GAME_IS ~eet~ THEN BEGIN
+  OUTER_SPRINT ~eet_2~ ~2~
+  INCLUDE ~EET/other/cpmvars/eet_cpmvars.tpa~
+END
+
+
+
+//////////////////////////////////////////////////////////////////////
+/* all following actions are only processed ONCE for the whole mod, independent of un- and reinstalling of single components */
+
+ACTION_IF !FILE_EXISTS ~sodrtd/install/sodrtdinstall.mrk~ BEGIN
+
+    /* Copies tra files into the autotra-folder (to leave the originals untouched) */
+    DEFINE_ACTION_FUNCTION autotra_workaround BEGIN
+      COPY ~sodrtd/translations/english~  ~sodrtd/translations/autotra/%LANGUAGE%~
+      COPY ~sodrtd/translations/%LANGUAGE%~  ~sodrtd/translations/autotra/%LANGUAGE%~
+    END
+
+    LAF autotra_workaround END
+
+  ACTION_DEFINE_ARRAY fl#noconvert BEGIN setup END
+
+  ACTION_DEFINE_ARRAY fl#reload BEGIN game END
+
+    LAF HANDLE_CHARSETS
+      INT_VAR
+        infer_charsets = 1
+      STR_VAR
+        tra_path = EVAL ~sodrtd/translations/autotra~
+        noconvert_array = fl#noconvert
+        reload_array = fl#reload
+    END
+
+
+//CamDawgs CD_STATE_NOTVALID 
+    APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~ UNLESS ~CD_STATE_NOTVALID~
+
+
+
+  COPY ~sodrtd/install/component.xx~ ~sodrtd/install/sodrtdinstall.mrk~
+
+  END // sodrtdinstall.mrk
+
+ //reloading of tras:
+  LOAD_TRA ~sodrtd/translations/autotra/english/game.tra~
+  LOAD_TRA ~sodrtd/translations/autotra/%LANGUAGE%/game.tra~
+
+END //ALWAYS
+
+
+LANGUAGE ~English~
+         ~english~   
+         ~sodrtd/translations/english/setup.tra~
+	 ~sodrtd/translations/english/game.tra~
+/*
+LANGUAGE ~Deutsch~
+         ~german~   
+         ~sodrtd/translations/german/setup.tra~
+	 ~sodrtd/translations/german/game.tra~
+*/
+
+
+
+///////////////////////////////////////////////////
+// ADD STAT-BASED OBSERVATIONS AND QUEST OPTIONS //
+///////////////////////////////////////////////////
+/* from Lauriel's Themed Tweaks:
+- weak poison of Caelar's palace assassins: Duke Jannath's info and all reply options
+- treatise about portal below DC
+- Edwin watches Hephernaan in the scry pool
+- make the Dukes question the fallen paladin Dauston
+*/
+BEGIN @100000 /* ~SoD - Stat-based observations and quest options from Lauriel's Themed Tweaks Mod~ */
+	DESIGNATED 80
+	LABEL "#L-SOD-STAT_BASED_OPTIONS"
+	REQUIRE_PREDICATE (GAME_INCLUDES ~sod~) @100001 /* ~This mod is only compatible with SoD and EET.~ */
+	FORBID_COMPONENT ~themed_tweaks.tp2~ ~80~ @100002 /* ~Component is already installed via Themed Tweaks~ */
+	FORBID_COMPONENT ~sodrtd.tp2~ ~0~ @100003 /* ~This component needs to be installed before RtD main component.~ */
+	FORBID_COMPONENT ~EET_end.tp2~ ~0~ @100004 /* ~This mod needs to be installed before EET_End.~ */
+	FORBID_COMPONENT ~EET_end.tp2~ ~1~ @100004 /* ~This mod needs to be installed before EET_End.~ */
+
+
+	OUTER_SPRINT "BAELOTH_BCS" "BAELOTH"
+	OUTER_SPRINT "BAELOTH_JOINED" "BAELOTHJ"
+	OUTER_SPRINT "BAELOTH_POST" "BAELOTHP" 
+
+	OUTER_SPRINT ~mod_root~ ~sodrtd/themedtweaks~
+	OUTER_SPRINT ~tra_loc~ ~sodrtd/translations/autotra~
+
+	INCLUDE ~sodrtd/themedtweaks/tpa/sod_stat_options.tpa~
+	LAF sod_stat_options END
+
+
+///////////////////////////////////////////////////
+// component 2 ~Main Component: Tracking System~
+/* Required for all following components
+variable system ONLY (for PC + Dukes/officers). Adding of variable setting for PC's knowledge to existent content, but NO presetting of what the commanders would know at which point. No reactions of any sort. */
+///////////////////////////////////////////////////
+BEGIN @100005 /* ~Main Component: Tracking System~ */
+	DESIGNATED 0
+	LABEL "SoDRoadToDiscovery-main" 
+	REQUIRE_PREDICATE (GAME_INCLUDES ~sod~) @100001 /* ~This mod is only compatible with SoD and EET.~ */
+	FORBID_COMPONENT ~EET_end.tp2~ ~0~ @100004 /* ~This mod needs to be installed before EET_End.~ */
+	FORBID_COMPONENT ~EET_end.tp2~ ~1~ @100004 /* ~This mod needs to be installed before EET_End.~ */
+
+
+<<<<<<<< .../inlined/journal_0.tph
+>>>>>>>>
+OUTER_SET strref_journal = eet_200000 + 31270 //59718 //59722 //59732 //66700 //67432 //59615
+APPEND_OUTER - ~.../inlined/journal_0.tph~ "ADD_JOURNAL EXISTING TITLE (#%strref_journal%) @10000 @10001 @10002 @10003 @10004 @10005 @10006 @10007 @10008 @10009 @10010 @10011 @10012 @10013 @10014 @10015 @10016 @10017 @10018 @10019 @10020 @10021 @10022 @10023 @10024 @10025 @10026 @10027 @10028 @10029 @10030 @10031 @10037 USING ~sodrtd/translations/autotra/%LANGUAGE%/game.tra~"
+INCLUDE ~.../inlined/journal_0.tph~
+
+
+/* consider variable interactions with Lauriel's Themed Tweaks */
+ACTION_IF (MOD_IS_INSTALLED ~sodrtd.tp2~ ~80~) OR (MOD_IS_INSTALLED ~themed_tweaks.tp2~ ~80~) THEN BEGIN
+PRINT @100006 /* ~Themed Tweaks component detected. Patching scripts.~ */
+/* inter-variables: set overal variables from Lauriel's */
+	EXTEND_TOP ~BDBALDUR.BCS~ ~sodrtd/scripts/interconnections_bdbaldur.baf~
+	EVALUATE_BUFFER
+	ACTION_IF GAME_IS ~eet~ THEN BEGIN
+	  EXTEND_TOP ~baldur.bcs~ ~sodrtd/scripts/interconnections_bdbaldur.baf~ 	EVALUATE_BUFFER
+	END
+	EXTEND_TOP ~BD0060.BCS~ ~sodrtd/scripts/interconnections_bd0060.baf~
+	EVALUATE_BUFFER
+	EXTEND_BOTTOM ~BD0102.BCS~ ~sodrtd/scripts/interconnections_bd0102.baf~
+	EVALUATE_BUFFER 
+	EXTEND_BOTTOM ~BD1200.BCS~ ~sodrtd/scripts/interconnections_bd1200.baf~ 
+	EVALUATE_BUFFER
+
+END
+
+/* add check system: setting of overall variables.
+-if variable "Global("C#RtD_VariableEvaluation","GLOBAL",1)" is at "1", (bd)baldur.bcs will set area script to "c#rtd_ve.bcs".
+-in "c#rtd_ve.bcs", the variables will be evaluated and the checking variable will be set to "0" again + area script is resetted.
+-setting "Global("C#RtD_VariableEvaluation","GLOBAL",1)" can also be used e.g. in an NPC mod if it adds info points. Evaluation of variables will be done via "c#rtd_ve.bcs" by Road to Discovery mod.
+*/
+<<<<<<<< ...inlined/baldur_add.baf
+IF
+  !RealGlobalTimerNotExpired("C#RtD_VariableEvaluation_Timer","GLOBAL")
+  Global("C#RtD_VariableEvaluation","GLOBAL",1)
+THEN
+RESPONSE #100
+  RealSetGlobalTimer("C#RtD_VariableEvaluation_Timer","GLOBAL",10)
+  DisplayStringHead(Player1,~Starting variable evaluation.~)
+  SetAreaScript("c#rtd_ve",OVERRIDE)  
+//  Continue()
+END
+>>>>>>>>
+EXTEND_TOP ~bdbaldur.bcs~ ~...inlined/baldur_add.baf~ EVALUATE_BUFFER
+ACTION_IF GAME_IS ~eet~ THEN BEGIN
+  EXTEND_TOP ~baldur.bcs~ ~...inlined/baldur_add.baf~ EVALUATE_BUFFER
+END
+
+<<<<<<<< ...inlined/c#rtd_ve.baf
+IF
+	Global("C#RtD_RoadToDiscovery","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_RoadToDiscovery","GLOBAL",1)
+END
+>>>>>>>>
+COMPILE EVAL ~...inlined/c#rtd_ve.baf~
+
+EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting/caelarbetrayal.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting/caelarbhaalchild.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting/caelargodbless.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting/caelarkidnap.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting/caelarplan.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting/caelarprotection.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting/caelarwantspc.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting/hephernaanbetrayal.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting/hephernaanfiendmaster.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting/hephernaanidentity.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting/hephernaanname.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting/hephernaanvisual.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting/knowsaunargent.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting/knowshoodedman.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting/knowsportalblood.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting/methoodedman.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting/wantbhaalblood.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting/weakpoison.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variable_interconnections.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/journalhandling.baf~ EVALUATE_BUFFER
+
+ACTION_IF (MOD_IS_INSTALLED ~sodrtd.tp2~ ~80~) OR (MOD_IS_INSTALLED ~themed_tweaks.tp2~ ~80~) THEN BEGIN
+	PRINT @100006 /* ~Themed Tweaks component detected. Patching scripts.~ */
+	EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/interconnections_stattweaks.baf~ 	EVALUATE_BUFFER
+END
+
+/* coalition variable handling */
+EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting_coalition/caelarbetrayal_coalition.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting_coalition/caelarbhaalchild_coalition.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting_coalition/caelargodbless_coalition.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting_coalition/caelarkidnap_coalition.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting_coalition/caelarplan_coalition.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting_coalition/caelarprotection_coalition.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting_coalition/caelarwantspc_coalition.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting_coalition/hephernaanbetrayal_coalition.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting_coalition/hephernaanfiendmaster_coalition.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting_coalition/hephernaanidentity_coalition.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting_coalition/knowsaunargent_coalition.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting_coalition/knowshoodedman_coalition.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting_coalition/knowsportalblood_coalition.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting_coalition/methoodedman_coalition.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting_coalition/wantbhaalblood_coalition.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting_coalition/weakpoison_coalition.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variable_interconnections_coalition.baf~ EVALUATE_BUFFER
+
+<<<<<<<< ...inlined/c#rtd_ve_end.baf
+IF
+  True()
+THEN
+RESPONSE #100
+  DisplayStringHead(Player1,~Variable evaluation done.~) //## for debug
+  SetGlobal("C#RtD_VariableEvaluation","GLOBAL",0)
+  SetAreaScript("",OVERRIDE)
+END
+>>>>>>>>
+EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~...inlined/c#rtd_ve_end.baf~ EVALUATE_BUFFER
+
+
+/////
+/* Add setting of variables inside the game - **PC's knowledge** */
+
+/* variable setting via dialogue - any reply options added later needs adding of the variable settings! */
+
+COMPILE EVALUATE_BUFFER ~sodrtd/dialogues/add_trans_action_general.d~ USING ~sodrtd/translations/autotra/%s/dialogue.tra~
+
+
+/////
+/* variable setting via scripts - by items in inventory or game variables that can be used */
+
+/* bd0060.bcs */
+/* A Historical Treatise of Dragonspear Castle bdbook11 #69147 
+~(Annotation: They could not destroy the portal, though. My research indicates it remains present, though dormant. Blood tainted by a god’s influence is required to activate its power. H requires us to secure the portal room the moment we take control of the castle.)~ 
+## should the mentioned "H" lead to any reactions? - not considered yet */
+<<<<<<<< ...inlined/bd0060_add.baf
+IF
+	PartyHasItem("BDBook11")
+	Global("#L_SoDStat_TreatiseFound","GLOBAL",0)
+	GlobalLT("C#RtD_KnowsPortalBlood_SET","GLOBAL",2)
+	GlobalLT("C#RtD_KnowsPortalBlood","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_KnowsPortalBlood_SET","GLOBAL",2)
+		SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)
+END
+>>>>>>>>
+EXTEND_BOTTOM ~bd0060.bcs~ ~...inlined/bd0060_add.baf~ EVALUATE_BUFFER
+
+
+/* bd0102.bcs */
+/* set variables at the beginning of the marching - after palace attack 
+-PC knows about Caelar's crusade in general
+*/
+
+<<<<<<<< ...inlined/bd0102_add.baf
+IF
+	GlobalGT("bd_plot_003","bd0102",0)
+	Global("C#RtD_UpatePC","bd0102",0)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CaelarPlan_SET","GLOBAL",1)
+		SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)
+		SetGlobal("C#RtD_UpatePC","bd0102",1)
+END
+>>>>>>>>
+EXTEND_BOTTOM ~bd0102.bcs~ ~...inlined/bd0102_add.baf~ EVALUATE_BUFFER
+
+
+/* bd1000.bcs */
+/* first camp in bd1000.are, after marching out of BG city: */
+<<<<<<<< ...inlined/bd1000_add.baf
+/* Caelar no child of Bhaal: Use the ingame variable which also triggers Dynaheir's dialogue in addition to patching TRANSACTIONs */
+IF
+	GlobalGT("bd_mdd018","global",0)
+	GlobalLT("C#RtD_CaelarBhaalChild_SET","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CaelarBhaalChild_SET","GLOBAL",3)
+		SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)
+END
+
+/* first camp: chapter 8. rumor about Caelar being blessed by the gods is known now 
+~Some proclaim the Shining Lady a prophet, doing the work of not one but all faiths, all gods.~ */
+IF
+	Global("C#RtD_UpatePC","bd1000",0)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CaelarGodBless_SET","GLOBAL",2)
+/* update variables in case there is a "skip parts" tweak to what they were in bd0102.are */
+		SetGlobal("C#RtD_CaelarPlan_SET","GLOBAL",1)
+
+		SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)
+		SetGlobal("C#RtD_UpatePC","bd1000",1)
+END
+
+>>>>>>>>
+EXTEND_BOTTOM ~bd1000.bcs~ ~...inlined/bd1000_add.baf~ EVALUATE_BUFFER
+
+
+/* bd3000.bcs */
+<<<<<<<< ...inlined/bd3000_add.baf
+/* Coalition camp bd3000.are. */
+/* after entering area: update variables in case there is a "skip parts" tweak to what they were in bd7100 (minimum) */
+IF
+	Global("C#RtD_UpatePC","bd3000",0)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CaelarGodBless_SET","GLOBAL",2)
+		SetGlobal("C#RtD_CaelarPlan_SET","GLOBAL",1)
+		SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)
+		SetGlobal("C#RtD_UpatePC","bd3000",1)
+		Continue()
+END
+>>>>>>>>
+EXTEND_TOP ~bd3000.bcs~ ~...inlined/bd3000_add.baf~ EVALUATE_BUFFER
+
+
+/* bd4000.bcs */
+/* bdravoc 14
+  SAY #49058 /* ~A score of us were lost taking down just three of 'em. Shaman said our dead didn't get to Gruumsh's realm. Their souls're trapped in the Hells below.~ */
+*/
+<<<<<<<< ...inlined/bd4000_add.baf
+IF
+	GlobalGT("bd_deneld_ravoc","bd4000",0)
+	GlobalLT("C#RtD_CaelarPlan_SET","GLOBAL",2)
+	GlobalLT("C#RtD_CaelarPlan","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CaelarPlan_SET","GLOBAL",2)
+		SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)
+END
+
+/* bdtristi 22
+  SAY #51398 /* ~I have healing magic as well, but that's not my primary use. The fiends of the Nine Hells are orderly, regimented. It will take all our skill to outmaneuver them.~ [BD51398] */
+*/
+IF
+	GlobalGT("bd_deneld_tristian","bd4000",0)
+	GlobalLT("C#RtD_CaelarPlan_SET","GLOBAL",3)
+	GlobalLT("C#RtD_CaelarPlan","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CaelarPlan_SET","GLOBAL",3)
+		SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)
+END
+
+/* bdtristi 25
+  SAY #51406 /* ~Have faith, my friend. I believe Caelar could call down holy fire from heaven itself to blast the fiends to dust. She will see us through this. Now please excuse me. I must return to my duties.~ [BD51406] */
+*/
+IF
+	GlobalGT("bd_deneld_tristian","bd4000",0)
+	GlobalLT("C#RtD_CaelarProtection_SET","GLOBAL",2)
+	GlobalLT("C#RtD_CaelarProtection","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CaelarPlan_SET","GLOBAL",2)
+		SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)
+END
+
+>>>>>>>>
+EXTEND_BOTTOM ~bd4000.bcs~ ~...inlined/bd4000_add.baf~ EVALUATE_BUFFER
+
+
+/* bd4300.bcs */
+/* Hephernaan is talking to his master in DC basement. 
+great evil is preparing to come through, a portal to Avernus will be opened, and they somehow need "the Bhaal Spawn" to achieve this: */
+
+<<<<<<<< ...inlined/bd4300_add.baf
+IF
+	GlobalGT("bd_hephernann_talk_belhifet","global",0)
+	Global("C#RtD_WitnessedHephernaan","bd4300",0)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_HephernaanIdentity_SET","GLOBAL",1)
+		SetGlobal("C#RtD_HephernaanFiend_SET","GLOBAL",2)
+		SetGlobal("C#RtD_WantBhaalBlood_SET","GLOBAL",1)
+		SetGlobal("C#RtD_WitnessedHephernaan","bd4300",1)
+		SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)
+END
+>>>>>>>>
+EXTEND_BOTTOM ~bd4300.bcs~ ~...inlined/bd4300_add.baf~ EVALUATE_BUFFER
+
+/* bd4400.bcs */
+/* Avernus. get info from Darnas. We know about the needed Bhaal blood so we also know Caelar is no child of Bhaal herself */
+<<<<<<<< ...inlined/bd4400_add.baf
+IF
+	GlobalGT("bd_darnas_plot","global",2)
+	!Global("bd_darnas_plot","global",9)
+	Global("C#RtD_InfoDarnas","bd4400",0)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_KnowsPortalBlood_SET","GLOBAL",4)
+		SetGlobal("C#RtD_WantBhaalBlood_SET","GLOBAL",1)
+		SetGlobal("C#RtD_CaelarBhaalChild_SET","GLOBAL",3)
+		SetGlobal("C#RtD_CaelarPlan_SET","GLOBAL",4)
+		SetGlobal("C#RtD_InfoDarnas","bd4400",1)
+		SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)
+END
+>>>>>>>>
+EXTEND_BOTTOM ~bd4400.bcs~ ~...inlined/bd4400_add.baf~ EVALUATE_BUFFER
+
+
+/* bd4700.bcs */
+/* Avernus Roof. All variables concerning Caelar and Hephernaan set to max */
+<<<<<<<< ...inlined/bd4700_add.baf
+IF
+	GlobalGT("bd_plot","global",570)
+	Global("C#RtD_WitnessedEverything","bd4700",0)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_HephernaanFiend_SET","GLOBAL",3)
+		SetGlobal("C#RtD_KnowsAunArgent_SET","GLOBAL",4)
+		SetGlobal("C#RtD_KnowsPortalBlood_SET","GLOBAL",4)
+		SetGlobal("C#RtD_WantBhaalBlood_SET","GLOBAL",1)
+		SetGlobal("C#RtD_CaelarBhaalChild_SET","GLOBAL",3)
+		SetGlobal("C#RtD_CaelarGodBless_SET","GLOBAL",3)
+		SetGlobal("C#RtD_CaelarPlan_SET","GLOBAL",6)
+		SetGlobal("C#RtD_CaelarProtection_SET","GLOBAL",4)
+		SetGlobal("C#RtD_WitnessedEverything","bd4700",1)
+		SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)
+END
+>>>>>>>>
+EXTEND_BOTTOM ~bd4700.bcs~ ~...inlined/bd4700_add.baf~ EVALUATE_BUFFER
+
+
+/* bd7100.bcs */
+/* FF camp Troll Forest bd7100 */
+<<<<<<<< ...inlined/bd7100_add.baf
+/* Crusader Tract bdmisc63 #67371 
+~(Scrawled notation: We know too little about this Hephernaan. Caelar relies fully on him, but does he serve her interests or his own? When I return to Berdusk, I’ll see what information I can dig up.)~ */
+IF
+	Global("C#RtD_HephernaanName_SET","GLOBAL",0)
+	PartyHasItem("bdmisc63")
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_HephernaanName_SET","GLOBAL",1)
+		SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)
+END
+
+/* update variables in case there is a "skip parts" tweak to what they were in bd1000 (minimum) */
+IF
+	Global("C#RtD_UpatePC","bd7100",0)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CaelarGodBless_SET","GLOBAL",2)
+		SetGlobal("C#RtD_CaelarPlan_SET","GLOBAL",1)
+		SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)
+		SetGlobal("C#RtD_UpatePC","bd7100",1)
+END
+>>>>>>>>
+EXTEND_BOTTOM ~bd7100.bcs~ ~...inlined/bd7100_add.baf~ EVALUATE_BUFFER
+
+
+
+/////////////////////////////////////////////////////////
+//
+/* component 3 ~Consistency Changes to Game Dialogues~
+(needs comp 2) consistency changes to EXISTENT content. [This is an own component so modders who want to implement their own reply options and reactions without having to meddle with cleaning up can use it.]
+
+    logical changes to content that result from possible knowledge. For PC's knowledge i.e. disabling of reply options that make no longer sense. Logical but MINIMUM changes to officers' dialogues, i.e. no asking "What would she want with you?" (paraphrased) when all already know. [note: changes to officers' dialogue is only preparation because comp 1&2 alone give no knowledge to officers!] NO addition of reply options that would arise of the knowledge.
+-add consistency - tagg existing lines and reply options so they account for what the PC / the coalition officers already know. coalition officers and PC shouldn't ask about things they already know */
+/////////////////////////////////////////////////////////
+
+BEGIN @100007 /* ~Consistency Changes to Game Dialogues~ */
+	DESIGNATED 10
+	LABEL "SoDRoadToDiscovery-consistency" 
+	REQUIRE_PREDICATE (GAME_INCLUDES ~sod~) @100001 /* ~This mod is only compatible with SoD and EET.~ */
+	FORBID_COMPONENT ~EET_end.tp2~ ~0~ @100004 /* ~This mod needs to be installed before EET_End.~ */
+	FORBID_COMPONENT ~EET_end.tp2~ ~1~ @100004 /* ~This mod needs to be installed before EET_End.~ */
+	REQUIRE_PREDICATE (MOD_IS_INSTALLED ~sodrtd.tp2~ ~0~) @100008 /* ~You need the main component "Tracking System" for this conponent.~ */
+
+
+INCLUDE ~sodrtd/tpa/add_trans_trigger_consistency.tpa~
+INCLUDE ~sodrtd/tpa/add_trans_trigger_consistency_weakpoison.tpa~
+
+/////////////////////////////////////////////////////////
+/*  component 4 ~Officers Are Aware~
+(needs comp 2): make officers aware of the world. [my writers view about what would they know when - can be replaced by other mods.]
+
+    basic changes to officers knowledge. Includes: their level of knowledge as the game progresses via camp scripts and whatthey witness during dialogue. Does NOT include possibilities to tell them. Does NOT add any ractions to officers.
+ */
+/////////////////////////////////////////////////////////
+BEGIN @100009 /* ~Officers Are Aware~ */
+	DESIGNATED 20
+	LABEL "SoDRoadToDiscovery-aware_officers" 
+	REQUIRE_PREDICATE (GAME_INCLUDES ~sod~) @100001 /* ~This mod is only compatible with SoD and EET.~ */
+	FORBID_COMPONENT ~sodrtd.tp2~ ~30~ ~This component needs to be installed before component "Give PC consistency reply options".~
+	FORBID_COMPONENT ~EET_end.tp2~ ~0~ @100004 /* ~This mod needs to be installed before EET_End.~ */
+	FORBID_COMPONENT ~EET_end.tp2~ ~1~ @100004 /* ~This mod needs to be installed before EET_End.~ */
+	REQUIRE_PREDICATE (MOD_IS_INSTALLED ~sodrtd.tp2~ ~0~) @100008 /* ~You need the main component "Tracking System" for this conponent.~ */
+
+
+COMPILE EVALUATE_BUFFER ~sodrtd/dialogues/add_officers_aware.d~ USING ~sodrtd/translations/autotra/%s/dialogue.tra~
+
+/* set variables at the beginning of the marching - after palace attack 
+- all coalition forces acknowledges the existance of the crusade which is rampaging through the lands 
+- all coalition forces heard rumors that Caelar is a child of Bhaal 
+- all coalition forces heard rumor about Caelar being blessed by the gods 
+- all coalition forces heard rumor about Caelar protecting the crusade (taken from Jospil's dialogue) 
+-poison was too weak to kill
+*/
+/* bd0102.bcs */
+<<<<<<<< ...inlined/bd0102_coalition_add.baf
+IF
+	GlobalGT("bd_plot_003","bd0102",0)
+	Global("C#RtD_UpateGreatCoalition","bd0102",0)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalCaelarPlan_SET","GLOBAL",1)
+		SetGlobal("C#RtD_CoalCaelarBhaalChild_SET","GLOBAL",1)
+		SetGlobal("C#RtD_CoalCaelarGodBless_SET","GLOBAL",1)
+		SetGlobal("C#RtD_CoalCaelarProtection_SET","GLOBAL",1)
+		SetGlobal("C#RtD_CoalWeakPoison_SET","GLOBAL",1)
+		SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)
+		SetGlobal("C#RtD_UpateGreatCoalition","bd0102",1)
+END
+>>>>>>>>
+EXTEND_BOTTOM ~bd0102.bcs~ ~...inlined/bd0102_coalition_add.baf~ EVALUATE_BUFFER
+
+
+/* bd1000.bcs */
+<<<<<<<< ...inlined/bd1000_coalition_add.baf
+/* first camp: chapter 8. rumor about Caelar being blessed by the gods is known now 
+~Some proclaim the Shining Lady a prophet, doing the work of not one but all faiths, all gods.~ */
+IF
+	Global("C#RtD_CaelarGodBlessbd1000","bd1000",0)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalCaelarGodBless_SET","GLOBAL",3)
+		SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)
+		SetGlobal("C#RtD_CaelarGodBlessbd1000","bd1000",1)
+END
+
+/* update variables in case there is a "skip parts" tweak to what they were in bd0102.are */
+
+IF
+	Global("C#RtD_UpdateGreatCoalition","bd1000",0)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalCaelarPlan_SET","GLOBAL",1)
+		SetGlobal("C#RtD_CoalCaelarBhaalChild_SET","GLOBAL",1)
+		SetGlobal("C#RtD_CoalCaelarProtection_SET","GLOBAL",1)
+		SetGlobal("C#RtD_CoalWeakPoison_SET","GLOBAL",1)
+		SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)
+		SetGlobal("C#RtD_UpdateGreatCoalition","bd1000",1)
+END
+
+>>>>>>>>
+EXTEND_BOTTOM ~bd1000.bcs~ ~...inlined/bd1000_coalition_add.baf~ EVALUATE_BUFFER
+
+
+/* bd3000.bcs */
+<<<<<<<< ...inlined/bd3000_coalition_add.baf
+/* Coalition camp bd3000.are. The coalition forces now know for sure:
+-know Hephernaan by name and face and that he is Caelar's advisor 
+-know that Caelar claims to be blessed by "the pantheon" / all gods /several gods
+- know that Caelar wants to free souls from Dragonspear War from Avernus
+
+They also know/speculate that Caelar is no child of Bhaal. Caelar does not make a secret out of it and I would assume the coalition has sources to know something like this (if it is by "interrogating" captured crusaders)
+*/
+
+IF
+	Global("C#RtD_InfoPoint1_bd3000","bd3000",0)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalCaelarPlan_SET","GLOBAL",3)
+		SetGlobal("C#RtD_CoalHephernaanIdentity_SET","GLOBAL",1)
+		SetGlobal("C#RtD_CoalCaelarBhaalChild_SET","GLOBAL",3)
+		SetGlobal("C#RtD_CoalCaelarProtection_SET","GLOBAL",3)
+		SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)
+		SetGlobal("C#RtD_InfoPoint1_bd3000","bd3000",1)
+		Continue()
+END
+
+
+/* after entering area: update variables in case there is a "skip parts" tweak to what they were in bd7100 (minimum) */
+IF
+	Global("C#RtD_UpdateGreatCoalition","bd3000",0)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalCaelarGodBless_SET","GLOBAL",3)
+		SetGlobal("C#RtD_CoalKnowsAunArgent_SET","GLOBAL",2)
+		SetGlobal("C#RtD_CoalWeakPoison_SET","GLOBAL",1)
+		SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)
+		SetGlobal("C#RtD_UpdateGreatCoalition","bd3000",1)
+		Continue()
+END
+
+/* after meeting with Caelar at Dead Man's Pass: fill in more holes. crusader forces will have their "sources":
+-know that they are planning on marching into Avernus
+-know that Caelar is no Child of Bhaal 
+ */
+
+IF
+	GlobalGT("bd_plot","GLOBAL",390)
+	Global("C#RtD_InfoPoint2_bd3000","bd3000",0)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalCaelarPlan_SET","GLOBAL",5)
+		SetGlobal("C#RtD_CoalCaelarBhaalChild_SET","GLOBAL",5)
+		SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)
+		SetGlobal("C#RtD_InfoPoint2_bd3000","bd3000",1)
+		Continue()
+END
+
+>>>>>>>>
+/* appending this with EXTEND_TOP. This delays the cutscene upon entering the camp for two seconds, but if patched to the end of bd3000.bcs, evaluation of the variables takes some xx seconds until the PC might already have reached the commend tent to talk to the officers. I need the variable evaluation to be done before that. */
+EXTEND_TOP ~bd3000.bcs~ ~...inlined/bd3000_coalition_add.baf~ EVALUATE_BUFFER
+
+
+/* bd4300.bcs */
+<<<<<<<< ...inlined/bd4300_coalition_add.baf
+/* after returning from Avernus. coalition forces will be filled in with what happened. Set all Caelar/Hephernaan values to max. */
+
+IF
+	GlobalGT("bd_plot","global",589)
+	Global("C#RtD_CoalitionKnowsEverything","bd4700",0)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalKnowsAunArgent_SET","GLOBAL",6)
+		SetGlobal("C#RtD_CoalKnowsPortalBlood_SET","GLOBAL",8)
+		SetGlobal("C#RtD_CoalWantBhaalBlood_SET","GLOBAL",2)
+		SetGlobal("C#RtD_CoalCaelarBhaalChild_SET","GLOBAL",5)
+		SetGlobal("C#RtD_CoalCaelarGodBless_SET","GLOBAL",5)
+		SetGlobal("C#RtD_CoalCaelarPlan_SET","GLOBAL",11)
+		SetGlobal("C#RtD_CoalCaelarProtection_SET","GLOBAL",6)
+		SetGlobal("C#RtD_CoalWeakPoison_SET","GLOBAL",1)
+		SetGlobal("C#RtD_CoalitionKnowsEverything","bd4300",1)
+		SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)
+END
+/* in case PC did not tell them about Belhifet in return dialogue with De Lancie, they will learn elsewhere */
+IF
+	GlobalGT("bd_plot","global",589)
+	GlobalLT("C#RtD_CoalHephernaanFiend","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalHephernaanFiend_SET","GLOBAL",4)
+		SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)
+END
+>>>>>>>>
+EXTEND_BOTTOM ~bd4300.bcs~ ~...inlined/bd4300_coalition_add.baf~ EVALUATE_BUFFER
+
+/* bd7100.bcs */
+<<<<<<<< ...inlined/bd7100_coalition_add.baf
+/* FF camp Troll Forest bd7100 */
+/* update variables in case there is a "skip parts" tweak to what they were in bd1000 (minimum) */
+IF
+	Global("C#RtD_UpdateGreatCoalition","bd7100",0)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalCaelarPlan_SET","GLOBAL",1)
+		SetGlobal("C#RtD_CoalCaelarBhaalChild_SET","GLOBAL",1)
+		SetGlobal("C#RtD_CoalCaelarGodBless_SET","GLOBAL",3)
+		SetGlobal("C#RtD_CoalCaelarProtection_SET","GLOBAL",1)
+		SetGlobal("C#RtD_CoalWeakPoison_SET","GLOBAL",1)
+		SetGlobal("C#RtD_UpdateGreatCoalition","bd7100",1)
+		SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)
+END
+>>>>>>>>
+EXTEND_BOTTOM ~bd7100.bcs~ ~...inlined/bd7100_coalition_add.baf~ EVALUATE_BUFFER
+
+
+/////////////////////////////////////////////////////////
+/*  component 5 ~Give PC Informed Reply Options~
+(needs comp 2&3; checks for component 4): Give PC consistency reply options.
+
+    additional reply options to let the PC react to game characters with the knowledge they have in existing dialogues - only if topic is raised in the original dialogue already. Informing the officers is NOT included.
+
+*/
+/////////////////////////////////////////////////////////
+BEGIN @100010 /* ~Give PC Informed Reply Options~ */
+	DESIGNATED 30
+	LABEL "SoDRoadToDiscovery-consistency_reply_options" 
+	REQUIRE_PREDICATE (GAME_INCLUDES ~sod~) @100001 /* ~This mod is only compatible with SoD and EET.~ */
+	FORBID_COMPONENT ~EET_end.tp2~ ~0~ @100004 /* ~This mod needs to be installed before EET_End.~ */
+	FORBID_COMPONENT ~EET_end.tp2~ ~1~ @100004 /* ~This mod needs to be installed before EET_End.~ */
+	REQUIRE_PREDICATE (MOD_IS_INSTALLED ~sodrtd.tp2~ ~0~) @100008 /* ~You need the main component "Tracking System" for this conponent.~ */
+	REQUIRE_PREDICATE (MOD_IS_INSTALLED ~sodrtd.tp2~ ~10~) @100011 /* ~You need the mod component "Consistency Changes to Game Dialogues" for this conponent.~ */
+
+ACTION_IF MOD_IS_INSTALLED ~sodrtd.tp2~ ~20~ THEN BEGIN
+  OUTER_SPRINT ~C#RtD_CoalCaelarPlan_SET_3~ ~SetGlobal("C#RtD_CoalCaelarPlan_SET","GLOBAL",3)~
+END ELSE BEGIN
+  OUTER_SPRINT ~C#RtD_CoalCaelarPlan_SET_3~ ~~
+END
+
+COMPILE EVALUATE_BUFFER ~sodrtd/dialogues/add_consistency_replyoptions.d~ USING ~sodrtd/translations/autotra/%s/dialogue.tra~
+
+
+///////////////////////////////////////////////////////////////////////
+/*
+ component 6 ~PC Can Tell the Officers~
+(needs comp 2): PC can tell the officers.
+
+    add information transfer from PC to officers. i.e. reply options to tell about Caelar's deeper plans, Hephernaan's betrayal, the portal and the needed Bhaal blood. Officers will give short remarks as a reply, no changes to overall gameplay and reactions.
+*/
+///////////////////////////////////////////////////////////////////////
+BEGIN @100012 /* ~PC Can Tell the Officers~ */
+	DESIGNATED 40
+	LABEL "SoDRoadToDiscovery-PC_tells_officers" 
+	REQUIRE_PREDICATE (GAME_INCLUDES ~sod~) @100001 /* ~This mod is only compatible with SoD and EET.~ */
+	FORBID_COMPONENT ~EET_end.tp2~ ~0~ @100004 /* ~This mod needs to be installed before EET_End.~ */
+	FORBID_COMPONENT ~EET_end.tp2~ ~1~ @100004 /* ~This mod needs to be installed before EET_End.~ */
+	REQUIRE_PREDICATE (MOD_IS_INSTALLED ~sodrtd.tp2~ ~0~) @100008 /* ~You need the main component "Tracking System" for this conponent.~ */
+
+WITH_TRA ~sodrtd/translations/autotra/%s/dialogue.tra~ BEGIN
+  INCLUDE ~sodrtd/tpa/include_reply_options.tpa~
+COMPILE EVALUATE_BUFFER ~sodrtd/dialogues/add_inform_officers_basic.d~  
+END
+
+/* consider variable interactions with Lauriel's Themed Tweaks */
+ACTION_IF (MOD_IS_INSTALLED ~sodrtd.tp2~ ~80~) OR (MOD_IS_INSTALLED ~themed_tweaks.tp2~ ~80~) THEN BEGIN
+
+PRINT @100013 /* ~Themed Tweaks component detected.~ */
+
+/* PC can tell about the Hooded Man to Duke Entar */
+
+/* BDENTAR 41 mod added reply option we want to catch:
+@107 /* ~Before I leave, I have some disturbing news.  I received a visitor here in the palace. It seems a mysterious hooded man is stalking me.~ */ 
+BDBELT %state_105% mod added reply option we want to catch:
+@106 /* ~Even more disturbing was the visitor I had.  It seems a mysterious hooded man is stalking me.~ */*/
+
+/* need to grab the corrent installed language of Themed Tweaks component: differentiation whether the component was installed via Themed Tweaks or Road to Discovery */
+ACTION_IF (MOD_IS_INSTALLED ~sodrtd.tp2~ ~80~) THEN BEGIN
+PRINT @100014 /* ~Themed Tweaks component was installed via RtD: patching dialogues.~ */
+WITH_TRA ~sodrtd/translations/autotra/%s/sod_stat_weak_poison.tra~ BEGIN
+  OUTER_SET strref1 = RESOLVE_STR_REF(@107)
+  OUTER_SET strref2 = RESOLVE_STR_REF(@106)
+  OUTER_SET state_105 = STATE_WHICH_SAYS 105 IN ~sodrtd/translations/autotra/%s/sod_stat_weak_poison.tra~ FROM ~bdbelt~
+END
+END
+ACTION_IF (MOD_IS_INSTALLED ~themed_tweaks.tp2~ ~80~) THEN BEGIN
+PRINT @100015 /* ~Themed Tweaks component was installed via Themed Tweaks: patching dialogues.~ */
+WITH_TRA ~themed_tweaks/languages/%s/sod_stat_weak_poison.tra~ BEGIN
+  OUTER_SET strref1 = RESOLVE_STR_REF(@107)
+  OUTER_SET strref2 = RESOLVE_STR_REF(@106)
+  OUTER_SET state_105 = STATE_WHICH_SAYS 105 IN ~themed_tweaks/languages/%s/sod_stat_weak_poison.tra~ FROM ~bdbelt~
+END
+END
+
+/* I'll do this via calling the function separately for every state. I am sure this could be unified into one call but I lack the knowledge to write the needed code. 
+Thank you to argent77 for his endless patience to provide me with the needed functions and examples. */
+/* first call: patch reply options added by Themed Tweaks in a mod added dialogue state to bdentar.dlg:
+BDENTAR BELT_WEAK_POISON @105 /* ~That is disturbing news.~ */
+@106 /* ~Even more disturbing was the visitor I had.  It seems a mysterious hooded man is stalking me.~ */ 
+*/
+<<<<<<<< .../inlined/tt_belt_105.d
+ADD_TRANS_ACTION ~bdbelt~ BEGIN %state_105% END BEGIN %transitions% END ~SetGlobal("C#RtD_CoalMetHoodedMan_SET","GLOBAL",1) SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~
+>>>>>>>>
+// Finding the right state
+OUTER_SET state = state_105
+
+ACTION_IF (state >= 0) BEGIN
+  OUTER_TEXT_SPRINT transitions ~~
+
+  COPY_EXISTING ~bdbelt.dlg~ ~override~
+    SET strref2 = strref2
+
+    LPF GET_DLG_RESPONSES
+      INT_VAR state
+      RET responses
+      RET_ARRAY responses
+    END
+
+    // Traversing available responses
+    FOR (i = 0; i < responses; ++i) BEGIN
+      PATCH_MATCH $responses(~%i%~ ~text~) WITH
+        strref2 BEGIN   // Match found!
+          TEXT_SPRINT transitions ~%transitions% %i%~
+        END
+        DEFAULT
+      END
+    END
+  BUT_ONLY
+
+  // No need to patch if no matching transitions were found
+  ACTION_IF (NOT ~%transitions%~ STR_EQ ~~) BEGIN
+    COMPILE EVAL ~.../inlined/tt_belt_105.d~
+  END
+END
+
+
+/* second case: patch mod added reply options to bdentar state 41 
+strref2 defined above depending whether the component was installed via TT or RtD */
+// The dialog patching code with variable placeholders
+<<<<<<<< .../inlined/bdentar_mod.d
+ADD_TRANS_ACTION ~bdentar~ BEGIN 41 END BEGIN %transitions% END ~SetGlobal("C#RtD_CoalMetHoodedMan_SET","GLOBAL",1) SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~
+>>>>>>>>
+
+// Finding the right state
+OUTER_SET state = 41
+
+ACTION_IF (state >= 0) BEGIN
+  OUTER_TEXT_SPRINT transitions ~~
+
+  COPY_EXISTING ~bdentar.dlg~ ~override~
+    SET strref1 = strref1
+
+    LPF GET_DLG_RESPONSES
+      INT_VAR state
+      RET responses
+      RET_ARRAY responses
+    END
+
+    // Traversing available responses
+    FOR (i = 0; i < responses; ++i) BEGIN
+      PATCH_MATCH $responses(~%i%~ ~text~) WITH
+        strref1 BEGIN   // Match found!
+          TEXT_SPRINT transitions ~%transitions% %i%~
+        END
+        DEFAULT
+      END
+    END
+  BUT_ONLY
+
+  // No need to patch if no matching transitions were found
+  ACTION_IF (NOT ~%transitions%~ STR_EQ ~~) BEGIN
+    COMPILE EVAL ~.../inlined/bdentar_mod.d~
+  END
+END
+
+END //Themed Tweaks
+
+
+///////////////////////////////////////////////////////////////////////
+/*  component 7 ~Add Officers Reactions~
+(needs comp 2&4&6; component 5 recommended if no other mod is installed as replacement): officers react to the threat.
+
+    everything else I wanted to include for reactions of officers to the new knowledge: gathering of the officers upong hearing about the portal and the PC's role to open it, telling the PC to look out for more detail knowledge about Caelar's plans, raction to the knowledge about the portal e.g. changed parley at the Dead Man's Pass. I.e. INCLUDES my writers view on what would be logical reactions of the officers. */
+/* add reactions - PC should be able to tell about what they know and officers should react to knowledge */
+///////////////////////////////////////////////////////////////////////
+
+BEGIN @100016 /* ~Add Officers Reactions~ */
+	DESIGNATED 50
+	LABEL "SoDRoadToDiscovery-officers_reactions" 
+	REQUIRE_PREDICATE (GAME_INCLUDES ~sod~) @100001 /* ~This mod is only compatible with SoD and EET.~ */
+	FORBID_COMPONENT ~EET_end.tp2~ ~0~ @100004 /* ~This mod needs to be installed before EET_End.~ */
+	FORBID_COMPONENT ~EET_end.tp2~ ~1~ @100004 /* ~This mod needs to be installed before EET_End.~ */
+	REQUIRE_PREDICATE (MOD_IS_INSTALLED ~sodrtd.tp2~ ~0~) @100008 /* ~You need the main component "Tracking System" for this conponent.~ */
+	REQUIRE_PREDICATE (MOD_IS_INSTALLED ~sodrtd.tp2~ ~20~) @100017 /* ~You need the mod component "Make Officers Aware" for this conponent.~ */
+	REQUIRE_PREDICATE (MOD_IS_INSTALLED ~sodrtd.tp2~ ~40~) @100018 /* ~You need the mod component "PC can tell the officers" for this conponent.~ */
+	FORBID_COMPONENT ~sodrtd.tp2~ ~70~ @100019 /* ~This mod needs to be installed before component "Add Additional Communication with Officers".~ */
+
+COPY ~sodrtd/areas/.~ ~override~
+
+COPY_EXISTING ~bdnederl.cre~ ~override/c#rtdned.cre~
+WRITE_ASCII 0x248 ~c#rtdned~  #8	 // override
+WRITE_ASCII 0x250 ~~ 	     #8  // class script
+WRITE_ASCII 0x258 ~~ 	     #8  // race script
+WRITE_ASCII 0x260 ~~ 	     #8  // general script
+WRITE_ASCII 0x268 ~~	     #8	 // default script
+
+COPY_EXISTING ~bddelanc.cre~ ~override/c#rtddel.cre~
+WRITE_ASCII 0x248 ~c#rtddel~  #8	 // override
+WRITE_ASCII 0x250 ~~ 	     #8  // class script
+WRITE_ASCII 0x258 ~~ 	     #8  // race script
+WRITE_ASCII 0x260 ~~ 	     #8  // general script
+WRITE_ASCII 0x268 ~~	     #8	 // default script
+
+COPY_EXISTING ~bdstoneh.cre~ ~override/c#rtdsto.cre~
+WRITE_ASCII 0x248 ~c#rtdsto~  #8	 // override
+WRITE_ASCII 0x250 ~~ 	     #8  // class script
+WRITE_ASCII 0x258 ~~ 	     #8  // race script
+WRITE_ASCII 0x260 ~~ 	     #8  // general script
+WRITE_ASCII 0x268 ~~	     #8	 // default script
+
+COMPILE EVALUATE_BUFFER ~sodrtd/scripts/c#rtdcu1.baf~
+COMPILE EVALUATE_BUFFER ~sodrtd/scripts/c#rtdcu2.baf~
+
+INCLUDE ~sodrtd/tpa/state_which_says_instances.tpa~
+COMPILE EVALUATE_BUFFER ~sodrtd/dialogues/add_reactions.d~ USING ~sodrtd/translations/autotra/%s/dialogue.tra~
+
+
+
+///////////////////////////////////////////////////////////////////////
+/*  component 8 (needs comp 2): Additional Info Points.
+
+    more possibilities to ask crusaders, maybe witness another "blessing" in the DC area, etc. [not sure how far I'll go with this.]
+ */
+///////////////////////////////////////////////////////////////////////
+BEGIN @100020 /* ~Additional Info Points~ */
+	DESIGNATED 60
+	LABEL "SoDRoadToDiscovery-additional_infopoints" 
+	REQUIRE_PREDICATE (GAME_INCLUDES ~sod~) @100001 /* ~This mod is only compatible with SoD and EET.~ */
+	FORBID_COMPONENT ~EET_end.tp2~ ~0~ @100004 /* ~This mod needs to be installed before EET_End.~ */
+	FORBID_COMPONENT ~EET_end.tp2~ ~1~ @100004 /* ~This mod needs to be installed before EET_End.~ */
+	REQUIRE_PREDICATE (MOD_IS_INSTALLED ~sodrtd.tp2~ ~0~) @100008 /* ~You need the main component "Tracking System" for this conponent.~ */
+
+ADD_JOURNAL TITLE (@10036) @10032 @10033 @10034 @10035 USING ~sodrtd/translations/autotra/%LANGUAGE%/game.tra~
+
+COPY_EXISTING ~sodrtd/cre/c#rtdblc.cre~ ~override/c#rtdblc.cre~
+SAY NAME1 @100021 /* ~Karlen~ */
+SAY NAME2 @100021 /* ~Karlen~ */
+WRITE_LONG SELECT_COMMON1 (eet_200000 + 69456)
+
+COMPILE EVALUATE_BUFFER ~sodrtd/scripts/c#rtdcu3.baf~
+
+EXTEND_BOTTOM ~bd2000.bcs~ ~sodrtd/scripts/additional_infopoints_bd2000.baf~ EVALUATE_BUFFER
+
+COMPILE EVALUATE_BUFFER ~sodrtd/dialogues/add_additional_infopoints.d~ USING ~sodrtd/translations/autotra/%s/dialogue.tra~
+
+
+
+///////////////////////////////////////////////////////////////////////
+/*  component 9 ~Add Additional Communication with Officers~
+(needs comp 2): adds a character that moves along the campaign from camp to camp for direct communication so the PC can always tell their findings independent on avilability of original game officers due to campaign progress. */
+///////////////////////////////////////////////////////////////////////
+
+BEGIN @100022 /* ~Add Additional Communication with Officers~ */
+	DESIGNATED 70
+	LABEL "SoDRoadToDiscovery-additional_communication_officers" 
+	REQUIRE_PREDICATE (GAME_INCLUDES ~sod~) @100001 /* ~This mod is only compatible with SoD and EET.~ */
+	FORBID_COMPONENT ~EET_end.tp2~ ~0~ @100004 /* ~This mod needs to be installed before EET_End.~ */
+	FORBID_COMPONENT ~EET_end.tp2~ ~1~ @100004 /* ~This mod needs to be installed before EET_End.~ */
+	REQUIRE_PREDICATE (MOD_IS_INSTALLED ~sodrtd.tp2~ ~0~) @100008 /* ~You need the main component "Tracking System" for this conponent.~ */
+	REQUIRE_PREDICATE (MOD_IS_INSTALLED ~sodrtd.tp2~ ~20~) @100017 /* ~You need the mod component "Make Officers Aware" for this conponent.~ */
+	REQUIRE_PREDICATE (MOD_IS_INSTALLED ~sodrtd.tp2~ ~40~) @100018 /* ~You need the mod component "PC can tell the officers" for this conponent.~ */
+
+
+COPY_EXISTING ~bdpatres.cre~ ~override/C#RtDdeg.cre~
+SAY NAME1 @100023 /* ~Sir Deggernaut~ */
+SAY NAME2 @100023 /* ~Sir Deggernaut~ */
+WRITE_LONG SELECT_COMMON1 (eet_200000 + 55323)
+WRITE_LONG SELECT_COMMON2 (eet_200000 + 55323)
+WRITE_ASCII 0x280 ~C#RtDdeg~ #32  // death variable
+WRITE_ASCII 0x2cc ~C#RtDdeg~ #8  // dialog
+WRITE_ASCII 0x248 ~C#RtDdeg~  #8	 // override
+WRITE_ASCII 0x250 ~~ 	     #8  // class script
+WRITE_ASCII 0x268 ~~	     #8	 // default script
+WRITE_BYTE 0x2d 31 // Minor color
+WRITE_BYTE 0x2e 31 // Major color
+WRITE_BYTE 0x32 29 // Hair color
+
+
+COMPILE EVALUATE_BUFFER ~sodrtd/dialogues/add_sir_deggernaut.d~ USING ~sodrtd/translations/autotra/%s/dialogue.tra~
+
+ACTION_IF MOD_IS_INSTALLED ~sodrtd.tp2~ ~50~ THEN BEGIN
+/* Get state for C#RtDdeg %information_03% (in add_sir_deggernaut.d):
+ ~Most shocking indeed - but now we know why Caelar is holding the castle.~ */
+OUTER_SET information_03 = STATE_WHICH_SAYS 266 IN ~sodrtd/translations/autotra/%s/dialogue.tra~ FROM ~C#RtDdeg~
+
+<<<<<<<< ...inlined/add_deggernaut.d
+EXTEND_BOTTOM C#RtDdeg %information_03%
+IF ~!Global("C#RtD_bddelanc_to_4","GLOBAL",0)
+AreaCheck("bd3000") InMyArea("bdnederl") InMyArea("bddelanc") InMyArea("bdstoneh")~ THEN + gather_officers
+END
+APPEND C#RtDdeg
+IF ~~ THEN gather_officers
+SAY @263 /* ~Follow me. This is something the officers will want to discuss immediately.~ */
+IF ~~ THEN DO ~ClearAllActions() StartCutSceneMode() StartCutScene("c#rtdcu1")~ EXIT
+END
+END //APPEND
+>>>>>>>>
+COMPILE EVALUATE_BUFFER ~...inlined/add_deggernaut.d~ USING ~sodrtd/translations/autotra/%s/dialogue.tra~
+
+
+END
+
+
+/* bd1000.bcs */
+<<<<<<<< ...inlined/bd1000_deggernaut.baf
+IF
+	Global("C#RtD_SpawnDeggernaut","bd1000",0)
+THEN
+	RESPONSE #100
+		CreateCreature("C#RtDdeg",[622.3442],0)
+		SetGlobal("C#RtD_SpawnDeggernaut","bd1000",1)
+END
+
+IF
+	GlobalGT("BD_plot","global",200)
+	InMyArea("C#RtDdeg")
+THEN
+	RESPONSE #100
+		ActionOverride("C#RtDdeg",DestroySelf())
+END
+>>>>>>>>
+EXTEND_BOTTOM ~bd1000.bcs~ ~...inlined/bd1000_deggernaut.baf~ EVALUATE_BUFFER
+
+/* bd3000.bcs */
+<<<<<<<< ...inlined/bd3000_deggernaut.baf
+IF
+	Global("C#RtD_SpawnDeggernaut","bd3000",0)
+THEN
+	RESPONSE #100
+		CreateCreature("C#RtDdeg",[2000.1506],6)
+		SetGlobal("C#RtD_SpawnDeggernaut","bd3000",1)
+		Continue()
+END
+IF
+	GlobalGT("bd_plot","global",409)
+	InMyArea("C#RtDdeg")
+THEN
+	RESPONSE #100
+		ActionOverride("C#RtDdeg",DestroySelf())
+		Continue()
+END
+>>>>>>>>
+EXTEND_TOP ~bd3000.bcs~ ~...inlined/bd3000_deggernaut.baf~ EVALUATE_BUFFER
+
+/* bd4000.bcs */
+<<<<<<<< ...inlined/bd4000_deggernaut.baf
+IF
+	Global("C#RtD_SpawnDeggernaut","bd4000",0)
+THEN
+	RESPONSE #100
+		CreateCreature("C#RtDdeg",[29.3146],12)
+		SetGlobal("C#RtD_SpawnDeggernaut","bd4000",1)
+END
+IF
+	GlobalGT("bd_plot","global",494)
+	InMyArea("C#RtDdeg")
+THEN
+	RESPONSE #100
+		ActionOverride("C#RtDdeg",DestroySelf())
+END
+>>>>>>>>
+EXTEND_BOTTOM ~bd4000.bcs~ ~...inlined/bd4000_deggernaut.baf~ EVALUATE_BUFFER
+
+/* bd7100.bcs */
+<<<<<<<< ...inlined/bd7100_deggernaut.baf
+IF
+	Global("C#RtD_SpawnDeggernaut","bd7100",0)
+THEN
+	RESPONSE #100
+		CreateCreature("C#RtDdeg",[373.3390],12)
+		SetGlobal("C#RtD_SpawnDeggernaut","bd7100",1)
+END
+IF
+	GlobalGT("bd_plot","global",304)
+	InMyArea("C#RtDdeg")
+THEN
+	RESPONSE #100
+		ActionOverride("C#RtDdeg",DestroySelf())
+END
+>>>>>>>>
+EXTEND_BOTTOM ~bd7100.bcs~ ~...inlined/bd7100_deggernaut.baf~ EVALUATE_BUFFER

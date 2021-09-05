@@ -1,0 +1,29 @@
+/* set the overal check variables. This is done ONCE */
+
+/* "C#RtD_CaelarBhaalChild" */
+
+/* 3 - knows that [rumors that Caelar is a child of Bhaal] is not true */
+IF
+	GlobalLT("C#RtD_CaelarBhaalChild","GLOBAL",3)
+	Global("C#RtD_CaelarBhaalChild_SET","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CaelarBhaalChild","GLOBAL",3)
+END
+/* 2 - reasons / concludes / speculates that [rumors that Caelar is a child of Bhaal] is not true */
+IF
+	GlobalLT("C#RtD_CaelarBhaalChild","GLOBAL",2)
+	Global("C#RtD_CaelarBhaalChild_SET","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CaelarBhaalChild","GLOBAL",2)
+END
+/* 1 - heard rumors that Caelar is a child of Bhaal */
+IF
+	Global("C#RtD_CaelarBhaalChild","GLOBAL",0)
+	Global("C#RtD_CaelarBhaalChild_SET","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CaelarBhaalChild","GLOBAL",1)
+END
+

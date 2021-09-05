@@ -1,0 +1,21 @@
+/* set the overal check variables. This is done ONCE */
+
+/* "C#RtD_MetHoodedMan" */
+
+/* 2 - met Hooded Man more than once */
+IF
+	GlobalLT("C#RtD_MetHoodedMan","GLOBAL",2)
+	GlobalGT("C#RtD_MetHoodedMan_SET","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_MetHoodedMan","GLOBAL",2)
+END
+/* 1 - met Hooded Man once */
+IF
+	Global("C#RtD_MetHoodedMan","GLOBAL",0)
+	Global("C#RtD_MetHoodedMan_SET","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_MetHoodedMan","GLOBAL",1)
+END
+

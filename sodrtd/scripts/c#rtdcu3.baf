@@ -1,0 +1,16 @@
+// c#rtdcu3.baf - group rests until dusk
+
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId("C#RtDblc")
+        FadeToColor([20.0],0)
+        Wait(2)
+	DayNight(22)
+	MultiPlayerSync()
+	FadeFromColor([20.0],0)
+        Wait(1)
+	DisplayStringHead(Player1,~You rested until dusk. Caelar's priest should perform the blessing ritual any minute near the great fire place.~)
+	EndCutSceneMode()
+END

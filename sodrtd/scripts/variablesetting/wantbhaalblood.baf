@@ -1,0 +1,28 @@
+/* set the overal check variables. This is done ONCE */
+
+/* "C#RtD_WantBhaalBlood" */
+/* 3 - knows that Caelar / Hephernaan want the PC's Bhaal child blood for opening the portal -- also for [C#RtD_KnowsPortalBlood = 4], but this simplifies checks in dialogues and scripts.  */
+IF
+	GlobalLT("C#RtD_WantBhaalBlood","GLOBAL",3)
+	Global("C#RtD_WantBhaalBlood_SET","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_WantBhaalBlood","GLOBAL",3)
+END
+/* 2 - reasons / concludes / speculates that Caelar / Hephernaan want the PC's Bhaal child blood for opening the portal -- also for [C#RtD_KnowsPortalBlood = 3], but this simplifies checks in dialogues and scripts.  */
+IF
+	GlobalLT("C#RtD_WantBhaalBlood","GLOBAL",2)
+	Global("C#RtD_WantBhaalBlood_SET","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_WantBhaalBlood","GLOBAL",1)
+END
+/* 1 - knows that Caelar / Hephernaan want the PC's Bhaal child blood [for something]  */
+IF
+	Global("C#RtD_WantBhaalBlood","GLOBAL",0)
+	Global("C#RtD_WantBhaalBlood_SET","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_WantBhaalBlood","GLOBAL",1)
+END
+

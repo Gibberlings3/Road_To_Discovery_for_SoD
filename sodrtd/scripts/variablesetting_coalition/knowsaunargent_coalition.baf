@@ -1,0 +1,56 @@
+/* set the overal check variables. This is done ONCE */
+
+/* "C#RtD_CoalKnowsAunArgent" */
+
+/* 6 - knows that Aun took place for Caelar in Avernus - heard it elsewhere */
+IF
+	GlobalLT("C#RtD_CoalKnowsAunArgent","GLOBAL",6)
+	Global("C#RtD_CoalKnowsAunArgent_SET","GLOBAL",6)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalKnowsAunArgent","GLOBAL",6)
+END
+
+/* 5 - knows that Aun took place for Caelar in Avernus - PC told them */
+IF
+	GlobalLT("C#RtD_CoalKnowsAunArgent","GLOBAL",5)
+	Global("C#RtD_CoalKnowsAunArgent_SET","GLOBAL",5)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalKnowsAunArgent","GLOBAL",5)
+END
+
+/* 4 - knows that Caelar was in Avernus and came back at the same time Aun vanished - heard it elsewhere */
+IF
+	GlobalLT("C#RtD_CoalKnowsAunArgent","GLOBAL",4)
+	Global("C#RtD_CoalKnowsAunArgent_SET","GLOBAL",4)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalKnowsAunArgent","GLOBAL",4)
+END
+
+/* 3 - knows that Caelar was in Avernus and came back at the same time Aun vanished - PC told them */
+IF
+	GlobalLT("C#RtD_CoalKnowsAunArgent","GLOBAL",3)
+	Global("C#RtD_CoalKnowsAunArgent_SET","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalKnowsAunArgent","GLOBAL",3)
+END
+/* 2 - heard rumors about Caelar being disgraced from Aster Order at the same time as Aon vanished - heard it elsewhere */
+IF
+	GlobalLT("C#RtD_CoalKnowsAunArgent","GLOBAL",2)
+	Global("C#RtD_CoalKnowsAunArgent_SET","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalKnowsAunArgent","GLOBAL",2)
+END
+/* 1 - heard rumors about Caelar being disgraced from Aster Order at the same time as Aun vanished - PC told them */
+IF
+	Global("C#RtD_CoalKnowsAunArgent","GLOBAL",0)
+	Global("C#RtD_CoalKnowsAunArgent_SET","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalKnowsAunArgent","GLOBAL",1)
+END
+

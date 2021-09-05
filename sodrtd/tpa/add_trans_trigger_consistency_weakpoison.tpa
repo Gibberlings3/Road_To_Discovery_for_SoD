@@ -1,0 +1,63 @@
+/* disable reply options about "Caelar wanted to have me killed */
+
+/* bddelanc */
+<<<<<<<< .../inlined/sodrtd_bddelanc_poison.d
+/* #37875 /* ~I don't understand. Caelar tried to have me killed in Baldur's Gate. Now she tries to win me over? It makes no sense.~ */ */
+ADD_TRANS_TRIGGER bddelanc 55 ~Global("C#RtD_CaelarKidnap","GLOBAL",0)~ DO %responses_55% //
+>>>>>>>>
+  
+OUTER_SET strref_37875 = eet_200000 + 37875
+
+COPY_EXISTING ~bddelanc.DLG~ ~override~
+  LPF GET_RESPONSE_STRREFS
+    INT_VAR state = 55
+    RET strrefs
+    RET_ARRAY strrefs
+  END
+
+  // assembling response list
+  TEXT_SPRINT responses_55 ~~
+  FOR (i = 0; i < strrefs; ++i) BEGIN
+    PATCH_IF ($strrefs(~%i%~) = strref_37875) BEGIN
+      TEXT_SPRINT responses_55 ~%responses_55% %i%~
+    END
+  END
+
+  // safety measure if no matching responses are found
+  PATCH_IF (~%responses_55%~ STR_EQ ~~) BEGIN
+    TEXT_SPRINT responses_55 "IF ~False()~"
+  END
+BUT_ONLY
+
+COMPILE EVAL ~.../inlined/sodrtd_bddelanc_poison.d~
+
+/* bdnederl */
+<<<<<<<< .../inlined/sodrtd_bdnederl_poison.d
+/* #37871 /* ~I don't understand. Caelar tried to have me killed in Baldur's Gate. Now she tries to win me over? It makes no sense.~ */ */
+ADD_TRANS_TRIGGER bdnederl 46 ~Global("C#RtD_CaelarKidnap","GLOBAL",0)~ DO %responses_46% //
+>>>>>>>>
+  
+OUTER_SET strref_37871 = eet_200000 + 37871
+
+COPY_EXISTING ~bdnederl.DLG~ ~override~
+  LPF GET_RESPONSE_STRREFS
+    INT_VAR state = 46
+    RET strrefs
+    RET_ARRAY strrefs
+  END
+
+  // assembling response list
+  TEXT_SPRINT responses_46 ~~
+  FOR (i = 0; i < strrefs; ++i) BEGIN
+    PATCH_IF ($strrefs(~%i%~) = strref_37871) BEGIN
+      TEXT_SPRINT responses_46 ~%responses_46% %i%~
+    END
+  END
+
+  // safety measure if no matching responses are found
+  PATCH_IF (~%responses_46%~ STR_EQ ~~) BEGIN
+    TEXT_SPRINT responses_46 "IF ~False()~"
+  END
+BUT_ONLY
+
+COMPILE EVAL ~.../inlined/sodrtd_bdnederl_poison.d~

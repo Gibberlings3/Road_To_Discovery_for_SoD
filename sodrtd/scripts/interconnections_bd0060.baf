@@ -1,0 +1,29 @@
+/*
+Global("#L_SoDStat_TreatiseFound","GLOBAL",2): PC has found the book 'A Historical Treatise of Dragonspear Castle 2 = read
+-> treatise area BD0060.BCS
+SetGlobal("C#RtD_KnowsPortalBlood_SET","GLOBAL",2)
+SetGlobal("C#RtD_CaelarBhaalChild_SET","GLOBAL",2)
+*/
+
+IF
+	Global("#L_SoDStat_TreatiseFound","GLOBAL",2)
+	!Global("C#RtD_KnowsPortalBlood_SET","GLOBAL",3)
+	GlobalLT("C#RtD_KnowsPortalBlood","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_KnowsPortalBlood_SET","GLOBAL",3)
+		SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)
+		Continue()
+END
+
+/* in case the part about Caelar's Bhaal heritage gets splitted from the dialogue this needs to be adjusted, too */
+IF
+	Global("#L_SoDStat_TreatiseFound","GLOBAL",2)
+	!Global("C#RtD_CaelarBhaalChild_SET","GLOBAL",2)
+	GlobalLT("C#RtD_CaelarBhaalChild","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CaelarBhaalChild_SET","GLOBAL",2)
+		SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)
+		Continue()
+END

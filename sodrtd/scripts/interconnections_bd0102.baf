@@ -1,0 +1,42 @@
+/*
+Global("#L_SoDStat_WeakPoison","GLOBAL",1): PC knows Caelar didn't try to kill him/her [and knows about the weak poison from Duke Liia]
+-> into area script of Duchal Palace irst floor bd0102.bcs
+SetGlobal("C#RtD_CaelarKidnap_SET","GLOBAL",1)
+SetGlobal("C#RtD_WeakPoison_SET","GLOBAL",1)
+SetGlobal("C#RtD_CaelarWantsPC_SET","GLOBAL",1)
+*/
+
+
+IF
+	Global("#L_SoDStat_WeakPoison","GLOBAL",1)
+	!Global("C#RtD_CaelarKidnap_SET","GLOBAL",1)
+	Global("C#RtD_CaelarKidnap","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CaelarKidnap_SET","GLOBAL",1)
+		SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)
+		Continue()
+END
+
+IF
+	Global("#L_SoDStat_WeakPoison","GLOBAL",1)
+	!Global("C#RtD_CaelarWantsPC_SET","GLOBAL",1)
+	Global("C#RtD_CaelarWantsPC","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CaelarWantsPC_SET","GLOBAL",1)
+		SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)
+END
+
+IF
+	Global("#L_SoDStat_WeakPoison","GLOBAL",1)
+	!Global("C#RtD_WeakPoison_SET","GLOBAL",1)
+	Global("C#RtD_WeakPoison","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_WeakPoison_SET","GLOBAL",1)
+		SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)
+		Continue()
+END
+
+

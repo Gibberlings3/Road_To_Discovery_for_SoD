@@ -1,0 +1,101 @@
+/**
+ * A patch function that returns all responses for a given state as an array.
+ * INT_VAR state        The desired dialog state.
+ * RET responses        Number of entries in the response array.
+ * RET_ARRAY responses  The response array as indexed array. It provides the following
+ *                      response elements via additional keywords:
+ *                      flags:      Response flags as integer
+ *                      text:       Strref of the response text (-1 if not available)
+ *                      journal:    Strref of the journal text (-1 if not available)
+ *                      trigger:    The response trigger as a string (empty string if not available)
+ *                      action:     The response action as a string (empty string if not available)
+ *                      next_dlg:   The DLG resref containing the next state in the conversation.
+ *                      next_state: Index of the next dialog state within the DLG resref specified by "next_dlg".
+ *
+ *                      Example: $response(~0~ ~text~) returns the text strref of the first response
+ */
+DEFINE_PATCH_FUNCTION GET_DLG_RESPONSES
+INT_VAR
+  state = 0
+RET
+  responses
+RET_ARRAY
+  responses
+BEGIN
+  SET responses = 0
+  SET $responses(~0~) = 0 // workaround for WeiDU 246 bug
+
+  READ_ASCII 0 sig (8)
+  PATCH_IF (~%sig%~ STR_EQ ~DLG V1.0~) BEGIN
+    READ_LONG 0x08 num_states
+    READ_LONG 0x0c ofs_states
+    READ_LONG 0x10 num_responses
+    READ_LONG 0x14 ofs_responses
+    READ_LONG 0x20 ofs_response_triggers
+    READ_LONG 0x24 num_response_triggers
+    READ_LONG 0x28 ofs_actions
+    READ_LONG 0x2c num_actions
+    PATCH_IF (state >= 0 && state < num_states) BEGIN
+      SET ofs_state = ofs_states + (state * 16)
+      READ_LONG (ofs_state + 4) idx_first_response
+      READ_LONG (ofs_state + 8) num_response
+      FOR (response_idx = 0; response_idx < num_response && response_idx < num_responses; ++response_idx) BEGIN
+        SET ofs_response = ofs_responses + (idx_first_response + response_idx) * 32
+
+        // response flags
+        READ_LONG ofs_response flags
+        SET $responses(~%responses%~ ~flags~) = flags
+
+        // response text
+        PATCH_IF (flags & BIT0) BEGIN
+          SET $responses(~%responses%~ ~text~) = LONG_AT (ofs_response + 0x4)
+        END ELSE BEGIN
+          SET $responses(~%responses%~ ~text~) = "-1"
+        END
+
+        // journal text
+        PATCH_IF (flags & (BIT4 | BIT6 | BIT7 | BIT8)) BEGIN
+          SET $responses(~%responses%~ ~journal~) = LONG_AT (ofs_response + 0x8)
+        END ELSE BEGIN
+          SET $responses(~%responses%~ ~journal~) = "-1"
+        END
+
+        // trigger
+        READ_LONG (ofs_response + 0xc) idx
+        PATCH_IF ((flags & BIT1) && (idx >= 0 && idx < num_response_triggers)) BEGIN
+          READ_LONG (ofs_response_triggers + idx * 8) ofs_trigger
+          READ_LONG (ofs_response_triggers + idx * 8 + 4) len
+          READ_ASCII ofs_trigger trigger (len) NULL
+          INNER_PATCH_SAVE trigger ~%trigger%~ BEGIN REPLACE_TEXTUALLY ~[%WNL%]+~ ~ ~ END
+          TEXT_SPRINT $responses(~%responses%~ ~trigger~) ~%trigger%~
+        END ELSE BEGIN
+          TEXT_SPRINT $responses(~%responses%~ ~trigger~) ~~
+        END
+
+        // action
+        READ_LONG (ofs_response + 0x10) idx
+        PATCH_IF ((flags & BIT2) && (idx >= 0 && idx < num_actions)) BEGIN
+          READ_LONG (ofs_actions + idx * 8) ofs_action
+          READ_LONG (ofs_actions + idx * 8 + 4) len
+          READ_ASCII ofs_action action (len) NULL
+          INNER_PATCH_SAVE action ~%action%~ BEGIN REPLACE_TEXTUALLY ~[%WNL%]+~ ~ ~ END
+          TEXT_SPRINT $responses(~%responses%~ ~action~) ~%action%~
+        END ELSE BEGIN
+          TEXT_SPRINT $responses(~%responses%~ ~action~) ~~
+        END
+
+        // next state
+        PATCH_IF (flags & BIT3) BEGIN
+          TEXT_SPRINT $responses(~%responses%~ ~next_dlg~) ~~
+          SET $responses(~%responses%~ ~next_state~) = "-1"
+        END ELSE BEGIN
+          READ_ASCII (ofs_response + 0x14) next_dlg (8) NULL
+          TEXT_SPRINT $responses(~%responses%~ ~next_dlg~) ~%next_dlg%~
+          SET $responses(~%responses%~ ~next_state~) = LONG_AT (ofs_response + 0x1c)
+        END
+
+        SET responses += 1
+      END
+    END
+  END
+END

@@ -1,0 +1,52 @@
+/* set the overal check variables. This is done ONCE */
+
+/* "C#RtD_CoalWantBhaalBlood" */
+/* 6 - knows that Caelar / Hephernaan want the PC's Bhaal child blood for opening the portal - heard it elsewhere */
+IF
+	GlobalLT("C#RtD_CoalWantBhaalBlood","GLOBAL",6)
+	Global("C#RtD_CoalWantBhaalBlood_SET","GLOBAL",6)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalWantBhaalBlood","GLOBAL",6)
+END
+/* 5 - knows that Caelar / Hephernaan want the PC's Bhaal child blood for opening the portal - PC told them  - PC told them */
+IF
+	GlobalLT("C#RtD_CoalWantBhaalBlood","GLOBAL",5)
+	Global("C#RtD_CoalWantBhaalBlood_SET","GLOBAL",5)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalWantBhaalBlood","GLOBAL",5)
+END
+/* 4 - reasons / concludes / speculates that Caelar / Hephernaan want the PC's Bhaal child blood for opening the portal- heard it elsewhere */
+IF
+	GlobalLT("C#RtD_CoalWantBhaalBlood","GLOBAL",4)
+	Global("C#RtD_CoalWantBhaalBlood_SET","GLOBAL",4)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalWantBhaalBlood","GLOBAL",4)
+END
+/* 3 - reasons / concludes / speculates that Caelar / Hephernaan want the PC's Bhaal child blood for opening the portal - PC told them */
+IF
+	GlobalLT("C#RtD_CoalWantBhaalBlood","GLOBAL",3)
+	Global("C#RtD_CoalWantBhaalBlood_SET","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalWantBhaalBlood","GLOBAL",3)
+END
+/* 2 - knows that Caelar / Hephernaan want the PC's Bhaal child blood - heard it elsewhere */
+IF
+	GlobalLT("C#RtD_CoalWantBhaalBlood","GLOBAL",2)
+	Global("C#RtD_CoalWantBhaalBlood_SET","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalWantBhaalBlood","GLOBAL",2)
+END
+/* 1 - knows that Caelar / Hephernaan want the PC's Bhaal child blood - PC told them */
+IF
+	Global("C#RtD_CoalWantBhaalBlood","GLOBAL",0)
+	Global("C#RtD_CoalWantBhaalBlood_SET","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalWantBhaalBlood","GLOBAL",1)
+END
+

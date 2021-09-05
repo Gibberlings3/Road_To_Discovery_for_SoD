@@ -1,0 +1,68 @@
+// PC learns it's a weak poison that was used
+@100	= ~They used a weak poison?  That makes no...they weren't trying to kill me.  They were trying to capture me.~
+@101	= ~Hmm, you may be right.~
+
+// Final conversation with the Dukes before leaving the palace for Dragonspear
+@102	= ~Before I leave, I need to point out that Caelar's minions weren't here to kill me.~
+@103	= ~Yes, the poison they used was far too weak to accomplish that.~
+@104	= ~Their purpose was to capture me.  I have no idea why.~
+@105	= ~That is disturbing news.~
+@106	= ~Even more disturbing was the visitor I had.  It seems a mysterious hooded man is stalking me.~
+@107	= ~Before I leave, I have some disturbing news.  I received a visitor here in the palace. It seems a mysterious hooded man is stalking me.~
+@108	= ~Could it be the same that commissioned the theft of Sarevok's sword?~
+@109	= ~Well, he certainly fit the description.  Mysterious...creepy is closer to the truth.  And ominous.~
+@110	= ~I must apologize, <CHARNAME>.  It seems our palace security never ceases to fail you.~
+
+// Conversation with Eltan
+@111	= ~I'm still not accustomed to people attacking me for no apparent reason, but I could be worse.~
+@112	= ~Not for long. Caelar tried to poison me. She will answer for it.~
+
+// Corwin while in town
+@113	= ~Someone tried to poison me tonight and I'm in a bar. Hells no, I'm not finished.~
+
+// Corwin while in the group
+@114	= ~Believe this, if nothing else: Caelar Argent tried to poison me and I will pay her back in kind. If you would see the Shining Lady fall, then we are allies, regardless of our history or bloodlines.~
+
+// Corwin while in the camps
+@115	= ~Caelar attacked me and nearly killed my friend Imoen. That cannot stand.~
+
+// Dynaheir while in town
+@116	= ~She tried to poison me. She very nearly killed someone I care deeply for. I can't let that stand.~
+@117	= ~I've little choice in the matter. She sent assassins to try and poison me this morning.~
+@118	= ~Caelar the Shining Lady tried to poison me. I can't let that stand.~
+@119	= ~As would I. Unfortunately, all I really know of her is that she's driven thousands from their homes and she attacked me and Imoen.~
+@120	= ~She attacked me and Imoen, and she will pay for that mistake. That is all you need to know.~
+
+// Garrick while in town
+@121	= ~We've yet to meet, but I know Caelar all too well. Agents in her service attacked me.~
+@122	= ~I know of it, yes, but not enough. Assassins bearing Caelar's mark attacked me in the ducal palace, no less.~
+@123	= ~She attacked the hero of Baldur's Gate? A bold move, but a risky one. Failure would surely draw you into the conflict...~
+
+
+// Rasaad while in town
+@124	= ~Agents of Caelar Argent attacked me and Imoen—at the Ducal Palace.~
+@125	= ~The assassins who attacked me and Imoen a few hours ago. Though it must be said they trouble me less now than they did then.~
+@126	= ~Any day you can get to breakfast without assassins trying to poison you is a good day. Or so I've heard.~
+@127	= ~The day's first meal is important. It sets the tone for what is to come— Wait. Are you saying someone tried to poison you?~
+@128	= ~Assassins in service to Caelar Argent penetrated the Ducal Palace and attempted to poison me.~
+@129	= ~Like them, my life has suffered from her malign influence. Her assassins tried to poison me earlier. They nearly succeeded.~
+@130	= ~Has she sent multiple assassins to poison any of them? Because that's what she did to me.~
+@131	= ~These people have run from their troubles. I intend to face mine. Caelar tried to poison me this morning.~
+@132	= ~You say Caelar Argent attacked you? But why?~
+@133	= ~Imoen was nearly killed earlier this evening. But she wasn't, so all things considered I guess I'm doing well.~
+
+// Safana while in town
+@134	= ~Earlier this night, assassins penetrated the Ducal Palace and attempted to poison me. They were sent by Caelar Argent.~
+
+// Edwin while in first camp
+@135	= ~Once again, I find myself dragged into events. Caelar Argent seeks to capture me.~
+@136	= ~Caelar Argent tried to poison me, and now I'm trying to pay her back. Childish, yes, but in my defense, she started it.~
+@137	= ~I know not why, but Caelar Argent tried to poison me. She failed. Now she must pay for her error.~
+@138	= ~For reasons I don't care to go into, Caelar Argent tried to poison me. She failed. Now she must pay for her error.~
+@139	= ~I am <CHARNAME>. The Shining Lady tried to poison me. Obviously, she failed, and will regret that failure when I find her at Dragonspear Castle.~
+@140	= ~The Shining Lady attacked me. Now it is my turn.~
+@141	= ~I am <CHARNAME>. I know not why, but the Shining Lady has targeted me. She will pay a heavy price for that error.~
+@142	= ~I am <CHARNAME>. For reasons I don't care to go into, the Shining Lady has targeted me. She will pay a heavy price for that error.~
+
+
+

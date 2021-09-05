@@ -1,0 +1,69 @@
+/* set the overal check variables. This is done ONCE */
+
+/* "C#RtD_CoalKnowsPortalBlood" */
+/* 8 - knows that this Caelar / Hephernaan are planning PC's blood for this - heard it elsewhere */
+IF
+	GlobalLT("C#RtD_CoalKnowsPortalBlood","GLOBAL",8)
+	Global("C#RtD_CoalKnowsPortalBlood_SET","GLOBAL",8)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalKnowsPortalBlood","GLOBAL",8)
+END
+/* 7 - knows that this Caelar / Hephernaan are planning PC's blood for this - PC told them */
+IF
+	GlobalLT("C#RtD_CoalKnowsPortalBlood","GLOBAL",7)
+	Global("C#RtD_CoalKnowsPortalBlood_SET","GLOBAL",7)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalKnowsPortalBlood","GLOBAL",7)
+END
+/* 6 - reasons / concludes / speculates that Caelar / Hephernaan want PC's blood for [open portal to Avernus] - heard it elsewhere */
+IF
+	GlobalLT("C#RtD_CoalKnowsPortalBlood","GLOBAL",6)
+	Global("C#RtD_CoalKnowsPortalBlood_SET","GLOBAL",6)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalKnowsPortalBlood","GLOBAL",6)
+END
+/* 5 - reasons / concludes / speculates that Caelar / Hephernaan want PC's blood for [open portal to Avernus] - PC told them */
+IF
+	GlobalLT("C#RtD_CoalKnowsPortalBlood","GLOBAL",5)
+	Global("C#RtD_CoalKnowsPortalBlood_SET","GLOBAL",5)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalKnowsPortalBlood","GLOBAL",5)
+END
+
+/* 4 - knows that blood of Bhaal child is needed/sufficient to open portal to Avernus under DC - heard it elsewhere */
+IF
+	GlobalLT("C#RtD_CoalKnowsPortalBlood","GLOBAL",4)
+	Global("C#RtD_CoalKnowsPortalBlood_SET","GLOBAL",4)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalKnowsPortalBlood","GLOBAL",4)
+END
+/* 3 - knows that blood of Bhaal child is needed/sufficient to open portal to Avernus under DC - PC told them */
+IF
+	GlobalLT("C#RtD_CoalKnowsPortalBlood","GLOBAL",3)
+	Global("C#RtD_CoalKnowsPortalBlood_SET","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalKnowsPortalBlood","GLOBAL",3)
+END
+/* 2 - heard about a portal/rift in Dragonspear Castle - heard it elsewhere */
+IF
+	GlobalLT("C#RtD_CoalKnowsPortalBlood","GLOBAL",2)
+	Global("C#RtD_CoalKnowsPortalBlood_SET","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalKnowsPortalBlood","GLOBAL",2)
+END
+/* 1 - heard about a portal/rift in Dragonspear Castle - PC told them */
+IF
+	Global("C#RtD_CoalKnowsPortalBlood","GLOBAL",0)
+	Global("C#RtD_CoalKnowsPortalBlood_SET","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalKnowsPortalBlood","GLOBAL",1)
+END
+

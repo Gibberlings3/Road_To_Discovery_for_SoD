@@ -1,0 +1,254 @@
+/////////////////////////////////////////////////////////////////
+/* 
+"C#RtD_CoalWantBhaalBlood" -> 3
+3 - reasons / concludes / speculates that Caelar / Hephernaan want the PC's Bhaal child blood for opening the portal - PC told them
+*/
+/*
+IF
+"C#RtD_CoalKnowsPortalBlood" = 5
+5 - reasons / concludes / speculates that Caelar / Hephernaan want PC's blood for [open portal to Avernus] - PC told them
+THEN
+"C#RtD_CoalWantBhaalBlood" -> 3
+3 - reasons / concludes / speculates that Caelar / Hephernaan want the PC's Bhaal child blood for opening the portal - PC told them
+*/
+IF
+	Global("C#RtD_CoalKnowsPortalBlood","GLOBAL",5)
+	GlobalLT("C#RtD_CoalWantBhaalBlood","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalWantBhaalBlood","GLOBAL",3)
+END
+
+/////////////////////////////////////////////////////////////////
+/* 
+"C#RtD_CoalWantBhaalBlood" -> 4
+4 - reasons / concludes / speculates that Caelar / Hephernaan want the PC's Bhaal child blood for opening the portal- heard it elsewhere
+*/
+/*
+IF
+"C#RtD_CoalKnowsPortalBlood" = 6
+6 - reasons / concludes / speculates that Caelar / Hephernaan want PC's blood for [open portal to Avernus] - heard it elsewhere
+THEN
+"C#RtD_CoalWantBhaalBlood" -> 4
+4 - reasons / concludes / speculates that Caelar / Hephernaan want the PC's Bhaal child blood for opening the portal- heard it elsewhere
+*/
+IF
+	Global("C#RtD_CoalKnowsPortalBlood","GLOBAL",6)
+	GlobalLT("C#RtD_CoalWantBhaalBlood","GLOBAL",4)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalWantBhaalBlood","GLOBAL",4)
+END
+
+/////////////////////////////////////////////////////////////////
+/* 
+"C#RtD_CoalWantBhaalBlood" -> 5
+5 - knows that Caelar / Hephernaan want the PC's Bhaal child blood for opening the portal - PC told them  - PC told them
+*/
+/*
+IF
+"C#RtD_CoalKnowsPortalBlood" = 7
+7 - knows that this Caelar / Hephernaan are planning PC's blood for this - PC told them
+THEN
+"C#RtD_CoalWantBhaalBlood" -> 5
+5 - knows that Caelar / Hephernaan want the PC's Bhaal child blood for opening the portal - PC told them  - PC told them
+*/
+IF
+	Global("C#RtD_CoalKnowsPortalBlood","GLOBAL",7)
+	GlobalLT("C#RtD_CoalWantBhaalBlood","GLOBAL",5)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalWantBhaalBlood","GLOBAL",5)
+END
+
+/////////////////////////////////////////////////////////////////
+/* 
+"C#RtD_CoalWantBhaalBlood" -> 6
+6 - knows that Caelar / Hephernaan want the PC's Bhaal child blood for opening the portal - heard it elsewhere
+*/
+/*
+IF
+"C#RtD_CoalKnowsPortalBlood" = 8
+8 - knows that this Caelar / Hephernaan are planning PC's blood for this - heard it elsewhere
+THEN
+"C#RtD_CoalWantBhaalBlood" -> 6
+6 - knows that Caelar / Hephernaan want the PC's Bhaal child blood for opening the portal - heard it elsewhere
+*/
+IF
+	Global("C#RtD_CoalKnowsPortalBlood","GLOBAL",8)
+	GlobalLT("C#RtD_CoalWantBhaalBlood","GLOBAL",6)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalWantBhaalBlood","GLOBAL",6)
+END
+
+
+/////////////////////////////////////////////////////////////////
+/* 
+"C#RtD_CoalKnowsPortalBlood" -> 5
+5 - reasons / concludes / speculates that Caelar / Hephernaan want PC's blood for [open portal to Avernus] - PC told them
+*/
+/*
+IF
+"C#RtD_CoalWantBhaalBlood" = 3
+3 - reasons / concludes / speculates that Caelar / Hephernaan want the PC's Bhaal child blood for opening the portal - PC told them
+THEN
+"C#RtD_CoalKnowsPortalBlood" -> 5
+5 - reasons / concludes / speculates that Caelar / Hephernaan want PC's blood for [open portal to Avernus] - PC told them
+*/
+IF
+	Global("C#RtD_CoalWantBhaalBlood","GLOBAL",3)
+	GlobalLT("C#RtD_CoalKnowsPortalBlood","GLOBAL",5)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalKnowsPortalBlood","GLOBAL",5)
+END
+
+/////////////////////////////////////////////////////////////////
+/* 
+"C#RtD_CoalKnowsPortalBlood" -> 6
+6 - reasons / concludes / speculates that Caelar / Hephernaan want PC's blood for [open portal to Avernus] - heard it elsewhere
+*/
+/*
+IF
+"C#RtD_CoalWantBhaalBlood" = 4
+4 - reasons / concludes / speculates that Caelar / Hephernaan want the PC's Bhaal child blood for opening the portal- heard it elsewhere
+THEN
+"C#RtD_CoalKnowsPortalBlood" -> 6
+6 - reasons / concludes / speculates that Caelar / Hephernaan want PC's blood for [open portal to Avernus] - heard it elsewhere
+*/
+IF
+	Global("C#RtD_CoalWantBhaalBlood","GLOBAL",4)
+	GlobalLT("C#RtD_CoalKnowsPortalBlood","GLOBAL",6)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalKnowsPortalBlood","GLOBAL",6)
+END
+
+/////////////////////////////////////////////////////////////////
+/* 
+"C#RtD_CoalKnowsPortalBlood" -> 7
+7 - knows that this Caelar / Hephernaan are planning PC's blood for this - PC told them
+*/
+/*
+IF
+"C#RtD_CoalWantBhaalBlood" = 5
+5 - knows that Caelar / Hephernaan want the PC's Bhaal child blood for opening the portal - PC told them  - PC told them
+THEN
+"C#RtD_CoalKnowsPortalBlood" -> 7
+7 - knows that this Caelar / Hephernaan are planning PC's blood for this - PC told them
+*/
+IF
+	Global("C#RtD_CoalWantBhaalBlood","GLOBAL",5)
+	GlobalLT("C#RtD_CoalKnowsPortalBlood","GLOBAL",7)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalKnowsPortalBlood","GLOBAL",7)
+END
+
+/////////////////////////////////////////////////////////////////
+/* 
+"C#RtD_CoalKnowsPortalBlood" -> 8
+8 - knows that this Caelar / Hephernaan are planning PC's blood for this - heard it elsewhere
+*/
+/*
+IF
+"C#RtD_CoalWantBhaalBlood" = 6
+6 - knows that Caelar / Hephernaan want the PC's Bhaal child blood for opening the portal - heard it elsewhere 
+THEN
+"C#RtD_CoalKnowsPortalBlood" -> 8
+8 - knows that this Caelar / Hephernaan are planning PC's blood for this - heard it elsewhere
+*/
+IF
+	Global("C#RtD_CoalWantBhaalBlood","GLOBAL",6)
+	GlobalLT("C#RtD_CoalKnowsPortalBlood","GLOBAL",8)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalKnowsPortalBlood","GLOBAL",8)
+END
+
+/////////////////////////////////////////////////////////////////
+/* 
+"C#RtD_CoalCaelarProtection" -> 6
+6 - they know "CaelarProtection" is a lie - heard it elsewhere
+*/
+/*
+IF
+"C#RtD_CoalCaelarGodBless" = 5
+5 - they know that [Caelar claims to be blessed by "the pantheon" / all gods /several gods] is a lie - heard it elsewhere
+THEN
+"C#RtD_CoalCaelarProtection" -> 6
+6 - they know "CaelarProtection" is a lie - heard it elsewhere
+*/
+IF
+	Global("C#RtD_CoalCaelarGodBless","GLOBAL",5)
+	GlobalLT("C#RtD_CoalCaelarProtection","GLOBAL",6)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalCaelarProtection","GLOBAL",6)
+END
+
+
+/////////////////////////////////////////////////////////////////
+/* 
+"C#RtD_CoalCaelarProtection" -> 5
+5 - they know "CaelarProtection" is a lie - PC told them
+*/
+/*
+IF
+"C#RtD_CoalCaelarGodBless" = 4
+4 - they know that [Caelar claims to be blessed by "the pantheon" / all gods /several gods] is a lie - PC told them
+THEN
+"C#RtD_CoalCaelarProtection" -> 5
+5 - they know "CaelarProtection" is a lie - PC told them
+*/
+IF
+	Global("C#RtD_CoalCaelarGodBless","GLOBAL",4)
+	GlobalLT("C#RtD_CoalCaelarProtection","GLOBAL",5)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalCaelarProtection","GLOBAL",5)
+END
+
+
+/////////////////////////////////////////////////////////////////
+/* 
+"C#RtD_CoalCaelarGodBless" -> 5
+5 - they know that [Caelar claims to be blessed by "the pantheon" / all gods /several gods] is a lie - heard it elsewhere
+*/
+/*
+IF
+"C#RtD_CoalCaelarProtection" = 6
+6 - they know "CaelarProtection" is a lie - heard it elsewhere
+THEN
+"C#RtD_CoalCaelarProtection" -> 5
+5 - they know that [Caelar claims to be blessed by "the pantheon" / all gods /several gods] is a lie - heard it elsewhere
+*/
+IF
+	Global("C#RtD_CoalCaelarProtection","GLOBAL",6)
+	GlobalLT("C#RtD_CoalCaelarGodBless","GLOBAL",5)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalCaelarGodBless","GLOBAL",5)
+END
+
+/////////////////////////////////////////////////////////////////
+/* 
+"C#RtD_CoalCaelarGodBless" -> 4
+4 - they know that [Caelar claims to be blessed by "the pantheon" / all gods /several gods] is a lie - PC told them
+*/
+/*
+IF
+"C#RtD_CoalCaelarProtection" = 5
+5 - they know "CaelarProtection" is a lie - PC told them
+THEN
+"C#RtD_CoalCaelarProtection" -> 4
+4 - they know that [Caelar claims to be blessed by "the pantheon" / all gods /several gods] is a lie - PC told them
+*/
+IF
+	Global("C#RtD_CoalCaelarProtection","GLOBAL",5)
+	GlobalLT("C#RtD_CoalCaelarGodBless","GLOBAL",4)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalCaelarGodBless","GLOBAL",4)
+END

@@ -1,0 +1,92 @@
+/* set the overal check variables. This is done ONCE */
+
+/* "C#RtD_CoalCaelarPlan" */
+/* 11 - knows that the whole purpose of the crusade is all for Aun Argent - heard it elsewhere */
+IF
+	GlobalLT("C#RtD_CoalCaelarPlan","GLOBAL",11)
+	Global("C#RtD_CoalCaelarPlan_SET","GLOBAL",11)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalCaelarPlan","GLOBAL",11)
+END
+/* 10 - know that the whole purpose of the crusade is all for Aun Argent - PC told them */
+IF
+	GlobalLT("C#RtD_CoalCaelarPlan","GLOBAL",10)
+	Global("C#RtD_CoalCaelarPlan_SET","GLOBAL",10)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalCaelarPlan","GLOBAL",10)
+END
+/* 9 - speculates that Caelar wants to save her uncle Aun Argent from Avernus - heard it elsewhere */
+IF
+	GlobalLT("C#RtD_CoalCaelarPlan","GLOBAL",9)
+	Global("C#RtD_CoalCaelarPlan_SET","GLOBAL",9)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalCaelarPlan","GLOBAL",9)
+END
+/* 8 - speculates that Caelar wants to save her uncle Aun Argent from Avernus - PC told them */
+IF
+	GlobalLT("C#RtD_CoalCaelarPlan","GLOBAL",8)
+	Global("C#RtD_CoalCaelarPlan_SET","GLOBAL",8)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalCaelarPlan","GLOBAL",8)
+END
+/* 7 - know that they are planning on opening a portal at Dragonspear Castle to enter Avernus - heard it elsewhere */
+IF
+	GlobalLT("C#RtD_CoalCaelarPlan","GLOBAL",7)
+	Global("C#RtD_CoalCaelarPlan_SET","GLOBAL",7)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalCaelarPlan","GLOBAL",7)
+END
+/* 6 - know that they are planning on opening a portal at Dragonspear Castle to enter Avernus - PC told them */
+IF
+	GlobalLT("C#RtD_CoalCaelarPlan","GLOBAL",6)
+	Global("C#RtD_CoalCaelarPlan_SET","GLOBAL",6)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalCaelarPlan","GLOBAL",6)
+END
+/* 5 - know that they are planning on marching into Avernus - heard it elsewhere */
+IF
+	GlobalLT("C#RtD_CoalCaelarPlan","GLOBAL",5)
+	Global("C#RtD_CoalCaelarPlan_SET","GLOBAL",5)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalCaelarPlan","GLOBAL",5)
+END
+/* 4 - know that they are planning on marching into Avernus - PC told them */
+IF
+	GlobalLT("C#RtD_CoalCaelarPlan","GLOBAL",4)
+	Global("C#RtD_CoalCaelarPlan_SET","GLOBAL",4)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalCaelarPlan","GLOBAL",4)
+END
+/* 3 - know that they want to free souls from Dragonspear War from Avernus - heard it elsewhere */
+IF
+	GlobalLT("C#RtD_CoalCaelarPlan","GLOBAL",3)
+	Global("C#RtD_CoalCaelarPlan_SET","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalCaelarPlan","GLOBAL",3)
+END
+/* 2 - know that they want to free souls from Dragonspear War from Avernus - PC told them */
+IF
+	GlobalLT("C#RtD_CoalCaelarPlan","GLOBAL",2)
+	Global("C#RtD_CoalCaelarPlan_SET","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalCaelarPlan","GLOBAL",2)
+END
+/* 1 - acknowledges the existence of the crusade which is rampaging through the lands */
+IF
+	Global("C#RtD_CoalCaelarPlan","GLOBAL",0)
+	Global("C#RtD_CoalCaelarPlan_SET","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalCaelarPlan","GLOBAL",1)
+END
+

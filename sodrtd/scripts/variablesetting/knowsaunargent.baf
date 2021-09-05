@@ -1,0 +1,38 @@
+/* set the overal check variables. This is done ONCE */
+
+/* "C#RtD_KnowsAunArgent" */
+
+/* 4 - knows that Aun took place for Caelar in Avernus */
+IF
+	GlobalLT("C#RtD_KnowsAunArgent","GLOBAL",4)
+	Global("C#RtD_KnowsAunArgent_SET","GLOBAL",4)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_KnowsAunArgent","GLOBAL",4)
+END
+
+/* 3 - knows that Caelar was in Avernus and came back at the same time Aun vanished */
+IF
+	GlobalLT("C#RtD_KnowsAunArgent","GLOBAL",3)
+	Global("C#RtD_KnowsAunArgent_SET","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_KnowsAunArgent","GLOBAL",3)
+END
+/* 2 - heard rumors about Caelar being disgraced from Aster Order at the same time as Aon vanished */
+IF
+	GlobalLT("C#RtD_KnowsAunArgent","GLOBAL",2)
+	Global("C#RtD_KnowsAunArgent_SET","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_KnowsAunArgent","GLOBAL",2)
+END
+/* 1 - knows that Caelar had an uncle named Aun and something happened */
+IF
+	Global("C#RtD_KnowsAunArgent","GLOBAL",0)
+	Global("C#RtD_KnowsAunArgent_SET","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_KnowsAunArgent","GLOBAL",1)
+END
+

@@ -1,0 +1,18 @@
+// c#rtdcu2.baf - group gets teleported back after talking to the officers
+
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId(Player1)
+        FadeToColor([20.0],0)
+        Wait(2)
+	ActionOverride("bdnederl",DestroySelf())
+	ActionOverride("bddelanc",DestroySelf())
+	ActionOverride("bdstoneh",DestroySelf())
+	SmallWait(7)
+	RestorePartyLocations()
+	MultiPlayerSync()
+	FadeFromColor([20.0],0)
+	EndCutSceneMode()
+END

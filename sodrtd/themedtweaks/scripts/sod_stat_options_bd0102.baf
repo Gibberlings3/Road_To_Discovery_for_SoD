@@ -1,0 +1,111 @@
+///////////////////////////////////////////////////////////////////////////////////////////
+// Prompt the PC to talk to Eltan about Dauston                                          //
+// This is very spoilery info we're giving the PC - make it's rather difficult to obtain //
+// No one in the stock canon group could advise the PC to talk to Eltan                  //
+// but since there are a lot of NPC mods, one of them now may                            //
+///////////////////////////////////////////////////////////////////////////////////////////
+
+IF
+	Global("#L_SoDStat_DaustonTalk","GLOBAL",1)
+	Global("#L_SoDStat_DaustonPrompt","MYAREA",0)
+	CheckStatGT(Player1,15,WIS)
+	CheckStatGT(Player1,10,INT)
+	OR(2)
+		ReputationGT(Player1,13)
+		CheckStatGT(Player1,15,CHR)
+THEN
+	RESPONSE #100
+		SetGlobal("#L_SoDStat_DaustonPrompt","MYAREA",2)
+		AddJournalEntry(@3001,QUEST)
+END
+
+IF
+	Global("#L_SoDStat_DaustonTalk","GLOBAL",1)
+	Global("#L_SoDStat_DaustonPrompt","MYAREA",0)
+	IsValidForPartyDialogue(Player2)
+	TriggerOverride(Player2,Global("#L_SoDStatOptionsGenDlg","LOCALS",1))
+	TriggerOverride(Player2,Global("#L_SoDStat_DaustonTalk","LOCALS",1))
+	CheckStatGT(Player2,15,WIS)
+	CheckStatGT(Player2,10,INT)
+	OR(3)
+		ReputationGT(Player1,13)
+		CheckStatGT(Player1,15,CHR)
+		CheckStatGT(Player2,15,CHR)
+THEN
+	RESPONSE #100
+		SetGlobal("#L_SoDStat_DaustonPrompt","MYAREA",1)
+		ActionOverride(Player2,StartDialogOverride("#LS0Temp",Player1))
+END
+
+IF
+	Global("#L_SoDStat_DaustonTalk","GLOBAL",1)
+	Global("#L_SoDStat_DaustonPrompt","MYAREA",0)
+	IsValidForPartyDialogue(Player3)
+	TriggerOverride(Player3,Global("#L_SoDStatOptionsGenDlg","LOCALS",1))
+	TriggerOverride(Player3,Global("#L_SoDStat_DaustonTalk","LOCALS",1))
+	CheckStatGT(Player3,15,WIS)
+	CheckStatGT(Player3,10,INT)
+	OR(3)
+		ReputationGT(Player1,13)
+		CheckStatGT(Player1,15,CHR)
+		CheckStatGT(Player3,15,CHR)
+THEN
+	RESPONSE #100
+		SetGlobal("#L_SoDStat_DaustonPrompt","MYAREA",1)
+		ActionOverride(Player3,StartDialogOverride("#LS0Temp",Player1))
+END
+
+IF
+	Global("#L_SoDStat_DaustonTalk","GLOBAL",1)
+	Global("#L_SoDStat_DaustonPrompt","MYAREA",0)
+	IsValidForPartyDialogue(Player4)
+	TriggerOverride(Player4,Global("#L_SoDStatOptionsGenDlg","LOCALS",1))
+	TriggerOverride(Player4,Global("#L_SoDStat_DaustonTalk","LOCALS",1))
+	CheckStatGT(Player4,15,WIS)
+	CheckStatGT(Player4,10,INT)
+	OR(3)
+		ReputationGT(Player1,13)
+		CheckStatGT(Player1,15,CHR)
+		CheckStatGT(Player4,15,CHR)
+THEN
+	RESPONSE #100
+		SetGlobal("#L_SoDStat_DaustonPrompt","MYAREA",1)
+		ActionOverride(Player4,StartDialogOverride("#LS0Temp",Player1))
+END
+
+IF
+	Global("#L_SoDStat_DaustonTalk","GLOBAL",1)
+	Global("#L_SoDStat_DaustonPrompt","MYAREA",0)
+	IsValidForPartyDialogue(Player5)
+	TriggerOverride(Player5,Global("#L_SoDStatOptionsGenDlg","LOCALS",1))
+	TriggerOverride(Player5,Global("#L_SoDStat_DaustonTalk","LOCALS",1))
+	CheckStatGT(Player5,15,WIS)
+	CheckStatGT(Player5,10,INT)
+	OR(3)
+		ReputationGT(Player1,13)
+		CheckStatGT(Player1,15,CHR)
+		CheckStatGT(Player5,15,CHR)
+THEN
+	RESPONSE #100
+		SetGlobal("#L_SoDStat_DaustonPrompt","MYAREA",1)
+		ActionOverride(Player5,StartDialogOverride("#LS0Temp",Player1))
+END
+
+IF
+	Global("#L_SoDStat_DaustonTalk","GLOBAL",1)
+	Global("#L_SoDStat_DaustonPrompt","MYAREA",0)
+	IsValidForPartyDialogue(Player6)
+	TriggerOverride(Player6,Global("#L_SoDStatOptionsGenDlg","LOCALS",1))
+	TriggerOverride(Player6,Global("#L_SoDStat_DaustonTalk","LOCALS",1))
+	CheckStatGT(Player6,15,WIS)
+	CheckStatGT(Player6,10,INT)
+	OR(3)
+		ReputationGT(Player1,13)
+		CheckStatGT(Player1,15,CHR)
+		CheckStatGT(Player6,15,CHR)
+THEN
+	RESPONSE #100
+		SetGlobal("#L_SoDStat_DaustonPrompt","MYAREA",1)
+		ActionOverride(Player6,StartDialogOverride("#LS0Temp",Player1))
+END
+

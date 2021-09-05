@@ -1,0 +1,43 @@
+/*
+Global("#L_SoDStat_DaustonTalk","GLOBAL",3): PC talked to Dauston, followed up on it, and received an answer [about Aoun being trapped in Avernus in stead of Caelar]
+-> into bdbaldur.bcs
+SetGlobal("C#RtD_KnowsAunArgent_SET","GLOBAL",4)
+*/
+
+IF
+	Global("#L_SoDStat_DaustonTalk","GLOBAL",3)
+	!Global("C#RtD_KnowsAunArgent_SET","GLOBAL",4)
+	GlobalLT("C#RtD_KnowsAunArgent","GLOBAL",4)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_KnowsAunArgent_SET","GLOBAL",4)
+		SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)
+		Continue()
+END
+
+IF
+	Global("#L_SoDStat_DaustonTalk","GLOBAL",3)
+	!Global("C#RtD_CoalKnowsAunArgent_SET","GLOBAL",6)
+	GlobalLT("C#RtD_CoalKnowsAunArgent","GLOBAL",5)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalKnowsAunArgent_SET","GLOBAL",6)
+		SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)
+		Continue()
+END
+
+/*
+Global("#L_SodStat_HephAdvisor","GLOBAL",1):PC knows Hephernaan's name and that he is Caelar's advisor
+-> into bdbaldur.bcs AND vise versa
+SetGlobal("C#RtD_HephernaanName_SET","GLOBAL",1)
+*/
+IF
+	Global("#L_SodStat_HephAdvisor","GLOBAL",1)
+	!Global("C#RtD_HephernaanName_SET","GLOBAL",1)
+	Global("C#RtD_HephernaanName","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_HephernaanName_SET","GLOBAL",1)
+		SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)
+		Continue()
+END

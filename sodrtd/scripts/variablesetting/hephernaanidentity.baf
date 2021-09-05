@@ -1,0 +1,12 @@
+/* set the overal check variables. This is done ONCE */
+
+/* "C#RtD_HephernaanIdentity" */
+/* 1 - knows Hephernaan by name and face and that he is Caelar's advisor */
+IF
+	Global("C#RtD_HephernaanIdentity","GLOBAL",0)
+	Global("C#RtD_HephernaanIdentity_SET","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_HephernaanIdentity","GLOBAL",1)
+END
+

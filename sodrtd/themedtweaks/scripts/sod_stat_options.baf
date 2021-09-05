@@ -1,0 +1,12 @@
+///////////////////////////////////////////////////////////////////
+// Sets up a global to indicate stat-based options are desired   //
+// Patched via sod_stat_options.tpa                              //
+///////////////////////////////////////////////////////////////////
+IF
+	Global("#L_SoDStatOptions","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("#L_SoDStatOptions","GLOBAL",1)
+  		Continue()
+END
+

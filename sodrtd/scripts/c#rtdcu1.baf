@@ -1,0 +1,29 @@
+// c#rtdcu1.baf - group meets up with the officers
+
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId(Player1)
+        FadeToColor([20.0],0)
+	MultiPlayerSync()
+	StorePartyLocations()
+        Wait(2)
+        LeaveAreaLUAPanic("c#rtd1","",[837.1519],8)
+        LeaveAreaLUA("c#rtd1","",[837.1519],8)
+	ActionOverride(Player2,LeaveAreaLUA("c#rtd1","",[914.1514],7))
+	ActionOverride(Player3,LeaveAreaLUA("c#rtd1","",[845.1555],8))
+	ActionOverride(Player4,LeaveAreaLUA("c#rtd1","",[917.1552],7))
+	ActionOverride(Player5,LeaveAreaLUA("c#rtd1","",[893.1603],8))
+	ActionOverride(Player6,LeaveAreaLUA("c#rtd1","",[969.1601],7))
+        Wait(1)
+        CreateCreature("c#rtdned",[815.1474],14) 
+        CreateCreature("c#rtddel",[843.1383],0) 
+        CreateCreature("c#rtdsto",[943.1476],6) 
+        Explore()
+        MoveViewPoint([211.186],INSTANT)
+        Wait(1)
+        FadeFromColor([20.0],0)
+	EndcutSceneMode()
+        ActionOverride("bdnederl",StartDialogNoSet(Player1))
+END 

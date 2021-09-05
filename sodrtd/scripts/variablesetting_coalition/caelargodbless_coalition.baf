@@ -1,0 +1,45 @@
+/* set the overal check variables. This is done ONCE */
+
+/* "C#RtD_CoalCaelarGodBless" */
+
+/* 5 - they know that [Caelar claims to be blessed by "the pantheon" / all gods /several gods] is a lie - heard it elsewhere */
+IF
+	GlobalLT("C#RtD_CoalCaelarGodBless","GLOBAL",5)
+	Global("C#RtD_CoalCaelarGodBless_SET","GLOBAL",5)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalCaelarGodBless","GLOBAL",3)
+END
+/* 4 - they know that [Caelar claims to be blessed by "the pantheon" / all gods /several gods] is a lie - PC told them */
+IF
+	GlobalLT("C#RtD_CoalCaelarGodBless","GLOBAL",4)
+	Global("C#RtD_CoalCaelarGodBless_SET","GLOBAL",4)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalCaelarGodBless","GLOBAL",4)
+END
+/* 3 - know that Caelar claims to be blessed by "the pantheon" / all gods /several gods - heard it elsewhere */
+IF
+	GlobalLT("C#RtD_CoalCaelarGodBless","GLOBAL",3)
+	Global("C#RtD_CoalCaelarGodBless_SET","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalCaelarGodBless","GLOBAL",3)
+END
+/* 2 - know that Caelar claims to be blessed by "the pantheon" / all gods /several gods - PC told them */
+IF
+	GlobalLT("C#RtD_CoalCaelarGodBless","GLOBAL",2)
+	Global("C#RtD_CoalCaelarGodBless_SET","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalCaelarGodBless","GLOBAL",2)
+END
+/* 1 - they know rumor about Caelar being divinely blessed */
+IF
+	Global("C#RtD_CoalCaelarGodBless","GLOBAL",0)
+	Global("C#RtD_CoalCaelarGodBless_SET","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalCaelarGodBless","GLOBAL",1)
+END
+

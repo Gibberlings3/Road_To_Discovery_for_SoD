@@ -1,0 +1,31 @@
+////////////////////////////////////////////////////////////////////
+/*
+Global("C#RtD_HephernaanName","GLOBAL",1)
+-> 
+SetGlobal("#L_SodStat_HephAdvisor","GLOBAL",1):PC knows Hephernaan's name and that he is Caelar's advisor
+*/
+IF
+	Global("C#RtD_HephernaanName","GLOBAL",1)
+	Global("#L_SodStat_HephAdvisor","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("#L_SodStat_HephAdvisor","GLOBAL",1)
+END
+
+
+//////////////////////////////////////////////////////////////////////
+/*
+Global("C#RtD_WeakPoison","GLOBAL",1)
+-> 
+Global("#L_SoDStat_WeakPoison","GLOBAL",1): Global used to track if PC knows Caelar didn't try to kill her 0 or 1. Also includes that PC speculates that Caelar wanted to kidnap them and alive.
+*/
+IF
+	Global("C#RtD_WeakPoison","GLOBAL",1)
+	Global("C#RtD_CaelarKidnap","GLOBAL",1)
+	Global("C#RtD_CaelarWantsPC","GLOBAL",1)
+	Global("#L_SoDStat_WeakPoison","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("#L_SoDStat_WeakPoison","GLOBAL",1)
+END
+

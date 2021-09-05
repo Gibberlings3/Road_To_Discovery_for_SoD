@@ -1,0 +1,89 @@
+IF
+	GlobalGT("bd_plot","global",259)
+	Global("C#RtD_CrusaderBlessingQuest","GLOBAL",2)
+THEN
+  RESPONSE #100
+		EraseJournalEntry(@10032)
+		EraseJournalEntry(@10033)
+		AddJournalEntry(@10034,QUEST_DONE)
+		SetGlobal("C#RtD_CrusaderBlessingQuest","GLOBAL",5)
+END
+
+IF
+	Global("C#RtD_CrusaderBlessingQuest","GLOBAL",0)
+THEN
+  RESPONSE #100
+		CreateCreature("C#RtDblc",[2828.2504],6)
+		SetGlobal("C#RtD_CrusaderBlessingQuest","GLOBAL",1)
+END
+
+IF
+	Global("C#RtD_CaelarProtection","GLOBAL",3)
+	Global("C#RtD_CrusaderBlessingQuest","GLOBAL",1)
+	!Class(Player1,PALADIN_ALL)
+	!Class(Player2,PALADIN_ALL)
+	!Class(Player3,PALADIN_ALL)
+	!Class(Player4,PALADIN_ALL)
+	!Class(Player5,PALADIN_ALL)
+	!Class(Player6,PALADIN_ALL)
+	!Class(Player1,CLERIC_ALL)
+	!Class(Player2,CLERIC_ALL)
+	!Class(Player3,CLERIC_ALL)
+	!Class(Player4,CLERIC_ALL)
+	!Class(Player5,CLERIC_ALL)
+	!Class(Player6,CLERIC_ALL)
+THEN
+  RESPONSE #100
+		EraseJournalEntry(@10032)
+		AddJournalEntry(@10033,QUEST)
+		SetGlobal("C#RtD_CrusaderBlessingQuest","GLOBAL",2)
+END
+
+IF
+	Global("C#RtD_CaelarProtection","GLOBAL",3)
+	GlobalGT("C#RtD_CrusaderBlessingQuest","GLOBAL",0)
+	GlobalLT("C#RtD_CrusaderBlessingQuest","GLOBAL",3)
+	OR(2)
+		Class(Player1,PALADIN_ALL)
+		Class(Player1,CLERIC_ALL)
+	IsValidForPartyDialogue(Player1)
+THEN
+  RESPONSE #100
+		SetGlobal("C#RtD_CrusaderBlessingQuest","GLOBAL",3)
+END
+
+IF
+	Global("C#RtD_CaelarProtection","GLOBAL",3)
+	GlobalGT("C#RtD_CrusaderBlessingQuest","GLOBAL",0)
+	GlobalLT("C#RtD_CrusaderBlessingQuest","GLOBAL",3)
+	!Class(Player1,PALADIN_ALL)
+	!Class(Player1,CLERIC_ALL)
+	OR(10)
+		Class(Player2,PALADIN_ALL)
+		Class(Player3,PALADIN_ALL)
+		Class(Player4,PALADIN_ALL)
+		Class(Player5,PALADIN_ALL)
+		Class(Player6,PALADIN_ALL)
+		Class(Player2,CLERIC_ALL)
+		Class(Player3,CLERIC_ALL)
+		Class(Player4,CLERIC_ALL)
+		Class(Player5,CLERIC_ALL)
+		Class(Player6,CLERIC_ALL)
+	IsValidForPartyDialogue(Player1)
+	OR(5)
+		IsValidForPartyDialogue(Player2)
+		IsValidForPartyDialogue(Player3)
+		IsValidForPartyDialogue(Player4)
+		IsValidForPartyDialogue(Player5)
+		IsValidForPartyDialogue(Player6)
+THEN
+  RESPONSE #100
+		SetGlobal("C#RtD_CrusaderBlessingQuest","GLOBAL",3)
+END
+
+IF
+	Global("C#RtD_CrusaderBlessingQuest","GLOBAL",3)
+THEN
+  RESPONSE #100
+		ActionOverride(Player1,StartDialogOverride("C#RtDpct",Player1))
+END

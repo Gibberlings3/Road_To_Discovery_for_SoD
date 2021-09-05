@@ -1,0 +1,38 @@
+/* set the overal check variables. This is done ONCE */
+
+/* "C#RtD_CaelarProtection" */
+
+/* 4 - knows that [the gods are protecting Caelar and them] is a lie */
+IF
+	GlobalLT("C#RtD_CaelarProtection","GLOBAL",4)
+	Global("C#RtD_CaelarProtection_SET","GLOBAL",4)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CaelarProtection","GLOBAL",4)
+END
+
+/* 3 - watched Hormorn's "blessing" in Bridgefort camp */
+IF
+	GlobalLT("C#RtD_CaelarProtection","GLOBAL",3)
+	Global("C#RtD_CaelarProtection_SET","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CaelarProtection","GLOBAL",3)
+END
+/* 2 - know that her followers believe that the gods are protecting Caelar and them */
+IF
+	GlobalLT("C#RtD_CaelarProtection","GLOBAL",2)
+	Global("C#RtD_CaelarProtection_SET","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CaelarProtection","GLOBAL",2)
+END
+/* 1 - heard rumor about Caelar/divine forces through Caelar protecting the crusade */
+IF
+	Global("C#RtD_CaelarProtection","GLOBAL",0)
+	Global("C#RtD_CaelarProtection_SET","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CaelarProtection","GLOBAL",1)
+END
+

@@ -1,0 +1,36 @@
+/* set the overal check variables. This is done ONCE */
+
+/* "C#RtD_CoalHephernaanFiend" */
+/* 4 - knows that Hephernaan is working for Belhifet - heard it elsewhere */
+IF
+	GlobalLT("C#RtD_CoalHephernaanFiend","GLOBAL",4)
+	Global("C#RtD_CoalHephernaanFiend_SET","GLOBAL",4)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalHephernaanFiend","GLOBAL",4)
+END
+/* 3 - knows that Hephernaan is working for Belhifet - PC told them */
+IF
+	GlobalLT("C#RtD_CoalHephernaanFiend","GLOBAL",3)
+	Global("C#RtD_CoalHephernaanFiend_SET","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalHephernaanFiend","GLOBAL",3)
+END
+/* 2 - knows that Hephernaan is working for a fiend to open the portal (+knows that Hephernaan is Caelar's advisor) - heard it elsewhere */
+IF
+	GlobalLT("C#RtD_CoalHephernaanFiend","GLOBAL",2)
+	Global("C#RtD_CoalHephernaanFiend_SET","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalHephernaanFiend","GLOBAL",2)
+END
+/* 1 - knows that Hephernaan is working for a fiend to open the portal (+knows that Hephernaan is Caelar's advisor) - PC told them */
+IF
+	Global("C#RtD_CoalHephernaanFiend","GLOBAL",0)
+	Global("C#RtD_CoalHephernaanFiend_SET","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalHephernaanFiend","GLOBAL",1)
+END
+

@@ -1,0 +1,12 @@
+/* set the overal check variables. This is done ONCE */
+
+/* "C#RtD_CaelarKidnap" */
+/* 1 - PC discussed with someone/NPCs that Caelar's assassin probably wanted to kidnap PC in Palace (instead of killing) */
+IF
+	Global("C#RtD_CaelarKidnap","GLOBAL",0)
+	Global("C#RtD_CaelarKidnap_SET","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CaelarKidnap","GLOBAL",1)
+END
+

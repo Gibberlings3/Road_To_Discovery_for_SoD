@@ -1,0 +1,51 @@
+/*
+Global("#L_SoDStat_HephUmbral","GLOBAL",1): PC knows about Hephernaan being an agent of the Umbral Accord 1 = face
+-> into area script of scry pool bd1200.BCS
+SetGlobal("C#RtD_HephernaanVisual_SET","GLOBAL",1)
+
+
+Global("#L_SoDStat_HephUmbral","GLOBAL",2): PC knows about Hephernaan being an agent of the Umbral Accord 2 = name and face
+-> into area script of scry pool bd1200.BCS
+SetGlobal("C#RtD_HephernaanFiend_SET","GLOBAL",2)
+
+
+Global("#L_SodStat_HephAdvisor","GLOBAL",2):PC knows Hephernaan's face, name and that he is Caelar's advisor
+-> into area script of scry pool bd1200.BCS
+SetGlobal("C#RtD_HephernaanIdentity_SET","GLOBAL",1)
+*/
+
+IF
+	Global("#L_SoDStat_HephUmbral","GLOBAL",1)
+	!Global("C#RtD_HephernaanVisual_SET","GLOBAL",1)
+	Global("C#RtD_HephernaanVisual","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_HephernaanVisual_SET","GLOBAL",1)
+		SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)
+		Continue()
+END
+IF
+	Global("#L_SoDStat_HephUmbral","GLOBAL",2)
+	!Global("C#RtD_HephernaanFiend_SET","GLOBAL",2)
+	GlobalLT("C#RtD_HephernaanFiend","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_HephernaanFiend_SET","GLOBAL",2)
+		SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)
+		Continue()
+END
+IF
+	Global("#L_SodStat_HephAdvisor","GLOBAL",2)
+	!Global("C#RtD_HephernaanIdentity_SET","GLOBAL",1)
+	Global("C#RtD_HephernaanIdentity","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_HephernaanIdentity_SET","GLOBAL",1)
+		SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)
+		Continue()
+END
+
+
+
+
+

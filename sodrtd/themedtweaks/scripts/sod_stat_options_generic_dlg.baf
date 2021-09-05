@@ -1,0 +1,15 @@
+/////////////////////////////////////////////////////////////////
+// Sets up a local on the stock NPC saying it's ok to use them //
+// in generic dialogues - modders can remove this if needed    //
+// Patched via sod_stat_options.tpa                            //
+/////////////////////////////////////////////////////////////////
+IF
+	Global("#L_SoDStatOptionsGenDlg","LOCALS",0)
+	Global("#L_SoDStatOptionsGenDlgSet","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobal("#L_SoDStatOptionsGenDlg","LOCALS",1)
+		SetGlobal("#L_SoDStatOptionsGenDlgSet","LOCALS",1)
+  		Continue()
+END
+

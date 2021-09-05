@@ -1,0 +1,12 @@
+/* set the overal check variables. This is done ONCE */
+
+/* "C#RtD_CoalWeakPoison" */
+/* 1 - knows that poison was too weak to kill - heard it elsewhere */
+IF
+	Global("C#RtD_CoalWeakPoison","GLOBAL",0)
+	Global("C#RtD_CoalWeakPoison_SET","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_CoalWeakPoison","GLOBAL",1)
+END
+

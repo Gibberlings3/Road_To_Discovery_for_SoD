@@ -1,0 +1,13 @@
+///////////////////////////////////
+// Changes to BG1200 area script //
+///////////////////////////////////
+
+IF
+	IsValidForPartyDialogue("EDWIN")
+	Global("#L_SoDStat_HephUmbral","GLOBAL",1)
+	TriggerOverride("EDWIN",Global("#L_SoDStat_HephUmbral","LOCALS",1))
+THEN
+	RESPONSE #100
+		ActionOverride("EDWIN",StartDialogueNoSet(Player1))
+END
+

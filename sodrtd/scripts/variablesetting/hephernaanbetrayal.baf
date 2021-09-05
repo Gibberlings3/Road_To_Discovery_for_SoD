@@ -1,0 +1,20 @@
+/* set the overal check variables. This is done ONCE */
+
+/* "C#RtD_HephernaanBetrayal" */
+/* 2 - knows that Hephernaan [who is Caelar's advisor] is betraying Caelar */
+IF
+	GlobalLT("C#RtD_HephernaanBetrayal","GLOBAL",2)
+	Global("C#RtD_HephernaanBetrayal_SET","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_HephernaanBetrayal","GLOBAL",2)
+END
+/* 1 - knows that [a man called] Hephernaan is betraying Caelar. */
+IF
+	Global("C#RtD_HephernaanBetrayal","GLOBAL",0)
+	Global("C#RtD_HephernaanBetrayal_SET","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_HephernaanBetrayal","GLOBAL",1)
+END
+
