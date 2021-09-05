@@ -13,14 +13,23 @@ For modders, this mod introduces a variable-based tracking system about the diff
 The mod is modular so every player as well as modder can chose how much changes and content they want to see/use.
 
 The following lists the information from the SoD campaign this mod is considering. For detailed description of the used variables and the exact definition of the tracked infomation see below:
+
 -What is the main purpose of the crusade - what is Caelar proclaiming, and what is it really?
+
 -What truth lies in Caelar's proclamation - and her crusaders' believe - that Caelar protects the crusade with "divine powers of the pantheon"?
+
 -What is the background of Caelar's life and family, and how does it influence her motives?
+
 -Is Caelar a Bhaal Spawn?
+
 -Caelar is being betrayed? By who?
+
 -What are Hephernaan's plans?
+
 -The Hooded Man is stalking the PC, and why?
+
 -What does Caelar and Hephrnaan want with the PC?
+
 -What was the attack in the palace with the weak poison for?
 
 
@@ -97,8 +106,11 @@ This component is optional and also needs components 4 "Make Officers Aware", as
 ## COMPATIBILITY NOTE
 
 Install Road to Discovery very late in install order. This mod should be installed AFTER the following mods:
+
 -Themed Tweaks
+
 -Jastey's SoD Tweakpack
+
 -any mod that adds reply options or transactions to SoD, like NPC mods or story tweak mods.
 
 Road to Discovery has native EET compatibility and needs to be installed before EET_End.
