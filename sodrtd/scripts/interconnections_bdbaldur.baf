@@ -1,5 +1,5 @@
 /*
-Global("#L_SoDStat_DaustonTalk","GLOBAL",3): PC talked to Dauston, followed up on it, and received an answer [about Aoun being trapped in Avernus in stead of Caelar]
+Global("#L_SoDStat_DaustonTalk","GLOBAL",3): PC talked to Dauston, followed up on it, and received an answer [about Aun being trapped in Avernus instead of Caelar]
 -> into bdbaldur.bcs
 SetGlobal("C#RtD_KnowsAunArgent_SET","GLOBAL",4)
 */
