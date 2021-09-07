@@ -1,12 +1,12 @@
 # Road To Discovery
-## Connect the SoD Story Dots: make PC and officers aware and talk about the crusade's real purpose!
+## Connect the SoD Story Dots: make PC and officers aware of and talk about the crusade's real purpose!
 
 This Tweak Mod is for the SoD campaign (also with native EET compatibility).
 
 It serves two purposes.
 
-For players, this mod aims to make the coalition forces aware to Caelar's and Hephernaan's plan with focus on the actual important aim and danger of the crusade, and give reply options with which the PC can inform the coalition forces about what is going on. For this, all bits and pieces of information the PC can gather along the campaign are tracked and evaluated. Journal entries give an overview on what information the PC already gathered.
-All in all, this mod is supposed to connect the dots so the PC is able to tell about all the inside info they gathered as well as the coalition officers acknowledge and react to the actual danger(s).
+For players, this mod aims to make the coalition forces aware of Caelar's and Hephernaan's plans with focus on the actual important aim and danger of the crusade, and give reply options with which the PC can inform the coalition forces about what is going on. For this, all bits and pieces of information the PC can gather along the campaign are tracked and evaluated. Journal entries give an overview on what information the PC already gathered.
+All in all, this mod is supposed to connect the dots so the PC is able to tell about all the inside info they gathered as well as have the coalition officers acknowledge and react to the actual danger(s).
 
 For modders, this mod introduces a variable-based tracking system about the different levels of knowledge the PC and the coalition officers gain throughout the campaign, which could be used for own mods, e.g. for fine tuning mod NPCs reactions to the depths of gained information about Caelar, Hephernaan, and the crusade, but also the Hooded Man's appearances. Also, own reaction mods based on any components of Road to Discovery can be developped by whoever wants to, as long as those mods make (components of) RtD a prerequisite and do not include changed content of this mod nor tweak any of RtD original writing.
 
@@ -16,7 +16,7 @@ The following lists the information from the SoD campaign this mod is considerin
 
 -What is the main purpose of the crusade - what is Caelar proclaiming, and what is it really?
 
--What truth lies in Caelar's proclamation - and her crusaders' believe - that Caelar protects the crusade with "divine powers of the pantheon"?
+-What truth lies in Caelar's proclamation - and her crusaders' belief - that Caelar protects the crusade with "divine powers of the pantheon"?
 
 -What is the background of Caelar's life and family, and how does it influence her motives?
 
@@ -40,7 +40,7 @@ The mod consists of 9 components, most of them optional.
 ### 1 Add Stat-Based Observations and Quest Options from Lauriel's Themed Tweaks Mod
 ---------------------------------------------
 
-This adds the same content as the component "Add Stat-Based Observations and Quest Options" from Lauriel's Themed Tweaks Mod. Install this if you want more depth and consistent reactions to the following ingame occurrences with regard to making the gained information aware to the group:
+This imports the component "Add Stat-Based Observations and Quest Options" from Lauriel's Themed Tweaks Mod. Install this if you want more depth and consistent reactions to the following ingame occurrences with regard to making the gained information aware to the group:
 - Duke Jannath's info about weak poison of Caelar's palace assassins (and all later reply options about Caelar trying to have the PC killed in the palace): PC realizes the attack was not meant to kill;
 - treatise about portal below Dragonspear Castle: reactions from NPCs to the revelations about the portal beneath Dragonspear Castle and how to open it;
 - have Edwin identify Hephernaan (including his plans) in the scry pool before having met him in persona;
@@ -71,9 +71,9 @@ This component is optional but needed for component 7 "Add Officers Reactions".
 
 ### 5 Give PC Informed Reply Options
 ---------------------------------------------
-This component adds consistency reply options to relevant game dialogues which reflects the PC's status of knowledge. For one it adds according reply options where component 3 "Consistency Changes to Game Dialogues" removed the unfitting ones except for the mentioned instances with regard to the weak poison that is content of Lauriel's "Add Stat-Based Observations and Quest Options from Themed Tweaks Mod". Component 5 also adds informed reply options at places where the PC talks about the ongoings with ingame characters, but it adds no options to inform the officers about the PC's findings, this is done in component 6 "PC Can Tell the Officers".
+This component adds consistent reply options to relevant game dialogues which reflect the PC's status of knowledge. For one it adds reply options where component 3 "Consistency Changes to Game Dialogues" removed the unfitting ones except for the mentioned instances with regard to the weak poison that is content of Lauriel's "Add Stat-Based Observations and Quest Options from Themed Tweaks Mod". Component 5 also adds informed reply options at places where the PC talks about the ongoings with ingame characters, but it adds no options to inform the officers about the PC's findings, this is done in component 6 "PC Can Tell the Officers".
 This component is optional.
-It requires also component 3 "Consistency Changes to Game Dialogues" and needs to be installed after component 4 "Officers Are Aware" if component 4 is installed.
+It requires component 3 "Consistency Changes to Game Dialogues" and needs to be installed after component 4 "Officers Are Aware" if component 4 is installed.
 
 ### 6 PC Can Tell the Officers
 ---------------------------------------------
