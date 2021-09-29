@@ -100,7 +100,7 @@ This component is optional.
 ---------------------------------------------
 Component 9 adds a custom character, Sir Deggernaut, who moves along the campaign from camp to camp for direct communication so the PC can always tell their findings independent on avilability of original game officers due to campaign progress. His dialogue features also a possibility to ask him about the status of the officers' knowledge, where he will list everything the officers are aware of at this point - which might be more than the PC found out depending on campaign progress. 
 Sir Deggernaut can be found by the camp tents in the first two camps, and near Mizhena in the big coalition camp.
-This component is optional and also needs components 4 "Make Officers Aware", as well as 6 "PC can tell the officers". 
+This component is optional and also needs components 4 "Officers Are Aware", as well as 6 "PC can tell the officers". 
 
 
 ## COMPATIBILITY NOTE
