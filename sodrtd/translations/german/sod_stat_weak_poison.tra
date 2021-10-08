@@ -1,0 +1,47 @@
+// creator: Shai Hulud
+// game: Road to Discovery
+// date: 08.10.2021, 21:54
+
+@100    = ~Sie haben ein schwaches Gift benutzt? Das ergibt keinen … Sie haben nicht versucht, mich zu töten – sie haben versucht, mich gefangen zu nehmen.~
+@101    = ~Hmm, da könntet Ihr recht haben.~
+@102    = ~Bevor ich gehe, muss ich darauf hinweisen, dass Caelars Schergen nicht hier waren, um mich zu töten.~
+@103    = ~Ja, das von ihnen verwendete Gift war viel zu schwach, um das zu erreichen.~
+@104    = ~Ihr Ziel war es, mich gefangen zu nehmen. Ich habe keine Ahnung, warum.~
+@105    = ~Das ist eine beunruhigende Nachricht.~
+@106    = ~Noch beunruhigender war der Besuch, den ich hatte. Es scheint, dass ein vermummter Mann mich verfolgt.~
+@107    = ~Bevor ich gehe, habe ich noch eine beunruhigende Nachricht. Ich habe hier im Palast einen Besucher empfangen. Es scheint, dass ein mysteriöser vermummter Mann mich verfolgt.~
+@108    = ~Könnte es derselbe sein, der den Diebstahl von Sarevoks Schwert in Auftrag gegeben hat?~
+@109    = ~Nun, die Beschreibung trifft auf ihn auf jeden Fall zu. Mysteriös … Unheimlich trifft es eher. Und unheilvoll.~
+@110    = ~Ich muss mich entschuldigen, <CHARNAME>. Es scheint, dass unsere Palastsicherheit Euch immer wieder im Stich lässt.~
+@111    = ~Ich bin immer noch nicht daran gewöhnt, dass man mich ohne ersichtlichen Grund angreift, aber es könnte schlimmer sein.~
+@112    = ~Nicht für lange. Caelar hat versucht, mich zu vergiften. Sie wird sich dafür verantworten.~
+@113    = ~Jemand hat heute Abend versucht, mich zu vergiften, und ich bin in einer Taverne. Verdammt, nein, ich bin noch nicht fertig.~
+@114    = ~Glaubt zumindest dies: Caelar Silberweiß hat versucht, mich zu vergiften, und ich werde es ihr mit gleicher Münze heimzahlen. Wenn Ihr die Strahlende Dame zu Fall bringen wollt, dann sind wir Verbündete, unabhängig von unserer Geschichte oder Blutlinie.~
+@115    = ~Caelar hat mich angegriffen und beinahe meine Freundin Imoen getötet. Das darf einfach nicht sein.~
+@116    = ~Sie hat versucht, mich zu vergiften. Sie hätte beinahe jemanden getötet, der mir sehr am Herzen liegt. Das kann ich nicht auf sich beruhen lassen.~
+@117    = ~Ich habe in dieser Angelegenheit kaum eine Wahl. Sie hat heute Morgen Attentäter geschickt, um mich zu vergiften.~
+@118    = ~Caelar, die Strahlende Dame, hat versucht, mich zu vergiften. Das kann ich nicht hinnehmen.~
+@119    = ~Ich auch. Leider weiß ich nur, dass sie Tausende aus ihren Häusern vertrieben und mich und Imoen angegriffen hat.~
+@120    = ~Sie hat mich und Imoen angegriffen, und sie wird für diesen Fehler bezahlen. Das ist alles, was Ihr wissen müsst.~
+@121    = ~Wir sind uns noch nicht begegnet, aber ich kenne Caelar nur zu gut. Agenten in ihren Diensten haben mich angegriffen.~
+@122    = ~Ich weiß davon, ja, aber nicht genug. Meuchelmörder, die Caelars Zeichen trugen, haben mich im herzoglichen Palast angegriffen, nicht weniger.~
+@123    = ~Sie hat den Helden von Baldurs Tor angegriffen? Ein mutiger Schritt, aber ein riskanter. Ein Scheitern würde Euch mit Sicherheit in den Konflikt hineinziehen …~ ~Sie hat die Heldin von Baldurs Tor angegriffen? Ein mutiger Schritt, aber ein riskanter. Ein Scheitern würde Euch mit Sicherheit in den Konflikt hineinziehen …~
+@124    = ~Agenten von Caelar Silberweiß haben mich und Imoen im Palast des Herzogs angegriffen.~
+@125    = ~Die Attentäter, die mich und Imoen vor ein paar Stunden angegriffen haben. Allerdings muss ich sagen, dass sie mich jetzt weniger stören als zum Zeitpunkt des Angriffs.~
+@126    = ~Jeder Tag, an dem man zum Frühstück gehen kann, ohne dass Attentäter versuchen, einen zu vergiften, ist ein guter Tag. Zumindest habe ich das gehört.~
+@127    = ~Die erste Mahlzeit des Tages ist wichtig. Sie gibt den Ton an für das, was kommen wird … Moment, wollt Ihr damit sagen, dass jemand versucht hat, Euch zu vergiften?~
+@128    = ~Meuchelmörder im Dienste von Caelar Silberweiß waren in den Herzogspalast eingedrungen und hatten versucht, mich zu vergiften.~
+@129    = ~Wie sie hat auch mein Leben unter ihrem bösartigen Einfluss gelitten. Ihre Attentäter haben versucht, mich zu vergiften. Es wäre ihnen fast gelungen.~
+@130    = ~Hat sie mehrere Attentäter geschickt, um einen von ihnen zu vergiften? Denn genau das hat sie mit mir gemacht.~
+@131    = ~Diese Leute sind vor ihren Problemen davongelaufen. Ich habe vor, mich meinen zu stellen. Caelar hat heute Morgen versucht, mich zu vergiften.~
+@132    = ~Ihr sagt, Caelar Silberweiß hat Euch angegriffen? Aber warum?~
+@133    = ~Imoen wurde heute Abend fast getötet. Aber sie wurde nicht getötet, also alles in allem geht es mir wohl gut.~
+@134    = ~In dieser Nacht sind Attentäter in den Herzogspalast eingedrungen und haben versucht, mich zu vergiften. Sie wurden von Caelar Silberweiß geschickt.~
+@135    = ~Wieder einmal werde ich in die Ereignisse hineingezogen. Caelar Silberweiß hat versucht, mich gefangen zu nehmen.~
+@136    = ~Caelar Silberweiß hat versucht, mich zu vergiften, und jetzt versuche ich, es ihr heimzuzahlen. Kindisch, ja, aber zu meiner Verteidigung muss ich sagen, dass sie angefangen hat.~
+@137    = ~Ich weiß nicht warum, aber Caelar Silberweiß hat versucht, mich zu vergiften. Es ist ihr nicht gelungen. Jetzt muss sie für ihren Fehler bezahlen.~
+@138    = ~Aus Gründen, auf die ich nicht näher eingehen möchte, hat Caelar Silberweiß versucht, mich zu vergiften. Es ist ihr nicht gelungen. Jetzt muss sie für ihren Fehler bezahlen.~
+@139    = ~Ich bin <CHARNAME>. Die Strahlende Dame hat versucht, mich zu vergiften. Offensichtlich ist es ihr nicht gelungen, und sie wird diesen Fehlschlag bereuen, wenn ich sie in Burg Drachenspeer finde.~
+@140    = ~Die Strahlende Dame hat mich angegriffen. Jetzt bin ich dran.~
+@141    = ~Ich bin <CHARNAME>. Ich weiß nicht warum, aber die Strahlende Dame hat es auf mich abgesehen. Sie wird einen hohen Preis für diesen Fehler zahlen.~
+@142    = ~Ich bin <CHARNAME>. Aus Gründen, auf die ich nicht näher eingehen möchte, hat die Strahlende Dame mich ins Visier genommen. Für diesen Fehler wird sie einen hohen Preis zahlen.~
