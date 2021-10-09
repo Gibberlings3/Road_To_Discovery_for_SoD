@@ -1,0 +1,66 @@
+// creator: Shai Hulud
+// game: Road to Discovery
+// date: 08.10.2021, 21:54
+
+@2000   = ~Was ist das? Habt Ihr das gesehen, <CHARNAME>?~
+@2001   = ~In dem Buch, das Ihr gefunden habt, steht, dass es unter Burg Drachenspeer ein Portal nach Avernus gibt.~
+@2002   = ~Nicht nur das, sondern auch, dass es mit Blut geöffnet werden kann, welches die Essenz eines Gottes enthält.~
+@2003   = ~Ist es das, was Caelar im Sinn hat? Ein Portal nach Avernus öffnen? Ist sie verrückt?~
+@2004   = ~Hm, das hat sie also vor. Ich denke, Ihr habt recht. Ich denke, sie hat ihren Verstand verloren.~
+@2005   = ~Was ist das? In dem Buch, das ich gefunden habe, steht, dass es unter Burg Drachenspeer ein Portal nach Avernus gibt.~
+@2006   = ~Hm, das ist es also, was sie vorhat. Sie will das Portal öffnen. Sie muss verrückt sein!~
+@2007   = ~Wenn Caelar ein Kind von Bhaal wäre, wie die Gerüchte besagen, hätte sie das Portal bereits geöffnet. Es scheint, dass die Gerüchte falsch sind.~
+@2010   = ~<CHARNAME>, vielleicht solltet Ihr mit Herzog Eltan über den gefallenen Paladin sprechen, mit dem wir gesprochen haben – Dauston.~
+@2011   = ~<CHARNAME>, vielleicht solltet Ihr mit Herzog Eltan über den unglücklicherweise gefallenen Paladin sprechen, mit dem wir gesprochen haben –Dauston.~
+@2020   = ~Gut genug, mein Herr. Aber ich möchte Euch um einen Gefallen bitten, der den gefallenen Paladin namens Dauston betrifft, der derzeit in Euren Zellen seinen Rausch ausschläft.~
+@2021   = ~Ja, natürlich. Was kann ich für den Helden von Baldurs Tor tun?~ ~Ja, natürlich. Was kann ich für die Heldin von Baldurs Tor tun?~
+@2022   = ~Könnt Ihr ihn befragen, wenn er wach ist? Er weiß etwas über Caelars Vergangenheit, das sich als nützlich erweisen könnte.~
+@2023   = ~Nichts einfacher als das. Betrachtet es als erledigt. Ich werde bei nächster Gelegenheit einen Boten mit den Ergebnissen zu Corwin schicken.~
+@2024   = ~Ich danke Euch, mein Herr. Wie geht es Euch mit all dem?~
+@2030   = ~Ich kenne Eure „Wahrheit“ bereits. In Burg Drachenspeer gibt es ein Portal nach Avernus, das Ihr in einem vergeblichen Versuch, Eure Schuldgefühle wegen Eures Onkels zu lindern, öffnen wollt.~
+@2031   = ~Trotzdem versucht Ihr, Euch moralisch zu profilieren! Macht Ihr Euch sogar selbst etwas vor? Ihre Motive sind nicht einmal im Entferntesten altruistisch. Das Risiko einzugehen, dass weitere Tausende zu Unrecht inhaftiert werden, nur um Eure eigene Schuld zu lindern, ist der Gipfel der Selbstsucht und Arroganz.~
+@2032   = ~Wenn Ihr diese Teufel bekämpfen wollt, warum steht dann einer ihrer Diener direkt hinter Euch?~
+@2033   = ~(hust)~
+@2034   = ~Ifearnan? Nein, ich werde mir keine unbegründeten Anschuldigungen gegen meinen vertrautesten Berater anhören!~
+@2035   = ~Ich kenne Eure „Wahrheit“ bereits, oder zumindest genug davon. In Burg Drachenspeer gibt es ein Portal nach Avernus, und Ihr wollt es öffnen.~
+@2036   = ~Wie kann die Tatsache, dass Ihr versucht habt, mich zu entführen, anstatt mich zu töten, Euch weniger zu einer Feindin machen?~
+@2037   = ~Da es Euer Ziel war, mich gefangen zu nehmen und nicht zu töten, sollten wir besten Freunde sein? Ernsthaft?~ ~Da es Euer Ziel war, mich gefangen zu nehmen und nicht zu töten, sollten wir besten Freundinnen sein? Ernsthaft?~
+@2038   = ~Dieser Agent der Schattenübereinkunft ist Euer vertrauenswürdigster Berater? Oh, das wird ja immer besser und besser!~
+@2039   = ~Dann seid Ihr ebenfalls ein Närrin. Nicht die Götter sind auf Eurer Seite, sondern Dämonen.~
+@2040   = ~Ihr habt mich hierher gebracht – es war Euer Angriff auf den Palast in Baldurs Tor und der Schaden, den Ihr im ganzen Land angerichtet habt.~
+@2041   = ~Das Schicksal und das Gift, das von den Klingen eurer Elitetruppen im Palast von Baldurs Tor tropft, haben mich hierher gebracht.~
+@2042   = ~Um ehrlich zu sein, habt Ihr mich zuerst angegriffen.~
+@2060   = ~Ich wusste, dass mit diesem Heckenmagier etwas nicht stimmt! (Ich weiß so etwas immer.)~
+@2061   = ~Welcher Heckenmagier, Edwin?~
+@2062   = ~Kennt Ihr ihn, Edwin?~
+@2063   = ~Diese armselige Entschuldigung für einen Magier, der mit dem Mann mit der Kapuze spricht – das ist Ifearnan. Caelars vertrautester Berater. (Unglaublich … was für ein Dummkopf.)~
+@2064   = ~Ja, ja, ich kenne ihn. Diese armselige Entschuldigung für einen Magier, der mit der vermummten Gestalt spricht, ist Ifearnan. Caelars vertrautester Berater. (Unglaublich … was für ein Dummkopf.)~
+@2065   = ~Die Teile des Puzzles fügen sich allmählich zusammen. Ich danke Euch, Edwin. Ihr wart von unschätzbarem Wert.~
+@2066   = ~Natürlich war ich das. Das bin ich immer.~
+@2067   = ~Natürlich ist er das. Das wird ja immer besser und besser. Ich danke Euch, Edwin. Das war eine unschätzbare Information.~
+@2068   = ~Natürlich. Habt Ihr etwas anderes von mir erwartet? (Das will ich nicht hoffen!)~
+@3000   = ~Eine historische Abhandlung über Burg Drachenspeer
+
+Ich habe ein Buch gefunden, in dem meiner Ansicht nach Caelars Pläne bezüglich meiner Person beschrieben sind. Sie will mein Blut benutzen, um ein Portal nach Avernus zu öffnen. Die einzige Schlussfolgerung ist, dass sie ihren Verstand verloren hat.~
+@3001   = ~Der arme Dauston
+
+Der gefallene Paladin, der gerade in den Zellen der Flammenden Faust seinen Rausch ausschläft, könnte wichtige Informationen über Caelar haben. Ich habe keine Zeit, darauf zu warten, dass er wieder nüchtern wird. Vielleicht kann Herzog Eltan mehr von ihm erfahren.~
+@3002   = ~Der arme Dauston
+
+Ein Mitglied meiner Gruppe hat mir vorgeschlagen, mit Herzog Eltan über den gefallenen Paladin zu sprechen, der in den Zellen der Flammenden Faust ohnmächtig geworden war.~
+@3003   = ~Der arme Dauston
+
+Herzog Eltan sagte, er werde Dauston befragen, sobald der gefallene Paladin wieder nüchtern ist. Er wird das, was er erfährt, an Corwin schicken.~
+@3004   = ~Der arme Dauston
+
+Wir haben erfahren, dass Daustons Mentor, Caelars Onkel, sich freiwillig gemeldet hat, um Caelars Platz als Gefangener in Avernus einzunehmen.~
+@3005   = ~Eine historische Abhandlung über Burg Drachenspeer
+
+Ich habe ein Buch gefunden, in dem meiner Einschätzung nach Caelars Pläne beschrieben werden. Sie will ein Portal nach Avernus öffnen. Die einzige Schlussfolgerung ist, dass sie ihren Verstand verloren hat.~
+@4030   = ~Übrigens, ich habe eine Nachricht von Herzog Eltan für Euch, <CHARNAME>.~
+@4031   = ~Ausgezeichnet! Was hat er herausgefunden?~
+@4032   = ~Besser spät als nie, denke ich. Was hat er herausgefunden?~
+@4033   = ~Hättet Ihr Kontakt zum Lager gehalten, hättet Ihr sie schon viel früher erhalten. Wir hatten sie jetzt schon eine Weile.~
+@4034   = ~Er hat herausgefunden, dass Caelar durch eigenes Verschulden als Gefangene in Avernus gelandet war.~
+@4035   = ~Ihr Onkel hat es geschafft, sie zu befreien, indem er sich geopfert hat. Er ist jetzt ein Gefangener in Avernus … an ihrer Stelle.~
+@4036   = ~Wie furchtbar. Aber das erklärt eine Menge.~
