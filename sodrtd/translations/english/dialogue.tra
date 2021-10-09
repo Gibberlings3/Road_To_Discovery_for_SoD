@@ -1,9 +1,7 @@
 /* add_inform_officers_basic.d */
 @0    = ~[PC reply]I have more information concerning Caelar's plans.~
-
 /* @1 is used in many other files, too */
 @1    = ~[PC reply]I have no more information to share right now.~
-
 @2    = ~[Torsin De Lancie]Is there anything you want to add to our status of information regarding Caelar's plans?~
 @3    = ~[Torsin De Lancie]Do you have anything else you want to share?~
 @4    = ~[Torsin De Lancie]...It would be the only reasonable explanation for what she is planning, yes, although we were hoping she might have a more... magical approach to this than opening a direct portal.~
@@ -228,7 +226,7 @@
 @1528 = ~[PC Reply]This greeting gets nicer and nicer.~
 @1529 = ~[PC Reply]Your attitude towards me is getting nicer and nicer, De Lancie.~
 @1530 = ~[PC Reply]Great! That's the first sensible remark I've heard in a long time. When do I leave?~
-@1531 = ~[Marshal Nederlok]You will not leave, <CHARNAME>. At least not the way De Lancie suggested it.~
+@1531 = ~[Marshal Nederlok]You will not leave, <CHARNAME>. At least not the way De Lancie implied.~
 @1532 = ~[General Stonehand]I will not let <CHARNAME> sit in camp so my soldiers will have to babysit <PRO_HIMHER>!~
 @1533 = ~[Marshal Nederlok]We need to stay calm. We will not send <CHARNAME> away or make <PRO_HIMHER> a sitting duck when there is so much work to be done here.~
 @1534 = ~[Marshal Nederlok]<CHARNAME> faced - and fought off - Caelar's assassins before. Accompanying the Flaming Fist up to here, <PRO_HESHE> faced crusaders and almost Caelar herself. There was no visible attempt of any crusaders to get a hold of <PRO_HIMHER> so far. I know that you agree - <PRO_HESHE> is our greatest asset, and we will make good use of <PRO_HISHER> strength to bring down Caelar.~

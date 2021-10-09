@@ -8,6 +8,7 @@ LIST OF CONTENTS
 --CONTENTS
 --DESCRIPTION OF COMPONENTS
 --COMPATIBILITY NOTE
+--NOTE TO ALL TRANSLATORS AND GERMAN PLAYERS
 --INSTALLATION
 --OVERVIEW ON TRACKED KNOWLEDGE
 --VARIABLE SYSTEM: GENERAL DESCRIPTION FOR MODDERS
@@ -118,6 +119,14 @@ Install Road to Discovery very late in install order. This mod should be install
 -any mod that adds reply options or transactions to SoD, like NPC mods or story tweak mods.
 
 Road to Discovery has native EET compatibility and needs to be installed before EET_End.
+
+
+NOTE TO ALL TRANSLATORS AND GERMAN PLAYERS
+
+Translators: please note that all tra-files are in utf8 conversion. Also, please refer to the "note_to_translators.txt" inside sodrtd/docs.
+
+The German version is consistent to the fan-made "Deutsche Übersetzung für SoD". This means, that names and terms could differ from the official German version shipped with the game. Install "Deutsche Übersetzung für SoD" for a consistent game experience.
+Download Link: https://baldurs-gate.de/index.php?resources/deutsche-%C3%9Cbersetzung-f%C3%BCr-sod.49/
 
 
 INSTALLATION
@@ -388,7 +397,8 @@ Using the variables with the postfix "_SET" ensures that knowledge is not lost: 
 CREDITS
 
 jastey - author, main mod head
-Lauriel - author of component 1, ideas, design help
+Lauriel - author of component 1, ideas, design help, proofreading English
+Shai Hulud - German translation
 
 Thanks to BioWare, Black Isle and Wizards of the Coast for Baldur's Gate 1, 2 and the Infinity Engine, and BeamDog for the revival of the games including the SoD campaign.
 Thanks to Kerzenburgforum and GibberlingsThree for giving a place for exchange of ideas and technical advice.
@@ -429,6 +439,11 @@ https://www.gibberlings3.net/forums/topic/1649-community-filename-prefix-reserva
 
 
 HISTORY
+
+Version 0.2 Beta
+- German version added, by Shai Hulud
+- added a paragraph "note to all translators and German players" to readme
+- removed the tra handling: no copying to "autotra" folder; no iconv convertion; tra-files are in utf8.
 
 Version 0.1 Beta
 -first public release
