@@ -1,28 +1,29 @@
 // creator: Shai Hulud
 // game: Road to Discovery
-// date: 08.10.2021, 21:54
+// date: 09.10.2021, 17:39
+// Caution: This file is in UTF-8 format because it uses several special characters of the German language
 
-@100000 = ~SoD – Stat-basierte Beobachtungen und Quest-Optionen von "Lauriel's Themed Tweaks Mod"~
+@100000 = ~SoD - Stat-basierte Beobachtungen und Quest-Optionen von "Lauriel's Themed Tweaks Mod"~
 @100001 = ~Diese Mod ist nur mit SoD und EET kompatibel.~
-@100002 = ~Komponente ist bereits über "Themed Tweaks" installiert~
+@100002 = ~Komponente ist bereits ueber "Themed Tweaks" installiert~
 @100003 = ~Diese Komponente muss vor der Hauptkomponente von RtD installiert werden.~
 @100004 = ~Diese Mod muss vor EET_End installiert werden.~
 @100005 = ~Hauptkomponente: Tracking-System~
 @100006 = ~"Themed Tweaks"-Komponente erkannt. Skripte werden gepatcht.~
-@100007 = ~Konsistenzänderungen an Spieldialogen~
-@100008 = ~Für diese Komponente benötigst du die Hauptkomponente "Tracking System".~
+@100007 = ~Konsistenzaenderungen an Spieldialogen~
+@100008 = ~Fuer diese Komponente benoetigst du die Hauptkomponente "Tracking System".~
 @100009 = ~Offiziere wissen Bescheid~
-@100010 = ~HC erhält umfangreichere Antwortmöglichkeiten~
-@100011 = ~Für diese Komponente benötigst du die Mod-Komponente "Konsistenzänderungen an Spieldialogen".~
+@100010 = ~HC erhaelt umfangreichere Antwortmoeglichkeiten~
+@100011 = ~Fuer diese Komponente benoetigst du die Mod-Komponente "Konsistenzaenderungen an Spieldialogen".~
 @100012 = ~HC kann den Offizieren berichten~
 @100013 = ~"Themed Tweaks"-Komponente entdeckt.~
 @100014 = ~Komponente "Themed Tweaks" wurde via RtD installiert: Dialoge aktualisieren.~
-@100015 = ~Komponente "Themed Tweaks" wurde über "Themed Tweaks" installiert: Dialoge aktualisieren.~
-@100016 = ~Zusätzliche Offiziersreaktionen~
-@100017 = ~Für diese Komponente benötigst du die Mod-Komponente "Offiziere wissen Bescheid".~
-@100018 = ~Für diese Komponente benötigst du die Mod-Komponente "HC kann den Offizieren berichten".~
-@100019 = ~Diese Mod muss vor der Komponente "Zusätzliche Kommunikation mit Offizieren" installiert werden.~
-@100020 = ~Zusätzliche Informationsquellen~
+@100015 = ~Komponente "Themed Tweaks" wurde ueber "Themed Tweaks" installiert: Dialoge aktualisieren.~
+@100016 = ~Zusaetzliche Offiziersreaktionen~
+@100017 = ~Fuer diese Komponente benoetigst du die Mod-Komponente "Offiziere wissen Bescheid".~
+@100018 = ~Fuer diese Komponente benoetigst du die Mod-Komponente "HC kann den Offizieren berichten".~
+@100019 = ~Diese Mod muss vor der Komponente "Zusaetzliche Kommunikation mit Offizieren" installiert werden.~
+@100020 = ~Zusaetzliche Informationsquellen~
 @100021 = ~Karlen~
-@100022 = ~Zusätzliche Kommunikation mit Offizieren~
+@100022 = ~Zusaetzliche Kommunikation mit Offizieren~
 @100023 = ~Sir Deggernaut~

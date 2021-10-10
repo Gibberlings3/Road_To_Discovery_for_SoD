@@ -1,6 +1,7 @@
 // creator: Shai Hulud
 // game: Road to Discovery
-// date: 08.10.2021, 21:54
+// date: 09.10.2021, 17:39
+// Caution: This file is in UTF-8 format because it uses several special characters of the German language
 
 @2000   = ~Was ist das? Habt Ihr das gesehen, <CHARNAME>?~
 @2001   = ~In dem Buch, das Ihr gefunden habt, steht, dass es unter Burg Drachenspeer ein Portal nach Avernus gibt.~
@@ -11,7 +12,7 @@
 @2006   = ~Hm, das ist es also, was sie vorhat. Sie will das Portal öffnen. Sie muss verrückt sein!~
 @2007   = ~Wenn Caelar ein Kind von Bhaal wäre, wie die Gerüchte besagen, hätte sie das Portal bereits geöffnet. Es scheint, dass die Gerüchte falsch sind.~
 @2010   = ~<CHARNAME>, vielleicht solltet Ihr mit Herzog Eltan über den gefallenen Paladin sprechen, mit dem wir gesprochen haben – Dauston.~
-@2011   = ~<CHARNAME>, vielleicht solltet Ihr mit Herzog Eltan über den unglücklicherweise gefallenen Paladin sprechen, mit dem wir gesprochen haben –Dauston.~
+@2011   = ~<CHARNAME>, vielleicht solltet Ihr mit Herzog Eltan über den unglücklicherweise gefallenen Paladin sprechen, mit dem wir gesprochen haben – Dauston.~
 @2020   = ~Gut genug, mein Herr. Aber ich möchte Euch um einen Gefallen bitten, der den gefallenen Paladin namens Dauston betrifft, der derzeit in Euren Zellen seinen Rausch ausschläft.~
 @2021   = ~Ja, natürlich. Was kann ich für den Helden von Baldurs Tor tun?~ ~Ja, natürlich. Was kann ich für die Heldin von Baldurs Tor tun?~
 @2022   = ~Könnt Ihr ihn befragen, wenn er wach ist? Er weiß etwas über Caelars Vergangenheit, das sich als nützlich erweisen könnte.~
@@ -24,11 +25,11 @@
 @2034   = ~Ifearnan? Nein, ich werde mir keine unbegründeten Anschuldigungen gegen meinen vertrautesten Berater anhören!~
 @2035   = ~Ich kenne Eure „Wahrheit“ bereits, oder zumindest genug davon. In Burg Drachenspeer gibt es ein Portal nach Avernus, und Ihr wollt es öffnen.~
 @2036   = ~Wie kann die Tatsache, dass Ihr versucht habt, mich zu entführen, anstatt mich zu töten, Euch weniger zu einer Feindin machen?~
-@2037   = ~Da es Euer Ziel war, mich gefangen zu nehmen und nicht zu töten, sollten wir besten Freunde sein? Ernsthaft?~ ~Da es Euer Ziel war, mich gefangen zu nehmen und nicht zu töten, sollten wir besten Freundinnen sein? Ernsthaft?~
+@2037   = ~Weil es Euer Ziel war, mich gefangen zu nehmen und nicht zu töten, sollten wir beste Freunde sein? Ernsthaft?~ ~Weil es Euer Ziel war, mich gefangen zu nehmen und nicht zu töten, sollten wir beste Freundinnen sein? Ernsthaft?~
 @2038   = ~Dieser Agent der Schattenübereinkunft ist Euer vertrauenswürdigster Berater? Oh, das wird ja immer besser und besser!~
 @2039   = ~Dann seid Ihr ebenfalls ein Närrin. Nicht die Götter sind auf Eurer Seite, sondern Dämonen.~
 @2040   = ~Ihr habt mich hierher gebracht – es war Euer Angriff auf den Palast in Baldurs Tor und der Schaden, den Ihr im ganzen Land angerichtet habt.~
-@2041   = ~Das Schicksal und das Gift, das von den Klingen eurer Elitetruppen im Palast von Baldurs Tor tropft, haben mich hierher gebracht.~
+@2041   = ~Das Schicksal und das Gift, das von den Klingen Eurer Elitetruppen im Palast von Baldurs Tor tropft, haben mich hierher gebracht.~
 @2042   = ~Um ehrlich zu sein, habt Ihr mich zuerst angegriffen.~
 @2060   = ~Ich wusste, dass mit diesem Heckenmagier etwas nicht stimmt! (Ich weiß so etwas immer.)~
 @2061   = ~Welcher Heckenmagier, Edwin?~
@@ -53,7 +54,7 @@ Ein Mitglied meiner Gruppe hat mir vorgeschlagen, mit Herzog Eltan über den gef
 Herzog Eltan sagte, er werde Dauston befragen, sobald der gefallene Paladin wieder nüchtern ist. Er wird das, was er erfährt, an Corwin schicken.~
 @3004   = ~Der arme Dauston
 
-Wir haben erfahren, dass Daustons Mentor, Caelars Onkel, sich freiwillig gemeldet hat, um Caelars Platz als Gefangener in Avernus einzunehmen.~
+Wir haben erfahren, dass Daustons Mentor, Caelars Onkel, sich aus freien Stücken angeboten hat, um Caelars Platz als Gefangener in Avernus einzunehmen.~
 @3005   = ~Eine historische Abhandlung über Burg Drachenspeer
 
 Ich habe ein Buch gefunden, in dem meiner Einschätzung nach Caelars Pläne beschrieben werden. Sie will ein Portal nach Avernus öffnen. Die einzige Schlussfolgerung ist, dass sie ihren Verstand verloren hat.~

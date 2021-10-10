@@ -1,6 +1,7 @@
 // creator: Shai Hulud
 // game: Road to Discovery
-// date: 08.10.2021, 21:54
+// date: 09.10.2021, 17:39
+// Caution: This file is in UTF-8 format because it uses several special characters of the German language
 
 @10000  = ~Wichtige Ereignisse
 
@@ -28,7 +29,7 @@ Nach allem, was ich bisher weiß, scheint es, dass Caelar Pläne für mich hat 
 Caelar will durch mich die Ziele ihres Kreuzzugs erreichen.~
 @10008  = ~Wichtige Ereignisse
 
-Ein Kreuzzug wütet in den Ländern nördlich von Schlängelnden Fluss und hat Burg Drachenspeer besetzt. Gerüchte besagen, dass der Kreuzzug eine Reihe von Städten geplündert und ihre Bewohner eingezogen hat. Eine beunruhigende Nachricht, wenn sie wahr ist. Die Anführerin heißt Caelar die „Strahlende Dame“. Die Pläne des Kreuzzugs sind unklar.~
+Ein Kreuzzug wütet in den Ländern nördlich des Schlängelnden Flusses und hat Burg Drachenspeer besetzt. Gerüchte besagen, dass der Kreuzzug eine Reihe von Städten geplündert und ihre Bewohner eingezogen hat. Eine beunruhigende Nachricht, wenn sie wahr ist. Die Anführerin heißt Caelar die „Strahlende Dame“. Die Pläne des Kreuzzugs sind unklar.~
 @10009  = ~Wichtige Ereignisse
 
 Caelar plant, mit ihrem Kreuzzug die Seelen von Avernus zu befreien. Wie sie dies erreichen will, ist unklar.~
@@ -55,7 +56,7 @@ Ich bin mir noch nicht sicher, wie, aber Caelars Anhänger glauben definitiv, da
 Wir wurden Zeuge eines seltsamen „Segnungsrituals“ in einem der Lager der Kreuzzügler. Ich weiß nicht, was genau gemacht wurde, aber die Kreuzzügler glauben fest, dass dieser „Segen“ sie vor feindlichen Kräften schützen wird.~
 @10017  = ~Wichtige Ereignisse
 
-Was auch immer Caelars Priester ihren Anhängern auf ritualisierter Basis verleihen, es ist lediglich ein gewöhnlicher Segen, nichts Besonderes. Und ganz sicher nichts, was sie in irgendeiner Weise unbesiegbar machen würde. Es handelt sich eher um eine Art Moralschub. Aber den Kreuzfahrern scheint nicht bewusst zu sein, dass er letztlich so wenig Wirkung hat.~
+Was auch immer Caelars Priester ihren Anhängern auf ritualisierter Basis verleihen, es ist lediglich ein gewöhnlicher Segen, nichts Besonderes. Und ganz sicher nichts, was sie in irgendeiner Weise unbesiegbar machen würde. Es handelt sich eher um eine Art Moralschub. Aber den Kreuzzüglern scheint nicht bewusst zu sein, dass er letztlich so wenig Wirkung hat.~
 @10018  = ~Wichtige Ereignisse
 
 Ifearnan ist nicht der loyale Diener Caelars, der er zu sein vorgibt. Er hat seine eigenen, dunklen Pläne für diesen Kreuzzug.~
@@ -67,7 +68,7 @@ Ifearnan ist nicht der loyale Diener Caelars, der er zu sein vorgibt. Er nennt e
 Ifearnan ist nicht der treue Diener von Caelar, der er vorgibt zu sein. Er hat für den Teufel Belhifet gearbeitet, der plant, die Primäre Ebene zu betreten!~
 @10021  = ~Wichtige Ereignisse
 
-Caelar war in Avernus! Aufgrund von Ereignissen in ihrer Kindheit war Caelar eine Zeit lang in Avernus gefangen. Sie kam zur gleichen Zeit zurück, als ihr Onkel Aun Argent verschwand …~
+Caelar war in Avernus! Aufgrund von Ereignissen in ihrer Kindheit war Caelar eine Zeit lang in Avernus gefangen. Sie kam zur gleichen Zeit zurück, als ihr Onkel Aun Silberweiß verschwand …~
 @10022  = ~Wichtige Ereignisse
 
 Caelar war in Avernus! Aufgrund von Ereignissen in ihrer Kindheit war Caelar eine Zeit lang in Avernus gefangen. Es war ihr Onkel Aun Silberweiß, der sie befreite – indem er den Platz mit seiner Nichte tauschte!~
@@ -103,7 +104,7 @@ Das Gift, das die „Attentäter“ des Kreuzzuges verwendet haben, war zu schwa
 Einer der Kreuzzügler hat ein „Segnungsritual“ erwähnt, das von Caelars Priestern in der Abenddämmerung durchgeführt werden soll. Es soll den Schutz des „Pantheons“ gewähren. Vielleicht sollte ich mir das ansehen, um herauszufinden, ob an dem Gerücht etwas dran ist, dass Caelar ihre Kreuzzügler durch göttliche Macht schützt.~
 @10033  = ~Segnungsritual der Kreuzzügler
 
-Es könnte interessant sein, ob dieses „ Segnungsritual“ in einem der Lager der Kreuzzügler tatsächlich eine Art Schutz gewährt. Ich sollte mich mit einem Kleriker oder jemand anderem, der die Natur eines göttlichen Zaubers bestimmen kann, zusammentun und morgen darauf zurückkommen, um herauszufinden, was sich hinter diesem „Segen“ verbirgt, den Caelars Priester ihren Kreuzzüglern gewähren.~
+Es könnte interessant sein, ob dieses „Segnungsritual“ in einem der Lager der Kreuzzügler tatsächlich eine Art Schutz gewährt. Ich sollte mich mit einem Kleriker oder jemand anderem, der die Natur eines göttlichen Zaubers bestimmen kann, zusammentun und morgen darauf zurückkommen, um herauszufinden, was sich hinter diesem „Segen“ verbirgt, den Caelars Priester ihren Kreuzzüglern gewähren.~
 @10034  = ~Segnungsritual der Kreuzzügler
 
 Ich habe zu lange damit gewartet, einen Kleriker um Hilfe zu bitten, was das „Segnungsritual“ im Lager der Kreuzzügler und an der Eberfellbrücke angeht. Solange es kein ähnliches Ritual in anderen Kreuzzügler-Lagern gibt, auf die wir noch treffen könnten, werden wir nicht in der Lage sein, die Art von Caelars „Segen“ für ihre Kreuzzügler zu bestimmen.~

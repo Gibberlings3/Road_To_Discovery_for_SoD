@@ -1,6 +1,7 @@
 // creator: Shai Hulud
 // game: Road to Discovery
-// date: 08.10.2021, 21:54
+// date: 09.10.2021, 17:39
+// Caution: This file is in UTF-8 format because it uses several special characters of the German language
 
 @0      = ~[PC reply]Ich habe mehr Informationen über Caelars Pläne.~
 @1      = ~[PC reply]Ich habe im Moment keine weiteren Informationen für Euch.~
@@ -19,7 +20,7 @@
 @14     = ~[Torsin De Lancie]Bei den Göttern der … Ich wusste, dass wir es hier mit der wahren Gefahr zu tun haben würden.~
 @15     = ~[Marshal Nederlok]Konntet Ihr sonst noch etwas über Caelar und ihren Berater Ifearnan in Erfahrung bringen?~
 @16     = ~[Marshal Nederlok]Es ist also eine Lüge, mit der sie ihre Anhänger blendet – und mit der sie versucht uns einzuschüchtern. Das könnte zu unserem Vorteil sein, wenn wir ihnen unweigerlich in Burg Drachenspeer gegenüberstehen.~
-@17     = ~[Marshal Nederlok]Interessant. Ob sie göttlichen – oder gar noch höheren – Einfluss hat, bleibt abzuwarten. Wir haben auch keine Hinweise auf ihre Anhänger gefunden, aber wir müssen auf der Hut sein, wenn wir sie nicht unvorbereitet bekämpfen wollen.~
+@17     = ~[Marshal Nederlok]Interessant. Ob sie göttliche – oder gar noch höhere – Einflüsse erfährt, bleibt abzuwarten. Auch bei ihren Anhängern haben wir keine Hinweise darauf gefunden, aber wir müssen auf der Hut sein, wenn wir sie nicht unvorbereitet bekämpfen wollen.~
 @18     = ~[Marshal Nederlok]Das sollten wir. Zumindest bereiten sich ihre Anhänger darauf vor. Wir wissen immer noch nicht, wie sie das überhaupt erreichen will. Lasst es uns wissen, sobald Ihr mehr Informationen dazu habt.~
 @19     = ~[Marshal Nederlok]Jetzt ergibt das alles einen Sinn. Wenn man sieht, wie sie die Burg seit Wochen hält, ohne dass ihr Kreuzzug irgendwo hinmarschiert, ist zumindest klar, dass sie noch nicht die Mittel hat, es zu öffnen. Wir müssen unsere Bemühungen verstärken, sie aufzuhalten, bevor dies geschieht.~
 @20     = ~[Marshal Nederlok]Die Informationen, die Ihr gesammelt habt, sind ernste Neuigkeiten, <CHARNAME>. Die Gefahr, die von Caelars Kreuzzug ausgeht, ist viel größer als die der wütenden Armee, die wir aufhalten wollen! Ihr habt gut daran getan, diese Informationen rechtzeitig zu sammeln.~
@@ -73,7 +74,6 @@
 @68     = ~[Marshal Nederlok]Ja, ihre Anhänger bereiten sich sicherlich darauf vor. Wir wissen immer noch nicht, wie sie das überhaupt erreichen will. Lasst es uns wissen, sobald Ihr mehr Informationen dazu habt.~
 @69     = ~[Marshal Nederlok]Nun, das haben wir schon vermutet. Ich danke Euch für die Bestätigung.~
 @70     = ~[PC reply]Ich habe mehr Informationen über Caelars Pläne, die wir jetzt besprechen sollten.~
-
 @200    = ~[Sir Deggernaut (male)]Seid gegrüßt, ich bin Sir Deggernaut. Die Herzöge haben beschlossen, mich mit Euch zu schicken, um die Fortschritte der Bündniskräfte zu überwachen und die Herzöge sowie unsere Verbündeten jederzeit umfassend zu informieren. Ich werde hier sein, wenn Ihr den Herzögen oder den anderen Bündnisoffizieren etwas mitteilen wollt.~
 @201    = ~[Sir Deggernaut (male)]Gibt es etwas, das Ihr uns über Caelars Kreuzzug mitteilen wollt?~
 @202    = ~[PC reply]Ich weiß etwas über die Pläne des Kreuzzuges, das die Offiziere wissen sollten.~
@@ -124,7 +124,7 @@
 @247    = ~[Sir Deggernaut (male)]Wir wissen, dass der Kreuzzug Verwendung für Euer Bhaal-Blut hat.~
 @248    = ~[Sir Deggernaut (male)]Wir wissen, dass es unter Burg Drachenspeer einen inaktiven Riss nach Avernus gibt.~
 @249    = ~[Sir Deggernaut (male)]Wir wissen, dass das Blut eines Kindes von Bhaal ausreichen würde, um das inaktive Portal nach Avernus unter Burg Drachenspeer zu öffnen.~
-@250    = ~[Sir Deggernaut (male)] Wir wissen, dass das Blut eines Kindes von Bhaal ausreichen würde, um das inaktive Portal nach Avernus unter Burg Drachenspeer zu öffnen, und sind daher zu dem Schluss gekommen, dass Caelar genau das von Euch will.~
+@250    = ~[Sir Deggernaut (male)]Wir wissen, dass das Blut eines Kindes von Bhaal ausreichen würde, um das inaktive Portal nach Avernus unter Burg Drachenspeer zu öffnen, und sind daher zu dem Schluss gekommen, dass Caelar genau das von Euch will.~
 @251    = ~[Sir Deggernaut (male)]Wir wissen, dass das Blut eines Kindes von Bhaal ausreichen würde, um das inaktive Portal nach Avernus unter Burg Drachenspeer zu öffnen, und wir wissen, dass Caelar Euch dafür braucht.~
 @252    = ~[Sir Deggernaut (male)]Wir glauben, dass Caelar ein Kind von Bhaal sein könnte – das sind allerdings nur Gerüchte, wir wissen es also nicht genau.~
 @253    = ~[Sir Deggernaut (male)]Aus dem, was wir gehört haben, haben wir geschlossen, dass Caelar kein Kind von Bhaal ist, trotz der Gerüchte, die wir anderswo gehört haben.~
@@ -173,9 +173,9 @@
 @1006   = ~[Male Crusader (C#RtDblc)]Ich kann es kaum erwarten, den nächsten Segen zu erhalten. Ich spüre, wie der letzte mit jeder Stunde schwächer wird.~
 @1007   = ~[PC reply]Ich würde sehr gerne hier sein, wenn die nächste Segnung stattfindet. Kennt Ihr einen Ort, wo wir warten können, ohne jemandem in die Quere zu kommen?~
 @1008   = ~[PC reply]Einen schönen Tag wünsche ich Euch.~
-@1009   = ~[Male Crusader (C#RtDblc)]Oh, wenn du willst, kannst du einfach hier warten. Ich brauche das Zelt im Moment nicht.~
+@1009   = ~[Male Crusader (C#RtDblc)]Oh, wenn Ihr wollt, könnt Ihr einfach hier warten. Ich brauche das Zelt im Moment nicht.~
 @1010   = ~[PC reply]Großartig. Dann werden wir hier bis zum nächsten Segen ausruhen.~
-@1011   = ~[PC reply]Vielen Dank für das Angebot, aber ich denke, ich werde bis dahin lieber beschäftigt sein.~
+@1011   = ~[PC reply]Vielen Dank für das Angebot, aber ich denke, ich werde mich bis dahin lieber beschäftigen.~
 @1012   = ~[Male Crusader (C#RtDblc)]Wir sehen uns dann!~
 @1013   = ~[Male Crusader (C#RtDblc)]Sicher, macht es Euch bequem.~
 @1014   = ~[PC selftalk](Ihr wurdet Zeuge eines „Segnungsrituals“ von einem von Caelars Priestern.)~
@@ -204,41 +204,41 @@
 @1514   = ~[General Stonehand]Wäre sie es, wäre die Moral der Truppe vielleicht nicht so erschüttert von den Bhaal-Zeichen, die um den Helden Eurer Stadt herum auftauchen.~ ~[General Stonehand]Wäre sie es, wäre die Moral der Truppe vielleicht nicht so erschüttert von den Bhaal-Zeichen, die um die Heldin Eurer Stadt herum auftauchen.~
 @1515   = ~[Marshal Nederlok]Generalin Steinhand, bitte.~
 @1516   = ~[Torsin De Lancie]Das könnte ein Hinweis darauf sein, warum Caelar ein solches Interesse daran hat, Euch lebend in die Finger zu bekommen.~
-@1517   = ~[Torsin De Lancie]Wir wissen auch, wofür sie Euch braucht – euer Blut, um genau zu sein. Sie braucht Euer Blut, um das Portal nach Avernus unter Burg Drachenspeer zu öffnen!~
+@1517   = ~[Torsin De Lancie]Wir wissen auch, wofür sie Euch braucht – Euer Blut, um genau zu sein. Sie braucht Euer Blut, um das Portal nach Avernus unter Burg Drachenspeer zu öffnen!~
 @1518   = ~[Torsin De Lancie]Dies ist eine wichtige Nachricht, denn sie verdeutlicht Caelars Beweggründe in Bezug auf Euch, <CHARNAME>. Es ist offensichtlich, dass sie Euer Blut braucht, um das Portal nach Avernus unterhalb Burg Drachenspeer zu öffnen!~
 @1519   = ~[Marshal Nederlok]Die neuen Informationen geben unserem Kampf gegen Caelar und ihren Kreuzzug eine völlig neue Bedeutung. Hier geht es nicht darum, eine plündernde Bande zu stoppen. Hier geht es darum, einen zweiten Krieg gegen Teufel zu verhindern!~
 @1520   = ~[Torsin De Lancie]Daher ist es für Caelars Kreuzzug unerlässlich, Zugriff auf Euch zu erlangen – und zwar lebend. Und damit stehen wir vor einem eklatanten Problem, jetzt da Ihr hier seid, <CHARNAME>.~
 @1521   = ~[Torsin De Lancie]Es scheint, dass nicht nur die Moral durch Euer Bhaal-Erbe erschüttert wurde. Es stellt auch eine echte Gefahr für uns alle dar, wenn es wahr ist, was wir über das inaktive Portal unter Burg Drachenspeer wissen!~
 @1522   = ~[Torsin De Lancie]Wenn die Kreuzzügler Euch in die Finger kriegen … Es war Wahnsinn, Euch hierher kommen zu lassen! Wir müssen Euch im Lager halten, weg von den Augen der Leute … oder Euch weit weg schicken!~
-@1523   = ~[PC reply] Um was zu erreichen? Wie Ihr wisst, haben mich Caelars Attentäter auch im Palast gefunden.~
+@1523   = ~[PC reply]Um was zu erreichen? Wie Ihr wisst, haben mich Caelars Attentäter auch im Palast gefunden.~
 @1524   = ~[PC reply]Ich mag uns alle gefährden, aber ich bin auch in der Lage, Schurken zu stoppen, wie ich bereits bewiesen habe. Ihr braucht mich.~
 @1525   = ~[PC reply]Caelar könnte einfach ein anderes Bhaal-Kind ausfindig machen, wenn ich nicht greifbar wäre. Vielleicht hat sie das auch schon, und das ist der Grund, warum es keine weiteren Angriffe auf mich gab.~
 @1526   = ~[PC reply]Ich bin gekommen, um dabei zu helfen, den Kreuzzug zu bekämpfen, und das werde ich auch tun. Jetzt mehr denn je!~
-@1527   = ~[PC reply] Ich bin nicht gerade freiwillig hier, De Lancie. Entweder Ihr habt eine Verwendung für mich oder ich werde tatsächlich meinen eigenen Weg gehen.~
+@1527   = ~[PC reply]Ich bin nicht gerade freiwillig hier, De Lancie. Entweder Ihr habt eine Verwendung für mich oder ich werde tatsächlich meinen eigenen Weg gehen.~
 @1528   = ~[PC reply]Diese Begrüßung wird immer netter.~
 @1529   = ~[PC reply]Euer Verhalten mir gegenüber wird immer netter, De Lancie.~
 @1530   = ~[PC reply]Großartig! Das ist die erste vernünftige Bemerkung, die ich seit Langem gehört habe. Wann soll ich gehen?~
-@1531   = ~[Marshal Nederlok]Ihr werdet nicht gehen, <CHARNAME>. Zumindest nicht so, wie De Lancie es vorgeschlagen hat.~
+@1531   = ~[Marshal Nederlok]Ihr werdet nicht gehen, <CHARNAME>. Zumindest nicht so, wie De Lancie es angedeutet hat.~
 @1532   = ~[General Stonehand]Ich werde <CHARNAME> nicht im Lager herumsitzen lassen, sodass meine Soldaten auf ihn aufpassen müssen!~ ~[General Stonehand]Ich werde <CHARNAME> nicht im Lager herumsitzen lassen, sodass meine Soldaten auf sie aufpassen müssen!~
 @1533   = ~[Marshal Nederlok]Wir müssen ruhig bleiben. Wir werden <CHARNAME> nicht wegschicken oder ihn zur leichten Beute machen, wenn es hier so viel zu tun gibt.~ ~[Marshal Nederlok]Wir müssen ruhig bleiben. Wir werden <CHARNAME> nicht wegschicken oder sie zur leichten Beute machen, wenn es hier so viel zu tun gibt.~
 @1534   = ~[Marshal Nederlok]<CHARNAME> stand schon früher Caelars Meuchelmördern gegenüber – und wehrte sie ab. Als er die Flammende Faust bis hierher begleitete, stand er Kreuzzüglern und fast Caelar selbst gegenüber. Bisher gab es keinen sichtbaren Versuch der Kreuzzügler, ihn in die Finger zu bekommen. Ich weiß, dass Ihr mir zustimmt – er ist unser größtes Kapital, und wir werden seine Stärke gut nutzen, um Caelar zu stürzen.~ ~[Marshal Nederlok]<CHARNAME> stand schon früher Caelars Meuchelmördern gegenüber – und wehrte sie ab. Als sie die Flammende Faust bis hierher begleitete, stand sie Kreuzzüglern und fast Caelar selbst gegenüber. Bisher gab es keinen sichtbaren Versuch der Kreuzzügler, sie in die Finger zu bekommen. Ich weiß, dass Ihr mir zustimmt – sie ist unser größtes Kapital, und wir werden ihre Stärke gut nutzen, um Caelar zu stürzen.~
 @1535   = ~[Torsin De Lancie]Passt lieber auf, dass Euer Held nicht erwischt wird, Nederlock. Das wäre mehr als eine Katastrophe. Es würde bedeuten, dass die Hölle losbricht – buchstäblich!~ ~[Torsin De Lancie]Passt lieber auf, dass Eure Heldin nicht erwischt wird, Nederlock. Das wäre mehr als eine Katastrophe. Es würde bedeuten, dass die Hölle losbricht – buchstäblich!~
-@1536   = ~[Marshal Nederlok]Ich bin mir dessen bewusst. De Lancie – weder Ihr noch Generalin Steinhand wussten, wer <CHARNAME> war, als Ihr ihn das erste Mal gesehen habt! Wir können davon ausgehen, dass dies in den Reihen der Kreuzzügler noch mehr der Fall ist, und Kopfgeldsteckbriefe werden sie nur so weit bringen.~ ~[Marshal Nederlok]Ich bin mir dessen bewusst. De Lancie – weder Ihr noch Generalin Steinhand wussten, wer <CHARNAME> war, als Ihr sie das erste Mal gesehen habt! Wir können davon ausgehen, dass dies in den Reihen der Kreuzzügler noch mehr der Fall ist, und Kopfgeldsteckbriefe werden sie nur so weit bringen.~
+@1536   = ~[Marshal Nederlok]Ich bin mir dessen bewusst. De Lancie – weder Ihr noch Generalin Steinhand wussten, wer <CHARNAME> war, als Ihr ihn das erste Mal gesehen habt! Wir können davon ausgehen, dass dies in den Reihen der Kreuzzügler noch mehr der Fall ist. Und mehr kann man aus Kopfgeldsteckbriefen auch nicht ableiten.~ ~[Marshal Nederlok]Ich bin mir dessen bewusst. De Lancie – weder Ihr noch Generalin Steinhand wussten, wer <CHARNAME> war, als Ihr sie das erste Mal gesehen habt! Wir können davon ausgehen, dass dies in den Reihen der Kreuzzügler noch mehr der Fall ist. Und mehr kann man aus Kopfgeldsteckbriefen auch nicht ableiten.~
 @1537   = ~[Marshal Nederlok]<CHARNAME>, ich bin Euer kommandierender General, und ich brauche Euch in diesem Kampf. Wenn Ihr die Ermittlungen leitet, wird das die Aufmerksamkeit von Euch ablenken. Je weniger Ihr mit uns Offizieren gesehen werdet, desto weniger werdet Ihr von unseren Feinden erkannt werden. Ich vertraue auf Eure Fähigkeiten, Euch bedeckt zu halten und den Feinden nicht in die Hände zu fallen. Wir haben keine andere Wahl – die Pläne des Feindes sind entsetzlich.~
 @1538   = ~[Marshal Nederlok]Ich bin mir dessen bewusst. Wir haben uns gerade Caelar und ihrem Berater gestellt, und <CHARNAME> ist immer noch bei uns. Mehr noch, wir ziehen in die Schlacht. <CHARNAME>, ich bin Euer kommandierender General, und ich brauche Euch in diesem Kampf. Ich vertraue auf Eure Kampfkraft und Eure Fähigkeiten, dem Feind nicht in die Hände zu fallen. Wir haben keine andere Wahl – die Pläne des Feindes sind entsetzlich.~
 @1539   = ~[Marshal Nederlok]Natürlich wissen wir, was Ihr bereits über ihn herausgefunden habt – dass er ein Verräter an der „rechtschaffenen“ Sache ist, die Caelar mit ihrem Kreuzzug plant.~
 @1540   = ~[Marshal Nederlok]Er arbeitet für einen Teufel – wenn es eine Person mit dunklen Plänen gibt, könnten diese nicht noch dunkler sein.~
-@1541   = ~[Marshal Nederlok]Aber wir wissen NICHTS über Ifearnan. Wer ist er? Wie mächtig ist er? Stehen ihm andere Kräfte zur Verfügung, bereit für einen Angriff?~
+@1541   = ~[Marshal Nederlok]Aber WISSEN tun wir über Ifearnan nichts. Wer ist er? Wie mächtig ist er? Stehen ihm andere Kräfte zur Verfügung, bereit für einen Angriff?~
 @1542   = ~[Marshal Nederlok]Bleiben noch die angesprochenen Punkte.~
 @1543   = ~[Marshal Nederlok]Wir müssen Caelar und ihren verrückten Kreuzzug aufhalten, so oder so, und dazu brauchen wir Eure Hilfe, <CHARNAME>.~
 @1544   = ~[Marshal Nederlok]Wie genau plant Caelar, die Seelen in Avernus zu erreichen?~
 @1545   = ~[Marshal Nederlok]Sie plant, ihren Kreuzzug nach Avernus zu führen. Wie wird sie dies erreichen? Wird dies die Ländereien durch Teufel in Gefahr bringen, die den umgekehrten Weg nehmen?~
-@1546   = ~[Marshal Nederlok]Wir wissen bereits von dem Portal unterhalb des Schlosses und ihren Möglichkeiten, es zu öffnen.~
-@1547   = ~[Marshal Nederlok]Wie glaubt sie, dass sie bei diesem Unterfangen Erfolg haben wird? Wie in den neun Höllen kann sie sich so sicher sein, dass sie Erfolg hat?Wenn es eine göttliche Macht gibt, die ihr hilft, müssen wir das wissen!~
+@1546   = ~[Marshal Nederlok]Wir wissen bereits von dem Portal unterhalb der Burg und ihren Möglichkeiten, es zu öffnen.~
+@1547   = ~[Marshal Nederlok]Wie glaubt sie, dass sie bei diesem Unterfangen Erfolg haben wird? Wie in den Neun Höllen kann sie sich so sicher sein, dass sie Erfolg hat? Wenn es eine göttliche Macht gibt, die ihr hilft, müssen wir das wissen!~
 @1548   = ~[Torsin De Lancie]Caelars Anhänger werden ihr überallhin folgen, sogar nach Avernus. Wir wissen, dass der „Segen“ und der Schutz, den sie angeblich vom gesamten Pantheon erhält, ein Schwindel ist. Sie marschieren ohne göttlichen Schutz, wahrscheinlich in ihr Verderben!~
 @1549   = ~[Torsin De Lancie]Konzentriert Euch darauf, Caelar und den Kreuzzug zu stoppen, <CHARNAME>. Das ist alles, was zählt. Sie dürfen das Portal nicht öffnen!~
 @1550   = ~[Torsin De Lancie]Wir müssen um jeden Preis verhindern, dass das Portal nach Avernus geöffnet wird. Da ich weiß, was es bedeuten würde, wenn Caelar Euch gefangen nimmt … Das muss um jeden Preis verhindert werden, habt Ihr verstanden? Gebt Euch niemals den Kreuzzüglern zu erkennen und seid auf Angriffe ihrer Attentäter gefasst! Flieht hierher in die Sicherheit unserer Soldaten, falls es zu Problemen kommt!~
-@1551   = ~[Torsin De Lancie]Nur damit das klar ist, <CHARNAME> – unsere Ressourcen sind begrenzt und wir müssen uns darauf konzentrieren, das Schloss einzudämmen. Wir haben einfach nicht das Personal für einen Rettungstrupp. Solltet Ihr außerhalb dieses Lagers in Schwierigkeiten geraten – es wäre wirklich schlimm, wenn das passieren würde. Ihr wisst, wofür Caelar Euer Blut braucht! Also macht Eurem Ruf als Held Eurer Stadt alle Ehre und lasst Euch nicht erwischen!~ ~[Torsin De Lancie]Nur damit das klar ist, <CHARNAME> – unsere Ressourcen sind begrenzt und wir müssen uns darauf konzentrieren, das Schloss einzudämmen. Wir haben einfach nicht das Personal für einen Rettungstrupp. Solltet Ihr außerhalb dieses Lagers in Schwierigkeiten geraten – es wäre wirklich schlimm, wenn das passieren würde. Ihr wisst, wofür Caelar Euer Blut braucht! Also macht Eurem Ruf als Heldin Eurer Stadt alle Ehre und lasst Euch nicht erwischen!~
+@1551   = ~[Torsin De Lancie]Nur damit das klar ist, <CHARNAME> – unsere Ressourcen sind begrenzt und wir müssen uns darauf konzentrieren, die Burg in Schach zu halten. Wir haben einfach nicht das Personal für einen Rettungstrupp. Solltet Ihr außerhalb dieses Lagers in Schwierigkeiten geraten – es wäre wirklich schlimm, wenn das passieren würde. Ihr wisst, wofür Caelar Euer Blut braucht! Also macht Eurem Ruf als Held Eurer Stadt alle Ehre und lasst Euch nicht erwischen!~ ~[Torsin De Lancie]Nur damit das klar ist, <CHARNAME> – unsere Ressourcen sind begrenzt und wir müssen uns darauf konzentrieren, die Burg in Schach zu halten. Wir haben einfach nicht das Personal für einen Rettungstrupp. Solltet Ihr außerhalb dieses Lagers in Schwierigkeiten geraten – es wäre wirklich schlimm, wenn das passieren würde. Ihr wisst, wofür Caelar Euer Blut braucht! Also macht Eurem Ruf als Heldin Eurer Stadt alle Ehre und lasst Euch nicht erwischen!~
 @1552   = ~[Torsin De Lancie]Bleibt hier! Wir müssen uns mit den anderen Kommandierenden über das weitere Vorgehen beraten!~
 @1553   = ~[Torsin De Lancie]In der Tat entsetzlich … Wir haben Euch bereits gesagt, dass wir nicht die Mittel für eine Rettungsmission haben. Solltet Ihr außerhalb dieses Lagers in Schwierigkeiten geraten – das wäre wirklich schlimm. Ihr wisst, wofür Caelar Euer Blut braucht! Also macht Eurem Ruf als Held Eurer Stadt alle Ehre und lasst Euch nicht erwischen!~ ~[Torsin De Lancie]In der Tat entsetzlich … Wir haben Euch bereits gesagt, dass wir nicht die Mittel für eine Rettungsmission haben. Solltet Ihr außerhalb dieses Lagers in Schwierigkeiten geraten – das wäre wirklich schlimm. Ihr wisst, wofür Caelar Euer Blut braucht! Also macht Eurem Ruf als Heldin Eurer Stadt alle Ehre und lasst Euch nicht erwischen!~
 @1554   = ~[Torsin De Lancie]Es ist offensichtlich, dass sie Euer Blut braucht, um das Portal nach Avernus unterhalb von Burg Drachenspeer zu öffnen! Für Caelars Kreuzzug ist es unerlässlich, Zugriff auf Euch zu erlangen – und zwar lebend. Und damit stehen wir vor einem eklatanten Problem, jetzt da Ihr hier seid, <CHARNAME>.~
@@ -265,6 +265,6 @@
 @1575   = ~[Torsin De Lancie]Aber nicht hier, nicht heute. Diesmal gibt es keinen einfachen Ausweg – dies ist ein Wahnsinn, der unbedingt gestoppt werden muss!~
 @1576   = ~[General Stonehand]Rechtschaffenheit? Gerechtigkeit? Frau, Ihr habt Euren Verstand verloren.~
 @1577   = ~[Marshal Nederlok]Seid vorsichtig, <CHARNAME>! Dies könnte der Ort sein, an dem Caelar und Ifearnan Euch haben wollen. Aber wir brauchen Eure Kampfkraft, ohne sie haben wir keine Chance. Passt gut auf Euch auf da unten!~
-@1578   = ~[General Stonehand]Und lasst Euch da nicht hineinziehen, egal, was die Kreuzfahrer mit Euch vorhaben, habt Ihr verstanden? Wir wollen diesen Krieg GEWINNEN.~
+@1578   = ~[General Stonehand]Und lasst Euch da nicht hineinziehen, egal, was die Kreuzzügler mit Euch vorhaben, habt Ihr verstanden? Wir wollen diesen Krieg GEWINNEN.~
 @1579   = ~[General Stonehand]Und lasst mich nicht bedauern, dass ich denjenigen, der für sein Blut gesucht wird, dort hinunter gehen lasse, hört Ihr?~ ~[General Stonehand]Und lasst mich nicht bedauern, dass ich diejenige, die für ihr Blut gesucht wird, dort hinunter gehen lasse, hört Ihr?~
 @1580   = ~[Torsin De Lancie]Es war Euer Blut, das dieses Höllenloch geöffnet hat, <CHARNAME>. Wenn es jemanden gibt, der am besten geeignet ist, es zu schließen, dann wärt Ihr es!~
