@@ -442,6 +442,10 @@ https://www.gibberlings3.net/forums/topic/1649-community-filename-prefix-reserva
 
 HISTORY
 
+Version 0.3 Beta
+- new reply option of Jastey's SoD Tweakpack (v6) will be tagged accordingly.
+- restructured tp2 so dependent components will be deinstalled automatically if main component is deinstalled.
+
 Version 0.2 Beta
 - German version added, by Shai Hulud
 - added a paragraph "note to all translators and German players" to readme

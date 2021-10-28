@@ -3,7 +3,7 @@ BACKUP ~sodrtd/backup~
 AUTHOR ~https://baldurs-gate.de/index.php?resources/road-to-discovery-for-sod.59/~ 
 
 
-VERSION ~0.2 (Beta)~
+VERSION ~0.3pre (Beta)~
 
 
 README ~sodrtd/readme.sodrtd.%LANGUAGE%.txt~ ~sodrtd/readme.sodrtd.english.txt~
@@ -461,11 +461,61 @@ BEGIN @100007 /* ~Consistency Changes to Game Dialogues~ */
 	REQUIRE_PREDICATE (GAME_INCLUDES ~sod~) @100001 /* ~This mod is only compatible with SoD and EET.~ */
 	FORBID_COMPONENT ~EET_end.tp2~ ~0~ @100004 /* ~This mod needs to be installed before EET_End.~ */
 	FORBID_COMPONENT ~EET_end.tp2~ ~1~ @100004 /* ~This mod needs to be installed before EET_End.~ */
+/*
 	REQUIRE_PREDICATE (MOD_IS_INSTALLED ~sodrtd.tp2~ ~0~) @100008 /* ~You need the main component "Tracking System" for this conponent.~ */
+*/
+	REQUIRE_COMPONENT ~sodrtd.tp2~ ~0~ @100008
 
 
 INCLUDE ~sodrtd/tpa/add_trans_trigger_consistency.tpa~
 INCLUDE ~sodrtd/tpa/add_trans_trigger_consistency_weakpoison.tpa~
+
+/* Crossmod */
+
+/* tagg new reply options from Jastey's SoD Tweakpack with variables */
+ACTION_IF MOD_IS_INSTALLED ~c#sodtweaks.tp2~ ~5~ THEN BEGIN
+PRINT @100024
+
+WITH_TRA ~c#sodtweaks/translations/autotra/%s/DIALOGUE_CHOICES.TRA~ BEGIN
+  OUTER_SET strref1 = RESOLVE_STR_REF(@54)
+END
+
+<<<<<<<< .../inlined/tt_caelar.d
+ADD_TRANS_TRIGGER ~bdcaelar~ 46 ~GlobalGT("C#RtD_CaelarPlan","GLOBAL",3)~ DO %transitions%
+>>>>>>>>
+
+OUTER_SET state = 46
+
+ACTION_IF (state >= 0) BEGIN
+  OUTER_TEXT_SPRINT transitions ~~
+
+  COPY_EXISTING ~bdcaelar.dlg~ ~override~
+    SET strref1 = strref1
+
+    LPF GET_DLG_RESPONSES
+      INT_VAR state
+      RET responses
+      RET_ARRAY responses
+    END
+
+    // Traversing available responses
+    FOR (i = 0; i < responses; ++i) BEGIN
+      PATCH_MATCH $responses(~%i%~ ~text~) WITH
+        strref1 BEGIN   // Match found!
+          TEXT_SPRINT transitions ~%transitions% %i%~
+        END
+        DEFAULT
+      END
+    END
+  BUT_ONLY
+
+  // No need to patch if no matching transitions were found
+  ACTION_IF (NOT ~%transitions%~ STR_EQ ~~) BEGIN
+    COMPILE EVAL ~.../inlined/tt_caelar.d~
+  END
+END
+
+END
 
 /////////////////////////////////////////////////////////
 /*  component 4 ~Officers Are Aware~
@@ -481,7 +531,10 @@ BEGIN @100009 /* ~Officers Are Aware~ */
 	FORBID_COMPONENT ~sodrtd.tp2~ ~30~ ~This component needs to be installed before component "Give PC consistency reply options".~
 	FORBID_COMPONENT ~EET_end.tp2~ ~0~ @100004 /* ~This mod needs to be installed before EET_End.~ */
 	FORBID_COMPONENT ~EET_end.tp2~ ~1~ @100004 /* ~This mod needs to be installed before EET_End.~ */
+/*
 	REQUIRE_PREDICATE (MOD_IS_INSTALLED ~sodrtd.tp2~ ~0~) @100008 /* ~You need the main component "Tracking System" for this conponent.~ */
+*/
+	REQUIRE_COMPONENT ~sodrtd.tp2~ ~0~ @100008
 
 
 COMPILE EVALUATE_BUFFER ~sodrtd/dialogues/add_officers_aware.d~ USING ~sodrtd/translations/%s/dialogue.tra~
@@ -668,8 +721,12 @@ BEGIN @100010 /* ~Give PC Informed Reply Options~ */
 	REQUIRE_PREDICATE (GAME_INCLUDES ~sod~) @100001 /* ~This mod is only compatible with SoD and EET.~ */
 	FORBID_COMPONENT ~EET_end.tp2~ ~0~ @100004 /* ~This mod needs to be installed before EET_End.~ */
 	FORBID_COMPONENT ~EET_end.tp2~ ~1~ @100004 /* ~This mod needs to be installed before EET_End.~ */
+/*
 	REQUIRE_PREDICATE (MOD_IS_INSTALLED ~sodrtd.tp2~ ~0~) @100008 /* ~You need the main component "Tracking System" for this conponent.~ */
 	REQUIRE_PREDICATE (MOD_IS_INSTALLED ~sodrtd.tp2~ ~10~) @100011 /* ~You need the mod component "Consistency Changes to Game Dialogues" for this conponent.~ */
+*/
+	REQUIRE_COMPONENT ~sodrtd.tp2~ ~0~ @100008
+	REQUIRE_COMPONENT ~sodrtd.tp2~ ~10~ @100011
 
 ACTION_IF MOD_IS_INSTALLED ~sodrtd.tp2~ ~20~ THEN BEGIN
   OUTER_SPRINT ~C#RtD_CoalCaelarPlan_SET_3~ ~SetGlobal("C#RtD_CoalCaelarPlan_SET","GLOBAL",3)~
@@ -694,7 +751,10 @@ BEGIN @100012 /* ~PC Can Tell the Officers~ */
 	REQUIRE_PREDICATE (GAME_INCLUDES ~sod~) @100001 /* ~This mod is only compatible with SoD and EET.~ */
 	FORBID_COMPONENT ~EET_end.tp2~ ~0~ @100004 /* ~This mod needs to be installed before EET_End.~ */
 	FORBID_COMPONENT ~EET_end.tp2~ ~1~ @100004 /* ~This mod needs to be installed before EET_End.~ */
+/*
 	REQUIRE_PREDICATE (MOD_IS_INSTALLED ~sodrtd.tp2~ ~0~) @100008 /* ~You need the main component "Tracking System" for this conponent.~ */
+*/
+	REQUIRE_COMPONENT ~sodrtd.tp2~ ~0~ @100008
 
 WITH_TRA ~sodrtd/translations/%s/dialogue.tra~ BEGIN
   INCLUDE ~sodrtd/tpa/include_reply_options.tpa~
@@ -829,10 +889,15 @@ BEGIN @100016 /* ~Add Officers Reactions~ */
 	REQUIRE_PREDICATE (GAME_INCLUDES ~sod~) @100001 /* ~This mod is only compatible with SoD and EET.~ */
 	FORBID_COMPONENT ~EET_end.tp2~ ~0~ @100004 /* ~This mod needs to be installed before EET_End.~ */
 	FORBID_COMPONENT ~EET_end.tp2~ ~1~ @100004 /* ~This mod needs to be installed before EET_End.~ */
+	FORBID_COMPONENT ~sodrtd.tp2~ ~70~ @100019 /* ~This mod needs to be installed before component "Add Additional Communication with Officers".~ */
+/*
 	REQUIRE_PREDICATE (MOD_IS_INSTALLED ~sodrtd.tp2~ ~0~) @100008 /* ~You need the main component "Tracking System" for this conponent.~ */
 	REQUIRE_PREDICATE (MOD_IS_INSTALLED ~sodrtd.tp2~ ~20~) @100017 /* ~You need the mod component "Make Officers Aware" for this conponent.~ */
 	REQUIRE_PREDICATE (MOD_IS_INSTALLED ~sodrtd.tp2~ ~40~) @100018 /* ~You need the mod component "PC can tell the officers" for this conponent.~ */
-	FORBID_COMPONENT ~sodrtd.tp2~ ~70~ @100019 /* ~This mod needs to be installed before component "Add Additional Communication with Officers".~ */
+*/
+	REQUIRE_COMPONENT ~sodrtd.tp2~ ~0~ @100008
+	REQUIRE_COMPONENT ~sodrtd.tp2~ ~20~ @100017
+	REQUIRE_COMPONENT ~sodrtd.tp2~ ~40~ @100018
 
 COPY ~sodrtd/areas/.~ ~override~
 
@@ -877,7 +942,10 @@ BEGIN @100020 /* ~Additional Info Points~ */
 	REQUIRE_PREDICATE (GAME_INCLUDES ~sod~) @100001 /* ~This mod is only compatible with SoD and EET.~ */
 	FORBID_COMPONENT ~EET_end.tp2~ ~0~ @100004 /* ~This mod needs to be installed before EET_End.~ */
 	FORBID_COMPONENT ~EET_end.tp2~ ~1~ @100004 /* ~This mod needs to be installed before EET_End.~ */
+/*
 	REQUIRE_PREDICATE (MOD_IS_INSTALLED ~sodrtd.tp2~ ~0~) @100008 /* ~You need the main component "Tracking System" for this conponent.~ */
+*/
+	REQUIRE_COMPONENT ~sodrtd.tp2~ ~0~ @100008
 
 ADD_JOURNAL TITLE (@10036) @10032 @10033 @10034 @10035 USING ~sodrtd/translations/%LANGUAGE%/game.tra~
 
@@ -905,9 +973,14 @@ BEGIN @100022 /* ~Add Additional Communication with Officers~ */
 	REQUIRE_PREDICATE (GAME_INCLUDES ~sod~) @100001 /* ~This mod is only compatible with SoD and EET.~ */
 	FORBID_COMPONENT ~EET_end.tp2~ ~0~ @100004 /* ~This mod needs to be installed before EET_End.~ */
 	FORBID_COMPONENT ~EET_end.tp2~ ~1~ @100004 /* ~This mod needs to be installed before EET_End.~ */
+/*
 	REQUIRE_PREDICATE (MOD_IS_INSTALLED ~sodrtd.tp2~ ~0~) @100008 /* ~You need the main component "Tracking System" for this conponent.~ */
 	REQUIRE_PREDICATE (MOD_IS_INSTALLED ~sodrtd.tp2~ ~20~) @100017 /* ~You need the mod component "Make Officers Aware" for this conponent.~ */
 	REQUIRE_PREDICATE (MOD_IS_INSTALLED ~sodrtd.tp2~ ~40~) @100018 /* ~You need the mod component "PC can tell the officers" for this conponent.~ */
+*/
+	REQUIRE_COMPONENT ~sodrtd.tp2~ ~0~ @100008
+	REQUIRE_COMPONENT ~sodrtd.tp2~ ~20~ @100017
+	REQUIRE_COMPONENT ~sodrtd.tp2~ ~40~ @100018
 
 
 COPY_EXISTING ~bdpatres.cre~ ~override/C#RtDdeg.cre~
