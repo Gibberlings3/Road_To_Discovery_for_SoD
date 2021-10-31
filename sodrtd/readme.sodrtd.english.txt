@@ -2,7 +2,8 @@
 --- Road to Discovery for BG:SoD and EET:SoD ---
 ------------------------------------------------
 
-by jastey and Lauriel
+by jastey
+with one component from Lauriel
 
 LIST OF CONTENTS
 --CONTENTS
