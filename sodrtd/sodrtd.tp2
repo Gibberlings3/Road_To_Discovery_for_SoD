@@ -1,15 +1,15 @@
 
 BACKUP ~sodrtd/backup~
-AUTHOR ~##~ 
+AUTHOR ~https://baldurs-gate.de/index.php?resources/road-to-discovery-for-sod.59/~ 
 
 
-VERSION ~0.1 (Beta)~
+VERSION ~0.3pre (Beta)~
 
 
 README ~sodrtd/readme.sodrtd.%LANGUAGE%.txt~ ~sodrtd/readme.sodrtd.english.txt~
 
 
-AUTO_TRA ~sodrtd/translations/autotra/%s~
+AUTO_TRA ~sodrtd/translations/%s~
 
 ALWAYS
 
@@ -35,47 +35,8 @@ ACTION_IF GAME_IS ~eet~ THEN BEGIN
   INCLUDE ~EET/other/cpmvars/eet_cpmvars.tpa~
 END
 
-
-
-//////////////////////////////////////////////////////////////////////
-/* all following actions are only processed ONCE for the whole mod, independent of un- and reinstalling of single components */
-
-ACTION_IF !FILE_EXISTS ~sodrtd/install/sodrtdinstall.mrk~ BEGIN
-
-    /* Copies tra files into the autotra-folder (to leave the originals untouched) */
-    DEFINE_ACTION_FUNCTION autotra_workaround BEGIN
-      COPY ~sodrtd/translations/english~  ~sodrtd/translations/autotra/%LANGUAGE%~
-      COPY ~sodrtd/translations/%LANGUAGE%~  ~sodrtd/translations/autotra/%LANGUAGE%~
-    END
-
-    LAF autotra_workaround END
-
-  ACTION_DEFINE_ARRAY fl#noconvert BEGIN setup END
-
-  ACTION_DEFINE_ARRAY fl#reload BEGIN game END
-
-    LAF HANDLE_CHARSETS
-      INT_VAR
-        infer_charsets = 1
-      STR_VAR
-        tra_path = EVAL ~sodrtd/translations/autotra~
-        noconvert_array = fl#noconvert
-        reload_array = fl#reload
-    END
-
-
 //CamDawgs CD_STATE_NOTVALID 
     APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~ UNLESS ~CD_STATE_NOTVALID~
-
-
-
-  COPY ~sodrtd/install/component.xx~ ~sodrtd/install/sodrtdinstall.mrk~
-
-  END // sodrtdinstall.mrk
-
- //reloading of tras:
-  LOAD_TRA ~sodrtd/translations/autotra/english/game.tra~
-  LOAD_TRA ~sodrtd/translations/autotra/%LANGUAGE%/game.tra~
 
 END //ALWAYS
 
@@ -84,12 +45,12 @@ LANGUAGE ~English~
          ~english~   
          ~sodrtd/translations/english/setup.tra~
 	 ~sodrtd/translations/english/game.tra~
-/*
+
 LANGUAGE ~Deutsch~
          ~german~   
          ~sodrtd/translations/german/setup.tra~
 	 ~sodrtd/translations/german/game.tra~
-*/
+
 
 
 
@@ -117,7 +78,7 @@ BEGIN @100000 /* ~SoD - Stat-based observations and quest options from Lauriel's
 	OUTER_SPRINT "BAELOTH_POST" "BAELOTHP" 
 
 	OUTER_SPRINT ~mod_root~ ~sodrtd/themedtweaks~
-	OUTER_SPRINT ~tra_loc~ ~sodrtd/translations/autotra~
+	OUTER_SPRINT ~tra_loc~ ~sodrtd/translations~
 
 	INCLUDE ~sodrtd/themedtweaks/tpa/sod_stat_options.tpa~
 	LAF sod_stat_options END
@@ -139,7 +100,7 @@ BEGIN @100005 /* ~Main Component: Tracking System~ */
 <<<<<<<< .../inlined/journal_0.tph
 >>>>>>>>
 OUTER_SET strref_journal = eet_200000 + 31270 //59718 //59722 //59732 //66700 //67432 //59615
-APPEND_OUTER - ~.../inlined/journal_0.tph~ "ADD_JOURNAL EXISTING TITLE (#%strref_journal%) @10000 @10001 @10002 @10003 @10004 @10005 @10006 @10007 @10008 @10009 @10010 @10011 @10012 @10013 @10014 @10015 @10016 @10017 @10018 @10019 @10020 @10021 @10022 @10023 @10024 @10025 @10026 @10027 @10028 @10029 @10030 @10031 @10037 USING ~sodrtd/translations/autotra/%LANGUAGE%/game.tra~"
+APPEND_OUTER - ~.../inlined/journal_0.tph~ "ADD_JOURNAL EXISTING TITLE (#%strref_journal%) @10000 @10001 @10002 @10003 @10004 @10005 @10006 @10007 @10008 @10009 @10010 @10011 @10012 @10013 @10014 @10015 @10016 @10017 @10018 @10019 @10020 @10021 @10022 @10023 @10024 @10025 @10026 @10027 @10028 @10029 @10030 @10031 @10037 USING ~sodrtd/translations/%LANGUAGE%/game.tra~"
 INCLUDE ~.../inlined/journal_0.tph~
 
 
@@ -256,7 +217,7 @@ EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~...inlined/c#rtd_ve_end.baf~ EVALUATE_BUFFER
 
 /* variable setting via dialogue - any reply options added later needs adding of the variable settings! */
 
-COMPILE EVALUATE_BUFFER ~sodrtd/dialogues/add_trans_action_general.d~ USING ~sodrtd/translations/autotra/%s/dialogue.tra~
+COMPILE EVALUATE_BUFFER ~sodrtd/dialogues/add_trans_action_general.d~ USING ~sodrtd/translations/%s/dialogue.tra~
 
 
 /////
@@ -500,11 +461,61 @@ BEGIN @100007 /* ~Consistency Changes to Game Dialogues~ */
 	REQUIRE_PREDICATE (GAME_INCLUDES ~sod~) @100001 /* ~This mod is only compatible with SoD and EET.~ */
 	FORBID_COMPONENT ~EET_end.tp2~ ~0~ @100004 /* ~This mod needs to be installed before EET_End.~ */
 	FORBID_COMPONENT ~EET_end.tp2~ ~1~ @100004 /* ~This mod needs to be installed before EET_End.~ */
+/*
 	REQUIRE_PREDICATE (MOD_IS_INSTALLED ~sodrtd.tp2~ ~0~) @100008 /* ~You need the main component "Tracking System" for this conponent.~ */
+*/
+	REQUIRE_COMPONENT ~sodrtd.tp2~ ~0~ @100008
 
 
 INCLUDE ~sodrtd/tpa/add_trans_trigger_consistency.tpa~
 INCLUDE ~sodrtd/tpa/add_trans_trigger_consistency_weakpoison.tpa~
+
+/* Crossmod */
+
+/* tagg new reply options from Jastey's SoD Tweakpack with variables */
+ACTION_IF MOD_IS_INSTALLED ~c#sodtweaks.tp2~ ~5~ THEN BEGIN
+PRINT @100024
+
+WITH_TRA ~c#sodtweaks/translations/autotra/%s/DIALOGUE_CHOICES.TRA~ BEGIN
+  OUTER_SET strref1 = RESOLVE_STR_REF(@54)
+END
+
+<<<<<<<< .../inlined/tt_caelar.d
+ADD_TRANS_TRIGGER ~bdcaelar~ 46 ~GlobalGT("C#RtD_CaelarPlan","GLOBAL",3)~ DO %transitions%
+>>>>>>>>
+
+OUTER_SET state = 46
+
+ACTION_IF (state >= 0) BEGIN
+  OUTER_TEXT_SPRINT transitions ~~
+
+  COPY_EXISTING ~bdcaelar.dlg~ ~override~
+    SET strref1 = strref1
+
+    LPF GET_DLG_RESPONSES
+      INT_VAR state
+      RET responses
+      RET_ARRAY responses
+    END
+
+    // Traversing available responses
+    FOR (i = 0; i < responses; ++i) BEGIN
+      PATCH_MATCH $responses(~%i%~ ~text~) WITH
+        strref1 BEGIN   // Match found!
+          TEXT_SPRINT transitions ~%transitions% %i%~
+        END
+        DEFAULT
+      END
+    END
+  BUT_ONLY
+
+  // No need to patch if no matching transitions were found
+  ACTION_IF (NOT ~%transitions%~ STR_EQ ~~) BEGIN
+    COMPILE EVAL ~.../inlined/tt_caelar.d~
+  END
+END
+
+END
 
 /////////////////////////////////////////////////////////
 /*  component 4 ~Officers Are Aware~
@@ -520,10 +531,13 @@ BEGIN @100009 /* ~Officers Are Aware~ */
 	FORBID_COMPONENT ~sodrtd.tp2~ ~30~ ~This component needs to be installed before component "Give PC consistency reply options".~
 	FORBID_COMPONENT ~EET_end.tp2~ ~0~ @100004 /* ~This mod needs to be installed before EET_End.~ */
 	FORBID_COMPONENT ~EET_end.tp2~ ~1~ @100004 /* ~This mod needs to be installed before EET_End.~ */
+/*
 	REQUIRE_PREDICATE (MOD_IS_INSTALLED ~sodrtd.tp2~ ~0~) @100008 /* ~You need the main component "Tracking System" for this conponent.~ */
+*/
+	REQUIRE_COMPONENT ~sodrtd.tp2~ ~0~ @100008
 
 
-COMPILE EVALUATE_BUFFER ~sodrtd/dialogues/add_officers_aware.d~ USING ~sodrtd/translations/autotra/%s/dialogue.tra~
+COMPILE EVALUATE_BUFFER ~sodrtd/dialogues/add_officers_aware.d~ USING ~sodrtd/translations/%s/dialogue.tra~
 
 /* set variables at the beginning of the marching - after palace attack 
 - all coalition forces acknowledges the existance of the crusade which is rampaging through the lands 
@@ -707,8 +721,12 @@ BEGIN @100010 /* ~Give PC Informed Reply Options~ */
 	REQUIRE_PREDICATE (GAME_INCLUDES ~sod~) @100001 /* ~This mod is only compatible with SoD and EET.~ */
 	FORBID_COMPONENT ~EET_end.tp2~ ~0~ @100004 /* ~This mod needs to be installed before EET_End.~ */
 	FORBID_COMPONENT ~EET_end.tp2~ ~1~ @100004 /* ~This mod needs to be installed before EET_End.~ */
+/*
 	REQUIRE_PREDICATE (MOD_IS_INSTALLED ~sodrtd.tp2~ ~0~) @100008 /* ~You need the main component "Tracking System" for this conponent.~ */
 	REQUIRE_PREDICATE (MOD_IS_INSTALLED ~sodrtd.tp2~ ~10~) @100011 /* ~You need the mod component "Consistency Changes to Game Dialogues" for this conponent.~ */
+*/
+	REQUIRE_COMPONENT ~sodrtd.tp2~ ~0~ @100008
+	REQUIRE_COMPONENT ~sodrtd.tp2~ ~10~ @100011
 
 ACTION_IF MOD_IS_INSTALLED ~sodrtd.tp2~ ~20~ THEN BEGIN
   OUTER_SPRINT ~C#RtD_CoalCaelarPlan_SET_3~ ~SetGlobal("C#RtD_CoalCaelarPlan_SET","GLOBAL",3)~
@@ -716,7 +734,7 @@ END ELSE BEGIN
   OUTER_SPRINT ~C#RtD_CoalCaelarPlan_SET_3~ ~~
 END
 
-COMPILE EVALUATE_BUFFER ~sodrtd/dialogues/add_consistency_replyoptions.d~ USING ~sodrtd/translations/autotra/%s/dialogue.tra~
+COMPILE EVALUATE_BUFFER ~sodrtd/dialogues/add_consistency_replyoptions.d~ USING ~sodrtd/translations/%s/dialogue.tra~
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -733,9 +751,12 @@ BEGIN @100012 /* ~PC Can Tell the Officers~ */
 	REQUIRE_PREDICATE (GAME_INCLUDES ~sod~) @100001 /* ~This mod is only compatible with SoD and EET.~ */
 	FORBID_COMPONENT ~EET_end.tp2~ ~0~ @100004 /* ~This mod needs to be installed before EET_End.~ */
 	FORBID_COMPONENT ~EET_end.tp2~ ~1~ @100004 /* ~This mod needs to be installed before EET_End.~ */
+/*
 	REQUIRE_PREDICATE (MOD_IS_INSTALLED ~sodrtd.tp2~ ~0~) @100008 /* ~You need the main component "Tracking System" for this conponent.~ */
+*/
+	REQUIRE_COMPONENT ~sodrtd.tp2~ ~0~ @100008
 
-WITH_TRA ~sodrtd/translations/autotra/%s/dialogue.tra~ BEGIN
+WITH_TRA ~sodrtd/translations/%s/dialogue.tra~ BEGIN
   INCLUDE ~sodrtd/tpa/include_reply_options.tpa~
 COMPILE EVALUATE_BUFFER ~sodrtd/dialogues/add_inform_officers_basic.d~  
 END
@@ -755,10 +776,10 @@ BDBELT %state_105% mod added reply option we want to catch:
 /* need to grab the corrent installed language of Themed Tweaks component: differentiation whether the component was installed via Themed Tweaks or Road to Discovery */
 ACTION_IF (MOD_IS_INSTALLED ~sodrtd.tp2~ ~80~) THEN BEGIN
 PRINT @100014 /* ~Themed Tweaks component was installed via RtD: patching dialogues.~ */
-WITH_TRA ~sodrtd/translations/autotra/%s/sod_stat_weak_poison.tra~ BEGIN
+WITH_TRA ~sodrtd/translations/%s/sod_stat_weak_poison.tra~ BEGIN
   OUTER_SET strref1 = RESOLVE_STR_REF(@107)
   OUTER_SET strref2 = RESOLVE_STR_REF(@106)
-  OUTER_SET state_105 = STATE_WHICH_SAYS 105 IN ~sodrtd/translations/autotra/%s/sod_stat_weak_poison.tra~ FROM ~bdbelt~
+  OUTER_SET state_105 = STATE_WHICH_SAYS 105 IN ~sodrtd/translations/%s/sod_stat_weak_poison.tra~ FROM ~bdbelt~
 END
 END
 ACTION_IF (MOD_IS_INSTALLED ~themed_tweaks.tp2~ ~80~) THEN BEGIN
@@ -868,10 +889,15 @@ BEGIN @100016 /* ~Add Officers Reactions~ */
 	REQUIRE_PREDICATE (GAME_INCLUDES ~sod~) @100001 /* ~This mod is only compatible with SoD and EET.~ */
 	FORBID_COMPONENT ~EET_end.tp2~ ~0~ @100004 /* ~This mod needs to be installed before EET_End.~ */
 	FORBID_COMPONENT ~EET_end.tp2~ ~1~ @100004 /* ~This mod needs to be installed before EET_End.~ */
+	FORBID_COMPONENT ~sodrtd.tp2~ ~70~ @100019 /* ~This mod needs to be installed before component "Add Additional Communication with Officers".~ */
+/*
 	REQUIRE_PREDICATE (MOD_IS_INSTALLED ~sodrtd.tp2~ ~0~) @100008 /* ~You need the main component "Tracking System" for this conponent.~ */
 	REQUIRE_PREDICATE (MOD_IS_INSTALLED ~sodrtd.tp2~ ~20~) @100017 /* ~You need the mod component "Make Officers Aware" for this conponent.~ */
 	REQUIRE_PREDICATE (MOD_IS_INSTALLED ~sodrtd.tp2~ ~40~) @100018 /* ~You need the mod component "PC can tell the officers" for this conponent.~ */
-	FORBID_COMPONENT ~sodrtd.tp2~ ~70~ @100019 /* ~This mod needs to be installed before component "Add Additional Communication with Officers".~ */
+*/
+	REQUIRE_COMPONENT ~sodrtd.tp2~ ~0~ @100008
+	REQUIRE_COMPONENT ~sodrtd.tp2~ ~20~ @100017
+	REQUIRE_COMPONENT ~sodrtd.tp2~ ~40~ @100018
 
 COPY ~sodrtd/areas/.~ ~override~
 
@@ -900,7 +926,7 @@ COMPILE EVALUATE_BUFFER ~sodrtd/scripts/c#rtdcu1.baf~
 COMPILE EVALUATE_BUFFER ~sodrtd/scripts/c#rtdcu2.baf~
 
 INCLUDE ~sodrtd/tpa/state_which_says_instances.tpa~
-COMPILE EVALUATE_BUFFER ~sodrtd/dialogues/add_reactions.d~ USING ~sodrtd/translations/autotra/%s/dialogue.tra~
+COMPILE EVALUATE_BUFFER ~sodrtd/dialogues/add_reactions.d~ USING ~sodrtd/translations/%s/dialogue.tra~
 
 
 
@@ -916,9 +942,12 @@ BEGIN @100020 /* ~Additional Info Points~ */
 	REQUIRE_PREDICATE (GAME_INCLUDES ~sod~) @100001 /* ~This mod is only compatible with SoD and EET.~ */
 	FORBID_COMPONENT ~EET_end.tp2~ ~0~ @100004 /* ~This mod needs to be installed before EET_End.~ */
 	FORBID_COMPONENT ~EET_end.tp2~ ~1~ @100004 /* ~This mod needs to be installed before EET_End.~ */
+/*
 	REQUIRE_PREDICATE (MOD_IS_INSTALLED ~sodrtd.tp2~ ~0~) @100008 /* ~You need the main component "Tracking System" for this conponent.~ */
+*/
+	REQUIRE_COMPONENT ~sodrtd.tp2~ ~0~ @100008
 
-ADD_JOURNAL TITLE (@10036) @10032 @10033 @10034 @10035 USING ~sodrtd/translations/autotra/%LANGUAGE%/game.tra~
+ADD_JOURNAL TITLE (@10036) @10032 @10033 @10034 @10035 USING ~sodrtd/translations/%LANGUAGE%/game.tra~
 
 COPY_EXISTING ~sodrtd/cre/c#rtdblc.cre~ ~override/c#rtdblc.cre~
 SAY NAME1 @100021 /* ~Karlen~ */
@@ -929,7 +958,7 @@ COMPILE EVALUATE_BUFFER ~sodrtd/scripts/c#rtdcu3.baf~
 
 EXTEND_BOTTOM ~bd2000.bcs~ ~sodrtd/scripts/additional_infopoints_bd2000.baf~ EVALUATE_BUFFER
 
-COMPILE EVALUATE_BUFFER ~sodrtd/dialogues/add_additional_infopoints.d~ USING ~sodrtd/translations/autotra/%s/dialogue.tra~
+COMPILE EVALUATE_BUFFER ~sodrtd/dialogues/add_additional_infopoints.d~ USING ~sodrtd/translations/%s/dialogue.tra~
 
 
 
@@ -944,9 +973,14 @@ BEGIN @100022 /* ~Add Additional Communication with Officers~ */
 	REQUIRE_PREDICATE (GAME_INCLUDES ~sod~) @100001 /* ~This mod is only compatible with SoD and EET.~ */
 	FORBID_COMPONENT ~EET_end.tp2~ ~0~ @100004 /* ~This mod needs to be installed before EET_End.~ */
 	FORBID_COMPONENT ~EET_end.tp2~ ~1~ @100004 /* ~This mod needs to be installed before EET_End.~ */
+/*
 	REQUIRE_PREDICATE (MOD_IS_INSTALLED ~sodrtd.tp2~ ~0~) @100008 /* ~You need the main component "Tracking System" for this conponent.~ */
 	REQUIRE_PREDICATE (MOD_IS_INSTALLED ~sodrtd.tp2~ ~20~) @100017 /* ~You need the mod component "Make Officers Aware" for this conponent.~ */
 	REQUIRE_PREDICATE (MOD_IS_INSTALLED ~sodrtd.tp2~ ~40~) @100018 /* ~You need the mod component "PC can tell the officers" for this conponent.~ */
+*/
+	REQUIRE_COMPONENT ~sodrtd.tp2~ ~0~ @100008
+	REQUIRE_COMPONENT ~sodrtd.tp2~ ~20~ @100017
+	REQUIRE_COMPONENT ~sodrtd.tp2~ ~40~ @100018
 
 
 COPY_EXISTING ~bdpatres.cre~ ~override/C#RtDdeg.cre~
@@ -964,12 +998,12 @@ WRITE_BYTE 0x2e 31 // Major color
 WRITE_BYTE 0x32 29 // Hair color
 
 
-COMPILE EVALUATE_BUFFER ~sodrtd/dialogues/add_sir_deggernaut.d~ USING ~sodrtd/translations/autotra/%s/dialogue.tra~
+COMPILE EVALUATE_BUFFER ~sodrtd/dialogues/add_sir_deggernaut.d~ USING ~sodrtd/translations/%s/dialogue.tra~
 
 ACTION_IF MOD_IS_INSTALLED ~sodrtd.tp2~ ~50~ THEN BEGIN
 /* Get state for C#RtDdeg %information_03% (in add_sir_deggernaut.d):
  ~Most shocking indeed - but now we know why Caelar is holding the castle.~ */
-OUTER_SET information_03 = STATE_WHICH_SAYS 266 IN ~sodrtd/translations/autotra/%s/dialogue.tra~ FROM ~C#RtDdeg~
+OUTER_SET information_03 = STATE_WHICH_SAYS 266 IN ~sodrtd/translations/%s/dialogue.tra~ FROM ~C#RtDdeg~
 
 <<<<<<<< ...inlined/add_deggernaut.d
 EXTEND_BOTTOM C#RtDdeg %information_03%
@@ -983,7 +1017,7 @@ IF ~~ THEN DO ~ClearAllActions() StartCutSceneMode() StartCutScene("c#rtdcu1")~ 
 END
 END //APPEND
 >>>>>>>>
-COMPILE EVALUATE_BUFFER ~...inlined/add_deggernaut.d~ USING ~sodrtd/translations/autotra/%s/dialogue.tra~
+COMPILE EVALUATE_BUFFER ~...inlined/add_deggernaut.d~ USING ~sodrtd/translations/%s/dialogue.tra~
 
 
 END

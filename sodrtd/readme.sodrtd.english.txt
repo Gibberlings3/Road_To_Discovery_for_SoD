@@ -2,12 +2,14 @@
 --- Road to Discovery for BG:SoD and EET:SoD ---
 ------------------------------------------------
 
-by jastey and Lauriel
+by jastey
+with one component from Lauriel
 
 LIST OF CONTENTS
 --CONTENTS
 --DESCRIPTION OF COMPONENTS
 --COMPATIBILITY NOTE
+--NOTE TO ALL TRANSLATORS AND GERMAN PLAYERS
 --INSTALLATION
 --OVERVIEW ON TRACKED KNOWLEDGE
 --VARIABLE SYSTEM: GENERAL DESCRIPTION FOR MODDERS
@@ -56,7 +58,9 @@ This imports the component "Add Stat-Based Observations and Quest Options" from 
 -The component also adds some more reply options at appropriate places to reflect the PC's experiences, e.g. tell the Dukes after meeting the Hooded Man inside the palace.
 If the component is installed via Themed Tweaks, it will be skipped here.
 This component is optional. 
-Note: This component works without any of the other components. Component 2 "Main Component" will also provide the needed basic tracking variables for the listed ingame occurrences in case this component is not installed. Installing component 1 (or the same component of Themed Tweaks) is recommended for the whole ingame experience.
+Note: This component works without any of the other components. 
+Component 2 "Main Component" will also provide the needed basic tracking variables for the listed ingame occurrences in case this component is not installed. 
+Installing component 1 (or the same component of Themed Tweaks) is recommended for the whole ingame experience.
 
 2 Main Component: Tracking System
 ---------------------------------------------
@@ -119,6 +123,14 @@ Install Road to Discovery very late in install order. This mod should be install
 -any mod that adds reply options or transactions to SoD, like NPC mods or story tweak mods.
 
 Road to Discovery has native EET compatibility and needs to be installed before EET_End.
+
+
+NOTE TO ALL TRANSLATORS AND GERMAN PLAYERS
+
+Translators: please note that all tra-files are in utf8 conversion. Also, please refer to the "note_to_translators.txt" inside sodrtd/docs.
+
+The German version is consistent to the fan-made "Deutsche Übersetzung für SoD". This means, that names and terms could differ from the official German version shipped with the game. Install "Deutsche Übersetzung für SoD" for a consistent game experience.
+Download Link: https://baldurs-gate.de/index.php?resources/deutsche-%C3%9Cbersetzung-f%C3%BCr-sod.49/
 
 
 INSTALLATION
@@ -317,10 +329,10 @@ Caelar being betrayed? ("C#RtD_CoalCaelarBetrayal"):
 2 - Dukes and officers know that Hephernaan [who is Caelar's advisor] is betraying Caelar - heard it elsewhere
 
 --Hephernaan's real Master ("C#RtD_CoalHephernaanFiend"):
-1 - Dukes and officers know that Hephernaan is working for a fiend to open the portal (+knows that Hephernaan is Caelar's advisor) - PC told them
-2 - Dukes and officers know that Hephernaan is working for a fiend to open the portal (+knows that Hephernaan is Caelar's advisor) - heard it elsewhere 
-3 - Dukes and officers know that Hephernaan is working for Belhifet - PC told them
-4 - Dukes and officers know that Hephernaan is working for Belhifet - heard it elsewhere 
+1 - Dukes and officers know that Hephernaan [who is Caelar's advisor] is working for a fiend to open the portal - PC told them
+2 - Dukes and officers know that Hephernaan [who is Caelar's advisor] is working for a fiend to open the portal - heard it elsewhere 
+3 - Dukes and officers know that Hephernaan [who is Caelar's advisor] is working for Belhifet - PC told them
+4 - Dukes and officers know that Hephernaan [who is Caelar's advisor] is working for Belhifet - heard it elsewhere 
 
 --Who is "Hephernaan"? ("C#RtD_CoalHephernaanIdentity"):
 1 - Dukes and officers know Hephernaan by name and face and that he is Caelar's advisor - heard it elsewhere
@@ -346,8 +358,8 @@ Caelar being betrayed? ("C#RtD_CoalCaelarBetrayal"):
 4 - Dukes and officers know that blood of Bhaal child is needed/sufficient to open portal to Avernus under DC - heard it elsewhere 
 5 - Dukes and officers reason / conclude / speculate that Caelar / Hephernaan want PC's blood for [open portal to Avernus] - PC told them -- also for [C#RtD_CoalWantBhaalBlood = 3]
 6 - Dukes and officers reason / conclude / speculate that Caelar / Hephernaan want PC's blood for [open portal to Avernus] - heard it elsewhere -- also for [C#RtD_CoalWantBhaalBlood = 4]
-7 - Dukes and officers know that this Caelar / Hephernaan are planning PC's blood for this - PC told them -- also for [C#RtD_CoalWantBhaalBlood = 5]
-8 - Dukes and officers know that this Caelar / Hephernaan are planning PC's blood for this - heard it elsewhere -- also for [C#RtD_CoalWantBhaalBlood = 6]
+7 - Dukes and officers know that Caelar / Hephernaan are planning PC's blood for [open portal to Avernus] - PC told them -- also for [C#RtD_CoalWantBhaalBlood = 5]
+8 - Dukes and officers know that Caelar / Hephernaan are planning PC's blood for [open portal to Avernus] - heard it elsewhere -- also for [C#RtD_CoalWantBhaalBlood = 6]
 
 --PC met Hooded Man ("C#RtD_CoalMetHoodedMan"):
 1 - Dukes and officers know that PC met Hooded Man - PC told them
@@ -360,7 +372,7 @@ Caelar being betrayed? ("C#RtD_CoalCaelarBetrayal"):
 2 - Dukes and officers know that Caelar / Hephernaan want the PC's Bhaal child blood - heard it elsewhere 
 3 - Dukes and officers reason / conclude / speculate that Caelar / Hephernaan want the PC's Bhaal child blood for opening the portal - PC told them -- also for [C#RtD_CoalKnowsPortalBlood = 5]
 4 - Dukes and officers reason / conclude / speculate that Caelar / Hephernaan want the PC's Bhaal child blood for opening the portal- heard it elsewhere -- also for [C#RtD_CoalKnowsPortalBlood = 6]
-5 - Dukes and officers know that Caelar / Hephernaan want the PC's Bhaal child blood for opening the portal - PC told them  - PC told them -- also for [C#RtD_CoalKnowsPortalBlood = 7]
+5 - Dukes and officers know that Caelar / Hephernaan want the PC's Bhaal child blood for opening the portal - PC told them -- also for [C#RtD_CoalKnowsPortalBlood = 7]
 6 - Dukes and officers know that Caelar / Hephernaan want the PC's Bhaal child blood for opening the portal - heard it elsewhere -- also for [C#RtD_CoalKnowsPortalBlood = 8] 
 
 --Poison of Palace Attack too Weak to Kill ("C#RtD_CoalWeakPoison"):
@@ -389,7 +401,8 @@ Using the variables with the postfix "_SET" ensures that knowledge is not lost: 
 CREDITS
 
 jastey - author, main mod head
-Lauriel - author of component 1, ideas, design help
+Lauriel - author of component 1, ideas, design help, proofreading English
+Shai Hulud - German translation
 
 Thanks to BioWare, Black Isle and Wizards of the Coast for Baldur's Gate 1, 2 and the Infinity Engine, and BeamDog for the revival of the games including the SoD campaign.
 Thanks to Kerzenburgforum and GibberlingsThree for giving a place for exchange of ideas and technical advice.
@@ -430,6 +443,15 @@ https://www.gibberlings3.net/forums/topic/1649-community-filename-prefix-reserva
 
 
 HISTORY
+
+Version 0.3 Beta
+- new reply option of Jastey's SoD Tweakpack (v6) will be tagged accordingly.
+- restructured tp2 so dependent components will be deinstalled automatically if main component is deinstalled.
+
+Version 0.2 Beta
+- German version added, by Shai Hulud
+- added a paragraph "note to all translators and German players" to readme
+- removed the tra handling: no copying to "autotra" folder; no iconv convertion; tra-files are in utf8.
 
 Version 0.1 Beta
 -first public release

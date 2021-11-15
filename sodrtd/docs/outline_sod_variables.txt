@@ -113,10 +113,10 @@ Overall trigger variables - ONLY to be used as triggers in other mods:
 3 - PC knows that Hephernaan [who is Caelar's advisor] is working for Belhifet
 
 "C#RtD_CoalHephernaanFiend":
-1 - Dukes and officers know that Hephernaan is working for a fiend to open the portal (+knows that Hephernaan is Caelar's advisor) - PC told them
-2 - Dukes and officers know that Hephernaan is working for a fiend to open the portal (+knows that Hephernaan is Caelar's advisor) - heard it elsewhere 
-3 - Dukes and officers know that Hephernaan is working for Belhifet - PC told them
-4 - Dukes and officers know that Hephernaan is working for Belhifet - heard it elsewhere 
+1 - Dukes and officers know that Hephernaan [who is Caelar's advisor] is working for a fiend to open the portal - PC told them
+2 - Dukes and officers know that Hephernaan [who is Caelar's advisor] is working for a fiend to open the portal - heard it elsewhere 
+3 - Dukes and officers know that Hephernaan [who is Caelar's advisor] is working for Belhifet - PC told them
+4 - Dukes and officers know that Hephernaan [who is Caelar's advisor] is working for Belhifet - heard it elsewhere 
 
 "C#RtD_HephernaanIdentity"
 1 - PC knows Hephernaan by name and face and that he is Caelar's advisor
@@ -167,8 +167,8 @@ Overall trigger variables - ONLY to be used as triggers in other mods:
 4 - Dukes and officers know that blood of Bhaal child is needed/sufficient to open portal to Avernus under DC - heard it elsewhere 
 5 - Dukes and officers reason / conclude / speculate that Caelar / Hephernaan want PC's blood for [open portal to Avernus] - PC told them -- also for [C#RtD_CoalWantBhaalBlood = 3]
 6 - Dukes and officers reason / conclude / speculate that Caelar / Hephernaan want PC's blood for [open portal to Avernus] - heard it elsewhere -- also for [C#RtD_CoalWantBhaalBlood = 4]
-7 - Dukes and officers know that this Caelar / Hephernaan are planning PC's blood for this - PC told them -- also for [C#RtD_CoalWantBhaalBlood = 5]
-8 - Dukes and officers know that this Caelar / Hephernaan are planning PC's blood for this - heard it elsewhere -- also for [C#RtD_CoalWantBhaalBlood = 6]
+7 - Dukes and officers know that Caelar / Hephernaan are planning PC's blood for [open portal to Avernus] - PC told them -- also for [C#RtD_CoalWantBhaalBlood = 5]
+8 - Dukes and officers know that Caelar / Hephernaan are planning PC's blood for [open portal to Avernus] - heard it elsewhere -- also for [C#RtD_CoalWantBhaalBlood = 6]
 
 "C#RtD_MetHoodedMan"
 1 - PC met Hooded Man once
@@ -190,7 +190,7 @@ Overall trigger variables - ONLY to be used as triggers in other mods:
 2 - Dukes and officers know that Caelar / Hephernaan want the PC's Bhaal child blood - heard it elsewhere 
 3 - Dukes and officers reason / conclude / speculate that Caelar / Hephernaan want the PC's Bhaal child blood for opening the portal - PC told them -- also for [C#RtD_CoalKnowsPortalBlood = 5]
 4 - Dukes and officers reason / conclude / speculate that Caelar / Hephernaan want the PC's Bhaal child blood for opening the portal- heard it elsewhere -- also for [C#RtD_CoalKnowsPortalBlood = 6]
-5 - Dukes and officers know that Caelar / Hephernaan want the PC's Bhaal child blood for opening the portal - PC told them  - PC told them -- also for [C#RtD_CoalKnowsPortalBlood = 7]
+5 - Dukes and officers know that Caelar / Hephernaan want the PC's Bhaal child blood for opening the portal - PC told them  -- also for [C#RtD_CoalKnowsPortalBlood = 7]
 6 - Dukes and officers know that Caelar / Hephernaan want the PC's Bhaal child blood for opening the portal - heard it elsewhere -- also for [C#RtD_CoalKnowsPortalBlood = 8]
 
 "C#RtD_WeakPoison"
