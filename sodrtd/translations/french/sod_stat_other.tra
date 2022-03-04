@@ -1,0 +1,91 @@
+//////////////////////////////////////////////////////////////////////////////////
+// Make sure the player notices the interesting bits in the Historical Treatise //
+//////////////////////////////////////////////////////////////////////////////////
+@2000	= ~Mais qu'est-ce que ça veut dire ? Qu'est-ce que c'est que ça, <CHARNAME> ?~
+@2001	= ~Ce livre que nous avons trouvé mentionne un portail menant à Avernus sous le château Paldragon.~
+@2002	= ~Et pas seulement, il raconte que le portail ne peut être ouvert qu'avec du sang renfermant l'essence d'un dieu.~
+@2003	= ~C'est vraiment ce que Caelar a en tête ? Ouvrir un portail vers Avernus ? Serait-elle folle à lier ?!~
+@2004	= ~Ouch, alors c'est donc ce qu'elle prépare. C'est une bonne analyse, elle a probablement perdu la raison.~
+@2005	= ~Qu'est-ce que c'est ? Ce livre que nous avons trouvé mentionne un portail menant à Avernus sous le château Paldragon.~
+@2006	= ~Ouch, alors c'est donc ce qu'elle prépare. Si elle veut ouvrir ce portail, elle doit être complètement folle !~
+@2007	= ~Si les rumeurs étaient vraies, et que Caelar était une enfant de Bhaal, elle aurait déjà ouvert le portail.~
+
+/////////////////////////////////////////////////////////////////////////////
+// Have a member of the group prompt the PC to talk to Eltan about Dauston //
+/////////////////////////////////////////////////////////////////////////////
+@2010	= ~<CHARNAME>, peut-être devrions-nous parler au Duc Eltan de ce paladin déchu que nous avons rencontré... Dauston.~
+@2011	= ~<CHARNAME>, peut-être devrions-nous parler au Duc Eltan de ce triste et désavoué paladin que nous avons rencontré... Dauston.~
+
+//////////////////////////////////////////////////////
+// Ask Eltan to interview Dauston when he sobers up //
+//////////////////////////////////////////////////////
+@2020	= ~Très bien, monseigneur. Mais j'aurais une faveur à vous demander, c'est au sujet de ce paladin déchu nommé Dauston qui décuve en ce moment dans vos geôles.~
+@2021	= ~Bien entendu. Que puis-je faire pour le héros de la Porte de Baldur ?~ ~Bien entendu. Que puis-je faire pour l'héroïne de la Porte de Baldur ?~
+@2022	= ~Pourriez-vous l'interroger à son réveil ? Il sait quelque chose concernant le passé de Caelar et cela pourrait s'avérer utile.~
+@2023	= ~Aucun problème. Considérez que c'est fait. J'enverrai un messager avec les résultats à Corwin dès la première occasion.~
+@2024	= ~Merci, monseigneur. Comment tenez-vous le coup avec toute cette histoire ?~
+
+///////////////////////////////////////////////////////////////
+// Dialogue with Caelar after the Coast Way Bridge explosion //
+///////////////////////////////////////////////////////////////
+@2030	= ~Je connais déjà votre « vérité ». Il y a un portail vers Avernus sous le château Paldragon et vous souhaitez l'ouvrir dans une vaine tentative d'apaiser votre culpabilité concernant le sort de votre oncle.~
+@2031	= ~Vous prétendez encore n'être que vertu ! Arrivez-vous vraiment à vous en convaincre ? Vos intentions sont loin d'être altruistes. Prendre le risque que des milliers soient injustement emprisonnés pour soulager votre unique culpabilité est le comble de l'égoïsme et de l'arrogance.~
+@2032	= ~Si vous avez vraiment l'intention de combattre des démons, alors pourquoi un de leurs serviteurs se tient-il juste derrière vous ?~
+@2033	= ~(*tousse*)~
+@2034	= ~Hephernaan ? Non. Je refuse d'écouter ces allégations que vous portez à l'encontre de mon plus fidèle conseiller !~
+@2035	= ~J'en sais bien assez sur votre « vérité ». Il y a un portail vers Avernus sous le château Paldragon et vous avez l'intention de l'ouvrir.~
+@2036	= ~En quoi tenter de me capturer au lieu de me tuer nous rend-il moins ennemis ?~ ~En quoi tenter de me capturer au lieu de me tuer nous rend-il moins ennemies ?~
+@2037	= ~Puisque votre intention était de me capturer et non de me tuer, alors nous devrions entamer une grande amitié ? Vous êtes vraiment sérieuse ?~
+@2038	= ~Cet agent de l'Accord de l'Ombre est votre plus fidèle conseiller ? Oh, c'est vraiment de mieux en mieux !~
+@2039	= ~Alors vous êtes aussi une andouille. Ce ne sont pas les dieux qui sont à vos côtés, ce sont des démons.~
+@2040	= ~Vous êtes la raison de ma venue. Vous, votre attaque sur le palais de la Porte de Baldur, ainsi que les dommages que vous avez causés à travers le pays.~
+@2041	= ~Le destin, et les lames empoisonnées de vos assassins m'ont amené ici.~ ~Le destin, et les lames empoisonnées de vos assassins m'ont amenée ici.~
+@2042	= ~Pour être tout à fait honnête, c'est vous qui m'avez attaqué en premier.~ ~Pour être tout à fait honnête, c'est vous qui m'avez attaquée en premier.~
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+// Dialogue with Edwin when he is in the group during the scrying on the hooded man and Hephernaan //
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+@2060	= ~Je savais que quelque chose clochait avec ce traître de magicien ! (J'ai toujours raison.)~
+@2061	= ~Quel traître, quel magicien, Edwin ?~
+@2062	= ~Tu le connais, Edwin ?~
+@2063	= ~Celui qui parle avec l'homme à la capuche et essaye de se faire passer pour un sorcier. C'est Hephernaan. Le plus fidèle conseiller de Caelar. (Incroyable... mais quelle idiote.)~
+@2064	= ~Oui oui, je le connais. Celui qui parle avec l'homme à la capuche et essaye de se faire passer pour un sorcier, il se nomme Hephernaan. Le plus fidèle conseiller de Caelar. (Incroyable... mais quelle idiote.)~
+@2065	= ~Le mystère est en train de s'éclaircir. Merci, Edwin. Ton aide est inestimable.~
+@2066	= ~Évidemment. Je le suis toujours.~
+@2067	= ~Bien sûr que c'en est un. La situation ne cesse de s'améliorer. Merci, Edwin. C'est une information inestimable.~
+@2068	= ~Évidemment. Tu t'attendais à autre chose de ma part ? (J'espère que non !)~
+
+/////////////////////
+// Journal Entries //
+/////////////////////
+@3000	= ~Histoire et légende du château Paldragon
+
+J'ai trouvé un livre qui explique probablement les intentions de Caelar à mon égard. Elle souhaite utiliser mon sang afin d'ouvrir un portail vers Avernus. La seule conclusion logique est qu'elle a perdu la raison.~
+@3001	= ~Le pauvre et malheureux Dauston
+
+Le paladin déchu et complètement ivre qui se trouve dans les geôles du Poing Enflammé pourrait avoir des informations importantes sur Caelar, mais je n'ai pas le temps d'attendre qu'il soit sobre. Peut-être que le Duc Eltan pourra se charger d'en apprendre plus à son sujet.~
+@3002	= ~Le pauvre et malheureux Dauston
+
+Un membre de mon groupe m'a conseillé de parler au Duc Eltan du paladin complètement ivre qui se trouve dans les cellules du Poing Enflammé.~
+@3003	= ~Le pauvre et malheureux Dauston
+
+Le Duc Eltan interrogera Dauston, le paladin déchu, une fois qu'il sera sobre. Ensuite, il enverra les informations obtenues à Corwin.~
+@3004	= ~Le pauvre et malheureux Dauston
+
+Nous avons appris que le mentor de Dauston, l'oncle de Caelar, a choisi de prendre la place de Caelar en Avernus.~
+@3005	= ~Histoire et légende du château Paldragon
+
+J'ai trouvé un livre qui explique probablement les plans de Caelar. Elle souhaite ouvrir un portail vers Avernus. La seule conclusion logique est qu'elle a perdu la raison.~
+
+/////////////////////////////////////////
+// Corwin relays Eltan's message to PC //
+/////////////////////////////////////////
+// THESE ARE ALSO IN SOD_COASTWAY_CROSSING.TRA
+// IF CHANGED HERE, NEED TO CHANGE THERE AS WELL
+@4030	= ~À propos, j'ai un message pour vous de la part du Duc Eltan, <CHARNAME>.~
+@4031	= ~Excellent ! Qu'a-t-il découvert ?~
+@4032	= ~Mieux vaut tard que jamais, je présume. Qu'a-t-il découvert ?~
+@4033	= ~Si vous aviez maintenu le contact avec le camp, vous l'auriez reçu bien plus tôt. Un messager nous l'a apporté il y a un moment déjà.~
+@4034	= ~Il a découvert que Caelar, dans son arrogance, s'est retrouvée piégée en Avernus.~
+@4035	= ~Son oncle a réussi à obtenir sa libération, il s'est sacrifié en prenant sa place en Avernus...~
+@4036	= ~C'est horrible. Mais ça explique beaucoup de choses.~

@@ -1,0 +1,68 @@
+// PC learns it's a weak poison that was used
+@100	= ~Ils ont utilisé un poison trop faible ? Ça n'a aucun... ils n'ont pas attaqué le palais pour me tuer. Ils voulaient me kidnapper.~
+@101	= ~Hmm, vous avez peut-être raison.~
+
+// Final conversation with the Dukes before leaving the palace for Dragonspear
+@102	= ~Avant de partir, je voudrais vous signaler que les sbires de Caelar n'étaient pas là pour me tuer.~
+@103	= ~Oui, le poison qu'ils ont utilisé était bien trop faible pour y parvenir.~
+@104	= ~Leur intention était de me capturer, mais je ne sais pas pour quelle raison.~
+@105	= ~Ce sont des nouvelles inquiétantes.~
+@106	= ~L'homme qui m'a rendu visite était encore plus inquiétant. Il se dissimule derrière une capuche et me suit à la trace.~
+@107	= ~Avant de partir, j'ai des nouvelles assez inquiétantes. J'ai reçu un visiteur, ici dans le palais. Il semble qu'un mystérieux homme à la capuche ait décidé de me persécuter.~
+@108	= ~Se pourrait-il que ce soit la même personne qui ait organisé le vol de l'épée de Sarevok ?~
+@109	= ~Eh bien, il correspond certainement à la description. Mystérieux... effrayant même. Et sinistre.~
+@110	= ~Je me dois de vous présenter des excuses, <CHARNAME>. Il semble que la sécurité de notre palais ne cesse de vous faire défaut.~
+
+// Conversation with Eltan
+@111	= ~Je ne me suis toujours pas habitué à ces attaques venues de nulle part, mais ça pourrait être pire.~ ~Je ne me suis toujours pas habituée à ces attaques venues de nulle part, mais ça pourrait être pire.~
+@112	= ~Plus pour longtemps. Caelar devra répondre de sa tentative d'empoisonnement.~
+
+// Corwin while in town
+@113	= ~Quelqu'un a essayé de m'empoisonner et moi JE vais à la taverne. Bon sang ce n'est pas possible, JE n'en finirai jamais.~
+
+// Corwin while in the group
+@114	= ~Ayez confiance en moi, si vous le voulez bien : Caelar Argent a essayé de m'empoisonner et je compte lui rendre la monnaie de sa pièce. Si vous désirez voir la Dame Étincelante tomber, alors nous sommes alliés, peu importe notre passé ou nos origines.~ ~Ayez confiance en moi, si vous le voulez bien : Caelar Argent a essayé de m'empoisonner et je compte lui rendre la monnaie de sa pièce. Si vous désirez voir la Dame Étincelante tomber, alors nous sommes alliées, peu importe notre passé ou nos origines.~
+
+// Corwin while in the camps
+@115	= ~En voulant s'en prendre à moi, Caelar a failli tuer ma chère amie Imoen. Ses actions ne resteront pas impunies.~
+
+// Dynaheir while in town
+@116	= ~Elle a presque tué une personne chère à mon cœur en essayant de m'empoisonner. Je ne peux pas laisser passer ça.~
+@117	= ~Je n'ai pas vraiment le choix. Elle a envoyé des assassins pour essayer de m'empoisonner, pas plus tard que ce matin.~
+@118	= ~Caelar, ... cette Dame Étincelante a essayé de m'empoisonner. Je ne peux pas laisser passer ça.~
+@119	= ~Je voudrais bien. Mais malheureusement, tout ce que je sais d'elle, c'est qu'elle a provoqué l'exode de milliers de personnes et qu'elle s'en est prise à Imoen et à moi.~
+@120	= ~Elle a osé nous attaquer, Imoen et moi. Tout ce que vous avez besoin de savoir, c'est qu'elle va payer pour cette erreur.~
+
+// Garrick while in town
+@121	= ~Nous ne nous sommes pas encore rencontrés, mais je connais bien cette Caelar. Certains de ses sbires m'ont déjà attaqué.~ ~Nous ne nous sommes pas encore rencontrées, mais je connais bien cette Caelar. Certains de ses sbires m'ont déjà attaquée.~
+@122	= ~Je la connais, oui, mais pas autant que je le voudrais. Des assassins portant la marque de Caelar ont eu le culot de m'attaquer dans le palais ducal.~
+@123	= ~Elle a attaqué le héros de la Porte de Baldur ? C'est audacieux, mais risqué. Un échec aurait pour conséquence de vous impliquer dans cette guerre...~ ~Elle a attaqué l'héroïne de la Porte de Baldur ? C'est audacieux, mais risqué. Un échec aurait pour conséquence de vous impliquer dans cette guerre...~
+
+
+// Rasaad while in town
+@124	= ~Des agents de Caelar Argent nous ont attaqués, Imoen et moi, au Palais Ducal.~ ~Des agents de Caelar Argent nous ont attaquées, Imoen et moi, au Palais Ducal.~
+@125	= ~Des assassins viennent de nous attaquer, Imoen et moi, il y a tout juste quelques heures et je dois bien avouer que ça ne me perturbe plus autant qu'à l'époque.~
+@126	= ~On dit qu'un petit déjeuner sans assassins pour vous empoisonner, c'est le début d'une bonne journée. Enfin, à ce qu'il paraît.~
+@127	= ~Le premier repas de la journée est important pour bien commencer la journée... Attends. Tu dis que quelqu'un a essayé de t'empoisonner ?~
+@128	= ~Des assassins au service de Caelar Argent ont pénétré dans le Palais Ducal et ont tenté de m'empoisonner.~
+@129	= ~Comme ces malheureux, j'ai subi son infamie. Ses assassins ont essayé de m'empoisonner un peu plus tôt et ils ont presque réussi.~
+@130	= ~A-t-elle envoyé de nombreux assassins pour les empoisonner ? Parce que c'est ce qui m'est arrivé.~
+@131	= ~Ces gens ont décidé de fuir leurs problèmes. J'ai la ferme intention d'affronter les miens. Caelar a essayé de m'empoisonner ce matin.~
+@132	= ~Tu dis que Caelar Argent s'en est prise à toi ? Mais pour quelle raison ?~
+@133	= ~Imoen a failli y passer tout à l'heure. Mais elle s'en est tirée, donc tout bien considéré, je pense que je m'en sors plutôt bien.~
+
+// Safana while in town
+@134	= ~Plus tôt dans la nuit, des assassins ont pénétré dans le Palais Ducal et ont tenté de m'empoisonner. C'est Caelar Argent qui les a envoyés.~
+
+// Edwin while in first camp
+@135	= ~Une fois de plus, je me retrouve mêlé aux événements. Caelar Argent cherche à me capturer.~ ~Une fois de plus, je me retrouve mêlée aux événements. Caelar Argent cherche à me capturer.~
+@136	= ~Caelar Argent a essayé de m'empoisonner, et maintenant je compte lui rendre la pareille. Puéril, certes, mais pour ma défense, c'est elle qui a commencé.~
+@137	= ~Pour des raisons qui m'échappent, Caelar Argent a essayé de m'empoisonner. Maintenant qu'elle a échoué, elle va devoir payer pour son manque de discernement.~
+@138	= ~Pour des raisons qui ne m'intéressent pas, Caelar Argent a essayé de m'empoisonner. Maintenant qu'elle a échoué, elle va devoir payer pour son manque de discernement.~
+@139	= ~Je suis <CHARNAME>. La Dame Étincelante a essayé de m'empoisonner. Elle va regretter son échec quand je lui mettrai la main dessus, au château de Paldragon.~
+@140	= ~La Dame Étincelante m'a attaqué. À présent, c'est mon tour...~ ~La Dame Étincelante m'a attaquée. À présent, c'est mon tour...~
+@141	= ~Je suis <CHARNAME>. Pour des raisons qui m'échappent, la Dame Étincelante s'en est prise à moi. Elle paiera cher pour cet affront.~
+@142	= ~Je suis <CHARNAME>. Pour des raisons qui ne m'intéressent pas, la Dame Étincelante s'en est prise à moi. Elle paiera cher pour cet affront.~
+
+
+

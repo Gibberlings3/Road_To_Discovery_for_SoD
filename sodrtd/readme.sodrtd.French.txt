@@ -1,171 +1,174 @@
 ------------------------------------------------
---- Road to Discovery for BG:SoD and EET:SoD ---
+--- Road to Discovery ( Rapport de Mission ) pour BG:SoD et EET:SoD ---
 ------------------------------------------------
 
-by jastey
-with one component from Lauriel
+Par Jastey
+Avec un composant par Lauriel
 
-LIST OF CONTENTS
---CONTENTS
---DESCRIPTION OF COMPONENTS
---COMPATIBILITY NOTE
+Sommaire
+--Contenu
+--Description des composants
+--Compatibilité
 --NOTE TO ALL TRANSLATORS AND GERMAN PLAYERS
---INSTALLATION
+--Installation
 --OVERVIEW ON TRACKED KNOWLEDGE
 --VARIABLE SYSTEM: GENERAL DESCRIPTION FOR MODDERS
 --CREDITS
---USED TOOLS AND RESSOURCES
 --HISTORY
 --COPYRIGHT NOTE
 
 
-CONTENTS
+Contenu
 
-This Tweak Mod is for the SoD campaign (also with native EET compatibility).
-It serves two purposes.
+Ce Tweak Mod est destiné à la campagne SoD ( il dispose également d'une compatibilité native avec EET).
+Il sert deux objectifs.
 
-For players, this mod aims to make the coalition forces aware of Caelar's and Hephernaan's plans with focus on the actual important aim and danger of the crusade, and give reply options with which the PC can inform the coalition forces about what is going on. For this, all bits and pieces of information the PC can gather along the campaign are tracked and evaluated. Journal entries give an overview on what information the PC already gathered.
-All in all, this mod is supposed to connect the dots so the PC is able to tell about all the inside info they gathered as well as have the coalition officers acknowledge and react to the actual danger(s).
+Pour les joueurs, ce mod a pour but de faire connaître aux forces de la coalition les plans de Caelar et d'Hephernaan en se concentrant sur le projet principal de la croisade et le danger qu'elle représente, il permet de donner des options de réponse avec lesquelles le PC peut informer les forces de la coalition des événements en cours. Pour cela, toutes les informations que le PC recueille au cours de la campagne sont suivies et évaluées. Les entrées du journal donnent un aperçu des informations que le PC a déjà recueillies.
+Dans l'ensemble, ce mod est censé relier les points pour que le PC soit capable de raconter toutes les informations qu'il a recueillies et que les officiers de la coalition reconnaissent et réagissent concrètement au(x) danger(s).
 
-For modders, this mod introduces a variable-based tracking system about the different levels of knowledge the PC and the coalition officers gain throughout the campaign, which could be used for own mods, e.g. for fine tuning mod NPCs reactions to the depths of gained information about Caelar, Hephernaan, and the crusade, but also the Hooded Man's appearances. Also, own reaction mods based on any components of Road to Discovery can be developped by whoever wants to, as long as those mods make (components of) RtD a prerequisite and do not include changed content of this mod nor tweak any of RtD original writing.
+Pour les moddeurs, ce mod introduit un système de suivi basé sur des variables concernant les différents niveaux de connaissances que le PC et les officiers de la coalition acquièrent tout au long de la campagne, Ce système pourrait être utilisé dans vos propres mods, par exemple pour affiner les réactions des PNJ ajoutés par des mods par rapport aux informations acquises sur Caelar, Hephernaan, et la croisade, mais aussi pour les apparitions de l'Homme à la Capuche. De ce fait, il est possible pour qui le souhaite de développer des mods basés les réactions de Road to Discovery, tant que ces mods font de RtD un prérequis et n'incluent pas de contenu modifié ni ne modifient le contenu original de RtD.
 
-The mod is modular so every player as well as modder can chose how much changes and content they want to see/use.
+Le mod a plusieurs composants afin que chaque joueur et chaque moddeur puissent choisir le nombre de changements et le contenu qu'il souhaite voir ou utiliser.
 
-The following lists the information from the SoD campaign this mod is considering. For detailed description of the used variables and the exact definition of the tracked infomation see below:
--What is the main purpose of the crusade - what is Caelar proclaiming, and what is it really?
--What truth lies in Caelar's proclamation - and her crusaders' belief - that Caelar protects the crusade with "divine powers of the pantheon"?
--What is the background of Caelar's life and family, and how does it influence her motives?
--Is Caelar a Bhaal Spawn?
--Caelar is being betrayed? By who?
--What are Hephernaan's plans?
--The Hooded Man is stalking the PC, and why?
--What does Caelar and Hephernaan want with the PC?
--What was the attack in the palace with the weak poison for?
+La liste suivante énumère les informations de la campagne SoD que ce mod prend en compte. Pour une description détaillée des variables utilisées et la définition exacte des informations suivies, voir ci-dessous :
+- Quel est le but principal de la croisade - Qu'est-ce que Caelar proclame, et qu'en est-il réellement ?
+- Quelle est la vérité dans la proclamation de Caelar et les croyances de ses croisés - est-ce que Caelar protège la croisade avec des "pouvoirs divins du panthéon" ?
+- Quel est le contexte de la vie et de la famille de Caelar, et comment cela influence ses motivations ?
+- Caelar est-elle une enfant de Bhaal ?
+- Caelar est trahie ? Par qui ?
+- Quels sont les plans d'Hephernaan ?
+- L'homme à la Capuche traque le PC, et pourquoi ?
+- Qu'est-ce que Caelar et Hephernaan veulent au PC ?
+- À quoi a servi l'attaque au palais avec un poison si faible ?
 
 
-DESCRIPTION OF COMPONENTS 
+Description des composants
 
-The mod consists of 9 components, most of them optional.
+Le mod est constitué de 9 éléments, dont la plupart sont facultatifs.
 
-1 Add Stat-Based Observations and Quest Options from Lauriel's Themed Tweaks Mod
+1 Observations basées sur des statistiques et options de quête tirées du mod Themed Tweaks de Lauriel.
 ---------------------------------------------
 
-This imports the component "Add Stat-Based Observations and Quest Options" from Lauriel's Themed Tweaks Mod. Install this if you want more depth and consistent reactions to the following ingame occurrences with regard to making the gained information aware to the group:
-- Duke Jannath's info about weak poison of Caelar's palace assassins (and all later reply options about Caelar trying to have the PC killed in the palace): PC realizes the attack was not meant to kill;
-- treatise about portal below Dragonspear Castle: reactions from NPCs to the revelations about the portal beneath Dragonspear Castle and how to open it;
-- have Edwin identify Hephernaan (including his plans) in the scry pool before having met him in persona;
-- make the Dukes question the fallen paladin Dauston to learn more about Caelar's background - and motives.
--The component also adds some more reply options at appropriate places to reflect the PC's experiences, e.g. tell the Dukes after meeting the Hooded Man inside the palace.
-If the component is installed via Themed Tweaks, it will be skipped here.
-This component is optional. 
-Note: This component works without any of the other components. 
-Component 2 "Main Component" will also provide the needed basic tracking variables for the listed ingame occurrences in case this component is not installed. 
-Installing component 1 (or the same component of Themed Tweaks) is recommended for the whole ingame experience.
+Ce composant importe le contenu "Observations basées sur des statistiques et options de quête" tiré du mod Themed Tweaks de Lauriel. Installez ce composant si vous voulez des réactions plus approfondies et cohérentes aux événements du jeu, en faisant attention à ce que les informations obtenues soient communiquées au groupe :
+- Les  informations de la Duchesse Jannath sur le poison trop faible, utilisé par les assassins de Caelar (et toutes les options de réponse ultérieures sur Caelar essayant de faire tuer le PC dans le palais) : Le PC réalise que l'attaque n'était pas destinée à tuer ;
+- Un traité d'histoire sur le portail sous le château Paldragon : réactions des PNJ aux révélations sur le portail et sur la façon de l'ouvrir ;
+- Faire en sorte qu'Edwin identifie Hephernaan (y compris ses plans) dans le bassin de scrutation avant même de l'avoir rencontré ;
+- Faire en sorte que les Ducs interrogent le paladin déchu Dauston pour en savoir plus sur le passé - et les motivations de Caelar.
+- Le composant ajoute également des options de réponse supplémentaires aux endroits appropriés pour refléter les expériences du PC, par exemple, informer les Ducs après avoir rencontré l'Homme à la Capuche dans le palais.
+Si ce composant est déjà installé via Themed Tweaks, il sera ignoré.
+Ce composant est facultatif. 
+Remarque : Ce composant peut fonctionner sans aucun des autres composants. 
+Le composant 2 "Composant principal" fournira également les variables de suivi nécessaires pour les occurrences en jeu énumérées précédemment au cas où ce composant ne serait pas installé. 
+L'installation du composant 1 (ou du même composant de Themed Tweaks) est recommandée pour une expérience en jeu complète.
 
-2 Main Component: Tracking System
+2 Composant principal : Système de Pistage.
 ---------------------------------------------
-Component 2 is the main component of Road to Discovery which inserts the variable-based tracking system as well as journal entry handling for the level of knowledge this mod is tracking as described below.
-This component adds no reactions or reply options, on its own it has no effect for players.
-Note: This component is required for all following components and would be the base for any other mods that want to make use of the information tracking system.
+Le composant 2 est le composant principal de Road to Discovery. Il intègre un système de suivi basé sur des variables ainsi que le traitement des entrées de journal pour les connaissances pistées/suivies grâce à ce module, comme décrit ci-dessous.
+Ce composant n'ajoute aucune réaction ou option de réponse, à lui seul il n'a aucun effet sur les joueurs.
+Note : Ce composant est requis pour tous les composants suivants et sera la base pour tous les autres mods qui veulent utiliser le système de pistage des informations.
 
-3 Consistency Changes to Game Dialogues
+3 Changements dans les dialogues du jeu pour plus de cohérence.
 ---------------------------------------------
-Component 3 disables reply options from the original game that do not make sense any more if the PC has more in-depth knowledge about the ongoings. For example, having met Hephernaan at Coast Way Crossing, it doesn't make sense to have a reply option that lets the PC ask "Hepher-who?" when talking to Edwin, or let them say "What could [Caelar] want with me?" after the parley at Dead Man's Pass if they already know exactly what Caelar needs the PC for. This component does not add new content / reply options, this is done in component 5 "Give PC Informed Reply Options".
-This component is optional.
-Note: any references to Caelar's assassins trying to "kill" the PC although the weakness of the poison is known are not changed by this component. Install Lauriel's "Add Stat-Based Observations and Quest Options" component for this, either via RtD or Themed Tweaks.
+Le composant 3 désactive les options de réponse du jeu original qui n'ont plus de sens si le PC a une connaissance plus approfondie de ce qui se passe. Par exemple, après avoir rencontré Hephernaan au Pont de la Voie Côtière, il n'est pas utile d'avoir une option de réponse qui permette au PC de demander "Hepher-qui ?" lorsqu'il parle à Edwin, ou de le laisser dire "Que pourrait me vouloir Caelar ?" après les pourparlers au Défilé du Trépassé s'il sait déjà exactement ce que Caelar veut. Ce composant n'ajoute pas de nouveaux contenus / options de réponse, ceci est fait dans le composant 5 "Donner au PC des options de réponse informée".
+Ce composant est facultatif.
+Note : toute référence aux assassins de Caelar essayant de "tuer" le PC bien que la faiblesse du poison soit connue n'est pas modifiée par ce composant. Installez le composant "Observations basées sur des statistiques et options de quête" tiré du mod Themed Tweaks de Lauriel pour cela, soit via RtD ou Themed Tweaks.
 
-4 Officers Are Aware
+4 Les officiers sont plus attentifs.
 ---------------------------------------------
-Component 4 adds my view on what the officers would know when along the campaign without the PC telling them. From the first meeting at the big coalition camp we know they interrogate captured crusaders, for example, and the original dialogue with De Lancie reveals their own investigations about Caelar. 
-Nevertheless, this component focusses on keeping officers' knowledge of the crusade's goals and secrets at an absolute minimum not to spoil the ingame experience of the PC being the one revealing the really crucial intel.
-Note: This component does *not* add any reactions to the officers, it just adds the level of their knowledge and awareness so it can be used in the later components.
-This component is optional but needed for component 7 "Add Officers Reactions".
+Le composant 4 ajoute mon point de vue sur ce que les officiers pourraient savoir au cours de la campagne sans que le PC ne le leur ait dit. Dès la première rencontre au camp de commandement de la coalition, nous savons qu'ils interrogent les croisés capturés, et le dialogue original avec De Lancie révèle leurs propres enquêtes sur Caelar. 
+Néanmoins, ce composant se concentre sur la connaissance des officiers concernant les objectifs et les secrets de la croisade mais dans une mesure minimale pour ne pas gâcher l'expérience de jeu du PC qui est celui qui révélera les informations vraiment cruciales.
+Note : Ce composant n'ajoute *pas* de nouvelles réactions aux officiers, il ajoute simplement le niveau de leurs connaissances et de leur conscience afin qu'ils puissent être utilisés dans les composants ultérieurs.
+Ce composant est facultatif mais nécessaire pour le composant 7 "Ajouter des interactions aux officiers.".
 
-5 Give PC Informed Reply Options
+5 Donnez au PC des options de réponse avisée.
 ---------------------------------------------
-This component adds consistent reply options to relevant game dialogues which reflect the PC's status of knowledge. For one it adds according reply options where component 3 "Consistency Changes to Game Dialogues" removed the unfitting ones except for the mentioned instances with regard to the weak poison that is content of Lauriel's "Add Stat-Based Observations and Quest Options from Themed Tweaks Mod". Component 5 also adds informed reply options at places where the PC talks about the ongoings with ingame characters, but it adds no options to inform the officers about the PC's findings, this is done in component 6 "PC Can Tell the Officers".
-This component is optional.
-It requires component 3 "Consistency Changes to Game Dialogues" and needs to be installed after component 4 "Officers Are Aware" if component 4 is installed.
+Ce composant ajoute des options de réponse cohérentes aux dialogues de jeu qui reflètent l'état des connaissances du PC. D'une part, il ajoute des options de réponse appropriées là où le composant 3 "Changements dans les dialogues du jeu pour plus de cohérence" a supprimé celles qui ne convenaient pas, à l'exception des exemples mentionnés concernant le poison faible qui est le contenu du composant "Observations basées sur des statistiques et options de quête" tiré du mod Themed Tweaks de Lauriel.
+Le composant 5 ajoute également des options de réponse avisée aux endroits où le PC parle de ce qui se passe avec des personnages du jeu, mais il n'ajoute aucune option pour informer les officiers des conclusions du PC, ce qui est fait dans le composant 6 "Le PC peut informer les officiers".
+Ce composant est facultatif.
+Il nécessite le composant 3 "Changements dans les dialogues du jeu pour plus de cohérence" et doit être installé après le composant 4 "Les officiers sont plus attentifs" si le composant 4 est installé.
 
-6 PC Can Tell the Officers
+6 Le PC peut informer les officiers.
 ---------------------------------------------
-This component adds the possibility for the PC to inform the Dukes and officers about the gathered information throughout the campaign with regard to the tracked information (e.g. Caelar's deeper plans, Hephernaan's betrayal, the portal and the needed Bhaal blood, and the Hooded Man). Officers will aknowledge the information and give short remarks as a reply. Apart from that, there is no changes to dialogues or other additions. For further, in-depth reactions of the officers, install component 7 "Add Officers Reactions".
-Characters the PC can tell about Caelar's plans with this component are:
--Captain Corwin before the castle assault (i.e. the first three camps areas), if she is not in party.
--Corporal Bence Duncan in the first two camps (Coast Way Crossing and Troll Claw Woods) when he is available.
--Torsin De Lancie when available.
--Marshal Nederlok in the big coalition camp (bd3000).
-This component is optional but needed for component 7 "Add Officers Reactions".
+Ce composant ajoute la possibilité pour le PC d'informer les Ducs et les officiers des informations recueillies tout au long de la campagne en ce qui concerne les informations suivies ( les plans plus secrets de Caelar, la trahison d'Hephernaan, le portail, le sang de Bhaal et l'Homme à la Capuche). Les agents prendront connaissance des informations et donneront de brèves remarques en guise de réponse. En dehors de cela, il n'y a pas de modification des dialogues ou d'autres ajouts. Pour des réactions plus approfondies des officiers, installez le composant 7 "Ajouter les réactions des officiers".
+Les personnages que le PC peut informer des plans de Caelar avec ce composant sont :
+-Capitaine Corwin avant l'assaut du château (c'est-à-dire les trois premiers camps), si elle n'est pas dans le groupe.
+-Le Caporal Bence Duncan dans les deux premiers camps (Pont de la Voie Côtière et Bois des Griffes de Troll) quand il est disponible.
+-Torsin De Lancie lorsqu'il est disponible.
+-Le Maréchal Nederlok dans le grand camp de la coalition (bd3000).
+Ce composant est facultatif mais nécessaire pour le composant 7 "Ajouter des réactions d'officiers".
 
-7 Add Officers Reactions
+7 Ajouter des interactions aux officiers.
 ---------------------------------------------
-This component is my view on how the officers should react to the crusade's main purpose depending on how much they know.
-Component 7 adds reactions of the officers to the threat in dialogues depending on how much information they got about the ongoings regarding the crusade and the other instances considered as described below: There will be new dialogue lines at the gathering of the three officers General Stonehand, Marshal Nederlok, and Torsin De Lancie in the big coalition camp, reactions of the three upong hearing about the portal and the PC's role to open it, the officers will ask the PC to look out for more detailed knowledge about Caelar's plans, the parley with Caelar will go differently if the officers know about what Caelar needs the Bhaal blood for, etc.
-This component is optional and also needs components 4 "Make Officers Aware", as well as 6 "PC can tell the officers". 
+Ce composant reflète mon point de vue sur la façon dont les officiers devraient réagir à l'objectif principal de la croisade, en fonction de ce qu'ils savent.
+Le composant 7 ajoute les réactions des officiers, face à la menace, dans les dialogues, en fonction des informations qu'ils ont obtenues sur les événements concernant la croisade et les autres instances considérées comme décrites ci-dessous : Il y aura de nouvelles lignes de dialogue lors de la réunion des trois officiers, le Général Stonehand, le Maréchal Nederlok et Torsin De Lancie, dans le grand camp de la coalition. Les réactions des trois officiers en entendant parler du portail et du rôle du PC pour l'ouvrir, les officiers demanderont au PC de chercher des informations plus détaillées sur les plans de Caelar, les pourparlers avec Caelar se dérouleront différemment si les officiers savent pourquoi Caelar a besoin du sang de Bhaal, etc.
+Ce composant est facultatif et nécessite également les composants 4 "Les officiers sont plus attentifs.", ainsi que 6 "Le PC peut informer les officiers."
 
-8 Additional Info Points
+8 Points d'information supplémentaires.
 ---------------------------------------------
-Component 8 adds a few more possibilities to gather information about Caelar's plans not considered in component 1 "Add Stat-Based Observations and Quest Options from Lauriel's Themed Tweaks Mod". For example, crusaders in the castle encampment can be asked more explicitely about the crusade's plans, and the "blessing ritual" in the camp at Boareskyr Bridge can be analysed if a cleric or paladin is in the group.
-This component is optional.
+Le composant 8 ajoute quelques possibilités supplémentaires pour recueillir des informations sur les plans de Caelar et qui n'ont pas été prises en compte dans le composant 1 "Observations basées sur des statistiques et options de quête tirées du mod Themed Tweaks de Lauriel." Par exemple, les soldats qui se trouvent dans le château peuvent être interrogés de manière plus explicite sur les plans de la croisade, et le "rituel de bénédiction" dans le camp du pont de Boarskyr peut être analysé si un clerc ou un paladin se trouve dans le groupe.
+Ce composant est facultatif.
 
-9 Add Additional Communication with Officers
+9 Ajouter de nouvelles discussions avec les officiers.
 ---------------------------------------------
-Component 9 adds a custom character, Sir Deggernaut, who moves along the campaign from camp to camp for direct communication so the PC can always tell their findings independent on avilability of original game officers due to campaign progress. His dialogue features also a possibility to ask him about the status of the officers' knowledge, where he will list everything the officers are aware of at this point - which might be more than the PC found out depending on campaign progress. 
-Sir Deggernaut can be found by the camp tents in the first two camps, and near Mizhena in the big coalition camp.
-This component is optional and also needs components 4 "Officers Are Aware", as well as 6 "PC can tell the officers". 
+Le composant 9 ajoute un personnage personnalisé, Sir Deggernaut, qui se déplace tout au long de la campagne, de camp en camp, pour une communication directe, afin que le PC puisse toujours raconter ses découvertes, indépendamment de la disponibilité des officiers du jeu d'origine en raison de la progression de la campagne. Dans son dialogue, il est également possible de l'interroger sur l'état des connaissances des officiers. Il énumérera tout ce que les officiers savent à ce stade - ce qui peut être plus que ce que le PC a découvert en fonction de la progression de la campagne. 
+Sir Deggernaut peut être trouvé près des tentes des deux premiers camps, et près de Mizhena dans le grand camp de la coalition.
+Ce composant est facultatif et nécessite également les composants 4 "Les officiers sont plus attentifs.", ainsi que 6 "Le PC peut informer les officiers." 
 
 
-COMPATIBILITY NOTE
+Compatibilité
 
-Install Road to Discovery very late in install order. This mod should be installed AFTER the following mods:
--Themed Tweaks
--Jastey's SoD Tweakpack
--any mod that adds reply options or transactions to SoD, like NPC mods or story tweak mods.
+Installer Road to Discovery vers la fin de votre installation. Ce mod doit être installé APRÈS les mods suivants:
+- Themed Tweaks
+- Jastey's SoD Tweakpack
+- Tout mod ajoutant des options de réponse supplémentaires ou des changements à SoD, comme les mods NPC ou les mods modifiant l'intrigue.
 
-Road to Discovery has native EET compatibility and needs to be installed before EET_End.
+Road to Discovery est compatible EET et doit être installé avant EET_End.
 
 
 NOTE TO ALL TRANSLATORS AND GERMAN PLAYERS
 
 Translators: please note that all tra-files are in utf8 conversion. Also, please refer to the "note_to_translators.txt" inside sodrtd/docs.
 
-The German version is consistent to the fan-made "Deutsche �bersetzung f�r SoD". This means, that names and terms could differ from the official German version shipped with the game. Install "Deutsche �bersetzung f�r SoD" for a consistent game experience.
+The German version is consistent to the fan-made "Deutsche Übersetzung für SoD". This means, that names and terms could differ from the official German version shipped with the game. Install "Deutsche Übersetzung für SoD" for a consistent game experience.
 Download Link: https://baldurs-gate.de/index.php?resources/deutsche-%C3%9Cbersetzung-f%C3%BCr-sod.49/
 
 
-INSTALLATION
+Installation
 
-NOTE: If you've previously installed the mod, remove it before extracting a new version. To do this, uninstall all previously installed components and delete the mod folder and executables. 
+NOTE: Si vous avez déjà installé le mod, supprimez-le avant d'extraire une nouvelle version. Pour cela: désinstallez tous les composants installés précédemment via le setup, et supprimez le dossier du mod ainsi que les exécutables. 
 
-When installing or uninstalling, do not close the DOS window by clicking on the X button! Instead, press the Enter key when instructed to do so.
+Quand vous installez ou désinstallez le mod, ne fermez pas la fenêtre DOS en cliquant sur la croix ! Au lieu de ça, appuyez sur "entrer" quand cela est demandé.
+
 
 BG:EE
-If you use SoD from GOG or Steam, you need to prepare your game with DLC Merger or modmerge before installing any mods:
-argent77's DLC Merger:
+Si vous utilisez SoD depuis GoG ou Steam, vous devez préparer votre jeu avec DLC Merger ou modmerge avant d'installer n'importe quel mod:
+DLC Merger par argent77 :
 https://forums.beamdog.com/discussion/71305/mod-dlc-merger-merge-steam-gog-sod-dlc-or-custom-dlcs-with-the-main-game
 
-modmerge (if in doubt, use the DLC Merger instead):
+modmerge (en cas de doute, utilisez le DLC Merger à la place):
 https://forums.beamdog.com/discussion/50441/modmerge-merge-your-steam-gog-zip-based-dlc-into-something-weidu-nearinfinity-dltcep-can-use/p1
 
-General (Windows, Mac OS X, and Linux)
+ 
+Général (Windows, Mac OS X, and Linux)
 
-Extract the contents of the mod archive to your game's main directory. 
-NOTE: For Enhanced Edition it is important that you istall the mod to the language version you are playing the game in. Otherwise, the dialogues of the mod will not show but give error messages.
+Extrayez le contenu de l'archive du mod dans le dossier de votre jeu. 
+NOTE: Pour les Enhanced Edition, il est important d'installer les mods dans le langage que vous utilisez dans le jeu. Autrement, les dialogues provenant des mods seront affichés sous forme de messages d'erreurs.
+
 
 Windows
-On successful extraction, there should be an sodrtd folder and a setup-sodrtd.exe file in your game folder. To install, simply double-click setup-sodrtd.exe and follow the instructions on screen.
-Run setup-sodrtd.exe in your game folder to reinstall, uninstall or otherwise change components.
+Après extraction, vous devriez trouver dans votre dossier de jeu: un dossier "c#endlessbg1" et un fichier "setup-c#endlessbg1.exe". Pour installer le mod, double-cliquez sur setup-c#endlessbg1.exe et suivez les instructions à l'écran.
+Lancez setup-c#endlessbg1.exe dans votre dossier de jeu pour réinstaller, désinstaller ou changer des composants.
 
 Mac OS X
-The Tweak Pack is packaged and installed with WeiDU. To install, extract the mod archive, then copy of the contents of the folder into your game folder (the folder which contains the CHITIN.KEY file). If properly extracted, you should have a "sodrtd" folder, setup-c#sodcodo, and setup-sodrtd.command in your game folder. To install, simply double-click setup-sodrtd.command and follow the instructions on screen.
+Le Tweak Pack est compressé et installé avec WeiDU. Pour l'installer, extrayez l'archive du mod, puis copiez le contenu du dossier dans votre dossier de jeu (le dossier qui contient le fichier CHITIN.KEY). Si l'extraction se passe correctement, vous devriez avoir un dossier "c#endlessbg1", setup-c#endlessbg1, et setup-c#endlessbg1.command dans votre dossier de jeu. Pour installer le mod, il suffit de double-cliquer sur setup-c#endlessbg1.command et de suivre les instructions à l'écran.
 
 Linux
-Extract the contents of the mod to the folder of the game you wish to modify. Download the latest version of WeiDU for Linux from https://github.com/WeiDUorg/weidu/releases and copy WeiDU and WeInstall to /usr/bin. Following that, open a terminal and cd to your BG2 installation directory, run 'tolower' and answer Y to both queries. You can avoid running the second option (linux.ini) if you've already ran it once in the same directory. If you're unsure, running tolower and choosing both options is the safe bet.
-Run WeInstall c#sodcodo in your game folder to install the mod. Then run wine BGMain.exe and start playing. 
+Extrayez le contenu du mod dans le dossier de votre jeu que vous souhaitez modifier. Téléchargez la dernière version de WeiDU pour Linux depuis https://github.com/WeiDUorg/weidu/releases et copiez WeiDU et WeInstall vers /usr/bin. Ensuite, ouvrez un terminal et accédez au répertoire d'installation de BG(2), exécutez "tolower" et répondez Y aux deux questions. Vous pouvez éviter d'exécuter la deuxième option (linux.ini) si vous l'avez déjà exécutée une fois dans le même répertoire. Si vous n'êtes pas sûr, lancer tolower et choisir les deux options est la meilleure solution. 
+Exécutez WeInstall c#endlessbg1 dans votre dossier de jeu pour installer le mod. Exécutez ensuite le Wine BGMain.exe et commencez à jouer.
 
-NOTE: BG(II):EE are actively supported games. Please note that every patch update will wipe your current mod setup! If in the middle of a modded game you might want to delay the patch update as even after reinstalling the mods, you might not be able to continue with your old savegames. 
+NOTE: BG(II):EE sont des jeux qui sont mis à jour régulièrement. Sachez qu'à chaque nouvelle mise à jour, votre jeu ne reconnaîtra plus les mods installés ! Si vous êtes au milieu d'une partie avec des mods, il est préférable de retarder la mise à jour car même après avoir réinstallé les mods, vous ne pourrez peut-être pas continuer avec vos anciennes sauvegardes. 
 
-If you have installation problems or encounter any bugs, please post your bug report in one of the forum threads.
+Si vous avez des problèmes d'installation ou rencontrez des bugs, veuillez poster votre rapport de bug sur le forum.
 
 
 OVERVIEW ON TRACKED KNOWLEDGE
@@ -390,7 +393,7 @@ For TRACKING the knowledge the PC and the coalition forces have about the game e
 For FEEDING variables from your mod in case your mod offers new ways to learn about game events, set the variables *with* the postfix "_SET" in your mod. Do not set the varibales without the postfix "_SET" in your mod, as it could screw up the overall variable and journal system.
 For every instance, the global variable which triggers the evaluation script "C#RtD_VariableEvaluation" has to be set to "1", as well. 
 Example:
-In Dynaheir's meeting dialogue, she says a line about hearing the rumor of Caelar being a child of Bhaal (bddynahe, state 20): "I know of this woman. There are those who believe her to be a daughter of the divine�perhaps even a child of Bhaal... She merits further investigation, and is the reason I still linger in the region. When dost thou leave?". 
+In Dynaheir's meeting dialogue, she says a line about hearing the rumor of Caelar being a child of Bhaal (bddynahe, state 20): "I know of this woman. There are those who believe her to be a daughter of the divine—perhaps even a child of Bhaal... She merits further investigation, and is the reason I still linger in the region. When dost thou leave?". 
 We want the variable "C#RtD_CaelarBhaalChild" to be evaluated to "1" if the PC didn't hear about this yet. So what we do is we add the action:
 DO ~SetGlobal("C#RtD_CaelarBhaalChild_SET","GLOBAL",1)
 SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~.
@@ -403,7 +406,7 @@ CREDITS
 jastey - author, main mod head
 JohnBob - French translation (v0.4 Beta)
 Lauriel - author of component 1, ideas, design help, proofreading English (v0.1 Beta) 
-Machiav�lique - proofreading French (v0.4 Beta)
+Machiavélique - proofreading French (v0.4 Beta)
 Shai Hulud - German translation (v0.2 Beta)
 
 Thanks to BioWare, Black Isle and Wizards of the Coast for Baldur's Gate 1, 2 and the Infinity Engine, and BeamDog for the revival of the games including the SoD campaign.
@@ -447,7 +450,7 @@ https://www.gibberlings3.net/forums/topic/1649-community-filename-prefix-reserva
 HISTORY
 
 Version 0.4 Beta
-- added French version by JohnBob, proofreading by Machiav�lique
+- added French version by JohnBob, proofreading by Machiavélique
 
 Version 0.3 Beta
 - new reply option of Jastey's SoD Tweakpack (v6) will be tagged accordingly.
@@ -471,6 +474,6 @@ There are two big ways to upset this harmony. One is to claim someone else's wor
 Be kind to your fellow players and modders. Don't do either.
 
 ================================================================================
-Road to Discovery mod for SoD is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. �Wizards of the Coast LLC.
+Road to Discovery mod for SoD is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC.
 This mod is also not developed, supported, or endorsed by BioWare, Black Isle Studios, Interplay Entertainment Corp., Overhaul Games or Beamdog. All other trademarks and copyrights are property of their respective owners.
 ================================================================================

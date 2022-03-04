@@ -400,9 +400,11 @@ Die Verwendung der Variablen mit dem Postfix „_SET“ stellt sicher, dass das 
 
 DANKSAGUNGEN
 
-jastey - Autor, Hauptverantwortliche für den Mod
-Lauriel - Autor von Komponente 1, Ideen, Designhilfe
-Shai Hulud - deutsche Übersetzung
+jastey - Autor, Hauptverantwortliche für die Mod
+JohnBob - französische Übersetzung (v0.4 Beta)
+Lauriel - Autor von Komponente 1, Ideen, Designhilfe, Korrekturleser (v0.1 Beta)
+Machiavélique - Korrekturleser (französisch, v0.4 Beta)
+Shai Hulud - deutsche Übersetzung (v0.2 Beta)
 
 Danke an BioWare, Black Isle und Wizards of the Coast für Baldur's Gate 1, 2 und die Infinity-Engine, und BeamDog für die Wiederbelebung der Spiele einschließlich der SoD-Kampagne.
 Danke an das Kerzenburgforum und GibberlingsThree für die Bereitstellung eines Ortes für den Austausch von Ideen und technischen Ratschlägen.
@@ -443,6 +445,9 @@ https://www.gibberlings3.net/forums/topic/1649-community-filename-prefix-reserva
 
 
 ÄNDERUNGSHISTORIE
+
+Version 0.4 Beta
+- added French version by JohnBob, proofreading by Machiavélique
 
 Version 0.3 Beta
 - new reply option of Jastey's SoD Tweakpack (v6) will be tagged accordingly.
