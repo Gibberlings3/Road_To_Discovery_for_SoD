@@ -138,7 +138,7 @@
 @259  = ~[Sir Deggernaut (male)]Nous savons également que vous avez signalé qu'un homme dissimulé derrière une capuche a réussi à vous approcher malgré la sécurité mise en place.~
 @260  = ~[Sir Deggernaut (male)]Nous sommes également au courant de vos rapports sur vos rencontres impromptues avec cet homme à la capuche.~
 @261  = ~[Sir Deggernaut (male)]Nous avons remarqué que l'homme encapuchonné en question est intéressé par votre héritage divin.~
-@262  = ~[Sir Deggernaut (male)]Voici l'ensemble de nos connaissances concernant Caelar et sa croisade. Prévenez-nous immédiatement si vous rassemblez des informations plus détaillées.~
+@262  = ~[Sir Deggernaut (male)]Prévenez-nous immédiatement si vous rassemblez des informations plus détaillées.~
 @263  = ~[Sir Deggernaut (male)]Suivez-moi. C'est quelque chose que les officiers vont vouloir aborder immédiatement.~
 @264  = ~[Sir Deggernaut (male)]C'est du bon boulot d'avoir rassemblé ces informations. J'informerai les officiers ainsi que les ducs à la Porte de Baldur.~
 @265  = ~[Sir Deggernaut (male)]Je vois.~
@@ -148,12 +148,27 @@
 @269  = ~[Sir Deggernaut (male)]Je vois. Je vais en informer les ducs et les officiers de la coalition.~
 @270  = ~[Sir Deggernaut (male)]Ah, <CHARNAME>. Si vous avez plus d'informations, je vous écouterai et les transmettrai le plus vite possible, mais les officiers vous attendent sous la tente de commandement, alors ne perdez pas de temps.~
 @271  = ~[Sir Deggernaut (male)]À plus tard alors, faites attention à vous.~
-@272  = ~[Sir Deggernaut (male)]Avec plaisir. Je vais tout récapituler, même ce que vous connaissez déjà.~
+@272  = ~[Sir Deggernaut (male)]Avec plaisir. Comme c'est la première fois, je vais tout récapituler, même ce dont nous avons déjà discuté.~
 @273  = ~[Sir Deggernaut (male)]Nous savons tous que la croisade de Caelar se déchaîne sur nos terres, en pillant et assassinant. Ce que nous ne savons pas c'est ce qu'ils peuvent bien chercher au château Paldragon.~
 @274  = ~[Sir Deggernaut (male)]Nous savons que Caelar et sa croisade prévoient de libérer des âmes piégées en Avernus depuis les Guerres du château Paldragon, mais la manière dont elle compte y parvenir est un mystère.~
 @275  = ~[Sir Deggernaut (male)]Nous savons que la croisade de Caelar prévoit de libérer des âmes prisonnières en Avernus depuis les Guerres du château Paldragon, en se frayant un chemin en enfer, mais nous ignorons par quel moyen.~
 @276  = ~[Sir Deggernaut (male)]Nous savons que Caelar et sa croisade prévoient de libérer des âmes piégées en Avernus depuis les Guerres du château Paldragon, en se frayant un chemin en enfer, à travers un portail situé sous le château Paldragon.~
 @277  = ~[Sir Deggernaut (male)]Nous savons que le conseiller le plus proche de Caelar est un prêtre nommé Hephernaan.~
+@278 = ~[PC Reply]Caelar projette d'ouvrir un portail vers Avernus afin d'y conduire son armée, j'en ai la conviction.~
+@279 = ~[PC Reply]Merci de me communiquer toutes les informations que les officiers ont rassemblées sur Caelar et ses intentions.~
+@280 = ~[PC Reply]Merci de me communiquer les informations rassemblées par les officiers - mais seulement celles que nous n'avons pas encore abordées.~
+@281 = ~[PC Reply]Pouvez-vous me répéter quels sont les renseignements que les officiers ont recueillis sur les intentions de Caelar ?~
+@282 = ~[Sir Deggernaut (male)]Laissez-moi voir...~
+@283 = ~[Sir Deggernaut (male)]Voilà pour les informations que nous avions déjà partagées. Dites-moi si vous souhaitez évoquer de nouvelles découvertes.~
+@284 = ~[Sir Deggernaut (male)]Je vous ai transmis tous les renseignements à notre disposition.~ 
+@285  = ~[Captain Corwin]What happened back there?~
+@286  = ~[Captain Corwin]We will discuss the rest later.~
+@287  = ~[Captain Corwin]Did Argent say anything else?~
+@288  = ~[Corporal Bence Duncan]This doesn't change what you let happen at the bridge!~
+@289  = ~[Corporal Bence Duncan]Very well. What happened at the bridge?~
+@290  = ~[Corporal Bence Duncan]So, what now?~
+@291  = ~[Corporal Bence Duncan]Do you have more you can tell us about Caelar's plans?~
+
 
 /* add_consistency_replyoptions.d */
 @500  = ~[PC Reply]Oui, je pense savoir ce qui s'est passé là-bas.~

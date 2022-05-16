@@ -90,10 +90,25 @@ SAY @66 /* We are in the big war camp. Best you tell this to the officers direct
 COPY_TRANS bdcorwin 38
 END
 
+IF ~~ THEN camp_bd1000_transition_14
+SAY @285 /* What happened back there? */
+COPY_TRANS bdcorwin 14
+END
+
+IF ~~ THEN camp_bd1000_transition_16
+SAY @286 /* We will discuss the rest later. */
+COPY_TRANS bdcorwin 16
+END
+
+IF ~~ THEN camp_bd1000_transition_18
+SAY @287 /* Did Argent say anything else? */
+COPY_TRANS bdcorwin 18
+END
+
 END //APPEND
 
 EXTEND_BOTTOM bdcorwin 5
-++ @42 /* I have knowledge about the crusade's plans we need to talk about. */ + update_corwin
+++ @42 /* I have knowledge about the crusade's plans we need to talk about. */ DO ~SetGlobal("bd_plot","global",101)~ + update_corwin
 END
 
 EXTEND_BOTTOM bdcorwin 24
@@ -118,58 +133,92 @@ END
 /* if Corwin is in the group, Bence will talk to the player instead. add interjection of Bence here, too. */
 
 /* Corwin, after bridge scene at Coast Way Crossing */
+
 EXTEND_BOTTOM bdcorwin 14
-++ @42 /* I have knowledge about the crusade's plans we need to talk about. */ EXTERN bdbence update_bence
+++ @42 /* I have knowledge about the crusade's plans we need to talk about. */ DO ~SetGlobal("C#RtD_bdplot_175_check","bd1000",14)~ FLAGS 0x200 EXTERN bdbence intermediate_to_update_bence
 END
 
+
 EXTEND_BOTTOM bdcorwin 18
-++ @42 /* I have knowledge about the crusade's plans we need to talk about. */ EXTERN bdbence update_bence
+++ @42 /* I have knowledge about the crusade's plans we need to talk about. */ DO ~SetGlobal("C#RtD_bdplot_175_check","bd1000",18)~ FLAGS 0x200 EXTERN bdbence intermediate_to_update_bence
 END
 
 /* add more reply options to this exchange with Corwin and Bence */
 EXTEND_BOTTOM bdbence 11
-++ @43 /* I am but one <PRO_RACE>, Corporal, but I'm flattered you think I could have stopped it from happening. Let's focus on realistic scenarios: I have knowledge about the crusade's plans we need to talk about. */ + update_bence
+++ @43 /* I am but one <PRO_RACE>, Corporal, but I'm flattered you think I could have stopped it from happening. Let's focus on realistic scenarios: I have knowledge about the crusade's plans we need to talk about. */ DO ~SetGlobal("C#RtD_bdplot_175_check","bd1000",110)~ FLAGS 128 + intermediate_to_update_bence
 END
 
 EXTEND_BOTTOM bdcorwin 16
-++ @43 /* I am but one <PRO_RACE>, Corporal, but I'm flattered you think I could have stopped it from happening. Let's focus on realistic scenarios: I have knowledge about the crusade's plans we need to talk about. */ EXTERN bdbence update_bence
+++ @43 /* I am but one <PRO_RACE>, Corporal, but I'm flattered you think I could have stopped it from happening. Let's focus on realistic scenarios: I have knowledge about the crusade's plans we need to talk about. */ DO ~SetGlobal("C#RtD_bdplot_175_check","bd1000",16)~ FLAGS 128 EXTERN bdbence intermediate_to_update_bence
 END
 
 /* in case Corwin is in party or not present, Bence has a different dialogue. add reply options here */
 EXTEND_BOTTOM bdbence 15
-++ @44 /* The bridge is destroyed, but I have knowledge about the crusade's plans we need to talk about urgently. */ + update_bence
+++ @44 /* The bridge is destroyed, but I have knowledge about the crusade's plans we need to talk about urgently. */ DO ~SetGlobal("C#RtD_bdplot_175_check","bd1000",150)~ FLAGS 128 + intermediate_to_update_bence
 END
 
 EXTEND_BOTTOM bdbence 16
-++ @44 /* The bridge is destroyed, but I have knowledge about the crusade's plans we need to talk about urgently. */ + update_bence
+++ @44 /* The bridge is destroyed, but I have knowledge about the crusade's plans we need to talk about urgently. */ DO ~SetGlobal("C#RtD_bdplot_175_check","bd1000",160)~ FLAGS 128 + intermediate_to_update_bence
 END
 
 /* first two camps - add reply options to Bence Duncan for the moments he is available */
 APPEND bdbence
 
-IF ~~ THEN camp_bd7100_transition
+IF ~~ THEN camp_bd1000_transition_110
+SAY @288 /* This doesn't change what you let happen at the bridge! */
+COPY_TRANS bdbence 11
+END
+
+IF ~~ THEN camp_bd1000_transition_150
+SAY @289 /* Very well. What happened at the bridge? */
+COPY_TRANS bdbence 15
+END
+
+IF ~~ THEN camp_bd1000_transition_160
+SAY @290 /* So, what now? */
+COPY_TRANS bdbence 16
+END
+
+IF ~~ THEN camp_bd7100_transition_201_200
 SAY @45 /* Let us focus on reaching our allies inside Bridgefort. */
 COPY_TRANS bdbence 20
 END
 
-IF ~~ THEN camp_bd7100_transition_01
-SAY @46 /* Lead the way then. */
-COPY_TRANS bdbence 32
+IF ~~ THEN camp_bd7100_transition_293_300
+SAY @46 /* Alright then. */
+COPY_TRANS bdbence 30
+END
+
+IF ~~ THEN camp_bd7100_transition_293_301
+SAY @46 /* Alright then. */
+COPY_TRANS bdbence 31
+END
+
+/* I need this stupid line or the variables will not be set soon enough */
+IF ~~ THEN intermediate_to_update_bence
+SAY @47 /* ~You have intel about the crusade? Let us know immediately.~ */
+IF ~~ THEN + update_bence
 END
 
 IF ~~ THEN update_bence
-SAY @47 /* ~You have intel about the crusade? Let us know immediately.~ */
+SAY @291 /* ~Do you have more you can tell us about caelar's plans?~ */
 %reply_options_inform_bence%
 + ~AreaCheck("bd1000")
-OR(3)
-InParty("bdcorwin")
-!See("bdcorwin") StateCheck("bdcorwin",CD_STATE_NOTVALID)~ + @1 /* I have no more information to share right now. */ + 17
+Global("C#RtD_bdplot_175_check","bd1000",110)~ + @1 /* I have no more information to share right now. */ DO ~SetGlobal("C#RtD_bdplot_175_check","bd1000",0)~ + camp_bd1000_transition_110
 + ~AreaCheck("bd1000")
-!InParty("bdcorwin") See("bdcorwin") !StateCheck("bdcorwin",CD_STATE_NOTVALID)~ + @1 /* I have no more information to share right now. */ EXTERN bdcorwin 19
+Global("C#RtD_bdplot_175_check","bd1000",150)~ + @1 /* I have no more information to share right now. */ DO ~SetGlobal("C#RtD_bdplot_175_check","bd1000",0)~ + camp_bd1000_transition_150
++ ~AreaCheck("bd1000")
+Global("C#RtD_bdplot_175_check","bd1000",160)~ + @1 /* I have no more information to share right now. */ DO ~SetGlobal("C#RtD_bdplot_175_check","bd1000",0)~ + camp_bd1000_transition_160
++ ~AreaCheck("bd1000")
+Global("C#RtD_bdplot_175_check","bd1000",14)~ + @1 /* I have no more information to share right now. */ DO ~SetGlobal("C#RtD_bdplot_175_check","bd1000",0)~ EXTERN bdcorwin camp_bd1000_transition_14
++ ~AreaCheck("bd1000")
+Global("C#RtD_bdplot_175_check","bd1000",16)~ + @1 /* I have no more information to share right now. */ DO ~SetGlobal("C#RtD_bdplot_175_check","bd1000",0)~ EXTERN bdcorwin camp_bd1000_transition_16
++ ~AreaCheck("bd1000")
+Global("C#RtD_bdplot_175_check","bd1000",18)~ + @1 /* I have no more information to share right now. */ DO ~SetGlobal("C#RtD_bdplot_175_check","bd1000",0)~ EXTERN bdcorwin camp_bd1000_transition_18
 + ~AreaCheck("bd7100")
-!GlobalGT("BD_plot","global",292)~ + @1 /* I have no more information to share right now. */ + camp_bd7100_transition
-+ ~AreaCheck("bd7100")
-GlobalGT("BD_plot","global",292)~ + @1 /* I have no more information to share right now. */ + camp_bd7100_transition_01
+Global("C#RtD_bdplot_201_check","bd7100",200)~ + @1 /* I have no more information to share right now. */ DO ~SetGlobal("C#RtD_bdplot_201_check","bd7100",0)~ + camp_bd7100_transition_201_200
++ ~Global("C#RtD_bdplot_293_check","MYAREA",300)~ + @1 /* I have no more information to share right now. */ DO ~SetGlobal("C#RtD_bdplot_293_check","MYAREA",0)~ + camp_bd7100_transition_293_300
++ ~Global("C#RtD_bdplot_293_check","MYAREA",301)~ + @1 /* I have no more information to share right now. */ DO ~SetGlobal("C#RtD_bdplot_293_check","MYAREA",0)~ + camp_bd7100_transition_293_301
 END
 
 IF ~~ THEN update_bence_01
@@ -221,15 +270,21 @@ END //APPEND
 /* bd7100 */
 /* after reaching camp, Bence initiates dialogue before he vanishes from the camp */
 EXTEND_BOTTOM bdbence 20
-++ @42 /* I have knowledge about the crusade's plans we need to talk about. */ + update_bence
+++ @42 /* I have knowledge about the crusade's plans we need to talk about. */ DO ~SetGlobal("C#RtD_bdplot_201_check","bd7100",200)~ FLAGS 128 + intermediate_to_update_bence
 END
 
 /* after Bridgefort fight */
-INTERJECT bdbence 32 C#RtD_bdbence_32
+INTERJECT bdbence 30 C#RtD_bdbence_30
 == bdbence @55 /* Is there anything you want the officers to know ahead of our arrival at the big war camp? */
 END
-++ @56 /* No, nothing. I can tell them myself. */ + camp_bd7100_transition_01
-++ @42 /* I have knowledge about the crusade's plans we need to talk about. */ + update_bence
+++ @56 /* No, nothing. I can tell them myself. */ + camp_bd7100_transition_293_300
+++ @42 /* I have knowledge about the crusade's plans we need to talk about. */ DO ~SetGlobal("C#RtD_bdplot_293_check","MYAREA",300)~ FLAGS 128 + intermediate_to_update_bence
+
+INTERJECT bdbence 31 C#RtD_bdbence_31
+== bdbence @55 /* Is there anything you want the officers to know ahead of our arrival at the big war camp? */
+END
+++ @56 /* No, nothing. I can tell them myself. */ + camp_bd7100_transition_293_301
+++ @42 /* I have knowledge about the crusade's plans we need to talk about. */ DO ~SetGlobal("C#RtD_bdplot_293_check","MYAREA",310)~ FLAGS 128 + intermediate_to_update_bence
 
 
 /* add reply options for info to bddelanc 4.
@@ -270,10 +325,12 @@ END
 IF ~~ THEN update_delancie_01
 SAY @3 /* Do you have anything else you want to share? */
 %reply_options_inform_delancie%
-+ ~OR(2) !Global("bd_plot","global",393)
-!AreaCheck("bd7300")
++ ~!Global("bd_plot","global",393)
+!Global("bd_plot","global",392)
 !Global("C#RtD_bddelanc_to_4","GLOBAL",1)~ + @1 /* I have no more information to share right now. */ + 31
-+ ~Global("bd_plot","global",393)
++ ~OR(2)
+Global("bd_plot","global",392)
+Global("bd_plot","global",393)
 AreaCheck("bd7300")~ + @1 /* I have no more information to share right now. */ EXTERN bdnederl move_to_camp
 END
 
@@ -595,5 +652,5 @@ END
 */
 
 EXTEND_BOTTOM bdnederl 46
-++ @70 /* [PC reply]I have more information concerning Caelar's plans we need to discuss right now. */ EXTERN bddelanc update_delancie
+++ @70 /* [PC reply]I have more information concerning Caelar's plans we need to discuss right now. */ DO ~SetGlobal("bd_plot","global",393)~ EXTERN bddelanc update_delancie_01
 END

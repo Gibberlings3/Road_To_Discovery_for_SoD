@@ -1,0 +1,36 @@
+OUTER_SPRINT ~CheckCaelarPlan_1~ ~Global("C#RtD_SD_CP1","LOCALS",0)~
+OUTER_SPRINT ~CheckCaelarPlan_2_OR_3~ ~Global("C#RtD_SD_CP2_3","LOCALS",0)~
+OUTER_SPRINT ~CheckCaelarPlan_4_OR_5~ ~Global("C#RtD_SD_CP4_5","LOCALS",0)~
+OUTER_SPRINT ~CheckCaelarPlan_6_OR_7~ ~Global("C#RtD_SD_CP6_7","LOCALS",0)~
+OUTER_SPRINT ~CheckCaelarPlan_8_OR_9~ ~Global("C#RtD_SD_CP8_9","LOCALS",0)~
+OUTER_SPRINT ~CheckHephernaanIdentity_1~ ~Global("C#RtD_SD_HI1","LOCALS",0)~
+OUTER_SPRINT ~CheckCaelarBetrayal_1_OR_2~ ~Global("C#RtD_SD_CB1_2","LOCALS",0)~
+OUTER_SPRINT ~CheckHephernaanBetrayal_1_OR_2~ ~Global("C#RtD_SD_HB1_2","LOCALS",0)~
+OUTER_SPRINT ~CheckHephernaanFiend_GT_0~ ~Global("C#RtD_SD_HF_GT0","LOCALS",0)~
+OUTER_SPRINT ~CheckCaelarGodBless_1~ ~Global("C#RtD_SD_GB1","LOCALS",0)~
+OUTER_SPRINT ~CheckCaelarGodBless_2_OR_3~ ~Global("C#RtD_SD_GB2_3","LOCALS",0)~
+OUTER_SPRINT ~CheckCaelarBhaalChild_1~ ~Global("C#RtD_SD_CBC1","LOCALS",0)~
+OUTER_SPRINT ~CheckCaelarBhaalChild_2_3~ ~Global("C#RtD_SD_CBC2_3","LOCALS",0)~
+OUTER_SPRINT ~CheckCaelarBhaalChild_4_5~ ~Global("C#RtD_SD_CBC4_5","LOCALS",0)~
+OUTER_SPRINT ~CheckCaelarProtection_1~ ~Global("C#RtD_SD_CPr1","LOCALS",0)~
+OUTER_SPRINT ~CheckCaelarProtection_2_OR_3_OR_4~ ~Global("C#RtD_SD_CPr2_3_4","LOCALS",0)~
+OUTER_SPRINT ~CheckCaelarProtection_5_OR_6~ ~Global("C#RtD_SD_CPr5_6","LOCALS",0)~
+OUTER_SPRINT ~CheckWeakPoison_1~ ~Global("C#RtD_SD_WP1","LOCALS",0)~
+OUTER_SPRINT ~CheckCaelarKidnap_1_OR_2~ ~Global("C#RtD_SD_CK1","LOCALS",0)~
+OUTER_SPRINT ~CheckCaelarWantsPC_1_OR_2~ ~Global("C#RtD_SD_CWPC1_2","LOCALS",0)~
+OUTER_SPRINT ~CheckCaelarWantsPC_3_OR_4~ ~Global("C#RtD_SD_CWPC3_4","LOCALS",0)~
+OUTER_SPRINT ~CheckWantBhaalBlood_1_OR_2~ ~Global("C#RtD_SD_WBW1_2","LOCALS",0)~
+OUTER_SPRINT ~CheckWantBhaalBlood_3_OR_4~ ~Global("C#RtD_SD_WBW3_4","LOCALS",0)~
+OUTER_SPRINT ~CheckWantBhaalBlood_5_OR_6~ ~Global("C#RtD_SD_WBW5_6","LOCALS",0)~
+OUTER_SPRINT ~CheckKnowsPortalBlood_1_OR_2~ ~Global("C#RtD_SD_KPB1_2","LOCALS",0)~
+OUTER_SPRINT ~CheckKnowsPortalBlood_3_OR_4~ ~Global("C#RtD_SD_KPB3_4","LOCALS",0)~
+OUTER_SPRINT ~CheckKnowsPortalBlood_5_OR_6~ ~Global("C#RtD_SD_KPB5_6","LOCALS",0)~
+OUTER_SPRINT ~CheckKnowsPortalBlood_7_OR_8~ ~Global("C#RtD_SD_KPB7_8","LOCALS",0)~
+OUTER_SPRINT ~CheckKnowsAunArgent_1_OR_2~ ~Global("C#RtD_SD_KAA1_2","LOCALS",0)~
+OUTER_SPRINT ~CheckKnowsAunArgent_3_OR_4~ ~Global("C#RtD_SD_KAA3_4","LOCALS",0)~
+OUTER_SPRINT ~CheckKnowsAunArgent_5_OR_6~ ~Global("C#RtD_SD_KAA5_6","LOCALS",0)~
+OUTER_SPRINT ~CheckMetHoodedMan_1_OR_2~ ~Global("C#RtD_SD_MHM1_2","LOCALS",0)~
+OUTER_SPRINT ~CheckMetHoodedMan_3_OR_4~ ~Global("C#RtD_SD_MHM3_4","LOCALS",0)~
+OUTER_SPRINT ~CheckKnowsHoodedMan_1_OR_2~ ~Global("C#RtD_SD_KHM1_2","LOCALS",0)~
+
+

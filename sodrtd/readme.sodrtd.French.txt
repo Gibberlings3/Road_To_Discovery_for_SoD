@@ -156,15 +156,15 @@ NOTE: Pour les Enhanced Edition, il est important d'installer les mods dans le l
 
 
 Windows
-Après extraction, vous devriez trouver dans votre dossier de jeu: un dossier "c#endlessbg1" et un fichier "setup-c#endlessbg1.exe". Pour installer le mod, double-cliquez sur setup-c#endlessbg1.exe et suivez les instructions à l'écran.
-Lancez setup-c#endlessbg1.exe dans votre dossier de jeu pour réinstaller, désinstaller ou changer des composants.
+Après extraction, vous devriez trouver dans votre dossier de jeu: un dossier "sodrtd" et un fichier "setup-sodrtd.exe". Pour installer le mod, double-cliquez sur setup-sodrtd.exe et suivez les instructions à l'écran.
+Lancez setup-sodrtd.exe dans votre dossier de jeu pour réinstaller, désinstaller ou changer des composants.
 
 Mac OS X
-Le Tweak Pack est compressé et installé avec WeiDU. Pour l'installer, extrayez l'archive du mod, puis copiez le contenu du dossier dans votre dossier de jeu (le dossier qui contient le fichier CHITIN.KEY). Si l'extraction se passe correctement, vous devriez avoir un dossier "c#endlessbg1", setup-c#endlessbg1, et setup-c#endlessbg1.command dans votre dossier de jeu. Pour installer le mod, il suffit de double-cliquer sur setup-c#endlessbg1.command et de suivre les instructions à l'écran.
+Le Tweak Pack est compressé et installé avec WeiDU. Pour l'installer, extrayez l'archive du mod, puis copiez le contenu du dossier dans votre dossier de jeu (le dossier qui contient le fichier CHITIN.KEY). Si l'extraction se passe correctement, vous devriez avoir un dossier "sodrtd", setup-sodrtd, et setup-sodrtd.command dans votre dossier de jeu. Pour installer le mod, il suffit de double-cliquer sur setup-sodrtd.command et de suivre les instructions à l'écran.
 
 Linux
 Extrayez le contenu du mod dans le dossier de votre jeu que vous souhaitez modifier. Téléchargez la dernière version de WeiDU pour Linux depuis https://github.com/WeiDUorg/weidu/releases et copiez WeiDU et WeInstall vers /usr/bin. Ensuite, ouvrez un terminal et accédez au répertoire d'installation de BG(2), exécutez "tolower" et répondez Y aux deux questions. Vous pouvez éviter d'exécuter la deuxième option (linux.ini) si vous l'avez déjà exécutée une fois dans le même répertoire. Si vous n'êtes pas sûr, lancer tolower et choisir les deux options est la meilleure solution. 
-Exécutez WeInstall c#endlessbg1 dans votre dossier de jeu pour installer le mod. Exécutez ensuite le Wine BGMain.exe et commencez à jouer.
+Exécutez WeInstall sodrtd dans votre dossier de jeu pour installer le mod. Exécutez ensuite le Wine BGMain.exe et commencez à jouer.
 
 NOTE: BG(II):EE sont des jeux qui sont mis à jour régulièrement. Sachez qu'à chaque nouvelle mise à jour, votre jeu ne reconnaîtra plus les mods installés ! Si vous êtes au milieu d'une partie avec des mods, il est préférable de retarder la mise à jour car même après avoir réinstallé les mods, vous ne pourrez peut-être pas continuer avec vos anciennes sauvegardes. 
 
@@ -404,7 +404,7 @@ Using the variables with the postfix "_SET" ensures that knowledge is not lost: 
 CREDITS
 
 jastey - author, main mod head
-JohnBob - French translation (v0.4 Beta)
+JohnBob - French translation (v0.5 Beta)
 Lauriel - author of component 1, ideas, design help, proofreading English (v0.1 Beta) 
 Machiavélique - proofreading French (v0.4 Beta)
 Shai Hulud - German translation (v0.2 Beta)
@@ -448,6 +448,15 @@ https://www.gibberlings3.net/forums/topic/1649-community-filename-prefix-reserva
 
 
 HISTORY
+
+Version 0.5 Beta
+- Component 1 "Add Stat-Based Observations and Quest Options from Lauriel's Themed Tweaks Mod" updated to changes v0.2: fixed compatibility issue with TBBS, generally improved compatibility, extra check whether PC met the Hooded Man.
+- Corrected oversights in scripts and dialogues: wrong variable values, missing setting of variables, missing interconnections in scripts.
+- Scripting generally improved for compatibility.
+- assumptions and speculations will no longer be triggered by script but will offered as reply options with the officers.
+- Component "Add Additional Communication with Officers": Sir Deggernaut can be asked to list all new and already known facts separately.
+- Silenced ingame debug notifications about variables evaluation.
+- Corrcted remnants to other mod names in readme.
 
 Version 0.4 Beta
 - added French version by JohnBob, proofreading by Machiavélique

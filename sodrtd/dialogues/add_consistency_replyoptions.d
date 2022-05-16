@@ -44,7 +44,7 @@ IF ~~ THEN BEGIN 8 // from: 3.3 5.2 12.0
 */
 EXTEND_BOTTOM bdhalat 8
 + ~GlobalGT("C#RtD_HephernaanBetrayal","GLOBAL",0)~ + @504 /* [PC Reply]Yes, I know that Hephernaan is betraying Caelar. Thank you for the warning nontheless. */ DO ~SetGlobal("C#RtD_HephernaanName_SET","GLOBAL",1)
-SetGlobal("C#RtD_HephernaanBetrayal_SET","GLOBAL",1)
+//SetGlobal("C#RtD_HephernaanBetrayal_SET","GLOBAL",1)
 SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + 11
 END
 
@@ -52,7 +52,8 @@ END
 
 /* parley at Dead Man's Pass: add more reply options to exit dialogue state so it's not only one in case more variables are set. The str-ref ones are falsed-out original ones from bddelanc and bdstoneh */
 EXTEND_BOTTOM BDNEDERL 46
-+ ~GlobalGT("C#RtD_CoalCaelarPlan","GLOBAL",3)~ + @505 /* [PC Reply]I'm glad even you saw sense in not handing me over to Caelar, de Lancie. */ EXTERN bddelanc 53
++ ~GlobalGT("C#RtD_CoalCaelarPlan","GLOBAL",3)~ + @505 /* [PC Reply]I'm glad even you saw sense in not handing me over to Caelar, de Lancie. */ DO ~SetGlobal("bd_plot","global",393)
+~ EXTERN bddelanc 53
   IF ~~ THEN REPLY #%eet_2%37876 /* ~I'm worth more than every life you hold in your oily little hands, de Lancie. ~ */ DO ~SetGlobal("bd_plot","global",393)
 ~ EXTERN bddelanc 55
   IF ~~ THEN REPLY #%eet_2%37880 /* ~I'll die before that devil gets her claws into me.~ */ DO ~SetGlobal("bd_plot","global",393)

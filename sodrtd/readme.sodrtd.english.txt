@@ -157,11 +157,11 @@ On successful extraction, there should be an sodrtd folder and a setup-sodrtd.ex
 Run setup-sodrtd.exe in your game folder to reinstall, uninstall or otherwise change components.
 
 Mac OS X
-The Tweak Pack is packaged and installed with WeiDU. To install, extract the mod archive, then copy of the contents of the folder into your game folder (the folder which contains the CHITIN.KEY file). If properly extracted, you should have a "sodrtd" folder, setup-c#sodcodo, and setup-sodrtd.command in your game folder. To install, simply double-click setup-sodrtd.command and follow the instructions on screen.
+The Tweak Pack is packaged and installed with WeiDU. To install, extract the mod archive, then copy of the contents of the folder into your game folder (the folder which contains the CHITIN.KEY file). If properly extracted, you should have a "sodrtd" folder, setup-sodrtd, and setup-sodrtd.command in your game folder. To install, simply double-click setup-sodrtd.command and follow the instructions on screen.
 
 Linux
 Extract the contents of the mod to the folder of the game you wish to modify. Download the latest version of WeiDU for Linux from https://github.com/WeiDUorg/weidu/releases and copy WeiDU and WeInstall to /usr/bin. Following that, open a terminal and cd to your BG2 installation directory, run 'tolower' and answer Y to both queries. You can avoid running the second option (linux.ini) if you've already ran it once in the same directory. If you're unsure, running tolower and choosing both options is the safe bet.
-Run WeInstall c#sodcodo in your game folder to install the mod. Then run wine BGMain.exe and start playing. 
+Run WeInstall sodrtd in your game folder to install the mod. Then run wine BGMain.exe and start playing. 
 
 NOTE: BG(II):EE are actively supported games. Please note that every patch update will wipe your current mod setup! If in the middle of a modded game you might want to delay the patch update as even after reinstalling the mods, you might not be able to continue with your old savegames. 
 
@@ -401,7 +401,7 @@ Using the variables with the postfix "_SET" ensures that knowledge is not lost: 
 CREDITS
 
 jastey - author, main mod head
-JohnBob - French translation (v0.4 Beta)
+JohnBob - French translation (v0.5 Beta)
 Lauriel - author of component 1, ideas, design help, proofreading English (v0.1 Beta) 
 Machiavélique - proofreading French (v0.4 Beta)
 Shai Hulud - German translation (v0.2 Beta)
@@ -445,6 +445,15 @@ https://www.gibberlings3.net/forums/topic/1649-community-filename-prefix-reserva
 
 
 HISTORY
+
+Version 0.5 Beta
+- Component 1 "Add Stat-Based Observations and Quest Options from Lauriel's Themed Tweaks Mod" updated to changes v0.2: fixed compatibility issue with TBBS, generally improved compatibility, extra check whether PC met the Hooded Man.
+- Corrected oversights in scripts and dialogues: wrong variable values, missing setting of variables, missing interconnections in scripts.
+- Scripting generally improved for compatibility.
+- assumptions and speculations will no longer be triggered by script but will offered as reply options with the officers.
+- Component "Add Additional Communication with Officers": Sir Deggernaut can be asked to list all new and already known facts separately.
+- Silenced ingame debug notifications about variables evaluation.
+- Corrcted remnants to other mod names in readme.
 
 Version 0.4 Beta
 - added French version by JohnBob, proofreading by Machiavélique
