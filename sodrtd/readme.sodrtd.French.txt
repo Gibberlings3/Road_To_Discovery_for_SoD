@@ -450,7 +450,8 @@ https://www.gibberlings3.net/forums/topic/1649-community-filename-prefix-reserva
 HISTORY
 
 Version 0.5 Beta
-- Component 1 "Add Stat-Based Observations and Quest Options from Lauriel's Themed Tweaks Mod" updated to changes v0.2: fixed compatibility issue with TBBS, generally improved compatibility, extra check whether PC met the Hooded Man.
+- Fixed installation problems if "Add Stat-Based Observations and Quest Options" component was installed via Themed Tweaks mod.
+- Component 1 "Add Stat-Based Observations and Quest Options from Lauriel's Themed Tweaks Mod" updated to changes v0.2: Wrong variable references fixed; Reply option about Hooded Man inside the palace will only show if the Hooded Man was inide the palace; Added WEIGHT #-1 to Edwin's dialogue so it won't get blocked; cutscene changed to make texts better readable; setting of variable for generic NPC dialogues will not loop; Corrected string reference error for BG:SoD.
 - Corrected oversights in scripts and dialogues: wrong variable values, missing setting of variables, missing interconnections in scripts.
 - Scripting generally improved for compatibility.
 - assumptions and speculations will no longer be triggered by script but will offered as reply options with the officers.
