@@ -3,7 +3,7 @@ BACKUP ~sodrtd/backup~
 AUTHOR ~https://baldurs-gate.de/index.php?resources/road-to-discovery-for-sod.59/~ 
 
 
-VERSION ~0.4 (Beta)~
+VERSION ~0.5 (Beta)~
 
 
 README ~sodrtd/readme.sodrtd.%LANGUAGE%.txt~ ~sodrtd/readme.sodrtd.english.txt~
@@ -139,7 +139,7 @@ IF
 THEN
 RESPONSE #100
   RealSetGlobalTimer("C#RtD_VariableEvaluation_Timer","GLOBAL",10)
-  DisplayStringHead(Player1,~Starting variable evaluation.~)
+//  DisplayStringHead(Player1,~Starting variable evaluation.~)
   SetAreaScript("c#rtd_ve",OVERRIDE)  
 //  Continue()
 END
@@ -209,7 +209,7 @@ IF
   True()
 THEN
 RESPONSE #100
-  DisplayStringHead(Player1,~Variable evaluation done.~) //## for debug
+//  DisplayStringHead(Player1,~Variable evaluation done.~) //## for debug
   SetGlobal("C#RtD_VariableEvaluation","GLOBAL",0)
   SetAreaScript("",OVERRIDE)
 END
@@ -789,7 +789,7 @@ END
 END
 ACTION_IF (MOD_IS_INSTALLED ~themed_tweaks.tp2~ ~80~) THEN BEGIN
 PRINT @100015 /* ~Themed Tweaks component was installed via Themed Tweaks: patching dialogues.~ */
-WITH_TRA ~themed_tweaks/languages/%s/sod_stat_weak_poison.tra~ BEGIN
+WITH_TRA ~themed_tweaks/languages/%s/sod_stat_weak_poison.tra~ ~sodrtd/translations/%s/sod_stat_weak_poison.tra~ BEGIN
   OUTER_SET strref1 = RESOLVE_STR_REF(@107)
   OUTER_SET strref2 = RESOLVE_STR_REF(@106)
   OUTER_SET state_105 = STATE_WHICH_SAYS 105 IN ~themed_tweaks/languages/%s/sod_stat_weak_poison.tra~ FROM ~bdbelt~
@@ -1002,8 +1002,17 @@ WRITE_BYTE 0x2d 31 // Minor color
 WRITE_BYTE 0x2e 31 // Major color
 WRITE_BYTE 0x32 29 // Hair color
 
+INCLUDE ~sodrtd/lib/prepare_sir_deggernauts_dlg.tph~
+LAF sodrtd_sir_deggernaut_main_dlg END
+LAF sodrtd_sir_deggernaut_information_first END
+LAF sodrtd_sir_deggernaut_information_new END
+LAF sodrtd_sir_deggernaut_information_old END
 
-COMPILE EVALUATE_BUFFER ~sodrtd/dialogues/add_sir_deggernaut.d~ USING ~sodrtd/translations/%s/dialogue.tra~
+COMPILE EVALUATE_BUFFER ~sodrtd/dialogues/add_sir_deggernaut.d~
+~sodrtd/dialogues/sir_deggernaut_tagg_information_first.d~
+~sodrtd/dialogues/sir_deggernaut_tagg_information_new.d~
+~sodrtd/dialogues/sir_deggernaut_tagg_information_old.d~ 
+USING ~sodrtd/translations/%s/dialogue.tra~
 
 ACTION_IF MOD_IS_INSTALLED ~sodrtd.tp2~ ~50~ THEN BEGIN
 /* Get state for C#RtDdeg %information_03% (in add_sir_deggernaut.d):

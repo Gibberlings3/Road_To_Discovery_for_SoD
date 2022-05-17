@@ -1,0 +1,42 @@
+DEFINE_ACTION_FUNCTION sodrtd_sir_deggernaut_main_dlg BEGIN
+
+INCLUDE ~sodrtd/tpa/include_setting_checkvariables_sir_deggernaut_1.tpa~
+
+COPY ~sodrtd/dialogues/add_sir_deggernaut_temp.d~ ~sodrtd/dialogues/add_sir_deggernaut.d~ EVALUATE_BUFFER
+
+END
+
+DEFINE_ACTION_FUNCTION sodrtd_sir_deggernaut_information_first BEGIN
+
+OUTER_SPRINT ~information_chain_name~ ~information_chain_first~
+
+INCLUDE ~sodrtd/tpa/include_checkvariables_sir_deggernaut_empty.tpa~
+INCLUDE ~sodrtd/tpa/include_setting_checkvariables_sir_deggernaut_1.tpa~
+
+COPY ~sodrtd/dialogues/sir_deggernaut_tagg_information_temp.d~ ~sodrtd/dialogues/sir_deggernaut_tagg_information_first.d~ EVALUATE_BUFFER
+
+END
+
+DEFINE_ACTION_FUNCTION sodrtd_sir_deggernaut_information_new BEGIN
+
+OUTER_SPRINT ~information_chain_name~ ~information_chain_new~
+
+INCLUDE ~sodrtd/tpa/include_checkvariables_sir_deggernaut_0.tpa~
+INCLUDE ~sodrtd/tpa/include_setting_checkvariables_sir_deggernaut_1.tpa~
+
+COPY ~sodrtd/dialogues/sir_deggernaut_tagg_information_temp.d~ ~sodrtd/dialogues/sir_deggernaut_tagg_information_new.d~ EVALUATE_BUFFER
+
+END
+
+DEFINE_ACTION_FUNCTION sodrtd_sir_deggernaut_information_old BEGIN
+
+OUTER_SPRINT ~information_chain_name~ ~information_chain_old~
+
+INCLUDE ~sodrtd/tpa/include_checkvariables_sir_deggernaut_1.tpa~
+INCLUDE ~sodrtd/tpa/include_setting_checkvariables_sir_deggernaut_empty.tpa~
+
+COPY ~sodrtd/dialogues/sir_deggernaut_tagg_information_temp.d~ ~sodrtd/dialogues/sir_deggernaut_tagg_information_old.d~ EVALUATE_BUFFER
+
+END
+
+

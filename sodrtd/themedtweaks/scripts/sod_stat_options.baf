@@ -10,3 +10,13 @@ THEN
   		Continue()
 END
 
+IF
+	AreaCheck("BD0103")
+	TriggerOverride(Player1,See("bdireni"))
+	Global("#L_PCMetIreniInRoom","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("#L_PCMetIreniInRoom","GLOBAL",1)
+		Continue()
+END
+

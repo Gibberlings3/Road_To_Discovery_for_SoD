@@ -1,6 +1,16 @@
 OUTER_SPRINT %reply_options_inform_bence%
 %/* "C#RtD_CaelarBhaalChild" = 1 - PC heard rumors that Caelar is a child of Bhaal */
 /* not considered. This is something the Dukes suspect from the start of SoD, no need to tell them. */
+/* After knowing that she needs godly blood to open the portal and hearing rumors that she is a child of Bhaal. */
+/* this reply option includes a variable change for the PC's knowledge */
++ ~Global("C#RtD_CaelarBhaalChild","GLOBAL",1)
+OR(2)
+	GlobalGT("C#RtD_KnowsPortalBlood","GLOBAL",1)
+	Global("C#RtD_WantBhaalBlood","GLOBAL",1)
+!Global("C#RtD_CoalCaelarBhaalChild","GLOBAL",2)~ + @223 /* ~I have reasons to believe that Caelar is no child of Bhaal.~ */ DO ~
+SetGlobal("C#RtD_CaelarBhaalChild","GLOBAL",2) //no _SET
+SetGlobal("C#RtD_CoalCaelarBhaalChild_SET","GLOBAL",2) 
+SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_bence_09
 /* "C#RtD_CaelarBhaalChild" = 2 - PC reasons / concludes / speculates that [rumors that Caelar is a child of Bhaal] is not true */
 + ~Global("C#RtD_CaelarBhaalChild","GLOBAL",2)
 GlobalLT("C#RtD_CoalCaelarBhaalChild","GLOBAL",2)~ + @223 /* ~I have reasons to believe that Caelar is no child of Bhaal.~ */ DO ~SetGlobal("C#RtD_CoalCaelarBhaalChild","GLOBAL",2) SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_bence_09
@@ -16,7 +26,7 @@ GlobalLT("C#RtD_CoalCaelarBhaalChild","GLOBAL",4)~ + @224 /* ~I know for sure th
 /* "C#RtD_CaelarProtection" = 1 - PC heard rumor about Caelar/divine forces through Caelar protecting the crusade */
 /* not considered. This is something the Dukes suspect from the start of SoD, no need to tell them. */
 /* "C#RtD_CaelarProtection" = 2 - PC knows that her followers believe that the gods are protecting Caelar and them */
-+ ~Global("C#RtD_CaelarProtection","GLOBAL",3)
++ ~Global("C#RtD_CaelarProtection","GLOBAL",2)
 GlobalLT("C#RtD_CoalCaelarProtection","GLOBAL",2)~ + @233 /* Caelar's followers seem to believe that the gods are protecting the crusade. */ DO ~SetGlobal("C#RtD_CoalCaelarProtection","GLOBAL",2) SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_bence_02
 /* "C#RtD_CaelarProtection" = 3 - PC watched Hormorn's "blessing" in Bridgefort camp */
 + ~Global("C#RtD_CaelarProtection","GLOBAL",3)
@@ -48,11 +58,32 @@ GlobalLT("C#RtD_CoalCaelarPlan","GLOBAL",2)~ + @222 /* It seems the crusaders wa
 /* "C#RtD_CaelarPlan" = 3 - PC knows that they are planning on marching into Avernus */
 + ~Global("C#RtD_CaelarPlan","GLOBAL",3)
 GlobalLT("C#RtD_CoalCaelarPlan","GLOBAL",4)~ + @208 /* You are aware that Caelar *will* march her crusade into Avernus, though? */ DO ~SetGlobal("C#RtD_CoalCaelarPlan","GLOBAL",4) SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_bence_01
+/* if PC knows that Caelar is planning on marching into Avernus AND Hephernaan is working for a fiend, they can speculate that they are planning on opening a portal to Avernus */
+/* this reply option includes a variable change for the PC's knowledge */
++ ~OR(2)
+	Global("C#RtD_CaelarPlan","GLOBAL",2)
+	Global("C#RtD_CaelarPlan","GLOBAL",3)
+OR(2)
+	GlobalGT("C#RtD_HephernaanFiend","GLOBAL",1)
+	GlobalGT("C#RtD_KnowsPortalBlood","GLOBAL",0)
+Global("C#RtD_KnowsPortalBlood","GLOBAL",0) //so reply options will not be doubled
+!Global("C#RtD_CoalCaelarPlan","GLOBAL",6)~ + @278 /* I have reasons to believe that Caelar is planning on opening a portal to Avernus to march her army into it. */ DO ~
+SetGlobal("C#RtD_CaelarPlan","GLOBAL",4) //no _SET
+SetGlobal("C#RtD_CoalCaelarPlan_SET","GLOBAL",6) 
+SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_bence_01
 /* "C#RtD_CaelarPlan" = 4 - PC knows that they are planning on opening a portal at Dragonspear Castle to enter Avernus */
 + ~Global("C#RtD_CaelarPlan","GLOBAL",4)
 GlobalLT("C#RtD_CoalCaelarPlan","GLOBAL",6)~ + @228 /* I know for sure that Caelar is planning on opening a portal to Avernus to march her army into it. */ DO ~SetGlobal("C#RtD_CoalCaelarPlan","GLOBAL",6) SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_bence_01
 /* "C#RtD_CaelarPlan" = 5 - PC speculates that Caelar wants to save her uncle Aun Argent from Avernus */
-/* considered with "C#RtD_CaelarPlan" = 6 */
+/* After knowing that she is planning on freeing souls from Avernus and knowing that Aun went to Avernus for her. */
+/* this reply option includes a variable change for the PC's knowledge */
++ ~GlobalGT("C#RtD_CaelarPlan","GLOBAL",1) GlobalLT("C#RtD_CaelarPlan","GLOBAL",5)
+GlobalGT("C#RtD_KnowsAunArgent","GLOBAL",3)
+!Global("C#RtD_CoalCaelarPlan","GLOBAL",8)~ + @226 /* ~I suspect that Caelar is marching her Crusade into Avernus to free her uncle Aun who is trapped there in her stead.~ */ DO ~ 
+SetGlobal("C#RtD_CaelarPlan","GLOBAL",5) //no _SET
+SetGlobal("C#RtD_CoalCaelarPlan_SET","GLOBAL",8)  
+SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_bence_04
+/* also considered with "C#RtD_CaelarPlan" = 6 */
 /* "C#RtD_CaelarPlan" = 6 - PC knows that the whole purpose of the crusade is all for Aun Argent */
 + ~GlobalGT("C#RtD_CaelarPlan","GLOBAL",4)
 GlobalLT("C#RtD_CoalCaelarPlan","GLOBAL",8)~ + @226 /* ~I suspect that Caelar is marching her Crusade into Avernus to free her uncle Aun who is trapped there in her stead.~ */ DO ~SetGlobal("C#RtD_CoalCaelarPlan","GLOBAL",8) SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_bence_04
@@ -66,10 +97,14 @@ GlobalGT("C#RtD_CoalCaelarPlan","GLOBAL",1)~ + @209 /* I have information about 
 /* only important if PC also knows that Caelar wants to reach into Avernus [GlobalGT("C#RtD_CaelarPlan","GLOBAL",1)] */
 /* this reply option includes a variable change for the PC's knowledge */
 + ~Global("C#RtD_KnowsPortalBlood","GLOBAL",2)
-GlobalLT("C#RtD_CoalKnowsPortalBlood","GLOBAL",5)
 GlobalGT("C#RtD_CaelarPlan","GLOBAL",1)
-GlobalGT("C#RtD_CoalCaelarPlan","GLOBAL",1)~ + @210 /* Oh yes. I have information about a portal to Avernus beneath Dragonspear Castle which can be opened with blood of a god's direct decendant - my Bhaal child blood, for example. I am sure that's what she's going for! */ DO ~SetGlobal("C#RtD_CoalKnowsPortalBlood","GLOBAL",5) 
-SetGlobal("C#RtD_KnowsPortalBlood_SET","GLOBAL",2) SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_bence_03
+GlobalGT("C#RtD_CoalCaelarPlan","GLOBAL",1)
+!Global("C#RtD_CoalKnowsPortalBlood","GLOBAL",5)~ + @210 /* Oh yes. I have information about a portal to Avernus beneath Dragonspear Castle which can be opened with blood of a god's direct decendant - my Bhaal child blood, for example. I am sure that's what she's going for! */ DO ~
+SetGlobal("C#RtD_KnowsPortalBlood","GLOBAL",3) //no _SET
+//SetGlobal("C#RtD_WantBhaalBlood_SET","GLOBAL",2) will be set by script
+SetGlobal("C#RtD_CoalKnowsPortalBlood","GLOBAL",5) 
+SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_bence_03
+
 /* "C#RtD_KnowsPortalBlood" = 3 - PC reasons / concludes / speculates that Caelar / Hephernaan want PC's blood for [open portal to Avernus] -- also for [C#RtD_WantBhaalBlood = 2] */
 /* in case PC already phrased conclusion elsewhere that this is what Caelar will be going for, tell officers */
 + ~Global("C#RtD_KnowsPortalBlood","GLOBAL",3)
@@ -95,13 +130,42 @@ GlobalGT("C#RtD_CoalKnowsPortalBlood","GLOBAL",4)
 /* not considered as an own reply option. Is dealt with via "C#RtD_HephernaanBetrayal" */
 /* "C#RtD_HephernaanBetrayal" = 1 - PC knows that [a man called] Hephernaan is betraying Caelar */
 /* not considered, PC wouldn't know it's important */
+/* if PC knows about [a man called] Hephernaan betraying Caelar and knows who Hephernaan is, but doesn't know he is working for a fiend: 
+(If PC watches scry pool scene after this reply option, variable ("C#RtD_HephernaanFiend","GLOBAL",2) will be set by script automatically) */
+/* this reply option includes a variable change for the PC's knowledge */
++ ~Global("C#RtD_HephernaanBetrayal","GLOBAL",1)
+Global("C#RtD_HephernaanIdentity","GLOBAL",1)
+Global("C#RtD_HephernaanFiend","GLOBAL",0)
+GlobalLT("C#RtD_HephernaanBetrayal","GLOBAL",2)
+!Global("C#RtD_CoalHephernaanBetrayal","GLOBAL",1)~ + @212 /* I have reasons to believe that Caelar's advisor Hephernaan is betraying Caelar. He has his own, dark plans with this crusade. */ DO ~
+	SetGlobal("C#RtD_HephernaanBetrayal","GLOBAL",2) //no _SET
+//	SetGlobal("C#RtD_CaelarBetrayal_SET","GLOBAL",1) will be set by script
+	SetGlobal("C#RtD_CoalHephernaanBetrayal_SET","GLOBAL",1) 
+//	SetGlobal("C#RtD_CoalCaelarBetrayal_SET","GLOBAL",1) will be set by script
+	SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_bence_01 
 /* "C#RtD_HephernaanBetrayal" = 2 - PC knows that Hephernaan [who is Caelar's advisor] is betraying Caelar */
 /* only in case PC doesn't know that Hephernaan is working for a fiend [Global("C#RtD_HephernaanFiend","GLOBAL",0)], otherwise it's considered there. */
 + ~Global("C#RtD_HephernaanFiend","GLOBAL",0)
-Global("C#RtD_HephernaanBetrayal","GLOBAL",1)
+Global("C#RtD_HephernaanBetrayal","GLOBAL",2)
 Global("C#RtD_CoalHephernaanBetrayal","GLOBAL",0)~ + @212 /* I have reasons to believe that Caelar's advisor Hephernaan is betraying Caelar. He has his own, dark plans with this crusade. */ DO ~SetGlobal("C#RtD_CoalHephernaanBetrayal","GLOBAL",1) SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_bence_01
 /* "C#RtD_HephernaanFiend" = 1 - PC knows that [a man being called] Hephernaan is working for a fiend to open the portal */
 /* not considered. Just because it's nothing the PC would need to tell the officers. */
+/* Global("C#RtD_HephernaanVisual","GLOBAL",1): After seeing the scry pool scene
+Global("C#RtD_HephernaanFiend","GLOBAL",1): PC knows that [a man being called] Hephernaan is working for a fiend to open the portal
+Global("C#RtD_HephernaanIdentity","GLOBAL",1) knows who Hephernaan is. */
+/* this reply option includes a variable change for the PC's knowledge */
++ ~OR(2) Global("C#RtD_HephernaanVisual","GLOBAL",1) 
+	 Global("C#RtD_HephernaanFiend","GLOBAL",1)
+GlobalLT("C#RtD_HephernaanFiend","GLOBAL",2)
+Global("C#RtD_HephernaanIdentity","GLOBAL",1)
+!Global("C#RtD_CoalHephernaanFiend","GLOBAL",1)~ + @211 /* I have disturbing news. Caelar's advisor Hephernaan is apparently working for a fiend who is planning on crossing into the Material Prime! */ DO ~
+	SetGlobal("C#RtD_HephernaanFiend","GLOBAL",2) //no _SET
+//	SetGlobal("C#RtD_HephernaanBetrayal_SET","GLOBAL",2) will be set by script
+//	SetGlobal("C#RtD_CaelarBetrayal_SET","GLOBAL",1) will be set by script
+	SetGlobal("C#RtD_CoalHephernaanFiend_SET","GLOBAL",1) 
+//	SetGlobal("C#RtD_CoalHephernaanBetrayal_SET","GLOBAL",1) will be set by script
+//	SetGlobal("C#RtD_CoalCaelarBetrayal_SET","GLOBAL",1) will be set by script
+	SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_bence_04
 /* "C#RtD_HephernaanFiend" = 2 - PC knows that Hephernaan [who is Caelar's advisor] is working for a fiend to open the portal */
 /* considered with "C#RtD_HephernaanFiend" = 3 */
 /* "C#RtD_HephernaanFiend" = 3 - PC knows that Hephernaan [who is Caelar's advisor] is working for Belhifet */
@@ -110,9 +174,18 @@ Global("C#RtD_CoalHephernaanFiend","GLOBAL",0)~ + @211 /* I have disturbing news
 /* "C#RtD_WeakPoison" = 1 - PC knows that poison from palace assassins was too weak to kill */
 /* not considered. This is something the Dukes tell the PC, not the other way around. */
 /* "C#RtD_CaelarKidnap" = 1 - PC discussed with someone/NPCs that Caelar's assassin probably wanted to kidnap PC in Palace (instead of killing) */
-/* contains setting of variable for PC, too: PC can phrase their suspicion */
-+ ~OR(2) Global("C#RtD_WeakPoison","GLOBAL",1)
-Global("C#RtD_CaelarKidnap","GLOBAL",1)
+/* After hearing that the poison was too weak: PC can suspect that Caelar is trying to kidnap them, not kill. */
+/* (I'll include a WIS/INT check here like in the Stat Based Reactions from Themed Tweaks.) */
+/* this reply option includes a variable change for the PC's knowledge */
++ ~Global("C#RtD_CaelarKidnap","GLOBAL",0)
+Global("C#RtD_WeakPoison","GLOBAL",1)
+OR(2) CheckStatGT(Player1,15,WIS) CheckStatGT(Player1,15,INT)~ + @227 /* I think Caelar tried to have me kidnapped in the palace, not killed. */ DO ~
+SetGlobal("C#RtD_CaelarKidnap","GLOBAL",1) //no _SET
+//SetGlobal("C#RtD_CaelarWantsPC_SET","GLOBAL",1) will be set by script
+SetGlobal("C#RtD_CoalCaelarWantsPC_SET","GLOBAL",1)
+SetGlobal("C#RtD_CoalCaelarKidnap_SET","GLOBAL",1) 
+SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_bence_05
++ ~Global("C#RtD_CaelarKidnap","GLOBAL",1)
 Global("C#RtD_CoalCaelarKidnap","GLOBAL",0)~ + @227 /* I think Caelar tried to have me kidnapped in the palace, not killed. */ DO ~SetGlobal("C#RtD_CaelarKidnap","GLOBAL",1) SetGlobal("C#RtD_CoalCaelarKidnap","GLOBAL",1) SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_bence_05
 /* "C#RtD_CaelarWantsPC" = 1 - PC assumes that Caelar wants to capture the PC [alive] */
 /* only considered if PC doesn't know That Caelar wants the PC's blood yet [Global("C#RtD_WantBhaalBlood","GLOBAL",0)]*/
@@ -194,6 +267,16 @@ Global("C#RtD_CoalMetHoodedMan","GLOBAL",2)
 OUTER_SPRINT %reply_options_inform_corwin%
 %/* "C#RtD_CaelarBhaalChild" = 1 - PC heard rumors that Caelar is a child of Bhaal */
 /* not considered. This is something the Dukes suspect from the start of SoD, no need to tell them. */
+/* After knowing that she needs godly blood to open the portal and hearing rumors that she is a child of Bhaal. */
+/* this reply option includes a variable change for the PC's knowledge */
++ ~Global("C#RtD_CaelarBhaalChild","GLOBAL",1)
+OR(2)
+	GlobalGT("C#RtD_KnowsPortalBlood","GLOBAL",1)
+	Global("C#RtD_WantBhaalBlood","GLOBAL",1)
+!Global("C#RtD_CoalCaelarBhaalChild","GLOBAL",2)~ + @223 /* ~I have reasons to believe that Caelar is no child of Bhaal.~ */ DO ~
+SetGlobal("C#RtD_CaelarBhaalChild","GLOBAL",2) //no _SET
+SetGlobal("C#RtD_CoalCaelarBhaalChild_SET","GLOBAL",2) 
+SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_corwin_07
 /* "C#RtD_CaelarBhaalChild" = 2 - PC reasons / concludes / speculates that [rumors that Caelar is a child of Bhaal] is not true */
 + ~Global("C#RtD_CaelarBhaalChild","GLOBAL",2)
 GlobalLT("C#RtD_CoalCaelarBhaalChild","GLOBAL",2)~ + @223 /* ~I have reasons to believe that Caelar is no child of Bhaal.~ */ DO ~SetGlobal("C#RtD_CoalCaelarBhaalChild","GLOBAL",2) SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_corwin_07
@@ -209,7 +292,7 @@ GlobalLT("C#RtD_CoalCaelarBhaalChild","GLOBAL",4)~ + @224 /* ~I know for sure th
 /* "C#RtD_CaelarProtection" = 1 - PC heard rumor about Caelar/divine forces through Caelar protecting the crusade */
 /* not considered. This is something the Dukes suspect from the start of SoD, no need to tell them. */
 /* "C#RtD_CaelarProtection" = 2 - PC knows that her followers believe that the gods are protecting Caelar and them */
-+ ~Global("C#RtD_CaelarProtection","GLOBAL",3)
++ ~Global("C#RtD_CaelarProtection","GLOBAL",2)
 GlobalLT("C#RtD_CoalCaelarProtection","GLOBAL",2)~ + @233 /* Caelar's followers seem to believe that the gods are protecting the crusade. */ DO ~SetGlobal("C#RtD_CoalCaelarProtection","GLOBAL",2) SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_corwin_02
 /* "C#RtD_CaelarProtection" = 3 - PC watched Hormorn's "blessing" in Bridgefort camp */
 + ~Global("C#RtD_CaelarProtection","GLOBAL",3)
@@ -241,10 +324,31 @@ GlobalLT("C#RtD_CoalCaelarPlan","GLOBAL",2)~ + @222 /* It seems the crusaders wa
 /* "C#RtD_CaelarPlan" = 3 - PC knows that they are planning on marching into Avernus */
 + ~Global("C#RtD_CaelarPlan","GLOBAL",3)
 GlobalLT("C#RtD_CoalCaelarPlan","GLOBAL",4)~ + @208 /* You are aware that Caelar *will* march her crusade into Avernus, though? */ DO ~SetGlobal("C#RtD_CoalCaelarPlan","GLOBAL",4) SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_corwin_01
+/* if PC knows that Caelar is planning on marching into Avernus AND Hephernaan is working for a fiend, they can speculate that they are planning on opening a portal to Avernus */
+/* this reply option includes a variable change for the PC's knowledge */
++ ~OR(2)
+	Global("C#RtD_CaelarPlan","GLOBAL",2)
+	Global("C#RtD_CaelarPlan","GLOBAL",3)
+OR(2)
+	GlobalGT("C#RtD_HephernaanFiend","GLOBAL",1)
+	GlobalGT("C#RtD_KnowsPortalBlood","GLOBAL",0)
+Global("C#RtD_KnowsPortalBlood","GLOBAL",0) //so reply options will not be doubled
+!Global("C#RtD_CoalCaelarPlan","GLOBAL",6)~ + @278 /* I have reasons to believe that Caelar is planning on opening a portal to Avernus to march her army into it. */ DO ~
+SetGlobal("C#RtD_CaelarPlan","GLOBAL",4) //no _SET
+SetGlobal("C#RtD_CoalCaelarPlan_SET","GLOBAL",6) 
+SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_corwin_01
 /* "C#RtD_CaelarPlan" = 4 - PC knows that they are planning on opening a portal at Dragonspear Castle to enter Avernus */
 + ~Global("C#RtD_CaelarPlan","GLOBAL",4)
 GlobalLT("C#RtD_CoalCaelarPlan","GLOBAL",6)~ + @228 /* I know for sure that Caelar is planning on opening a portal to Avernus to march her army into it. */ DO ~SetGlobal("C#RtD_CoalCaelarPlan","GLOBAL",6) SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_corwin_01
 /* "C#RtD_CaelarPlan" = 5 - PC speculates that Caelar wants to save her uncle Aun Argent from Avernus */
+/* After knowing that she is planning on freeing souls from Avernus and knowing that Aun went to Avernus for her. */
+/* this reply option includes a variable change for the PC's knowledge */
++ ~GlobalGT("C#RtD_CaelarPlan","GLOBAL",1) GlobalLT("C#RtD_CaelarPlan","GLOBAL",5)
+GlobalGT("C#RtD_KnowsAunArgent","GLOBAL",3)
+!Global("C#RtD_CoalCaelarPlan","GLOBAL",8)~ + @226 /* ~I suspect that Caelar is marching her Crusade into Avernus to free her uncle Aun who is trapped there in her stead.~ */ DO ~ 
+SetGlobal("C#RtD_CaelarPlan","GLOBAL",5) //no _SET
+SetGlobal("C#RtD_CoalCaelarPlan_SET","GLOBAL",8)  
+SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_corwin_02
 /* considered with "C#RtD_CaelarPlan" = 6 */
 /* "C#RtD_CaelarPlan" = 6 - PC knows that the whole purpose of the crusade is all for Aun Argent */
 + ~GlobalGT("C#RtD_CaelarPlan","GLOBAL",4)
@@ -259,10 +363,13 @@ GlobalGT("C#RtD_CoalCaelarPlan","GLOBAL",1)~ + @209 /* I have information about 
 /* only important if PC also knows that Caelar wants to reach into Avernus [GlobalGT("C#RtD_CaelarPlan","GLOBAL",1)] */
 /* this reply option includes a variable change for the PC's knowledge */
 + ~Global("C#RtD_KnowsPortalBlood","GLOBAL",2)
-GlobalLT("C#RtD_CoalKnowsPortalBlood","GLOBAL",5)
 GlobalGT("C#RtD_CaelarPlan","GLOBAL",1)
-GlobalGT("C#RtD_CoalCaelarPlan","GLOBAL",1)~ + @210 /* Oh yes. I have information about a portal to Avernus beneath Dragonspear Castle which can be opened with blood of a god's direct decendant - my Bhaal child blood, for example. I am sure that's what she's going for! */ DO ~SetGlobal("C#RtD_CoalKnowsPortalBlood","GLOBAL",5) 
-SetGlobal("C#RtD_KnowsPortalBlood_SET","GLOBAL",2) SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_corwin_03
+GlobalGT("C#RtD_CoalCaelarPlan","GLOBAL",1)
+!Global("C#RtD_CoalKnowsPortalBlood","GLOBAL",5)~ + @210 /* Oh yes. I have information about a portal to Avernus beneath Dragonspear Castle which can be opened with blood of a god's direct decendant - my Bhaal child blood, for example. I am sure that's what she's going for! */ DO ~
+SetGlobal("C#RtD_KnowsPortalBlood","GLOBAL",3) //no _SET
+//SetGlobal("C#RtD_WantBhaalBlood_SET","GLOBAL",2) will be set by script
+SetGlobal("C#RtD_CoalKnowsPortalBlood","GLOBAL",5) 
+SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_corwin_03
 /* "C#RtD_KnowsPortalBlood" = 3 - PC reasons / concludes / speculates that Caelar / Hephernaan want PC's blood for [open portal to Avernus] -- also for [C#RtD_WantBhaalBlood = 2] */
 /* in case PC already phrased conclusion elsewhere that this is what Caelar will be going for, tell officers */
 + ~Global("C#RtD_KnowsPortalBlood","GLOBAL",3)
@@ -288,13 +395,42 @@ GlobalGT("C#RtD_CoalKnowsPortalBlood","GLOBAL",4)
 /* not considered as an own reply option. Is dealt with via "C#RtD_HephernaanBetrayal" */
 /* "C#RtD_HephernaanBetrayal" = 1 - PC knows that [a man called] Hephernaan is betraying Caelar */
 /* not considered, PC wouldn't know it's important */
+/* if PC knows about [a man called] Hephernaan betraying Caelar and knows who Hephernaan is, but doesn't know he is working for a fiend: 
+(If PC watches scry pool scene after this reply option, variable ("C#RtD_HephernaanFiend","GLOBAL",2) will be set by script automatically) */
+/* this reply option includes a variable change for the PC's knowledge */
++ ~Global("C#RtD_HephernaanBetrayal","GLOBAL",1)
+Global("C#RtD_HephernaanIdentity","GLOBAL",1)
+Global("C#RtD_HephernaanFiend","GLOBAL",0)
+GlobalLT("C#RtD_HephernaanBetrayal","GLOBAL",2)
+!Global("C#RtD_CoalHephernaanBetrayal","GLOBAL",1)~ + @212 /* I have reasons to believe that Caelar's advisor Hephernaan is betraying Caelar. He has his own, dark plans with this crusade. */ DO ~
+	SetGlobal("C#RtD_HephernaanBetrayal","GLOBAL",2) //no _SET
+//	SetGlobal("C#RtD_CaelarBetrayal_SET","GLOBAL",1) will be set by script
+	SetGlobal("C#RtD_CoalHephernaanBetrayal_SET","GLOBAL",1) 
+//	SetGlobal("C#RtD_CoalCaelarBetrayal_SET","GLOBAL",1) will be set by script
+	SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_corwin_01
 /* "C#RtD_HephernaanBetrayal" = 2 - PC knows that Hephernaan [who is Caelar's advisor] is betraying Caelar */
 /* only in case PC doesn't know that Hephernaan is working for a fiend [Global("C#RtD_HephernaanFiend","GLOBAL",0)], otherwise it's considered there. */
 + ~Global("C#RtD_HephernaanFiend","GLOBAL",0)
-Global("C#RtD_HephernaanBetrayal","GLOBAL",1)
+Global("C#RtD_HephernaanBetrayal","GLOBAL",2)
 Global("C#RtD_CoalHephernaanBetrayal","GLOBAL",0)~ + @212 /* I have reasons to believe that Caelar's advisor Hephernaan is betraying Caelar. He has his own, dark plans with this crusade. */ DO ~SetGlobal("C#RtD_CoalHephernaanBetrayal","GLOBAL",1) SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_corwin_01
 /* "C#RtD_HephernaanFiend" = 1 - PC knows that [a man being called] Hephernaan is working for a fiend to open the portal */
 /* not considered. Just because it's nothing the PC would need to tell the officers. */
+/* Global("C#RtD_HephernaanVisual","GLOBAL",1): After seeing the scry pool scene
+Global("C#RtD_HephernaanFiend","GLOBAL",1): PC knows that [a man being called] Hephernaan is working for a fiend to open the portal
+Global("C#RtD_HephernaanIdentity","GLOBAL",1) knows who Hephernaan is. */
+/* this reply option includes a variable change for the PC's knowledge */
++ ~OR(2) Global("C#RtD_HephernaanVisual","GLOBAL",1) 
+	 Global("C#RtD_HephernaanFiend","GLOBAL",1)
+GlobalLT("C#RtD_HephernaanFiend","GLOBAL",2)
+Global("C#RtD_HephernaanIdentity","GLOBAL",1)
+!Global("C#RtD_CoalHephernaanFiend","GLOBAL",1)~ + @211 /* I have disturbing news. Caelar's advisor Hephernaan is apparently working for a fiend who is planning on crossing into the Material Prime! */ DO ~
+	SetGlobal("C#RtD_HephernaanFiend","GLOBAL",2) //no _SET
+//	SetGlobal("C#RtD_HephernaanBetrayal_SET","GLOBAL",2) will be set by script
+//	SetGlobal("C#RtD_CaelarBetrayal_SET","GLOBAL",1) will be set by script
+	SetGlobal("C#RtD_CoalHephernaanFiend_SET","GLOBAL",1) 
+//	SetGlobal("C#RtD_CoalHephernaanBetrayal_SET","GLOBAL",1) will be set by script
+//	SetGlobal("C#RtD_CoalCaelarBetrayal_SET","GLOBAL",1) will be set by script
+	SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_corwin_04
 /* "C#RtD_HephernaanFiend" = 2 - PC knows that Hephernaan [who is Caelar's advisor] is working for a fiend to open the portal */
 /* considered with "C#RtD_HephernaanFiend" = 3 */
 /* "C#RtD_HephernaanFiend" = 3 - PC knows that Hephernaan [who is Caelar's advisor] is working for Belhifet */
@@ -303,9 +439,18 @@ Global("C#RtD_CoalHephernaanFiend","GLOBAL",0)~ + @211 /* I have disturbing news
 /* "C#RtD_WeakPoison" = 1 - PC knows that poison from palace assassins was too weak to kill */
 /* not considered. This is something the Dukes tell the PC, not the other way around. */
 /* "C#RtD_CaelarKidnap" = 1 - PC discussed with someone/NPCs that Caelar's assassin probably wanted to kidnap PC in Palace (instead of killing) */
-/* contains setting of variable for PC, too: PC can phrase their suspicion */
-+ ~OR(2) Global("C#RtD_WeakPoison","GLOBAL",1)
-Global("C#RtD_CaelarKidnap","GLOBAL",1)
+/* After hearing that the poison was too weak: PC can suspect that Caelar is trying to kidnap them, not kill. */
+/* (I'll include a WIS/INT check here like in the Stat Based Reactions from Themed Tweaks.) */
+/* this reply option includes a variable change for the PC's knowledge */
++ ~Global("C#RtD_CaelarKidnap","GLOBAL",0)
+Global("C#RtD_WeakPoison","GLOBAL",1)
+OR(2) CheckStatGT(Player1,15,WIS) CheckStatGT(Player1,15,INT)~ + @227 /* I think Caelar tried to have me kidnapped in the palace, not killed. */ DO ~
+SetGlobal("C#RtD_CaelarKidnap","GLOBAL",1) //no _SET
+//SetGlobal("C#RtD_CaelarWantsPC_SET","GLOBAL",1) will be set by script
+SetGlobal("C#RtD_CoalCaelarWantsPC_SET","GLOBAL",1)
+SetGlobal("C#RtD_CoalCaelarKidnap_SET","GLOBAL",1) 
+SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_corwin_02
++ ~Global("C#RtD_CaelarKidnap","GLOBAL",1)
 Global("C#RtD_CoalCaelarKidnap","GLOBAL",0)~ + @227 /* I think Caelar tried to have me kidnapped in the palace, not killed. */ DO ~SetGlobal("C#RtD_CaelarKidnap","GLOBAL",1) SetGlobal("C#RtD_CoalCaelarKidnap","GLOBAL",1) SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_corwin_02
 /* "C#RtD_CaelarWantsPC" = 1 - PC assumes that Caelar wants to capture the PC [alive] */
 /* only considered if PC doesn't know That Caelar wants the PC's blood yet [Global("C#RtD_WantBhaalBlood","GLOBAL",0)]*/
@@ -386,6 +531,16 @@ Global("C#RtD_CoalMetHoodedMan","GLOBAL",2)
 OUTER_SPRINT %reply_options_inform_delancie%
 %/* "C#RtD_CaelarBhaalChild" = 1 - PC heard rumors that Caelar is a child of Bhaal */
 /* not considered. This is something the Dukes suspect from the start of SoD, no need to tell them. */
+/* After knowing that she needs godly blood to open the portal and hearing rumors that she is a child of Bhaal. */
+/* this reply option includes a variable change for the PC's knowledge */
++ ~Global("C#RtD_CaelarBhaalChild","GLOBAL",1)
+OR(2)
+	GlobalGT("C#RtD_KnowsPortalBlood","GLOBAL",1)
+	Global("C#RtD_WantBhaalBlood","GLOBAL",1)
+!Global("C#RtD_CoalCaelarBhaalChild","GLOBAL",2)~ + @223 /* ~I have reasons to believe that Caelar is no child of Bhaal.~ */ DO ~
+SetGlobal("C#RtD_CaelarBhaalChild","GLOBAL",2) //no _SET
+SetGlobal("C#RtD_CoalCaelarBhaalChild_SET","GLOBAL",2) 
+SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_delancie_14
 /* "C#RtD_CaelarBhaalChild" = 2 - PC reasons / concludes / speculates that [rumors that Caelar is a child of Bhaal] is not true */
 + ~Global("C#RtD_CaelarBhaalChild","GLOBAL",2)
 GlobalLT("C#RtD_CoalCaelarBhaalChild","GLOBAL",2)~ + @223 /* ~I have reasons to believe that Caelar is no child of Bhaal.~ */ DO ~SetGlobal("C#RtD_CoalCaelarBhaalChild","GLOBAL",2) SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_delancie_14
@@ -401,7 +556,7 @@ GlobalLT("C#RtD_CoalCaelarBhaalChild","GLOBAL",4)~ + @224 /* ~I know for sure th
 /* "C#RtD_CaelarProtection" = 1 - PC heard rumor about Caelar/divine forces through Caelar protecting the crusade */
 /* not considered. This is something the Dukes suspect from the start of SoD, no need to tell them. */
 /* "C#RtD_CaelarProtection" = 2 - PC knows that her followers believe that the gods are protecting Caelar and them */
-+ ~Global("C#RtD_CaelarProtection","GLOBAL",3)
++ ~Global("C#RtD_CaelarProtection","GLOBAL",2)
 GlobalLT("C#RtD_CoalCaelarProtection","GLOBAL",2)~ + @233 /* Caelar's followers seem to believe that the gods are protecting the crusade. */ DO ~SetGlobal("C#RtD_CoalCaelarProtection","GLOBAL",2) SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_delancie_15
 /* "C#RtD_CaelarProtection" = 3 - PC watched Hormorn's "blessing" in Bridgefort camp */
 + ~Global("C#RtD_CaelarProtection","GLOBAL",3)
@@ -433,10 +588,31 @@ GlobalLT("C#RtD_CoalCaelarPlan","GLOBAL",2)~ + @222 /* It seems the crusaders wa
 /* "C#RtD_CaelarPlan" = 3 - PC knows that they are planning on marching into Avernus */
 + ~Global("C#RtD_CaelarPlan","GLOBAL",3)
 GlobalLT("C#RtD_CoalCaelarPlan","GLOBAL",4)~ + @208 /* You are aware that Caelar *will* march her crusade into Avernus, though? */ DO ~SetGlobal("C#RtD_CoalCaelarPlan","GLOBAL",4) SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_delancie_02
+/* if PC knows that Caelar is planning on marching into Avernus AND Hephernaan is working for a fiend, they can speculate that they are planning on opening a portal to Avernus */
+/* this reply option includes a variable change for the PC's knowledge */
++ ~OR(2)
+	Global("C#RtD_CaelarPlan","GLOBAL",2)
+	Global("C#RtD_CaelarPlan","GLOBAL",3)
+OR(2)
+	GlobalGT("C#RtD_HephernaanFiend","GLOBAL",1)
+	GlobalGT("C#RtD_KnowsPortalBlood","GLOBAL",0)
+Global("C#RtD_KnowsPortalBlood","GLOBAL",0) //so reply options will not be doubled
+!Global("C#RtD_CoalCaelarPlan","GLOBAL",6)~ + @278 /* I have reasons to believe that Caelar is planning on opening a portal to Avernus to march her army into it. */ DO ~
+SetGlobal("C#RtD_CaelarPlan","GLOBAL",4) //no _SET
+SetGlobal("C#RtD_CoalCaelarPlan_SET","GLOBAL",6) 
+SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_delancie_16
 /* "C#RtD_CaelarPlan" = 4 - PC knows that they are planning on opening a portal at Dragonspear Castle to enter Avernus */
 + ~Global("C#RtD_CaelarPlan","GLOBAL",4)
 GlobalLT("C#RtD_CoalCaelarPlan","GLOBAL",6)~ + @228 /* I know for sure that Caelar is planning on opening a portal to Avernus to march her army into it. */ DO ~SetGlobal("C#RtD_CoalCaelarPlan","GLOBAL",6) SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_delancie_16
 /* "C#RtD_CaelarPlan" = 5 - PC speculates that Caelar wants to save her uncle Aun Argent from Avernus */
+/* After knowing that she is planning on freeing souls from Avernus and knowing that Aun went to Avernus for her. */
+/* this reply option includes a variable change for the PC's knowledge */
++ ~GlobalGT("C#RtD_CaelarPlan","GLOBAL",1) GlobalLT("C#RtD_CaelarPlan","GLOBAL",5)
+GlobalGT("C#RtD_KnowsAunArgent","GLOBAL",3)
+!Global("C#RtD_CoalCaelarPlan","GLOBAL",8)~ + @226 /* ~I suspect that Caelar is marching her Crusade into Avernus to free her uncle Aun who is trapped there in her stead.~ */ DO ~ 
+SetGlobal("C#RtD_CaelarPlan","GLOBAL",5) //no _SET
+SetGlobal("C#RtD_CoalCaelarPlan_SET","GLOBAL",8)  
+SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_delancie_13
 /* considered with "C#RtD_CaelarPlan" = 6 */
 /* "C#RtD_CaelarPlan" = 6 - PC knows that the whole purpose of the crusade is all for Aun Argent */
 + ~GlobalGT("C#RtD_CaelarPlan","GLOBAL",4)
@@ -451,10 +627,13 @@ GlobalGT("C#RtD_CoalCaelarPlan","GLOBAL",1)~ + @209 /* I have information about 
 /* only important if PC also knows that Caelar wants to reach into Avernus [GlobalGT("C#RtD_CaelarPlan","GLOBAL",1)] */
 /* this reply option includes a variable change for the PC's knowledge */
 + ~Global("C#RtD_KnowsPortalBlood","GLOBAL",2)
-GlobalLT("C#RtD_CoalKnowsPortalBlood","GLOBAL",5)
 GlobalGT("C#RtD_CaelarPlan","GLOBAL",1)
-GlobalGT("C#RtD_CoalCaelarPlan","GLOBAL",1)~ + @210 /* Oh yes. I have information about a portal to Avernus beneath Dragonspear Castle which can be opened with blood of a god's direct decendant - my Bhaal child blood, for example. I am sure that's what she's going for! */ DO ~SetGlobal("C#RtD_CoalKnowsPortalBlood","GLOBAL",5) 
-SetGlobal("C#RtD_KnowsPortalBlood_SET","GLOBAL",2) SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_delancie_04
+GlobalGT("C#RtD_CoalCaelarPlan","GLOBAL",1)
+!Global("C#RtD_CoalKnowsPortalBlood","GLOBAL",5)~ + @210 /* Oh yes. I have information about a portal to Avernus beneath Dragonspear Castle which can be opened with blood of a god's direct decendant - my Bhaal child blood, for example. I am sure that's what she's going for! */ DO ~
+SetGlobal("C#RtD_KnowsPortalBlood","GLOBAL",3) //no _SET
+//SetGlobal("C#RtD_WantBhaalBlood_SET","GLOBAL",2) will be set by script
+SetGlobal("C#RtD_CoalKnowsPortalBlood","GLOBAL",5) 
+SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_delancie_04
 /* "C#RtD_KnowsPortalBlood" = 3 - PC reasons / concludes / speculates that Caelar / Hephernaan want PC's blood for [open portal to Avernus] -- also for [C#RtD_WantBhaalBlood = 2] */
 /* in case PC already phrased conclusion elsewhere that this is what Caelar will be going for, tell officers */
 + ~Global("C#RtD_KnowsPortalBlood","GLOBAL",3)
@@ -479,14 +658,43 @@ GlobalGT("C#RtD_CoalKnowsPortalBlood","GLOBAL",4)
 1 - PC knows that Caelar is betrayed by someone in her crusade, that there is a deeper level to the crusade's purpose she has no influence on */
 /* not considered as an own reply option. Is dealt with via "C#RtD_HephernaanBetrayal" */
 /* "C#RtD_HephernaanBetrayal" = 1 - PC knows that [a man called] Hephernaan is betraying Caelar */
+/* if PC knows about [a man called] Hephernaan betraying Caelar and knows who Hephernaan is, but doesn't know he is working for a fiend: 
+(If PC watches scry pool scene after this reply option, variable ("C#RtD_HephernaanFiend","GLOBAL",2) will be set by script automatically) */
+/* this reply option includes a variable change for the PC's knowledge */
++ ~Global("C#RtD_HephernaanBetrayal","GLOBAL",1)
+Global("C#RtD_HephernaanIdentity","GLOBAL",1)
+Global("C#RtD_HephernaanFiend","GLOBAL",0)
+GlobalLT("C#RtD_HephernaanBetrayal","GLOBAL",2)
+!Global("C#RtD_CoalHephernaanBetrayal","GLOBAL",1)~ + @212 /* I have reasons to believe that Caelar's advisor Hephernaan is betraying Caelar. He has his own, dark plans with this crusade. */ DO ~
+	SetGlobal("C#RtD_HephernaanBetrayal","GLOBAL",2) //no _SET
+//	SetGlobal("C#RtD_CaelarBetrayal_SET","GLOBAL",1) will be set by script
+	SetGlobal("C#RtD_CoalHephernaanBetrayal_SET","GLOBAL",1) 
+//	SetGlobal("C#RtD_CoalCaelarBetrayal_SET","GLOBAL",1) will be set by script
+	SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_delancie_08 
 /* not considered, PC wouldn't know it's important */
 /* "C#RtD_HephernaanBetrayal" = 2 - PC knows that Hephernaan [who is Caelar's advisor] is betraying Caelar */
 /* only in case PC doesn't know that Hephernaan is working for a fiend [Global("C#RtD_HephernaanFiend","GLOBAL",0)], otherwise it's considered there. */
 + ~Global("C#RtD_HephernaanFiend","GLOBAL",0)
-Global("C#RtD_HephernaanBetrayal","GLOBAL",1)
+Global("C#RtD_HephernaanBetrayal","GLOBAL",2)
 Global("C#RtD_CoalHephernaanBetrayal","GLOBAL",0)~ + @212 /* I have reasons to believe that Caelar's advisor Hephernaan is betraying Caelar. He has his own, dark plans with this crusade. */ DO ~SetGlobal("C#RtD_CoalHephernaanBetrayal","GLOBAL",1) SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_delancie_08
 /* "C#RtD_HephernaanFiend" = 1 - PC knows that [a man being called] Hephernaan is working for a fiend to open the portal */
 /* not considered. Just because it's nothing the PC would need to tell the officers. */
+/* Global("C#RtD_HephernaanVisual","GLOBAL",1): After seeing the scry pool scene
+Global("C#RtD_HephernaanFiend","GLOBAL",1): PC knows that [a man being called] Hephernaan is working for a fiend to open the portal
+Global("C#RtD_HephernaanIdentity","GLOBAL",1) knows who Hephernaan is. */
+/* this reply option includes a variable change for the PC's knowledge */
++ ~OR(2) Global("C#RtD_HephernaanVisual","GLOBAL",1) 
+	 Global("C#RtD_HephernaanFiend","GLOBAL",1)
+GlobalLT("C#RtD_HephernaanFiend","GLOBAL",2)
+Global("C#RtD_HephernaanIdentity","GLOBAL",1)
+!Global("C#RtD_CoalHephernaanFiend","GLOBAL",1)~ + @211 /* I have disturbing news. Caelar's advisor Hephernaan is apparently working for a fiend who is planning on crossing into the Material Prime! */ DO ~
+	SetGlobal("C#RtD_HephernaanFiend","GLOBAL",2) //no _SET
+//	SetGlobal("C#RtD_HephernaanBetrayal_SET","GLOBAL",2) will be set by script
+//	SetGlobal("C#RtD_CaelarBetrayal_SET","GLOBAL",1) will be set by script
+	SetGlobal("C#RtD_CoalHephernaanFiend_SET","GLOBAL",1) 
+//	SetGlobal("C#RtD_CoalHephernaanBetrayal_SET","GLOBAL",1) will be set by script
+//	SetGlobal("C#RtD_CoalCaelarBetrayal_SET","GLOBAL",1) will be set by script
+	SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_delancie_07
 /* "C#RtD_HephernaanFiend" = 2 - PC knows that Hephernaan [who is Caelar's advisor] is working for a fiend to open the portal */
 /* considered with "C#RtD_HephernaanFiend" = 3 */
 /* "C#RtD_HephernaanFiend" = 3 - PC knows that Hephernaan [who is Caelar's advisor] is working for Belhifet */
@@ -495,9 +703,18 @@ Global("C#RtD_CoalHephernaanFiend","GLOBAL",0)~ + @211 /* I have disturbing news
 /* "C#RtD_WeakPoison" = 1 - PC knows that poison from palace assassins was too weak to kill */
 /* not considered. This is something the Dukes tell the PC, not the other way around. */
 /* "C#RtD_CaelarKidnap" = 1 - PC discussed with someone/NPCs that Caelar's assassin probably wanted to kidnap PC in Palace (instead of killing) */
-/* contains setting of variable for PC, too: PC can phrase their suspicion */
-+ ~OR(2) Global("C#RtD_WeakPoison","GLOBAL",1)
-Global("C#RtD_CaelarKidnap","GLOBAL",1)
+/* After hearing that the poison was too weak: PC can suspect that Caelar is trying to kidnap them, not kill. */
+/* (I'll include a WIS/INT check here like in the Stat Based Reactions from Themed Tweaks.) */
+/* this reply option includes a variable change for the PC's knowledge */
++ ~Global("C#RtD_CaelarKidnap","GLOBAL",0)
+Global("C#RtD_WeakPoison","GLOBAL",1)
+OR(2) CheckStatGT(Player1,15,WIS) CheckStatGT(Player1,15,INT)~ + @227 /* I think Caelar tried to have me kidnapped in the palace, not killed. */ DO ~
+SetGlobal("C#RtD_CaelarKidnap","GLOBAL",1) //no _SET
+//SetGlobal("C#RtD_CaelarWantsPC_SET","GLOBAL",1) will be set by script
+SetGlobal("C#RtD_CoalCaelarWantsPC_SET","GLOBAL",1)
+SetGlobal("C#RtD_CoalCaelarKidnap_SET","GLOBAL",1) 
+SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_delancie_14
++ ~Global("C#RtD_CaelarKidnap","GLOBAL",1)
 Global("C#RtD_CoalCaelarKidnap","GLOBAL",0)~ + @227 /* I think Caelar tried to have me kidnapped in the palace, not killed. */ DO ~SetGlobal("C#RtD_CaelarKidnap","GLOBAL",1) SetGlobal("C#RtD_CoalCaelarKidnap","GLOBAL",1) SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_delancie_14
 /* "C#RtD_CaelarWantsPC" = 1 - PC assumes that Caelar wants to capture the PC [alive] */
 /* only considered if PC doesn't know That Caelar wants the PC's blood yet [Global("C#RtD_WantBhaalBlood","GLOBAL",0)]*/
@@ -579,6 +796,16 @@ Global("C#RtD_CoalMetHoodedMan","GLOBAL",2)
 OUTER_SPRINT %reply_options_inform_nederlok% 
 %/* "C#RtD_CaelarBhaalChild" = 1 - PC heard rumors that Caelar is a child of Bhaal */
 /* not considered. This is something the Dukes suspect from the start of SoD, no need to tell them. */
+/* After knowing that she needs godly blood to open the portal and hearing rumors that she is a child of Bhaal. */
+/* this reply option includes a variable change for the PC's knowledge */
++ ~Global("C#RtD_CaelarBhaalChild","GLOBAL",1)
+OR(2)
+	GlobalGT("C#RtD_KnowsPortalBlood","GLOBAL",1)
+	Global("C#RtD_WantBhaalBlood","GLOBAL",1)
+!Global("C#RtD_CoalCaelarBhaalChild","GLOBAL",2)~ + @223 /* ~I have reasons to believe that Caelar is no child of Bhaal.~ */ DO ~
+SetGlobal("C#RtD_CaelarBhaalChild","GLOBAL",2) //no _SET
+SetGlobal("C#RtD_CoalCaelarBhaalChild_SET","GLOBAL",2) 
+SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_nederlok_15
 /* "C#RtD_CaelarBhaalChild" = 2 - PC reasons / concludes / speculates that [rumors that Caelar is a child of Bhaal] is not true */
 + ~Global("C#RtD_CaelarBhaalChild","GLOBAL",2)
 GlobalLT("C#RtD_CoalCaelarBhaalChild","GLOBAL",2)~ + @223 /* ~I have reasons to believe that Caelar is no child of Bhaal.~ */ DO ~SetGlobal("C#RtD_CoalCaelarBhaalChild","GLOBAL",2) SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_nederlok_15
@@ -594,7 +821,7 @@ GlobalLT("C#RtD_CoalCaelarBhaalChild","GLOBAL",4)~ + @224 /* ~I know for sure th
 /* "C#RtD_CaelarProtection" = 1 - PC heard rumor about Caelar/divine forces through Caelar protecting the crusade */
 /* not considered. This is something the Dukes suspect from the start of SoD, no need to tell them. */
 /* "C#RtD_CaelarProtection" = 2 - PC knows that her followers believe that the gods are protecting Caelar and them */
-+ ~Global("C#RtD_CaelarProtection","GLOBAL",3)
++ ~Global("C#RtD_CaelarProtection","GLOBAL",2)
 GlobalLT("C#RtD_CoalCaelarProtection","GLOBAL",2)~ + @233 /* Caelar's followers seem to believe that the gods are protecting the crusade. */ DO ~SetGlobal("C#RtD_CoalCaelarProtection","GLOBAL",2) SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_nederlok_15
 /* "C#RtD_CaelarProtection" = 3 - PC watched Hormorn's "blessing" in Bridgefort camp */
 + ~Global("C#RtD_CaelarProtection","GLOBAL",3)
@@ -626,10 +853,31 @@ GlobalLT("C#RtD_CoalCaelarPlan","GLOBAL",2)~ + @222 /* It seems the crusaders wa
 /* "C#RtD_CaelarPlan" = 3 - PC knows that they are planning on marching into Avernus */
 + ~Global("C#RtD_CaelarPlan","GLOBAL",3)
 GlobalLT("C#RtD_CoalCaelarPlan","GLOBAL",4)~ + @208 /* You are aware that Caelar *will* march her crusade into Avernus, though? */ DO ~SetGlobal("C#RtD_CoalCaelarPlan","GLOBAL",4) SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_nederlok_03
+/* if PC knows that Caelar is planning on marching into Avernus AND Hephernaan is working for a fiend, they can speculate that they are planning on opening a portal to Avernus */
+/* this reply option includes a variable change for the PC's knowledge */
++ ~OR(2)
+	Global("C#RtD_CaelarPlan","GLOBAL",2)
+	Global("C#RtD_CaelarPlan","GLOBAL",3)
+OR(2)
+	GlobalGT("C#RtD_HephernaanFiend","GLOBAL",1)
+	GlobalGT("C#RtD_KnowsPortalBlood","GLOBAL",0)
+Global("C#RtD_KnowsPortalBlood","GLOBAL",0) //so reply options will not be doubled
+!Global("C#RtD_CoalCaelarPlan","GLOBAL",6)~ + @278 /* I have reasons to believe that Caelar is planning on opening a portal to Avernus to march her army into it. */ DO ~
+SetGlobal("C#RtD_CaelarPlan","GLOBAL",4) //no _SET
+SetGlobal("C#RtD_CoalCaelarPlan_SET","GLOBAL",6) 
+SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_nederlok_16
 /* "C#RtD_CaelarPlan" = 4 - PC knows that they are planning on opening a portal at Dragonspear Castle to enter Avernus */
 + ~Global("C#RtD_CaelarPlan","GLOBAL",4)
 GlobalLT("C#RtD_CoalCaelarPlan","GLOBAL",6)~ + @228 /* I know for sure that Caelar is planning on opening a portal to Avernus to march her army into it. */ DO ~SetGlobal("C#RtD_CoalCaelarPlan","GLOBAL",6) SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_nederlok_16
 /* "C#RtD_CaelarPlan" = 5 - PC speculates that Caelar wants to save her uncle Aun Argent from Avernus */
+/* After knowing that she is planning on freeing souls from Avernus and knowing that Aun went to Avernus for her. */
+/* this reply option includes a variable change for the PC's knowledge */
++ ~GlobalGT("C#RtD_CaelarPlan","GLOBAL",1) GlobalLT("C#RtD_CaelarPlan","GLOBAL",5)
+GlobalGT("C#RtD_KnowsAunArgent","GLOBAL",3)
+!Global("C#RtD_CoalCaelarPlan","GLOBAL",8)~ + @226 /* ~I suspect that Caelar is marching her Crusade into Avernus to free her uncle Aun who is trapped there in her stead.~ */ DO ~ 
+SetGlobal("C#RtD_CaelarPlan","GLOBAL",5) //no _SET
+SetGlobal("C#RtD_CoalCaelarPlan_SET","GLOBAL",8)  
+SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_nederlok_12
 /* considered with "C#RtD_CaelarPlan" = 6 */
 /* "C#RtD_CaelarPlan" = 6 - PC knows that the whole purpose of the crusade is all for Aun Argent */
 + ~GlobalGT("C#RtD_CaelarPlan","GLOBAL",4)
@@ -644,10 +892,13 @@ GlobalGT("C#RtD_CoalCaelarPlan","GLOBAL",1)~ + @209 /* I have information about 
 /* only important if PC also knows that Caelar wants to reach into Avernus [GlobalGT("C#RtD_CaelarPlan","GLOBAL",1)] */
 /* this reply option includes a variable change for the PC's knowledge */
 + ~Global("C#RtD_KnowsPortalBlood","GLOBAL",2)
-GlobalLT("C#RtD_CoalKnowsPortalBlood","GLOBAL",5)
 GlobalGT("C#RtD_CaelarPlan","GLOBAL",1)
-GlobalGT("C#RtD_CoalCaelarPlan","GLOBAL",1)~ + @210 /* Oh yes. I have information about a portal to Avernus beneath Dragonspear Castle which can be opened with blood of a god's direct decendant - my Bhaal child blood, for example. I am sure that's what she's going for! */ DO ~SetGlobal("C#RtD_CoalKnowsPortalBlood","GLOBAL",5) 
-SetGlobal("C#RtD_KnowsPortalBlood_SET","GLOBAL",2) SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_nederlok_05
+GlobalGT("C#RtD_CoalCaelarPlan","GLOBAL",1)
+!Global("C#RtD_CoalKnowsPortalBlood","GLOBAL",5)~ + @210 /* Oh yes. I have information about a portal to Avernus beneath Dragonspear Castle which can be opened with blood of a god's direct decendant - my Bhaal child blood, for example. I am sure that's what she's going for! */ DO ~
+SetGlobal("C#RtD_KnowsPortalBlood","GLOBAL",3) //no _SET
+//SetGlobal("C#RtD_WantBhaalBlood_SET","GLOBAL",2) will be set by script
+SetGlobal("C#RtD_CoalKnowsPortalBlood","GLOBAL",5) 
+SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_nederlok_05
 /* "C#RtD_KnowsPortalBlood" = 3 - PC reasons / concludes / speculates that Caelar / Hephernaan want PC's blood for [open portal to Avernus] -- also for [C#RtD_WantBhaalBlood = 2] */
 /* in case PC already phrased conclusion elsewhere that this is what Caelar will be going for, tell officers */
 + ~Global("C#RtD_KnowsPortalBlood","GLOBAL",3)
@@ -673,13 +924,42 @@ GlobalGT("C#RtD_CoalKnowsPortalBlood","GLOBAL",4)
 /* not considered as an own reply option. Is dealt with via "C#RtD_HephernaanBetrayal" */
 /* "C#RtD_HephernaanBetrayal" = 1 - PC knows that [a man called] Hephernaan is betraying Caelar */
 /* not considered, PC wouldn't know it's important */
+/* if PC knows about [a man called] Hephernaan betraying Caelar and knows who Hephernaan is, but doesn't know he is working for a fiend: 
+(If PC watches scry pool scene after this reply option, variable ("C#RtD_HephernaanFiend","GLOBAL",2) will be set by script automatically) */
+/* this reply option includes a variable change for the PC's knowledge */
++ ~Global("C#RtD_HephernaanBetrayal","GLOBAL",1)
+Global("C#RtD_HephernaanIdentity","GLOBAL",1)
+Global("C#RtD_HephernaanFiend","GLOBAL",0)
+GlobalLT("C#RtD_HephernaanBetrayal","GLOBAL",2)
+!Global("C#RtD_CoalHephernaanBetrayal","GLOBAL",1)~ + @212 /* I have reasons to believe that Caelar's advisor Hephernaan is betraying Caelar. He has his own, dark plans with this crusade. */ DO ~
+	SetGlobal("C#RtD_HephernaanBetrayal","GLOBAL",2) //no _SET
+//	SetGlobal("C#RtD_CaelarBetrayal_SET","GLOBAL",1) will be set by script
+	SetGlobal("C#RtD_CoalHephernaanBetrayal_SET","GLOBAL",1) 
+//	SetGlobal("C#RtD_CoalCaelarBetrayal_SET","GLOBAL",1) will be set by script
+	SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_nederlok_07 
 /* "C#RtD_HephernaanBetrayal" = 2 - PC knows that Hephernaan [who is Caelar's advisor] is betraying Caelar */
 /* only in case PC doesn't know that Hephernaan is working for a fiend [Global("C#RtD_HephernaanFiend","GLOBAL",0)], otherwise it's considered there. */
 + ~Global("C#RtD_HephernaanFiend","GLOBAL",0)
-Global("C#RtD_HephernaanBetrayal","GLOBAL",1)
+Global("C#RtD_HephernaanBetrayal","GLOBAL",2)
 Global("C#RtD_CoalHephernaanBetrayal","GLOBAL",0)~ + @212 /* I have reasons to believe that Caelar's advisor Hephernaan is betraying Caelar. He has his own, dark plans with this crusade. */ DO ~SetGlobal("C#RtD_CoalHephernaanBetrayal","GLOBAL",1) SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_nederlok_07
 /* "C#RtD_HephernaanFiend" = 1 - PC knows that [a man being called] Hephernaan is working for a fiend to open the portal */
 /* not considered. Just because it's nothing the PC would need to tell the officers. */
+/* Global("C#RtD_HephernaanVisual","GLOBAL",1): After seeing the scry pool scene
+Global("C#RtD_HephernaanFiend","GLOBAL",1): PC knows that [a man being called] Hephernaan is working for a fiend to open the portal
+Global("C#RtD_HephernaanIdentity","GLOBAL",1) knows who Hephernaan is. */
+/* this reply option includes a variable change for the PC's knowledge */
++ ~OR(2) Global("C#RtD_HephernaanVisual","GLOBAL",1) 
+	 Global("C#RtD_HephernaanFiend","GLOBAL",1)
+GlobalLT("C#RtD_HephernaanFiend","GLOBAL",2)
+Global("C#RtD_HephernaanIdentity","GLOBAL",1)
+!Global("C#RtD_CoalHephernaanFiend","GLOBAL",1)~ + @211 /* I have disturbing news. Caelar's advisor Hephernaan is apparently working for a fiend who is planning on crossing into the Material Prime! */ DO ~
+	SetGlobal("C#RtD_HephernaanFiend","GLOBAL",2) //no _SET
+//	SetGlobal("C#RtD_HephernaanBetrayal_SET","GLOBAL",2) will be set by script
+//	SetGlobal("C#RtD_CaelarBetrayal_SET","GLOBAL",1) will be set by script
+	SetGlobal("C#RtD_CoalHephernaanFiend_SET","GLOBAL",1) 
+//	SetGlobal("C#RtD_CoalHephernaanBetrayal_SET","GLOBAL",1) will be set by script
+//	SetGlobal("C#RtD_CoalCaelarBetrayal_SET","GLOBAL",1) will be set by script
+	SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_nederlok_06
 /* "C#RtD_HephernaanFiend" = 2 - PC knows that Hephernaan [who is Caelar's advisor] is working for a fiend to open the portal */
 /* considered with "C#RtD_HephernaanFiend" = 3 */
 /* "C#RtD_HephernaanFiend" = 3 - PC knows that Hephernaan [who is Caelar's advisor] is working for Belhifet */
@@ -688,9 +968,18 @@ Global("C#RtD_CoalHephernaanFiend","GLOBAL",0)~ + @211 /* I have disturbing news
 /* "C#RtD_WeakPoison" = 1 - PC knows that poison from palace assassins was too weak to kill */
 /* not considered. This is something the Dukes tell the PC, not the other way around. */
 /* "C#RtD_CaelarKidnap" = 1 - PC discussed with someone/NPCs that Caelar's assassin probably wanted to kidnap PC in Palace (instead of killing) */
-/* contains setting of variable for PC, too: PC can phrase their suspicion */
-+ ~OR(2) Global("C#RtD_WeakPoison","GLOBAL",1)
-Global("C#RtD_CaelarKidnap","GLOBAL",1)
+/* After hearing that the poison was too weak: PC can suspect that Caelar is trying to kidnap them, not kill. */
+/* (I'll include a WIS/INT check here like in the Stat Based Reactions from Themed Tweaks.) */
+/* this reply option includes a variable change for the PC's knowledge */
++ ~Global("C#RtD_CaelarKidnap","GLOBAL",0)
+Global("C#RtD_WeakPoison","GLOBAL",1)
+OR(2) CheckStatGT(Player1,15,WIS) CheckStatGT(Player1,15,INT)~ + @227 /* I think Caelar tried to have me kidnapped in the palace, not killed. */ DO ~
+SetGlobal("C#RtD_CaelarKidnap","GLOBAL",1) //no _SET
+//SetGlobal("C#RtD_CaelarWantsPC_SET","GLOBAL",1) will be set by script
+SetGlobal("C#RtD_CoalCaelarWantsPC_SET","GLOBAL",1)
+SetGlobal("C#RtD_CoalCaelarKidnap_SET","GLOBAL",1) 
+SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_nederlok_14
++ ~Global("C#RtD_CaelarKidnap","GLOBAL",1)
 Global("C#RtD_CoalCaelarKidnap","GLOBAL",0)~ + @227 /* I think Caelar tried to have me kidnapped in the palace, not killed. */ DO ~SetGlobal("C#RtD_CaelarKidnap","GLOBAL",1) SetGlobal("C#RtD_CoalCaelarKidnap","GLOBAL",1) SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + update_nederlok_14
 /* "C#RtD_CaelarWantsPC" = 1 - PC assumes that Caelar wants to capture the PC [alive] */
 /* only considered if PC doesn't know That Caelar wants the PC's blood yet [Global("C#RtD_WantBhaalBlood","GLOBAL",0)]*/

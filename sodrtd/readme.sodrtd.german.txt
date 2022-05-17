@@ -157,11 +157,11 @@ Nach erfolgreichem Entpacken sollte sich ein sodrtd-Ordner und eine setup-sodrtd
 Führe setup-sodrtd.exe in deinem Spielordner aus, um Komponenten neu zu installieren, zu deinstallieren oder anderweitig zu ändern.
 
 Mac OS X
-Das Tweak-Pack wird mit WeiDU gepackt und installiert. Um es zu installieren, entpacke das Mod-Archiv und kopiere den Inhalt des Ordners in deinen Spielordner (den Ordner, der die Datei CHITIN.KEY enthält). Wenn das Archiv richtig entpackt wurde, solltest du einen „sodrtd“-Ordner, setup-c#sodcodo und setup-sodrtd.command in deinem Spielordner haben. Zur Installation doppelklicke einfach auf setup-sodrtd.command und folge den Anweisungen auf dem Bildschirm.
+Das Tweak-Pack wird mit WeiDU gepackt und installiert. Um es zu installieren, entpacke das Mod-Archiv und kopiere den Inhalt des Ordners in deinen Spielordner (den Ordner, der die Datei CHITIN.KEY enthält). Wenn das Archiv richtig entpackt wurde, solltest du einen „sodrtd“-Ordner, setup-sodrtd und setup-sodrtd.command in deinem Spielordner haben. Zur Installation doppelklicke einfach auf setup-sodrtd.command und folge den Anweisungen auf dem Bildschirm.
 
 Linux
 Entpacke den Inhalt des Mods in den Ordner des Spiels, das du ändern möchtest. Lade die neueste Version von WeiDU für Linux von https://github.com/WeiDUorg/weidu/releases herunter und kopiere WeiDU und WeInstall nach /usr/bin. Öffne anschließend ein Terminal und wechsle in dein BG2-Installationsverzeichnis, führe „tolower“ aus und beantworte beide Fragen mit Y. Du kannst die zweite Option (linux.ini) vermeiden, wenn du sie bereits einmal im selben Verzeichnis ausgeführt hast. Wenn du unsicher bist, ist es am sichersten, tolower auszuführen und beide Optionen zu wählen.
-Führe WeInstall c#sodcodo in deinem Spielordner aus, um die Mod zu installieren. Starte dann wine BGMain.exe und beginne zu spielen. 
+Führe WeInstall sodrtd in deinem Spielordner aus, um die Mod zu installieren. Starte dann wine BGMain.exe und beginne zu spielen. 
 
 HINWEIS: BG(II):EE sind aktiv unterstützte Spiele. Bitte beachte, dass jedes Patch-Update dein aktuelles Mod-Setup löscht! Wenn du dich mitten in einem Spiel mit Mods befindest, solltest du das Patch-Update verschieben, da du selbst nach einer Neuinstallation der Mods möglicherweise nicht mit deinem alten Spielständen weiterspielen kannst. 
 
@@ -401,7 +401,7 @@ Die Verwendung der Variablen mit dem Postfix „_SET“ stellt sicher, dass das 
 DANKSAGUNGEN
 
 jastey - Autor, Hauptverantwortliche für die Mod
-JohnBob - französische Übersetzung (v0.4 Beta)
+JohnBob - französische Übersetzung (v0.5 Beta)
 Lauriel - Autor von Komponente 1, Ideen, Designhilfe, Korrekturleser (v0.1 Beta)
 Machiavélique - Korrekturleser (französisch, v0.4 Beta)
 Shai Hulud - deutsche Übersetzung (v0.2 Beta)
@@ -445,6 +445,16 @@ https://www.gibberlings3.net/forums/topic/1649-community-filename-prefix-reserva
 
 
 ÄNDERUNGSHISTORIE
+
+Version 0.5 Beta
+- Fixed installation problems if "Add Stat-Based Observations and Quest Options" component was installed via Themed Tweaks mod.
+- Component 1 "Add Stat-Based Observations and Quest Options from Lauriel's Themed Tweaks Mod" updated to changes v0.2: Wrong variable references fixed; Reply option about Hooded Man inside the palace will only show if the Hooded Man was inide the palace; Added WEIGHT #-1 to Edwin's dialogue so it won't get blocked; cutscene changed to make texts better readable; setting of variable for generic NPC dialogues will not loop; Corrected string reference error for BG:SoD.
+- Corrected oversights in scripts and dialogues: wrong variable values, missing setting of variables, missing interconnections in scripts.
+- Scripting generally improved for compatibility.
+- assumptions and speculations will no longer be triggered by script but will offered as reply options with the officers.
+- Component "Add Additional Communication with Officers": Sir Deggernaut can be asked to list all new and already known facts separately.
+- Silenced ingame debug notifications about variables evaluation.
+- Corrcted remnants to other mod names in readme.
 
 Version 0.4 Beta
 - added French version by JohnBob, proofreading by Machiavélique

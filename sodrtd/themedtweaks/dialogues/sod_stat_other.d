@@ -12,7 +12,7 @@ REPLACE_ACTION_TEXT BDDAUSTO ~SetGlobal("BD_PASSOUT_DAUSTON","BD0030",1)~ ~SetGl
 //////////////////////////////////////////////////////
 // Ask Eltan to interview Dauston when he sobers up //
 //////////////////////////////////////////////////////
-EXTEND_TOP BDELTAN 10 #0
+EXTEND_BOTTOM BDELTAN 10 
 	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",1) Global("#L_SoDStat_DaustonPrompt","MYAREA",2)~ THEN REPLY @2020 /* ~Well enough, sir. But I have a favor to ask of you concerning the fallen paladin named Dauston that is currently sleeping it off in your cells.~ */ GOTO ELTAN_ASK_ABOUT_DAUSTON
 END
 
@@ -32,71 +32,71 @@ END
 // Have Corwin have a message from Eltan for you if you speak with her more than once //
 ////////////////////////////////////////////////////////////////////////////////////////
 EXTEND_BOTTOM BDCORWIN 17
-	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",2)~ THEN DO ~AddJournalEntry(266861,QUEST_DONE) AddJournalEntry(266862,QUEST) ActionOverride("bdbence",EscapeAreaObject("ff_camp"))~ GOTO MESSAGE_FOR_YOU_SIR
+	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",2)~ THEN DO ~SetGlobal("#L_BDCORWIN_TRACKER","MYAREA",17)~ GOTO MESSAGE_FOR_YOU_SIR
 END
 
 EXTEND_BOTTOM BDCORWIN 20
-	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",2)~ THEN DO ~AddJournalEntry(266861,QUEST_DONE) AddJournalEntry(266862,QUEST) ActionOverride("bdbence",EscapeAreaObject("ff_camp"))~ GOTO MESSAGE_FOR_YOU_SIR
+	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",2)~ THEN DO ~SetGlobal("#L_BDCORWIN_TRACKER","MYAREA",20)~ GOTO MESSAGE_FOR_YOU_SIR
 END
 
 EXTEND_BOTTOM BDCORWIN 27
-	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",2)~ THEN GOTO MESSAGE_FOR_YOU_SIR_THEN_JOIN
+	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",2)~ THEN DO ~SetGlobal("#L_BDCORWIN_TRACKER","MYAREA",27)~ GOTO MESSAGE_FOR_YOU_SIR
 END
 
 EXTEND_BOTTOM BDCORWIN 28
-	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",2)~ THEN GOTO MESSAGE_FOR_YOU_SIR
+	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",2)~ THEN DO ~SetGlobal("#L_BDCORWIN_TRACKER","MYAREA",28)~ GOTO MESSAGE_FOR_YOU_SIR
 END
 
 EXTEND_BOTTOM BDCORWIN 30
-	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",2)~ THEN DO ~SetGlobal("bd_fists_attack","global",3)~ GOTO MESSAGE_FOR_YOU_SIR
+	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",2)~ THEN DO ~SetGlobal("#L_BDCORWIN_TRACKER","MYAREA",30)~ GOTO MESSAGE_FOR_YOU_SIR
 END
 
 EXTEND_BOTTOM BDCORWIN 31
-	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",2)~ THEN GOTO MESSAGE_FOR_YOU_SIR
+	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",2)~ THEN DO ~SetGlobal("#L_BDCORWIN_TRACKER","MYAREA",31)~ GOTO MESSAGE_FOR_YOU_SIR
 END
 
 EXTEND_BOTTOM BDCORWIN 32
-	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",2)~ THEN DO ~AddJournalEntry(259776,INFO)~ GOTO MESSAGE_FOR_YOU_SIR
+	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",2)~ THEN DO ~SetGlobal("#L_BDCORWIN_TRACKER","MYAREA",32)~ GOTO MESSAGE_FOR_YOU_SIR
 END
 
 EXTEND_BOTTOM BDCORWIN 33
-	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",2)~ THEN GOTO MESSAGE_FOR_YOU_SIR
+	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",2)~ THEN DO ~SetGlobal("#L_BDCORWIN_TRACKER","MYAREA",33)~ GOTO MESSAGE_FOR_YOU_SIR
 END
 
 EXTEND_BOTTOM BDCORWIN 34
-	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",2)~ THEN DO ~SetGlobal("bd_fists_attack","global",3)~ GOTO MESSAGE_FOR_YOU_SIR_THEN_JOIN
+	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",2)~ THEN DO ~SetGlobal("#L_BDCORWIN_TRACKER","MYAREA",34)~ GOTO MESSAGE_FOR_YOU_SIR
 END
 
 EXTEND_BOTTOM BDCORWIN 35
-	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",2)~ THEN DO ~AddJournalEntry(259776,INFO)~ GOTO MESSAGE_FOR_YOU_SIR
+	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",2)~ THEN DO ~SetGlobal("#L_BDCORWIN_TRACKER","MYAREA",35)~ GOTO MESSAGE_FOR_YOU_SIR
 END
 
 EXTEND_BOTTOM BDCORWIN 37
-	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",2)~ THEN GOTO MESSAGE_FOR_YOU_SIR
+	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",2)~ THEN DO ~SetGlobal("#L_BDCORWIN_TRACKER","MYAREA",37)~ GOTO MESSAGE_FOR_YOU_SIR
 END
 
 EXTEND_BOTTOM BDCORWIN 41
-	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",2)~ THEN GOTO MESSAGE_FOR_YOU_SIR
+	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",2)~ THEN DO ~SetGlobal("#L_BDCORWIN_TRACKER","MYAREA",41)~ GOTO MESSAGE_FOR_YOU_SIR
 END
 
 EXTEND_BOTTOM BDCORWIN 42
-	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",2)~ THEN GOTO MESSAGE_FOR_YOU_SIR
+	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",2)~ THEN DO ~SetGlobal("#L_BDCORWIN_TRACKER","MYAREA",42)~ GOTO MESSAGE_FOR_YOU_SIR
 END
 
 EXTEND_BOTTOM BDCORWIN 46
-	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",2)~ THEN GOTO MESSAGE_FOR_YOU_SIR
+	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",2)~ THEN DO ~SetGlobal("#L_BDCORWIN_TRACKER","MYAREA",46)~ GOTO MESSAGE_FOR_YOU_SIR
 END
 
 EXTEND_BOTTOM BDCORWIN 54
-	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",2)~ THEN GOTO MESSAGE_FOR_YOU_SIR_THEN_JOIN
+	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",2)~ THEN DO ~SetGlobal("#L_BDCORWIN_TRACKER","MYAREA",54)~ GOTO MESSAGE_FOR_YOU_SIR
 END
 
 EXTEND_BOTTOM BDCORWIN 55
-	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",2)~ THEN GOTO MESSAGE_FOR_YOU_SIR
+	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",2)~ THEN DO ~SetGlobal("#L_BDCORWIN_TRACKER","MYAREA",55)~ GOTO MESSAGE_FOR_YOU_SIR
 END
 
 EXTEND_BOTTOM BDCORWIN 56
-	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",2)~ THEN GOTO MESSAGE_FOR_YOU_SIR
+	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",2)~ THEN DO ~SetGlobal("#L_BDCORWIN_TRACKER","MYAREA",56)~ GOTO MESSAGE_FOR_YOU_SIR
 END
 
 APPEND BDCORWIN
@@ -118,28 +118,108 @@ APPEND BDCORWIN
 	
 	IF ~~ THEN BEGIN DAUSTON_MESSAGE_3
 		SAY @4035 /* ~Her uncle managed to get her out by sacrificing himself.  He is now a prisoner in Avernus...in her place.~ */
-		IF ~~ THEN REPLY @4036 /* ~How awful.  But that does explain a lot.~ */ DO ~SetGlobal("#L_SoDStat_DaustonTalk","GLOBAL",3)~ SOLVED_JOURNAL @3004 EXIT
-	END
-
-	IF ~~ THEN BEGIN MESSAGE_FOR_YOU_SIR_THEN_JOIN
-		SAY @4030 /* ~By the way, I have a message for you from Duke Eltan, <CHARNAME>.~ */
-		IF ~GlobalGT("BD_PLOT","GLOBAL",160)~ THEN REPLY @4032 /* ~Better late than never I guess.  What did he find out?~ */ GOTO DAUSTON_MESSAGE_1J
-		IF ~GlobalLT("BD_PLOT","GLOBAL",160)~ THEN REPLY @4031 /* ~Excellent!  What did he find out?~ */ GOTO DAUSTON_MESSAGE_2J
+		IF ~Global("#L_BDCORWIN_TRACKER","MYAREA",17)~ THEN REPLY @4036 /* ~How awful.  But that does explain a lot.~ */ DO ~SetGlobal("#L_SoDStat_DaustonTalk","GLOBAL",3)~ SOLVED_JOURNAL @3004 + DAUSTON_MESSAGE_4_17
+		IF ~Global("#L_BDCORWIN_TRACKER","MYAREA",20)~ THEN REPLY @4036 /* ~How awful.  But that does explain a lot.~ */ DO ~SetGlobal("#L_SoDStat_DaustonTalk","GLOBAL",3)~ SOLVED_JOURNAL @3004 + DAUSTON_MESSAGE_4_20
+		IF ~Global("#L_BDCORWIN_TRACKER","MYAREA",27)~ THEN REPLY @4036 /* ~How awful.  But that does explain a lot.~ */ DO ~SetGlobal("#L_SoDStat_DaustonTalk","GLOBAL",3)~ SOLVED_JOURNAL @3004 + DAUSTON_MESSAGE_4_27
+		IF ~Global("#L_BDCORWIN_TRACKER","MYAREA",28)~ THEN REPLY @4036 /* ~How awful.  But that does explain a lot.~ */ DO ~SetGlobal("#L_SoDStat_DaustonTalk","GLOBAL",3)~ SOLVED_JOURNAL @3004 + DAUSTON_MESSAGE_4_28
+		IF ~Global("#L_BDCORWIN_TRACKER","MYAREA",30)~ THEN REPLY @4036 /* ~How awful.  But that does explain a lot.~ */ DO ~SetGlobal("#L_SoDStat_DaustonTalk","GLOBAL",3)~ SOLVED_JOURNAL @3004 + DAUSTON_MESSAGE_4_30
+		IF ~Global("#L_BDCORWIN_TRACKER","MYAREA",31)~ THEN REPLY @4036 /* ~How awful.  But that does explain a lot.~ */ DO ~SetGlobal("#L_SoDStat_DaustonTalk","GLOBAL",3)~ SOLVED_JOURNAL @3004 + DAUSTON_MESSAGE_4_31
+		IF ~Global("#L_BDCORWIN_TRACKER","MYAREA",32)~ THEN REPLY @4036 /* ~How awful.  But that does explain a lot.~ */ DO ~SetGlobal("#L_SoDStat_DaustonTalk","GLOBAL",3)~ SOLVED_JOURNAL @3004 + DAUSTON_MESSAGE_4_32
+		IF ~Global("#L_BDCORWIN_TRACKER","MYAREA",33)~ THEN REPLY @4036 /* ~How awful.  But that does explain a lot.~ */ DO ~SetGlobal("#L_SoDStat_DaustonTalk","GLOBAL",3)~ SOLVED_JOURNAL @3004 + DAUSTON_MESSAGE_4_33
+		IF ~Global("#L_BDCORWIN_TRACKER","MYAREA",34)~ THEN REPLY @4036 /* ~How awful.  But that does explain a lot.~ */ DO ~SetGlobal("#L_SoDStat_DaustonTalk","GLOBAL",3)~ SOLVED_JOURNAL @3004 + DAUSTON_MESSAGE_4_34
+		IF ~Global("#L_BDCORWIN_TRACKER","MYAREA",35)~ THEN REPLY @4036 /* ~How awful.  But that does explain a lot.~ */ DO ~SetGlobal("#L_SoDStat_DaustonTalk","GLOBAL",3)~ SOLVED_JOURNAL @3004 + DAUSTON_MESSAGE_4_35
+		IF ~Global("#L_BDCORWIN_TRACKER","MYAREA",37)~ THEN REPLY @4036 /* ~How awful.  But that does explain a lot.~ */ DO ~SetGlobal("#L_SoDStat_DaustonTalk","GLOBAL",3)~ SOLVED_JOURNAL @3004 + DAUSTON_MESSAGE_4_37
+		IF ~Global("#L_BDCORWIN_TRACKER","MYAREA",41)~ THEN REPLY @4036 /* ~How awful.  But that does explain a lot.~ */ DO ~SetGlobal("#L_SoDStat_DaustonTalk","GLOBAL",3)~ SOLVED_JOURNAL @3004 + DAUSTON_MESSAGE_4_41
+		IF ~Global("#L_BDCORWIN_TRACKER","MYAREA",42)~ THEN REPLY @4036 /* ~How awful.  But that does explain a lot.~ */ DO ~SetGlobal("#L_SoDStat_DaustonTalk","GLOBAL",3)~ SOLVED_JOURNAL @3004 + DAUSTON_MESSAGE_4_42
+		IF ~Global("#L_BDCORWIN_TRACKER","MYAREA",46)~ THEN REPLY @4036 /* ~How awful.  But that does explain a lot.~ */ DO ~SetGlobal("#L_SoDStat_DaustonTalk","GLOBAL",3)~ SOLVED_JOURNAL @3004 + DAUSTON_MESSAGE_4_46
+		IF ~Global("#L_BDCORWIN_TRACKER","MYAREA",54)~ THEN REPLY @4036 /* ~How awful.  But that does explain a lot.~ */ DO ~SetGlobal("#L_SoDStat_DaustonTalk","GLOBAL",3)~ SOLVED_JOURNAL @3004 + DAUSTON_MESSAGE_4_54
+		IF ~Global("#L_BDCORWIN_TRACKER","MYAREA",55)~ THEN REPLY @4036 /* ~How awful.  But that does explain a lot.~ */ DO ~SetGlobal("#L_SoDStat_DaustonTalk","GLOBAL",3)~ SOLVED_JOURNAL @3004 + DAUSTON_MESSAGE_4_55
+		IF ~Global("#L_BDCORWIN_TRACKER","MYAREA",56)~ THEN REPLY @4036 /* ~How awful.  But that does explain a lot.~ */ DO ~SetGlobal("#L_SoDStat_DaustonTalk","GLOBAL",3)~ SOLVED_JOURNAL @3004 + DAUSTON_MESSAGE_4_56
 	END
 	
-	IF ~~ THEN BEGIN DAUSTON_MESSAGE_1J
-		SAY @4033 /* ~Had you kept in contact with the camp, you'd have received it much sooner.  We've had it for a while now.~ */
-		IF ~~ THEN GOTO DAUSTON_MESSAGE_2J
+	IF ~~ THEN BEGIN DAUSTON_MESSAGE_4_17
+		SAY #%eet_2%42104 /* ~All right then.~ */
+		COPY_TRANS BDCORWIN 17
 	END
 	
-	IF ~~ THEN BEGIN DAUSTON_MESSAGE_2J
-		SAY @4034 /* ~He found out that Caelar, through some fault of her own, wound up a prisoner in Avernus.~ */
-		IF ~~ THEN GOTO DAUSTON_MESSAGE_3J
+	IF ~~ THEN BEGIN DAUSTON_MESSAGE_4_20
+		SAY #%eet_2%42104 /* ~All right then.~ */
+		COPY_TRANS BDCORWIN 20
 	END
 	
-	IF ~~ THEN BEGIN DAUSTON_MESSAGE_3J
-		SAY @4035 /* ~Her uncle managed to get her out by sacrificing himself.  He is now a prisoner in Avernus...in her place.~ */
-		IF ~~ THEN REPLY @4036 /* ~How awful.  But that does explain a lot.~ */ DO ~SetGlobal("#L_SoDStat_DaustonTalk","GLOBAL",3) JoinParty()~ SOLVED_JOURNAL @3004 EXIT
+	IF ~~ THEN BEGIN DAUSTON_MESSAGE_4_27
+		SAY #%eet_2%42104 /* ~All right then.~ */
+		COPY_TRANS BDCORWIN 27
+	END
+	
+	IF ~~ THEN BEGIN DAUSTON_MESSAGE_4_28
+		SAY #%eet_2%42104 /* ~All right then.~ */
+		COPY_TRANS BDCORWIN 28
+	END
+	
+	IF ~~ THEN BEGIN DAUSTON_MESSAGE_4_30
+		SAY #%eet_2%42104 /* ~All right then.~ */
+		COPY_TRANS BDCORWIN 30
+	END
+	
+	IF ~~ THEN BEGIN DAUSTON_MESSAGE_4_31
+		SAY #%eet_2%42104 /* ~All right then.~ */
+		COPY_TRANS BDCORWIN 31
+	END
+	
+	IF ~~ THEN BEGIN DAUSTON_MESSAGE_4_32
+		SAY #%eet_2%42104 /* ~All right then.~ */
+		COPY_TRANS BDCORWIN 32
+	END
+	
+	IF ~~ THEN BEGIN DAUSTON_MESSAGE_4_33
+		SAY #%eet_2%42104 /* ~All right then.~ */
+		COPY_TRANS BDCORWIN 33
+	END
+	
+	IF ~~ THEN BEGIN DAUSTON_MESSAGE_4_34
+		SAY #%eet_2%42104 /* ~All right then.~ */
+		COPY_TRANS BDCORWIN 34
+	END
+	
+	IF ~~ THEN BEGIN DAUSTON_MESSAGE_4_35
+		SAY #%eet_2%42104 /* ~All right then.~ */
+		COPY_TRANS BDCORWIN 35
+	END
+	
+	IF ~~ THEN BEGIN DAUSTON_MESSAGE_4_37
+		SAY #%eet_2%42104 /* ~All right then.~ */
+		COPY_TRANS BDCORWIN 37
+	END
+	
+	IF ~~ THEN BEGIN DAUSTON_MESSAGE_4_41
+		SAY #%eet_2%42104 /* ~All right then.~ */
+		COPY_TRANS BDCORWIN 41
+	END
+	
+	IF ~~ THEN BEGIN DAUSTON_MESSAGE_4_42
+		SAY #%eet_2%42104 /* ~All right then.~ */
+		COPY_TRANS BDCORWIN 42
+	END
+	
+	IF ~~ THEN BEGIN DAUSTON_MESSAGE_4_46
+		SAY #%eet_2%42104 /* ~All right then.~ */
+		COPY_TRANS BDCORWIN 46
+	END
+	
+	IF ~~ THEN BEGIN DAUSTON_MESSAGE_4_54
+		SAY #%eet_2%42104 /* ~All right then.~ */
+		COPY_TRANS BDCORWIN 54
+	END
+	
+	IF ~~ THEN BEGIN DAUSTON_MESSAGE_4_55
+		SAY #%eet_2%42104 /* ~All right then.~ */
+		COPY_TRANS BDCORWIN 55
+	END
+	
+	IF ~~ THEN BEGIN DAUSTON_MESSAGE_4_56
+		SAY #%eet_2%42104 /* ~All right then.~ */
+		COPY_TRANS BDCORWIN 56
 	END
 END
 
@@ -158,22 +238,30 @@ END
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Track if PC learned that Hephernaan is Caelar's advisor (1=knows name, 2=knows both name and face) //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*
 ALTER_TRANS BDEDWIN
 	BEGIN 48 END
 	BEGIN 0 END
 	BEGIN
 		"ACTION" ~SetGlobal("#L_SodStat_HephAdvisor","GLOBAL",1)~
 	END
+*/
+ADD_TRANS_ACTION BDEDWIN BEGIN 48 END BEGIN END ~SetGlobal("#L_SodStat_HephAdvisor","GLOBAL",1)~
 
+/*
 ALTER_TRANS BDEDWINJ
 	BEGIN 5 6 END
 	BEGIN 0 END
 	BEGIN
 		"ACTION" ~SetGlobal("#L_SodStat_HephAdvisor","GLOBAL",1)~
 	END
+*/
+ADD_TRANS_ACTION BDEDWINJ BEGIN 5 6 END BEGIN END ~SetGlobal("#L_SodStat_HephAdvisor","GLOBAL",1)~
+
 	
 APPEND BDEDWINJ
-	IF ~Global("#L_SoDStat_HephUmbral","LOCALS",1)~	THEN BEGIN I_KNEW_IT
+	IF WEIGHT #-1
+	~Global("#L_SoDStat_HephUmbral","LOCALS",1)~	THEN BEGIN I_KNEW_IT
 		SAY @2060 /* ~I knew something was off with that hedge wizard! (I always know.)~ */
 		++ @2061 /* ~Which hedge wizard, Edwin?~ */ GOTO KNEW_WHO
 		++ @2062 /* ~You know him, Edwin?~ */ GOTO YOU_KNOW_HIM
@@ -235,7 +323,7 @@ BEGIN ~#LS0Temp~
 ////////////////////////////////////////////////////
 // Dialogue with Caelar at the Coast Way Crossing //
 ////////////////////////////////////////////////////
-EXTEND_TOP BDCAELAR 10
+EXTEND_BOTTOM BDCAELAR 10
 	IF ~Global("#L_SoDStat_TreatiseFound","GLOBAL",2) Global("#L_SoDStat_DaustonTalk","GLOBAL",3)~ THEN REPLY @2030 DO ~SetGlobal("bd_plot","global",170) ChangeAIScript("bdcutsce",OVERRIDE)~ GOTO 23
 	IF ~Global("#L_SoDStat_TreatiseFound","GLOBAL",2) !Global("#L_SoDStat_DaustonTalk","GLOBAL",3)~ THEN REPLY @2035 DO ~SetGlobal("bd_plot","global",170) ChangeAIScript("bdcutsce",OVERRIDE)~ GOTO 11
 END
@@ -244,8 +332,8 @@ ALTER_TRANS BDCAELAR
 	BEGIN 12 END
 	BEGIN 0 1 END
 	BEGIN "TRIGGER" ~Global("#L_SoDStat_WeakPoison","GLOBAL",0)~ END
-EXTEND_TOP BDCAELAR 12
-	IF ~Global("#L_SoDStat_WeakPoison","GLOBAL",1)~ THEN REPLY @2040 /* ~You were what brought me here—...~ */ DO ~IncrementGlobal("bd_mdd420_good","global",3)~ GOTO 14
+EXTEND_BOTTOM BDCAELAR 12
+	IF ~Global("#L_SoDStat_WeakPoison","GLOBAL",1)~ THEN REPLY @2040 /* ~You were what brought me here-...~ */ DO ~IncrementGlobal("bd_mdd420_good","global",3)~ GOTO 14
 	IF ~Global("#L_SoDStat_WeakPoison","GLOBAL",1)~ THEN REPLY @2041 /* ~Destiny, and the poison dripping ....*/ GOTO 14
 END
 
@@ -253,7 +341,7 @@ ALTER_TRANS BDCAELAR
 	BEGIN 13 END
 	BEGIN 1 END
 	BEGIN "TRIGGER" ~Global("#L_SoDStat_WeakPoison","GLOBAL",0)~ END
-EXTEND_TOP BDCAELAR 13 #1
+EXTEND_BOTTOM BDCAELAR 13
 	IF ~Global("#L_SoDStat_WeakPoison","GLOBAL",1)~ THEN REPLY @2042 /* ~In fairness, you did attack me first.~ */ GOTO 14
 END
 
@@ -265,20 +353,20 @@ ALTER_TRANS BDCAELAR
 	BEGIN 14 END
 	BEGIN 1 END
 	BEGIN "TRIGGER" ~!CheckStatGT(Player1,14,INT) !Global("#L_SoDStat_WeakPoison","GLOBAL",1)~ END
-EXTEND_TOP BDCAELAR 14
+EXTEND_BOTTOM BDCAELAR 14
 	IF ~Global("#L_SoDStat_WeakPoison","GLOBAL",1)~ THEN REPLY @2036 /*	~How is the fact you tried to kidnap me instead of kill me make you any less an enemy?~ */ GOTO 15
 	IF ~Global("#L_SoDStat_WeakPoison","GLOBAL",1) Global("#L_Snark","GLOBAL",1)~ THEN REPLY @2037 /* ~Since your goal was to capture and not kill me we should the be best of friends? Seriously?~ */ GOTO 15
 END
 
-
+/* I think this question is still valid even if the PC assumes to know
 ALTER_TRANS BDCAELAR
 	BEGIN 16 21 END
 	BEGIN 1 END
 	BEGIN "TRIGGER" ~!Global("#L_SoDStat_TreatiseFound","GLOBAL",2)~ END
+*/
 
-
-EXTEND_TOP BDCAELAR 26
-	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",3)~ THEN REPLY @2031 /* ~Still you attempt to hold the moral high ground!  Do you deceive even yourself? Your motives are not even remotely altruistic.  To risk thousands more being unjustly imprisoned for the sake of easing your own guilt is the height of selfishness and arrogance.~ */ DO ~IncrementGlobal("bd_mdd420_good","global",5)~ GOTO 33
+EXTEND_BOTTOM BDCAELAR 26
+	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",3)~ THEN REPLY @2031 DO ~IncrementGlobal("bd_mdd420_good","global",5)~ GOTO 33
 END
 
 EXTEND_BOTTOM BDCAELAR 33
@@ -287,7 +375,7 @@ END
 
 APPEND BDCAELAR
 	IF ~~ THEN BEGIN ONLY_I_CAN_CHALLENGE_FIENDS
-		SAY #256585 /* ~Only I can challenge the fiends of the Nine Hells. I must carry my mission out to its end.~ [BD56585] */
+		SAY #%eet_2%56585 /* ~Only I can challenge the fiends of the Nine Hells. I must carry my mission out to its end.~ [BD56585] */
 		IF ~~ THEN REPLY @2032 /* ~If you plan on fighting these fiends, then why is one of their servants standing right behind you?~ */ EXTERN ~BDHEPHER~ HEPH_COUGH 
 	END
 	

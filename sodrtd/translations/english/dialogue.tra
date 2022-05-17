@@ -46,7 +46,7 @@
 @43   = ~[PC Reply]I am but one <PRO_RACE>, Corporal, but I'm flattered you think I could have stopped it from happening. Let's focus on realistic scenarios: I have knowledge about the crusade's plans we need to talk about.~
 @44   = ~[PC Reply]The bridge is destroyed, but I have knowledge about the crusade's plans we need to talk about urgently.~
 @45   = ~[Corporal Bence Duncan]Let us focus on reaching our allies inside Bridgefort.~
-@46   = ~[Corporal Bence Duncan]Lead the way then.~
+@46   = ~[Corporal Bence Duncan]Alright then.~
 @47   = ~[Corporal Bence Duncan]You have intel about the crusade? Let us know immediately.~ 
 @48   = ~[Corporal Bence Duncan]This is important news. I will inform the Dukes and the officers at the big war camp.~
 @49   = ~[Corporal Bence Duncan]Let us know if you get more information with regard to this.~
@@ -138,7 +138,7 @@
 @259  = ~[Sir Deggernaut (male)]We are also aware of your reporting of a hooded man seeking you out in what should have been a secured place.~
 @260  = ~[Sir Deggernaut (male)]We are also aware of your reportings about a hooded man seeking you out more than once.~
 @261  = ~[Sir Deggernaut (male)]We noticed that the hooded man you spoke of is taking an interest in your Bhaal heritage.~
-@262  = ~[Sir Deggernaut (male)]This is the current status of our knowledge with regard to Caelar's crusade. Let us know immediately if you'll gather more detailed information.~
+@262  = ~[Sir Deggernaut (male)]Let us know immediately if you'll gather more detailed information.~
 @263  = ~[Sir Deggernaut (male)]Follow me. This is something the officers will want to discuss immediately.~
 @264  = ~[Sir Deggernaut (male)]You did well gathering this intel. I will inform the officers as well as the Dukes in Baldur's Gate.~
 @265  = ~[Sir Deggernaut (male)]I see.~
@@ -148,12 +148,27 @@
 @269  = ~[Sir Deggernaut (male)]I see. I will inform the Dukes and coalition officers about this.~
 @270  = ~[Sir Deggernaut (male)]Ah, <CHARNAME>. When you have more information, I will listen and pass it on right away, but the officers are waiting for you at the command tent, so please do not delay going to them any longer than necessary.~
 @271  = ~[Sir Deggernaut (male)]See you later then, and take care of yourself.~
-@272  = ~[Sir Deggernaut (male)]With pleasure. I'll list everything, also the things you already know.~
+@272  = ~[Sir Deggernaut (male)]With pleasure. Since it's the first time I'll list everything, regardless of whether we already talked about it.~
 @273  = ~[Sir Deggernaut (male)]We all know Caelar's crusade is rampaging through the lands, plundering and murdering. We do not know what exactly it is they are seeking at Dragonspear Castle, though.~
 @274  = ~[Sir Deggernaut (male)]We know Caelar's crusade is planning on freeing souls from Avernus trapped there since the Dragonspear Wars, but we do not know the exact means by which she is trying to achieve it.~
 @275  = ~[Sir Deggernaut (male)]We know Caelar's crusade is planning on freeing souls from Avernus trapped there since the Dragonspear Wars by marching into hell itself, but we do not know yet how exactly she will achieve this.~
 @276  = ~[Sir Deggernaut (male)]We know Caelar's crusade is planning on freeing souls from Avernus trapped there since the Dragonspear Wars by opening a portal at Dragonspear Castle and marching into hell itself.~
 @277  = ~[Sir Deggernaut (male)]We know that Caelar's most trusted advisor is a priest called Hephernaan.~
+
+@278  = ~[PC Reply]I have reasons to believe that Caelar is planning on opening a portal to Avernus to march her army into it.~
+@279  = ~[PC Reply]Please tell me everything the officers already know about Caelar and her plans.~
+@280  = ~[PC Reply]Please tell me what the officers know - but only things you didn't tell me yet.~
+@281  = ~[PC Reply]What have you already told me what the officers know about Caelar's plans? Please repeat.~
+@282  = ~[Sir Deggernaut (male)]Let me check...~
+@283  = ~[Sir Deggernaut (male)]This was a summary about the information we already shared. Let me know if you want to talk about new knowledge.~
+@284  = ~[Sir Deggernaut (male)]I told you all that is known to us.~
+@285  = ~[Captain Corwin]What happened back there?~
+@286  = ~[Captain Corwin]We will discuss the rest later.~
+@287  = ~[Captain Corwin]Did Argent say anything else?~
+@288  = ~[Corporal Bence Duncan]This doesn't change what you let happen at the bridge!~
+@289  = ~[Corporal Bence Duncan]Very well. What happened at the bridge?~
+@290  = ~[Corporal Bence Duncan]So, what now?~
+@291  = ~[Corporal Bence Duncan]Do you have more you can tell us about Caelar's plans?~
 
 /* add_consistency_replyoptions.d */
 @500  = ~[PC Reply]Yes, I think I know what happened there.~

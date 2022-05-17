@@ -81,13 +81,13 @@ THEN
 		SetGlobal("#L_SoDStat_TreatiseFound","GLOBAL",2)
 		StartCutSceneMode()
 		DisplayStringHead(Player1,@2005) // ~What is this?  This book I found says there's a portal leading to Avernus under Dragonspear Castle.~
-		Wait(2)
+		Wait(3)
 		DisplayStringHead(Player1,@2002) // ~Not only that, but that it can be opened using blood that contains the essense of a god.~
-		Wait(2)
+		Wait(3)
 		DisplayStringHead(Player1,@2006) // ~Ugh, so that's what she's up to.  She wants to open that portal.  She must mad!~
-		Wait(2)
+		Wait(3)
 		DisplayStringHead(Player1,@2007) // ~If Caelar was a child of Bhaal as rumors suggest, she'd have opened the portal already.  It appears the rumors are false.~
-		Wait(2)
+		Wait(3)
 		AddJournalEntry(@3000,INFO)
 		EndCutSceneMode()
 END
@@ -101,13 +101,13 @@ THEN
 		SetGlobal("#L_SoDStat_TreatiseFound","GLOBAL",2)
 		StartCutSceneMode()
 		DisplayStringHead(Player1,@2005) // ~What is this?  This book I found says there's a portal leading to Avernus under Dragonspear Castle.~
-		Wait(2)
+		Wait(3)
 		DisplayStringHead(Player1,@2002) // ~Not only that, but that it can be opened using blood that contains the essense of a god.~
-		Wait(2)
+		Wait(3)
 		DisplayStringHead(Player1,@2006) // ~Ugh, so that's what she's up to.  She wants to open that portal.  She must mad!~
-		Wait(2)
+		Wait(3)
 		DisplayStringHead(Player1,@2007) // ~If Caelar was a child of Bhaal as rumors suggest, she'd have opened the portal already.  It appears the rumors are false.~
-		Wait(2)
+		Wait(3)
 		AddJournalEntry(@3005,INFO)
 		EndCutSceneMode()
 END

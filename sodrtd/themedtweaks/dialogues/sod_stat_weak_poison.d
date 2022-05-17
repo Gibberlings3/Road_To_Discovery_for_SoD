@@ -3,6 +3,21 @@
 // with regard to the poison used by Caelar's elites //
 ///////////////////////////////////////////////////////
 
+
+/* this needs to be compiled first so the COPY_TRANS grabs the yet unchanged transactions from state 14 */
+APPEND BDLIIA
+	IF ~~ THEN LIIA_WEAK_POISON
+		SAY @101 /* ~Hmm, you may be right.~ */
+		COPY_TRANS BDLIIA 14
+	END
+
+	IF ~~ THEN LIIA_YES_WEAK_POISON
+		SAY @103 /* ~Yes, the poison they used was far too weak to accomplish that.~ */
+		+ ~Global("#L_PCMetIreniInRoom","GLOBAL",1)~ + @104 /* ~Their purpose was to capture me.  I have no idea why.~ */ EXTERN ~BDBELT~ BELT_WEAK_POISON1
+		+ ~!Global("#L_PCMetIreniInRoom","GLOBAL",1)~ + @104 /* ~Their purpose was to capture me.  I have no idea why.~ */ EXTERN ~BDBELT~ BELT_WEAK_POISON2
+	END
+END
+
 // Have the PC realize the poison was too weak to act as a means of assassination
 ALTER_TRANS BDLIIA
 	BEGIN 14 END 
@@ -21,30 +36,23 @@ ALTER_TRANS BDLIIA
 		"TRIGGER" ~CheckStatLT(Player1,16,WIS) CheckStatLT(Player1,16,INT)~ 
 	END
 
-APPEND BDLIIA
-	IF ~~ THEN LIIA_WEAK_POISON
-		SAY @101 /* ~Hmm, you may be right.~ */
-		IF ~~ THEN GOTO 15
-	END
-
-	IF ~~ THEN LIIA_YES_WEAK_POISON
-		SAY @103 /* ~Yes, the poison they used was far too weak to accomplish that.~ */
-		++ @104 /* ~Their purpose was to capture me.  I have no idea why.~ */ EXTERN ~BDBELT~ BELT_WEAK_POISON
-	END
-END
-
 // Final palace conversation
-EXTEND_TOP BDENTAR 41 
+EXTEND_BOTTOM BDENTAR 41 
 	IF ~!Global("#L_SoDStat_WeakPoison","GLOBAL",0)~ THEN REPLY @102 /* ~Before I leave, I need to point out that Caelar's minions weren't here to kill me.~ */ EXTERN ~BDLIIA~ LIIA_YES_WEAK_POISON
-	IF ~Global("#L_SoDStat_WeakPoison","GLOBAL",0) Global("#L_Snark","GLOBAL",0)~ THEN REPLY @107 /* ~Before I leave, I have some disturbing news.  I received a visitor here in the palace. It seems a mysterious hooded man is stalking me.~ */ EXTERN ~BDBELT~ BELT_SORRY
-	IF ~Global("#L_SoDStat_WeakPoison","GLOBAL",0) !Global("#L_Snark","GLOBAL",0)~ THEN REPLY @107 /* ~Before I leave, I have some disturbing news.  I received a visitor here in the palace. It seems a mysterious hooded man is stalking me.~ */ EXTERN ~BDBELT~ BELT_SAME_HOODED_MAN
+	IF ~Global("#L_PCMetIreniInRoom","GLOBAL",1) Global("#L_SoDStat_WeakPoison","GLOBAL",0) Global("#L_Snark","GLOBAL",0)~ THEN REPLY @107 /* ~Before I leave, I have some disturbing news.  I received a visitor here in the palace. It seems a mysterious hooded man is stalking me.~ */ EXTERN ~BDBELT~ BELT_SORRY
+	IF ~Global("#L_PCMetIreniInRoom","GLOBAL",1) Global("#L_SoDStat_WeakPoison","GLOBAL",0) !Global("#L_Snark","GLOBAL",0)~ THEN REPLY @107 /* ~Before I leave, I have some disturbing news.  I received a visitor here in the palace. It seems a mysterious hooded man is stalking me.~ */ EXTERN ~BDBELT~ BELT_SAME_HOODED_MAN
 END
 
 APPEND BDBELT
-	IF ~~ THEN BELT_WEAK_POISON
+	IF ~~ THEN BELT_WEAK_POISON1
 		SAY @105 /* ~That is disturbing news.~ */
 		IF ~Global("#L_Snark","GLOBAL",0)~ THEN REPLY @106 /* ~Even more disturbing was the visitor I had.  It seems a mysterious hooded man is stalking me.~ */ + BELT_SORRY
 		IF ~!Global("#L_Snark","GLOBAL",0)~ THEN REPLY @106 /* ~Even more disturbing was the visitor I had.  It seems a mysterious hooded man is stalking me.~ */ + BELT_SAME_HOODED_MAN
+	END
+
+	IF ~~ THEN BELT_WEAK_POISON2
+		SAY @105 /* ~That is disturbing news.~ */
+		IF ~~ EXTERN ~BDENTAR~ 42
 	END
 
 	IF ~~ THEN BELT_SAME_HOODED_MAN
@@ -64,7 +72,7 @@ ALTER_TRANS BDELTAN
 	BEGIN
 		"TRIGGER" ~Global("#L_SoDStat_WeakPoison","GLOBAL",0)~
 	END
-EXTEND_TOP BDELTAN 10 #1
+EXTEND_BOTTOM BDELTAN 10
 	IF ~Global("#L_SoDStat_WeakPoison","GLOBAL",1)~ THEN REPLY @111 /* ~I'm still not accustomed to people attacking me for no apparent reason, but I could be worse.~ */ GOTO 11
 END
 
@@ -74,7 +82,7 @@ ALTER_TRANS BDELTAN
 	BEGIN
 		"TRIGGER" ~Global("#L_SoDStat_WeakPoison","GLOBAL",0)~
 	END
-EXTEND_TOP BDELTAN 13 #2
+EXTEND_BOTTOM BDELTAN 13
 	IF ~Global("#L_SoDStat_WeakPoison","GLOBAL",1)~ THEN REPLY @112 /* ~Not for long. Caelar tried to poison me. She will answer for it.~ */ GOTO 14
 END
 
@@ -84,7 +92,7 @@ ALTER_TRANS BDSCHAEL
 	BEGIN
 	  "TRIGGER" ~Global("#L_SoDStat_WeakPoison","GLOBAL",0)~
 	END
-EXTEND_TOP BDSCHAEL 162 #4
+EXTEND_BOTTOM BDSCHAEL 162
 	IF ~Global("#L_SoDStat_WeakPoison","GLOBAL",1)~ THEN REPLY @113 /* ~Someone tried to poison me tonight and I'm in a bar. Hells no, I'm not finished.~ */ GOTO 166
 END
 
@@ -94,7 +102,7 @@ ALTER_TRANS BDCORWIJ
 	BEGIN
 	  "TRIGGER" ~Global("#L_SoDStat_WeakPoison","GLOBAL",0)~
 	END
-EXTEND_TOP BDCORWIJ 251 #2
+EXTEND_BOTTOM BDCORWIJ 251
 	IF ~Global("#L_SoDStat_WeakPoison","GLOBAL",1)~ THEN REPLY @114 /* ~Believe this, if nothing else: Caelar Argent tried to poison me and I will pay her back in kind. If you would see the Shining Lady fall, then we are allies, regardless of our history or bloodlines.~ */ GOTO 252
 END
 
@@ -104,7 +112,7 @@ ALTER_TRANS BDCORWIN
 	BEGIN
 	  "TRIGGER" ~Global("#L_SoDStat_WeakPoison","GLOBAL",0)~
 	END
-EXTEND_TOP BDCORWIN 11 #1
+EXTEND_BOTTOM BDCORWIN 11
 	IF ~Global("#L_SoDStat_WeakPoison","GLOBAL",1)~ THEN REPLY @115 /* ~Caelar attacked me and nearly killed my friend Imoen. That cannot stand.~ */GOTO 12
 END
 
@@ -114,7 +122,7 @@ ALTER_TRANS BDDYNAHE
 	BEGIN
 	  "TRIGGER" ~Global("#L_SoDStat_WeakPoison","GLOBAL",0)~
 	END
-EXTEND_TOP BDDYNAHE 23
+EXTEND_BOTTOM BDDYNAHE 23
 	IF ~Global("#L_SoDStat_WeakPoison","GLOBAL",1)~ THEN REPLY @116 /* ~She tried to poison me. She very nearly killed someone I care deeply for. I can't let that stand.~ */ GOTO 24
 	IF ~Global("#L_SoDStat_WeakPoison","GLOBAL",1)~ THEN REPLY @117 /* ~I've little choice in the matter. She sent assassins to try and poison me this morning.~ */ GOTO 24
 END
@@ -125,7 +133,7 @@ ALTER_TRANS BDDYNAHE
 	BEGIN
 	  "TRIGGER" ~Global("#L_SoDStat_WeakPoison","GLOBAL",0)~
 	END
-EXTEND_TOP BDDYNAHE 30 #1
+EXTEND_BOTTOM BDDYNAHE 30
 	IF ~Global("#L_SoDStat_WeakPoison","GLOBAL",1)~ THEN REPLY @118 /* ~Caelar the Shining Lady tried to poison me. I can't let that stand. ~ */ GOTO 31
 END
 
@@ -135,7 +143,7 @@ ALTER_TRANS BDDYNAHE
 	BEGIN
 	  "TRIGGER" ~Global("#L_SoDStat_WeakPoison","GLOBAL",0)~
 	END
-EXTEND_TOP BDDYNAHE 33
+EXTEND_BOTTOM BDDYNAHE 33
 	IF ~Global("#L_SoDStat_WeakPoison","GLOBAL",1)~ THEN REPLY @119 /* ~As would I. Unfortunately, all I really know of her is that she's driven thousands from their homes and she attacked me and Imoen.~ */ GOTO 34
 END
 EXTEND_BOTTOM BDDYNAHE 33
@@ -148,7 +156,7 @@ ALTER_TRANS BDGARRIC
 	BEGIN
 	  "TRIGGER" ~Global("#L_SoDStat_WeakPoison","GLOBAL",0)~
 	END
-EXTEND_TOP BDGARRIC 38
+EXTEND_BOTTOM BDGARRIC 38
 	IF ~Global("#L_SoDStat_WeakPoison","GLOBAL",1)~ THEN REPLY @121 /* ~We've yet to meet, but I know Caelar all too well. Agents in her service attacked me.~ */ GOTO GARRICK_ATTACK
 	IF ~Global("#L_SoDStat_WeakPoison","GLOBAL",1)~ THEN REPLY @122 /* ~I know of it, yes, but not enough. Assassins bearing Caelar's mark attacked me in the ducal palace, no less.~ */ GOTO GARRICK_ATTACK
 END
@@ -168,8 +176,8 @@ ALTER_TRANS BDRASAAD
 	BEGIN
 	  "TRIGGER" ~Global("#L_SoDStat_WeakPoison","GLOBAL",0)~
 	END
-EXTEND_TOP BDRASAAD 22
-	IF ~Global("#L_SoDStat_WeakPoison","GLOBAL",1)~ THEN REPLY @124	/* ~Agents of Caelar Argent attacked me and Imoen—at the Ducal Palace.~ */ GOTO 23
+EXTEND_BOTTOM BDRASAAD 22
+	IF ~Global("#L_SoDStat_WeakPoison","GLOBAL",1)~ THEN REPLY @124	/* ~Agents of Caelar Argent attacked me and Imoenâ€”at the Ducal Palace.~ */ GOTO 23
 	IF ~Global("#L_SoDStat_WeakPoison","GLOBAL",1)~ THEN REPLY @125 /* ~The assassins who attacked me and Imoen a few hours ago. Though it must be said they trouble me less now than they did then.~ */ GOTO 44
 END
 
@@ -179,21 +187,19 @@ ALTER_TRANS BDRASAAD
 	BEGIN
 	  "TRIGGER" ~Global("#L_SoDStat_WeakPoison","GLOBAL",0)~
 	END
-EXTEND_TOP BDRASAAD 36 #1
+EXTEND_BOTTOM BDRASAAD 36
 	IF ~Global("#L_SoDStat_WeakPoison","GLOBAL",1)~ THEN REPLY @126 /* ~Any day you can get to breakfast without assassins trying to poison you is a good day. Or so I've heard.~ */ GOTO POISON_FOR_BREAKFAST
 END
 
 APPEND BDRASAAD
 	IF ~~ THEN BEGIN POISON_FOR_BREAKFAST
-		SAY @127 /* ~The day's first meal is important. It sets the tone for what is to come— Wait. Are you saying someone tried to poison you?~ */
-		IF ~~ THEN GOTO 38
+		SAY @127 /* ~The day's first meal is important. It sets the tone for what is to comeâ€” Wait. Are you saying someone tried to poison you?~ */
+		COPY_TRANS BDRASAAD 35
 	END
 
 	IF ~~ THEN BEGIN RASAAD_ATTACK
   		SAY @132 /* ~You say Caelar Argent attacked you? But why?~ */
-  		IF ~~ THEN REPLY #234649 /* ~I was hoping you'd help me find out.~ */ GOTO 24
-  		IF ~~ THEN REPLY #234650 /* ~I'm less concerned with her reasons than ensuring this doesn't happen again.~ */ GOTO 23
-  		IF ~~ THEN REPLY #234651 /* ~Why doesn't matter. All that matters is that she pay for her folly.~ */ GOTO 41
+		COPY_TRANS BDRASAAD 40
 	END
 END
 
@@ -226,7 +232,7 @@ ALTER_TRANS BDRASAAD
 	BEGIN
 	  "TRIGGER" ~Global("#L_SoDStat_WeakPoison","GLOBAL",0)~
 	END
-EXTEND_TOP BDRASAAD 32 #1
+EXTEND_BOTTOM BDRASAAD 32
 	IF ~Global("#L_SoDStat_WeakPoison","GLOBAL",1)~ THEN REPLY @133 /* ~Imoen was nearly killed earlier this evening. But she wasn't, so all things considered I guess I'm doing well.~ */ GOTO 37
 END
 
@@ -246,7 +252,7 @@ ALTER_TRANS BDSAFANA
 	BEGIN
 	  "TRIGGER" ~Global("#L_SoDStat_WeakPoison","GLOBAL",0)~
 	END
-EXTEND_TOP BDSAFANA 44 #1
+EXTEND_BOTTOM BDSAFANA 44
 	IF ~Global("#L_SoDStat_WeakPoison","GLOBAL",1)~ THEN REPLY @134 /* ~Earlier this night, assassins penetrated the Ducal Palace and attempted to poison me. They were sent by Caelar Argent.~ */ GOTO 46
 END
 
