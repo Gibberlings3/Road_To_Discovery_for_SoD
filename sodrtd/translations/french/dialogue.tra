@@ -46,7 +46,7 @@
 @43   = ~[PC Reply]Je ne suis qu'un simple <PRO_RACE>, Caporal, mais je suis flatté que vous me pensiez capable d'empêcher que cela n'arrive. Concentrons-nous sur des plans plus réalistes : J'ai des renseignements sur la croisade, et nous devons en discuter.~ ~Je ne suis qu'une simple <PRO_RACE>, Caporal, mais je suis flattée que vous me pensiez capable d'empêcher que cela n'arrive. Concentrons-nous sur des plans plus réalistes : J'ai des renseignements sur la croisade, et nous devons en discuter.~
 @44   = ~[PC Reply]Le pont est détruit, mais j'ai des nouvelles informations sur les plans de la croisade, nous devons en discuter de toute urgence.~
 @45   = ~[Corporal Bence Duncan]Restons concentrés sur nos alliés à l'intérieur de Fort-du-Pont.~
-@46   = ~[Corporal Bence Duncan]Alors, montrez-nous le chemin.~
+@46   = ~[Corporal Bence Duncan]Comme vous voulez.~
 @47   = ~[Corporal Bence Duncan]Vous avez des informations sur la croisade ? Faites-nous en part immédiatement.~ 
 @48   = ~[Corporal Bence Duncan]Ce sont des nouvelles importantes. Je vais informer les ducs et les officiers au camp de commandement.~
 @49   = ~[Corporal Bence Duncan]Faites-nous savoir si vous obtenez plus de renseignements à ce sujet.~
@@ -161,13 +161,13 @@
 @282 = ~[Sir Deggernaut (male)]Laissez-moi voir...~
 @283 = ~[Sir Deggernaut (male)]Voilà pour les informations que nous avions déjà partagées. Dites-moi si vous souhaitez évoquer de nouvelles découvertes.~
 @284 = ~[Sir Deggernaut (male)]Je vous ai transmis tous les renseignements à notre disposition.~ 
-@285  = ~[Captain Corwin]What happened back there?~
-@286  = ~[Captain Corwin]We will discuss the rest later.~
-@287  = ~[Captain Corwin]Did Argent say anything else?~
-@288  = ~[Corporal Bence Duncan]This doesn't change what you let happen at the bridge!~
-@289  = ~[Corporal Bence Duncan]Very well. What happened at the bridge?~
-@290  = ~[Corporal Bence Duncan]So, what now?~
-@291  = ~[Corporal Bence Duncan]Do you have more you can tell us about Caelar's plans?~
+@285 = ~[Capitaine Corwin]Donnez-moi des explications sur ce qu'il s'est passé ?~
+@286 = ~[Capitaine Corwin]Nous aborderons le reste plus tard.~
+@287 = ~[Capitaine Corwin]Argent a-t-elle mentionné quoi que ce soit d'autre ?~
+@288 = ~[Caporal Bence Duncan]Cela ne change absolument rien à ce que vous avez laissé arriver sur ce pont !~
+@289 = ~[Caporal Bence Duncan]Très bien, alors que s'est-il réellement passé sur le pont ?~
+@290 = ~[Caporal Bence Duncan]Et maintenant, qu'allons-nous faire ?~
+@291 = ~[Caporal Bence Duncan]Avez-vous d'autres informations à nous fournir concernant les projets de Caelar ?~ 
 
 
 /* add_consistency_replyoptions.d */
