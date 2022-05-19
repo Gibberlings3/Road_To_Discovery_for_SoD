@@ -449,6 +449,10 @@ https://www.gibberlings3.net/forums/topic/1649-community-filename-prefix-reserva
 
 HISTORY
 
+Version 0.6 Beta
+- Cutscene in Dragonspear Basement should not loop if one of the new reply options is chosen.
+- Reply options should cycle back to correct dialogues states in all cases.
+
 Version 0.5 Beta
 - Fixed installation problems if "Add Stat-Based Observations and Quest Options" component was installed via Themed Tweaks mod.
 - Component 1 "Add Stat-Based Observations and Quest Options from Lauriel's Themed Tweaks Mod" updated to changes v0.2: Wrong variable references fixed; Reply option about Hooded Man inside the palace will only show if the Hooded Man was inide the palace; Added WEIGHT #-1 to Edwin's dialogue so it won't get blocked; cutscene changed to make texts better readable; setting of variable for generic NPC dialogues will not loop; Corrected string reference error for BG:SoD.
