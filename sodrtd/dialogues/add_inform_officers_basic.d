@@ -108,7 +108,7 @@ END
 END //APPEND
 
 EXTEND_BOTTOM bdcorwin 5
-++ @42 /* I have knowledge about the crusade's plans we need to talk about. */ DO ~SetGlobal("bd_plot","global",101)~ + update_corwin
+++ @42 /* I have knowledge about the crusade's plans we need to talk about. */ + update_corwin
 END
 
 EXTEND_BOTTOM bdcorwin 24
@@ -316,22 +316,34 @@ EXTEND_BOTTOM bddelanc 30
 END
 
 APPEND bddelanc
+IF ~~ THEN intermediate_4
+SAY @1555 /* ~[Torsin De Lancie]Now let us talk about how you can be of use.~ */
+COPY_TRANS bddelanc 4
+END
+
 IF ~~ THEN update_delancie
 SAY @2 /* Is there anything you want to add to our status of information regarding Caelar's plans? */
 %reply_options_inform_delancie%
-+ ~!Global("C#RtD_bddelanc_to_4","GLOBAL",1)~ + @1 /* I have no more information to share right now. */ + 31
++ ~Global("C#RtD_bddelanc_to_4","GLOBAL",0)~ + @1 /* I have no more information to share right now. */ + intermediate_4
 END
 
 IF ~~ THEN update_delancie_01
 SAY @3 /* Do you have anything else you want to share? */
 %reply_options_inform_delancie%
-+ ~!Global("bd_plot","global",393)
-!Global("bd_plot","global",392)
-!Global("C#RtD_bddelanc_to_4","GLOBAL",1)~ + @1 /* I have no more information to share right now. */ + 31
++ ~GlobalLT("bd_plot","global",305)
+Global("C#RtD_bddelanc_to_4","GLOBAL",0)~ + @1 /* I have no more information to share right now. */ + intermediate_4
++ ~GlobalGT("bd_plot","global",304)
+GlobalLT("bd_plot","global",350)
+AreaCheck("bd3000")~ + @1 /* I have no more information to share right now. */ + 31
 + ~OR(2)
 Global("bd_plot","global",392)
 Global("bd_plot","global",393)
 AreaCheck("bd7300")~ + @1 /* I have no more information to share right now. */ EXTERN bdnederl move_to_camp
+/*
++ ~!Global("bd_plot","global",393)
+!Global("bd_plot","global",392)
+Global("C#RtD_bddelanc_to_4","GLOBAL",2)~ + @1 /* I have no more information to share right now. */ + 31
+*/
 END
 
 IF ~~ THEN update_delancie_02
@@ -652,5 +664,6 @@ END
 */
 
 EXTEND_BOTTOM bdnederl 46
-++ @70 /* [PC reply]I have more information concerning Caelar's plans we need to discuss right now. */ DO ~SetGlobal("bd_plot","global",393)~ EXTERN bddelanc update_delancie_01
+++ @70 /* [PC reply]I have more information concerning Caelar's plans we need to discuss right now. */ //DO ~SetGlobal("bd_plot","global",393)~ 
+EXTERN bddelanc update_delancie_01
 END
