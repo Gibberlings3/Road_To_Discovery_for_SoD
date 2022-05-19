@@ -79,8 +79,8 @@ AreaCheck("bd4300")
 END
 */
 EXTEND_BOTTOM bdcaelar 50
-+ ~GlobalGT("C#RtD_CaelarPlan","GLOBAL",4)~ + @506 /* [PC Reply]You are doing this for your uncle Aun, are you not? All this death, all these crimes for one man who sacrificed himself for you? */ + ignorance
-+ ~GlobalGT("C#RtD_HephernaanBetrayal","GLOBAL",0)~ + @507 /* [PC Reply]Caelar... open your eyes and see Hephernaan for what he is - a traitor and danger to your cause! */ + ignorance_01
++ ~GlobalGT("C#RtD_CaelarPlan","GLOBAL",4)~ + @506 /* [PC Reply]You are doing this for your uncle Aun, are you not? All this death, all these crimes for one man who sacrificed himself for you? */ DO ~SetGlobal("bd_plot","global",486)~ + ignorance
++ ~GlobalGT("C#RtD_HephernaanBetrayal","GLOBAL",0)~ + @507 /* [PC Reply]Caelar... open your eyes and see Hephernaan for what he is - a traitor and danger to your cause! */ DO ~SetGlobal("bd_plot","global",486)~ + ignorance_01
 END
 
 APPEND bdcaelar

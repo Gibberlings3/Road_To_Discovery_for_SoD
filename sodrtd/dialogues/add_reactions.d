@@ -155,7 +155,7 @@ GlobalGT("C#RtD_CoalKnowsPortalBlood","GLOBAL",2)
 GlobalGT("C#RtD_CoalWantBhaalBlood","GLOBAL",2)~ THEN @1520 /* [Torsin De Lancie]With this it is imperative for Caelar's crusade to get to you - alive. And this leaves us with a glaring problem, now that you are here, <CHARNAME>. */ 
 END
 IF ~~ THEN + %update_delancie%
-/* will go here to separate state/CHAIN so I can use it for later dialgue if needed */
+/* will go here to separate state/CHAIN so I can use it for later dialogue if needed */
 IF ~GlobalGT("C#RtD_CoalKnowsPortalBlood","GLOBAL",2)~ THEN + hysterics
 
 
@@ -202,7 +202,7 @@ IF ~~ THEN bdnederl hysterics_04
 == bddelanc @1535 /* [Torsin De Lancie]You better make sure your hero doesn't get caught, Nederlok. It would be more than a desaster. It would mean hell breaking lose - literally! */
 END
 IF ~~ THEN EXTERN bdnederl hysterics_05
-IF ~Global("bd_plot","global",393)
+IF ~Global("bd_plot","global",392)
 AreaCheck("bd7300")~ THEN EXTERN bdnederl hysterics_06
 
 CHAIN
@@ -373,11 +373,6 @@ AreaCheck("bd3000")
   IF ~~ THEN REPLY #61084 /* ~Of course, Torsin de Lancie. I will leave immediately.~ */ GOTO 31
 END
 */
-
-/* make sure we cycle back to the correct dialogue state at this point */
-EXTEND_BOTTOM bddelanc 30
-+ ~Global("C#RtD_bddelanc_to_4","GLOBAL",1)~ + @1 /* ~[PC Reply]I have no more information to share right now.~ */ DO ~SetGlobal("C#RtD_bddelanc_to_4","GLOBAL",2)~ + intermediate
-END
 
 
 /* Marshal Nederlok in camp: add reply options here
