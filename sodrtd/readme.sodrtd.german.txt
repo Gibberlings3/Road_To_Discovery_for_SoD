@@ -400,6 +400,7 @@ Die Verwendung der Variablen mit dem Postfix „_SET“ stellt sicher, dass das 
 
 DANKSAGUNGEN
 
+improb@bile - italienische Übersetzung (v0.7 beta)
 jastey - Autor, Hauptverantwortliche für die Mod
 JohnBob - französische Übersetzung (v0.5 Beta)
 Lauriel - Autor von Komponente 1, Ideen, Designhilfe, Korrekturleser (v0.1 Beta)
@@ -445,6 +446,9 @@ https://www.gibberlings3.net/forums/topic/1649-community-filename-prefix-reserva
 
 
 ÄNDERUNGSHISTORIE
+
+Version 0.7 Beta
+- added Italian version by improb@bile
 
 Version 0.6 Beta
 - Cutscene in Dragonspear Basement should not loop if one of the new reply options is chosen.

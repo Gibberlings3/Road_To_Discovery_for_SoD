@@ -1,0 +1,92 @@
+//////////////////////////////////////////////////////////////////////////////////
+// Make sure the player notices the interesting bits in the Historical Treatise //
+//////////////////////////////////////////////////////////////////////////////////
+@2000 = ~Che cos'è questo? L'hai visto, <CHARNAME>?~
+@2001 = ~Questo libro che hai trovato dice che c'è un portale che conduce ad Avernus sotto il Castello Dragonspear.~
+@2002 = ~Non solo, ma che può essere aperto usando il sangue che contiene l'essenza di un dio.~
+@2003 = ~Questo è quello che Caelar ha in mente? Aprire un portale per Avernus? È impazzita?!~
+@2004 = ~Ugh, allora è questo che ha in mente. Penso che tu abbia ragione. Credo che abbia perso la testa.~
+@2005 = ~Che cos'è questo? Questo libro che ho trovato dice che c'è un portale che conduce ad Avernus sotto il Castello Dragonspear.~
+@2006 = ~Ugh, allora è questo che ha in mente. Vuole aprire quel portale. Deve essere pazza!~
+@2007 = ~Se Caelar fosse figlia di Bhaal come si dice, avrebbe già aperto il portale. Sembra che le voci siano false.~
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Have a member of the group prompt the PC to talk to Eltan about Dauston //
+/////////////////////////////////////////////////////////////////////////////
+@2010 = ~<CHARNAME>, forse dovresti parlare con il Duca Eltan di quel paladino caduto che abbiamo incontrato... Dauston.~
+@2011 = ~<CHARNAME>, forse dovresti parlare con il Duca Eltan dello sfortunato paladino caduto che abbiamo incontrato... Dauston.~
+
+//////////////////////////////////////////////////////
+// Ask Eltan to interview Dauston when he sobers up //
+//////////////////////////////////////////////////////
+@2020 = ~Benissimo, mio signore. Ma ho un favore da chiederti riguardo al paladino caduto di nome Dauston che al momento sta dormendo nelle tue celle.~
+@2021 = ~Certo. Cosa posso fare per l'Eroe di Baldur's Gate?~ ~Certo. Cosa posso fare per l'Eroina di Baldur's Gate?~
+@2022 = ~Puoi interrogarlo quando si sveglierà. Conosce qualcosa del passato di Caelar che potrebbe rivelarsi utile.~
+@2023 = ~Bene. Consideralo fatto. Invierò a Corwin un messaggero con le informazioni ottenute, alla prima occasione.~
+@2024 = ~Grazie, mio signore. Come stai affrontando tutto questo?~
+
+///////////////////////////////////////////////////////////////
+// Dialogue with Caelar after the Coast Way Bridge explosion //
+///////////////////////////////////////////////////////////////
+@2030 = ~Conosco già la tua verità. C'è un portale per Avernus all'interno del Castello Dragonspear che intendi aprire nel patetico tentativo di placare il senso di colpa per tuo zio.~
+@2031 = ~Tenti ancora di farmi la morale! Inganni persino te stessa? Le tue motivazioni non sono nemmeno lontanamente altruistiche. Rischiare di imprigionare ingiustamente altre migliaia di persone per alleviare il proprio senso di colpa è il massimo dell'egoismo e dell'arroganza.~
+@2032 = ~Se hai intenzione di combattere questi demoni, allora perché uno dei loro servitori è lì proprio dietro di te?~
+@2033 = ~(*cough*)~
+@2034 = ~Hephernaan? No. Non ascolterò le accuse infondate contro il mio più fidato consigliere!~
+@2035 = ~Conosco già la tua verità, o quantomeno ne conosco abbastanza. C'è un portale per Avernus all'interno del Castello Dragonspear e tu intendi aprirlo.~
+@2036 = ~Come può il fatto che tu abbia cercato di rapirmi invece di uccidermi renderti meno nemica?~
+@2037 = ~Dal momento che il tuo obiettivo era catturarmi e non uccidermi dovremmo essere migliori amici? Sul serio?~
+@2038 = ~Quell'agente della Fosca Alleanza è il tuo consigliere più fidato? Oh, questa faccenda migliora di minuto in minuto!~
+@2039 = ~Allora anche tu sei uno sciocca. Non sono gli Dèi ad essere dalla tua parte, ma i demoni!~
+@2040 = ~Sei stata tu a portarmi qui: il tuo attacco al palazzo di Baldur's Gate, i danni che hai provocato su tutte queste terre.~
+@2041 = ~Il destino e il veleno che colava dalle lame dei tuoi assassini nel palazzo di Baldur's Gate sono stati ciò che mi ha portato qui.~
+@2042 = ~In tutta onestà, sei stato tu ad attaccarmi per primo.~ ~In tutta onestà, sei stata tu ad attaccarmi per prima.~
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+// Dialogue with Edwin when he is in the group during the scrying on the hooded man and Hephernaan //
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+@2060 = ~Sapevo che c'era qualcosa di sbagliato in quel mago traditore! (Ho sempre ragione.)~
+@2061 = ~Che traditore, che mago, Edwin?~
+@2062 = ~Lo conosci, Edwin?~
+@2063 = ~Quello che parla con l'uomo incappucciato e cerca di farsi passare per un mago. È Hephernaan. Il più fidato consigliere di Caelar (Incredibile... ma che idiota).~
+@2064 = ~Sì, lo conosco. Quello che parla con l'uomo incappucciato e cerca di farsi passare per un mago, si chiama Hephernaan. Il più fidato consigliere di Caelar (Incredibile... ma che idiota).~
+@2065 = ~Il mistero si sta chiarendo. Grazie, Edwin. Il tuo aiuto è prezioso.~
+@2066 = ~Certo. Lo sono sempre.~
+@2067 = ~Certo che lo è. Le cose continuano a farsi più chiare di momento in momento. Grazie, Edwin. È un'informazione preziosa.~
+@2068 = ~Naturalmente. Ti aspettavi qualcos'altro da me? (Spero di no!)~
+
+/////////////////////
+// Journal Entries //
+/////////////////////
+@3000 = ~Un Trattato Storico sul Castello Dragonspear
+
+Ho trovato un libro che probabilmente spiega le intenzioni di Caelar nei miei confronti. Vuole usare il mio sangue per aprire un portale verso Avernus. L'unica conclusione logica è che ha perso la testa.~
+@3001 = ~Povero, Sfortunato Dauston
+
+Il paladino caduto ubriaco nelle prigioni del Pugno Fiammante potrebbe avere informazioni importanti su Caelar, ma non ho tempo di aspettare che sia sobrio. Forse il duca Eltan può prendersi l'incarico di indagare su di lui.~
+@3002 = ~Povero, Sfortunato Dauston
+
+Un membro del mio gruppo mi ha consigliato di riferire al Duca Eltan del paladino ubriaco nelle celle del Pugno Fiammante.~
+@3003 = ~Povero, Sfortunato Dauston
+
+Il Duca Eltan interrogherà Dauston, il paladino caduto, quando sarà sobrio. Poi invierà le informazioni a Corwin.~
+@3004 = ~Povero, Sfortunato Dauston
+
+Abbiamo appreso che il mentore di Dauston, lo zio di Caelar, ha scelto di prendere il posto di Caelar ad Avernus.~
+@3005 = ~Un Trattato Storico sul Castello Dragonspear
+
+Ho trovato un libro che probabilmente spiega i piani di Caelar. Vuole aprire un portale per Avernus. L'unica conclusione logica è che ha perso la testa.~
+
+/////////////////////////////////////////
+// Corwin relays Eltan's message to PC //
+/////////////////////////////////////////
+// THESE ARE ALSO IN SOD_COASTWAY_CROSSING.TRA
+// IF CHANGED HERE, NEED TO CHANGE THERE AS WELL
+@4030 = ~A proposito, ho un messaggio per te da parte del Duca Eltan, <CHARNAME>.~
+@4031 = ~Eccellente! Cosa ha scoperto?~
+@4032 = ~Meglio tardi che mai, credo. Cosa ha scoperto?~
+@4033 = ~Se avessi mantenuto i contatti con il campo, te l'avrei riferito molto prima. L'abbiamo ricevuto già da un po'.~
+@4034 = ~Ha scoperto che Caelar, per sua colpa, è finita prigioniera ad Avernus.~
+@4035 = ~Suo zio è riuscito a liberarla sacrificandosi. Ora è prigioniero ad Avernus... al posto suo.~
+@4036 = ~Che cosa terribile. Ma questo spiega molte cose.~
