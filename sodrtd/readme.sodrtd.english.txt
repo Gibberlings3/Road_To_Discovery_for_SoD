@@ -400,6 +400,7 @@ Using the variables with the postfix "_SET" ensures that knowledge is not lost: 
 
 CREDITS
 
+improb@bile - Italian translation (v0.7 Beta)
 jastey - author, main mod head
 JohnBob - French translation (v0.5 Beta)
 Lauriel - author of component 1, ideas, design help, proofreading English (v0.1 Beta) 
@@ -445,6 +446,10 @@ https://www.gibberlings3.net/forums/topic/1649-community-filename-prefix-reserva
 
 
 HISTORY
+
+Version 0.7 Beta
+- added Italian version by improb@bile 
+- refined variable triggers for conclusion that Caelar is no child of Bhaal.
 
 Version 0.6 Beta
 - Cutscene in Dragonspear Basement should not loop if one of the new reply options is chosen.

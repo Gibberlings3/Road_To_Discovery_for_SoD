@@ -1,0 +1,69 @@
+// PC learns it's a weak poison that was used
+@100 = ~Hanno usato un veleno debole?  Quindi non... non stavano cercando di uccidermi. Stavano cercando di catturarmi.~
+@101 = ~Hmm, forse hai ragione.~
+
+// Final conversation with the Dukes before leaving the palace for Dragonspear
+@102 = ~Prima di andarmene, devo precisare che gli scagnozzi di Caelar non erano qui per uccidermi.~
+@103 = ~Sì, il veleno che hanno usato era troppo debole per riuscirci.~
+@104 = ~Il loro scopo era catturarmi. Non ho idea del perché.~
+@105 = ~Questa è una notizia inquietante.~
+@106 = ~Ancora più inquietante è stata la visita che ho ricevuto. Sembra che un misterioso uomo incappucciato mi stia perseguitando.~
+@107 = ~Prima di andarmene, ho una notizia inquietante. Ho ricevuto una visita qui a palazzo. Sembra che un misterioso uomo incappucciato mi stia perseguitando.~
+@108 = ~Potrebbe essere lo stesso che ha commissionato il furto della spada di Sarevok?~
+@109 = ~Beh, di certo corrisponde alla descrizione. Misterioso... inquietante è più vicino alla verità.  E minaccioso.~
+@110 = ~Devo scusarmi, <CHARNAME>. Sembra che la sicurezza del nostro palazzo continui a deluderti.~
+
+
+// Conversation with Eltan
+@111 = ~Non riesco a fare l'abitudine alle persone che mi attaccano senza motivo apparente, ma potrebbe andare peggio.~
+@112 = ~Non per molto. Caelar ha cercato di avvelenarmi. Ne risponderà.~
+
+// Corwin while in town
+@113 = ~Qualcuno ha cercato di avvelenarmi e io me ne vado alla taverna. Dannazione, non è possibile, questa storia non avrà mai fine.~
+
+// Corwin while in the group
+@114 = ~Fidati di me, se vuoi. Caelar Argent ha cercato di avvelenarmi e io intendo fargliela pagare. Se desideri vedere la caduta della Dama Splendente, allora siamo alleati, a prescindere dal nostro passato o dalle nostre origini.~
+
+// Corwin while in the camps
+@115 = ~Caelar ha quasi ucciso la mia cara amica Imoen nel suo tentativo di farmi del male. Le sue azioni non resteranno impunite.~
+
+// Dynaheir while in town
+@116 = ~Ha cercato di avvelenarmi. Ha quasi ucciso una persona a cui tengo molto. Non posso lasciar perdere.~
+@117 = ~Ho poca scelta in questa faccenda. Stamattina ha mandato dei sicari a cercare di avvelenarmi.~
+@118 = ~Caelar la Dama Splendente ha cercato di avvelenarmi. Non posso lasciar perdere.~
+@119 = ~Mi piacerebbe. Purtroppo, tutto ciò che so di lei è che ha cacciato migliaia di persone dalle loro case e che ha attaccato Imoen e me.~
+@120 = ~Ha attaccato Imoen e me e pagherà per quest'errore. Questo è tutto ciò che devi sapere.~
+
+// Garrick while in town
+@121 = ~Non ci siamo ancora incontrati, ma conosco Caelar fin troppo bene. Agenti al suo servizio mi hanno attaccato.~
+@122 = ~La conosco sì, ma non abbastanza. Assassini con il marchio di Caelar mi hanno attaccato nel palazzo ducale, nientemeno.~
+@123 = ~Ha attaccato l'Eroe di Baldur's Gate? Una mossa audace, ma rischiosa. Un fallimento ti trascinerebbe sicuramente nel conflitto...~ ~Ha attaccato l'Eroina di Baldur's Gate? Una mossa audace, ma rischiosa. Un fallimento ti trascinerebbe sicuramente nel conflitto...~
+
+
+// Rasaad while in town
+@124 = ~Alcuni agenti di Caelar Argent hanno attaccato me e Imoen al Palazzo Ducale.~
+@125 = ~Alcuni assassini hanno attaccato me e Imoen poche ore fa. Anche se va detto che mi danneggiato meno di quel che avrei pensato.~
+@126 = ~Ogni giorno in cui puoi fare colazione senza che degli assassini cerchino di avvelenarti è un buon giorno. O almeno così ho sentito dire.~
+@127 = ~Il primo pasto della giornata è importante. Dà tono a ciò che verrà... Aspetta. Stai dicendo che qualcuno ha cercato di avvelenarti?~
+@128 = ~Alcuni assassini al servizio di Caelar Argent sono penetrati nel Palazzo Ducale e hanno tentato di avvelenarmi.~
+@129 = ~Come quegli sfortunati, anche la mia vita ha risentito della sua influenza maligna. Poco fa i suoi assassini hanno tentato di avvelenarmi. Ci sono quasi riusciti.~
+@130 = ~Ha mandato altri assassini per avvelenare qualcuno di loro? Perché è quello che ha fatto a me.~
+@131 = ~Queste persone sono scappate dai loro problemi. Io intendo affrontare i miei. Caelar ha cercato di avvelenarmi stamattina.~
+@132 = ~Dici che Caelar Argent ti ha attaccato? Ma perché?~
+@133 = ~Imoen è stata quasi uccisa oggi. Ma alla fine se l'è cavata, quindi tutto sommato credo che vada abbastanza bene.~
+
+// Safana while in town
+@134 = ~Durante le prime ore della notte, alcuni assassini si sono introdotti nel Palazzo Ducale e hanno cercato di avvelenarmi. Li ha inviati Caelar Argent.~
+
+// Edwin while in first camp
+@135 = ~Ancora una volta, mi trovo trascinato negli eventi. Caelar Argent cerca di catturarmi.~
+@136 = ~Caelar Argent ha cercato di avvelenarmi e ora sto cercando di fargliela pagare. Infantile, sì, ma in mia difesa è stata lei a cominciare.~
+@137 = ~Non so perché, ma Caelar Argent ha cercato di avvelenarmi. Ha fallito. Ora deve pagare per il suo errore.~
+@138 = ~Per ragioni che non mi interessa approfondire, Caelar Argent ha cercato di avvelenarmi. Ha fallito. Ora deve pagare per il suo errore.~
+@139 = ~Io sono <CHARNAME>. La Dama Splendente ha cercato di avvelenarmi. Ovviamente ha fallito e si pentirà di questo fallimento quando la stanerò al Castello Dragonspear.~
+@140 = ~La Dama Splendente mi ha attaccato. Ora tocca a me.~
+@141 = ~Io sono <CHARNAME>. Non so perché, ma la Dama Splendente mi ha preso di mira. Pagherà a caro prezzo questo errore.~
+@142 = ~Sono <CHARNAME>. Per ragioni che non mi interessa approfondire, la Dama Splendente mi ha preso di mira. Pagherà a caro prezzo questo errore.~
+
+
+
