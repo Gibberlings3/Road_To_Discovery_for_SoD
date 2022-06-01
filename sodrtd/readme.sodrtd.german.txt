@@ -449,6 +449,7 @@ https://www.gibberlings3.net/forums/topic/1649-community-filename-prefix-reserva
 
 Version 0.7 Beta
 - added Italian version by improb@bile
+- refined variable triggers for conclusion that Caelar is no child of Bhaal.
 
 Version 0.6 Beta
 - Cutscene in Dragonspear Basement should not loop if one of the new reply options is chosen.

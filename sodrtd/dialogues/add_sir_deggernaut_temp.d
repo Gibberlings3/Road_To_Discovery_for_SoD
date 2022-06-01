@@ -31,8 +31,8 @@ SAY @205 /* Tell me everything. */
 /* this reply option includes a variable change for the PC's knowledge */
 + ~Global("C#RtD_CaelarBhaalChild","GLOBAL",1)
 OR(2)
-	GlobalGT("C#RtD_KnowsPortalBlood","GLOBAL",1)
-	Global("C#RtD_WantBhaalBlood","GLOBAL",1)
+	GlobalGT("C#RtD_KnowsPortalBlood","GLOBAL",2)
+	GlobalGT("C#RtD_WantBhaalBlood","GLOBAL",1)
 !Global("C#RtD_CoalCaelarBhaalChild","GLOBAL",2)~ + @223 /* ~I have reasons to believe that Caelar is no child of Bhaal.~ */ DO ~%Set_CheckCaelarBhaalChild_2_3%
 SetGlobal("C#RtD_CaelarBhaalChild","GLOBAL",2) //no _SET
 SetGlobal("C#RtD_CoalCaelarBhaalChild_SET","GLOBAL",2) 
