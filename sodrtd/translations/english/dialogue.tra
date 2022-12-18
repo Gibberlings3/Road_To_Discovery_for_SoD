@@ -170,6 +170,10 @@
 @290  = ~[Corporal Bence Duncan]So, what now?~
 @291  = ~[Corporal Bence Duncan]Do you have more you can tell us about Caelar's plans?~
 
+/* new for v0.8 (Beta) */
+/* @292 also used in "include_reply_options.tph" */
+@292  = ~[PC Reply]I saw something disturbing that lets me think that Hephernaan, Caelar's advisor, might be in league with a fiend somehow.~
+
 /* add_consistency_replyoptions.d */
 @500  = ~[PC Reply]Yes, I think I know what happened there.~
 @501  = ~[PC Reply]I will not help you open a portal to Avernus, Caelar. This is madness.~
@@ -229,7 +233,7 @@
 @1516 = ~[Torsin De Lancie]This might be a clue as to why Caelar has such an interest in getting her hands onto you - alive.~
 @1517 = ~[Torsin De Lancie]We also know what she needs you for - your blood, to be precise. She needs your blood to open the portal to Avernus beneath Dragonspear Castle!~
 @1518 = ~[Torsin De Lancie]This is important news, as it clarifies Caelar's motivation with regard to you, <CHARNAME>. It is evident she needs your blood to open the portal to Avernus beneath Dragonspear Castle!~
-@1519 = ~[Marshal Nederlok]The new intel gives our fight against Caelar and her crusade a completely new meaning. This is not about stopping a ransacking mob - this is about preventing a second fiend war!~
+@1519 = ~[Marshal Nederlok]The new intel gives our fight against Caelar and her crusade a completely new meaning. This is not about stopping a ransacking mob - this is about preventing a third fiend war!~
 @1520 = ~[Torsin De Lancie]With this it is imperative for Caelar's crusade to get to you - alive. And this leaves us with a glaring problem, now that you are here, <CHARNAME>.~
 @1521 = ~[Torsin De Lancie]It seems now that not only was morale shaken by your Bhaal heritage. It also is a real danger to all of us, if what we know about the dormant portal beneath Dragonspear Castle is true!~
 @1522 = ~[Torsin De Lancie]If the crusaders get their hands on you... It was madness, letting you come here! We need to keep you in the camp, away from people's eyes... or send you far away!~

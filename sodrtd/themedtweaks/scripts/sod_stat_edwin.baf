@@ -1,0 +1,27 @@
+/* Detection: Edwin is in area */
+IF
+	InParty("Edwin")
+	CombatCounter(0)
+	!See([ENEMY])
+	!Dead("Edwin")
+	AreaCheck("bd1200")
+	Global("#L_SoDStat_HephUmbral","GLOBAL",0) //global variable, is set when player watches the scene
+	Global("#L_SoDStat_HephUmbral","LOCALS",0) //local variable for Edwin
+THEN
+	RESPONSE #100
+		SetGlobal("#L_SoDStat_HephUmbral","LOCALS",1)
+END
+
+/* reset variable: Edwin is not in area or can't watch the scene */
+IF
+	OR(3) 
+		!InParty("Edwin")
+		Dead("Edwin")
+		!AreaCheck("bd1200")
+	CombatCounter(0)
+	!See([ENEMY])
+	Global("#L_SoDStat_HephUmbral","LOCALS",1)
+THEN
+	RESPONSE #100
+		SetGlobal("#L_SoDStat_HephUmbral","LOCALS",0)
+END

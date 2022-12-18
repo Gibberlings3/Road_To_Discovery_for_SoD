@@ -56,26 +56,62 @@ IF
 	Global("C#RtD_CaelarProtection","GLOBAL",3)
 	GlobalGT("C#RtD_CrusaderBlessingQuest","GLOBAL",0)
 	GlobalLT("C#RtD_CrusaderBlessingQuest","GLOBAL",3)
-	!Class(Player1,PALADIN_ALL)
-	!Class(Player1,CLERIC_ALL)
-	OR(10)
+	OR(2)
 		Class(Player2,PALADIN_ALL)
-		Class(Player3,PALADIN_ALL)
-		Class(Player4,PALADIN_ALL)
-		Class(Player5,PALADIN_ALL)
-		Class(Player6,PALADIN_ALL)
 		Class(Player2,CLERIC_ALL)
+	IsValidForPartyDialogue(Player2)
+THEN
+  RESPONSE #100
+		SetGlobal("C#RtD_CrusaderBlessingQuest","GLOBAL",3)
+END
+
+IF
+	Global("C#RtD_CaelarProtection","GLOBAL",3)
+	GlobalGT("C#RtD_CrusaderBlessingQuest","GLOBAL",0)
+	GlobalLT("C#RtD_CrusaderBlessingQuest","GLOBAL",3)
+	OR(2)
+		Class(Player3,PALADIN_ALL)
 		Class(Player3,CLERIC_ALL)
+	IsValidForPartyDialogue(Player3)
+THEN
+  RESPONSE #100
+		SetGlobal("C#RtD_CrusaderBlessingQuest","GLOBAL",3)
+END
+
+IF
+	Global("C#RtD_CaelarProtection","GLOBAL",3)
+	GlobalGT("C#RtD_CrusaderBlessingQuest","GLOBAL",0)
+	GlobalLT("C#RtD_CrusaderBlessingQuest","GLOBAL",3)
+	OR(2)
+		Class(Player4,PALADIN_ALL)
 		Class(Player4,CLERIC_ALL)
+	IsValidForPartyDialogue(Player4)
+THEN
+  RESPONSE #100
+		SetGlobal("C#RtD_CrusaderBlessingQuest","GLOBAL",3)
+END
+
+IF
+	Global("C#RtD_CaelarProtection","GLOBAL",3)
+	GlobalGT("C#RtD_CrusaderBlessingQuest","GLOBAL",0)
+	GlobalLT("C#RtD_CrusaderBlessingQuest","GLOBAL",3)
+	OR(2)
+		Class(Player5,PALADIN_ALL)
 		Class(Player5,CLERIC_ALL)
+	IsValidForPartyDialogue(Player5)
+THEN
+  RESPONSE #100
+		SetGlobal("C#RtD_CrusaderBlessingQuest","GLOBAL",3)
+END
+
+IF
+	Global("C#RtD_CaelarProtection","GLOBAL",3)
+	GlobalGT("C#RtD_CrusaderBlessingQuest","GLOBAL",0)
+	GlobalLT("C#RtD_CrusaderBlessingQuest","GLOBAL",3)
+	OR(2)
+		Class(Player6,PALADIN_ALL)
 		Class(Player6,CLERIC_ALL)
-	IsValidForPartyDialogue(Player1)
-	OR(5)
-		IsValidForPartyDialogue(Player2)
-		IsValidForPartyDialogue(Player3)
-		IsValidForPartyDialogue(Player4)
-		IsValidForPartyDialogue(Player5)
-		IsValidForPartyDialogue(Player6)
+	IsValidForPartyDialogue(Player6)
 THEN
   RESPONSE #100
 		SetGlobal("C#RtD_CrusaderBlessingQuest","GLOBAL",3)

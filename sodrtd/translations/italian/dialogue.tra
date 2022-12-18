@@ -170,6 +170,10 @@
 @290 = ~[Caporale Bence Duncan]E adesso?~
 @291 = ~[Caporale Bence Duncan]Hai altro da dirci sui piani di Caelar?~
 
+/* new for v0.8 (Beta) */
+/* @292 also used in "include_reply_options.tph" */
+@292  = ~[PC Reply]Ho visto qualcosa di inquietante che mi fa pensare che Hephernaan, il consigliere di Caelar, possa essere in qualche modo in combutta con un demone.~
+
 /* add_consistency_replyoptions.d */
 @500 = ~[Risposta del giocatore]Sì, credo di sapere cosa sia successo lì.~
 @501 = ~[Risposta del giocatore]Non ti aiuterò ad aprire un portale per Avernus, Caelar. È una follia.~
@@ -229,7 +233,7 @@
 @1516 = ~[Torsin De Lancie]Questo potrebbe essere un indizio del motivo per cui Caelar è così interessato a mettere le mani su di te... in salute.~
 @1517 = ~[Torsin De Lancie]Sappiamo anche perché ha bisogno di te, in particolare del tuo sangue. Il suo obiettivo è aprire un portale per Avernus, sotto il Castello Dragonspear!~
 @1518 = ~[Torsin De Lancie]Questa è una notizia della massima importanza, che chiarisce le intenzioni di Caelar nei tuoi confronti, <CHARNAME>. È ovvio che l'apertura del portale per Avernus richiede il tuo sangue!~
-@1519 = ~[Maresciallo Nederlok]Queste informazioni rinnovano la nostra determinazione a combattere Caelar e la sua crociata. Non si tratta più di fermare un gruppo di razziatori, ma di impedire una seconda guerra contro i demoni!~
+@1519 = ~[Maresciallo Nederlok]Queste informazioni rinnovano la nostra determinazione a combattere Caelar e la sua crociata. Non si tratta più di fermare un gruppo di razziatori, ma di impedire una terza guerra contro i demoni!~
 @1520 = ~[Torsin De Lancie]Inoltre, è imperativo per Caelar catturarti... e non ucciderti. E questo ci lascia con un problema evidente, ora che sei qui, <CHARNAME>.~
 @1521 = ~[Torsin De Lancie]Ora sembra che non solo il morale sia stato scosso dal tuo retaggio in quanto Progenie di Bhaal. È anche un pericolo reale per tutti noi, se quello che sappiamo sul portale dormiente sotto il Castello Dragonspear è vero!~
 @1522 = ~[Torsin De Lancie]Se i crociati ti mettono le mani addosso... È stata una follia lasciarti venire qui! Dobbiamo tenerti nell'accampamento, lontano dagli occhi della gente... o mandarti lontano!~
