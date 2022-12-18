@@ -80,11 +80,11 @@ BEGIN C#RtDpct
 CHAIN
 IF ~Global("C#RtD_CrusaderBlessingQuest","GLOBAL",3)~ THEN C#RtDpct detect_blessing
 @1014 /* [PC Selftalk](You witnessed a "blessing ritual" of one of Caelar's priests.) */
-== BDGLINTJ IF ~IsValidForPartyDialogue("GLINT") Class("GLINT",CLERIC_ALL)~ THEN @1015 /* [Glint]Nah, how can he say it was granted by "the gods"... blasphemy is what that was, nothing more. */
-== BDVICONJ IF ~IsValidForPartyDialogue("VICONIA") Class("VICONIA",CLERIC_ALL)~ THEN @1016 /* [Viconia]This blessing from "the gods" might have been good for the morale of Caelar's followers, but that was all there is to it. */
 == C#RtDpct IF ~OR(2)
 Class(Player1,CLERIC_ALL)
-Class(Player1,PALADIN_ALL)~ THEN @1017 /* [PC Selftalk](You didn't need anyone else's observation to determine that this "blessing" is nothing special at all, and definitely not a protection by "the gods" as proclaimed by the priest performing the ritual.) */
+Class(Player1,PALADIN_ALL)
+OR(2) !IsValidForPartyDialogue("GLINT") !Class("GLINT",CLERIC_ALL)
+OR(2) !IsValidForPartyDialogue("VICONIA") !Class("VICONIA",CLERIC_ALL)~ THEN @1017 /* [PC Selftalk](You didn't need anyone else's observation to determine that this "blessing" is nothing special at all, and definitely not a protection by "the gods" as proclaimed by the priest performing the ritual.) */
 END
 IF ~~ THEN DO ~SetGlobal("C#RtD_CrusaderBlessingQuest","GLOBAL",4) 
 SetGlobal("C#RtD_CaelarProtection_SET","GLOBAL",4)
@@ -129,6 +129,26 @@ Class(Player6,PALADIN_ALL)
 !Name("VICONIA",Player6)
 !Class(Player1,CLERIC_ALL)
 !Class(Player1,PALADIN_ALL)~ THEN + player6
+IF ~IsValidForPartyDialogue("GLINT") Class("GLINT",CLERIC_ALL)~ THEN EXTERN BDGLINTJ glint_noticed
+IF ~IsValidForPartyDialogue("VICONIA") Class("VICONIA",CLERIC_ALL)~ THEN EXTERN BDVICONJ viconia_noticed
+
+APPEND BDGLINTJ
+IF ~~ THEN glint_noticed
+SAY @1015 /* [Glint]Nah, how can he say it was granted by "the gods"... blasphemy is what that was, nothing more. */
+IF ~~ THEN DO ~SetGlobal("C#RtD_CrusaderBlessingQuest","GLOBAL",4) 
+SetGlobal("C#RtD_CaelarProtection_SET","GLOBAL",4)
+SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)EraseJournalEntry(@32) EraseJournalEntry(@33) AddJournalEntry(@35,QUEST_DONE)~ EXIT
+END
+END
+
+APPEND BDVICONJ 
+IF ~~ THEN viconia_noticed
+SAY @1016 /* [Viconia]This blessing from "the gods" might have been good for the morale of Caelar's followers, but that was all there is to it. */
+IF ~~ THEN DO ~SetGlobal("C#RtD_CrusaderBlessingQuest","GLOBAL",4) 
+SetGlobal("C#RtD_CaelarProtection_SET","GLOBAL",4)
+SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)EraseJournalEntry(@32) EraseJournalEntry(@33) AddJournalEntry(@35,QUEST_DONE)~ EXIT
+END
+END
 
 APPEND C#RtDpct 
 

@@ -91,12 +91,8 @@ GlobalLT("C#RtD_CoalCaelarPlan","GLOBAL",2)~ + @222 /* It seems the crusaders wa
 GlobalLT("C#RtD_CoalCaelarPlan","GLOBAL",4)~ + @208 /* You are aware that Caelar *will* march her crusade into Avernus, though? */ DO ~%Set_CheckCaelarPlan_4_OR_5% SetGlobal("C#RtD_CoalCaelarPlan","GLOBAL",4) SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + information_01
 /* if PC knows that Caelar is planning on marching into Avernus AND Hephernaan is working for a fiend, they can speculate that they are planning on opening a portal to Avernus */
 /* this reply option includes a variable change for the PC's knowledge */
-+ ~OR(2)
-	Global("C#RtD_CaelarPlan","GLOBAL",2)
-	Global("C#RtD_CaelarPlan","GLOBAL",3)
-OR(2)
-	GlobalGT("C#RtD_HephernaanFiend","GLOBAL",1)
-	GlobalGT("C#RtD_KnowsPortalBlood","GLOBAL",0)
++ ~Global("C#RtD_CaelarPlan","GLOBAL",3)
+GlobalGT("C#RtD_HephernaanFiend","GLOBAL",1)
 Global("C#RtD_KnowsPortalBlood","GLOBAL",0) //so reply options will not be doubled
 !Global("C#RtD_CoalCaelarPlan","GLOBAL",6)~ + @278 /* I have reasons to believe that Caelar is planning on opening a portal to Avernus to march her army into it. */ DO ~%Set_CheckCaelarPlan_6_OR_7%
 SetGlobal("C#RtD_CaelarPlan","GLOBAL",4) //no _SET
@@ -184,16 +180,17 @@ Global("C#RtD_CoalHephernaanBetrayal","GLOBAL",0)~ + @212 /* I have reasons to b
 Global("C#RtD_HephernaanFiend","GLOBAL",1): PC knows that [a man being called] Hephernaan is working for a fiend to open the portal
 Global("C#RtD_HephernaanIdentity","GLOBAL",1) knows who Hephernaan is. */
 /* this reply option includes a variable change for the PC's knowledge */
+//## !Global("C#RtD_CoalHephernaanFiend","GLOBAL",1)
 + ~OR(2) Global("C#RtD_HephernaanVisual","GLOBAL",1) 
 	 Global("C#RtD_HephernaanFiend","GLOBAL",1)
 GlobalLT("C#RtD_HephernaanFiend","GLOBAL",2)
 Global("C#RtD_HephernaanIdentity","GLOBAL",1)
-!Global("C#RtD_CoalHephernaanFiend","GLOBAL",1)~ + @211 /* I have disturbing news. Caelar's advisor Hephernaan is apparently working for a fiend who is planning on crossing into the Material Prime! */ DO ~%Set_CheckHephernaanFiend_GT_0%
+!Global("C#RtD_CoalHephernaanFiend","GLOBAL",1)~ + @292 /* ~I saw something disturbing that lets me think that Hephernaan, Caelar's advisor, might be in liege with a fiend of sorts.~ */ DO ~%Set_CheckHephernaanFiend_GT_0%
 %Set_CheckHephernaanBetrayal_1_OR_2% %Set_CheckCaelarBetrayal_1_OR_2%
 	SetGlobal("C#RtD_HephernaanFiend","GLOBAL",2) //no _SET
 //	SetGlobal("C#RtD_HephernaanBetrayal_SET","GLOBAL",2) will be set by script
 //	SetGlobal("C#RtD_CaelarBetrayal_SET","GLOBAL",1) will be set by script
-	SetGlobal("C#RtD_CoalHephernaanFiend_SET","GLOBAL",1) 
+	SetGlobal("C#RtD_CoalHephernaanFiend","GLOBAL",1) 
 //	SetGlobal("C#RtD_CoalHephernaanBetrayal_SET","GLOBAL",1) will be set by script
 //	SetGlobal("C#RtD_CoalCaelarBetrayal_SET","GLOBAL",1) will be set by script
 	SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + information_04

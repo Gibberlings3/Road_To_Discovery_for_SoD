@@ -334,7 +334,8 @@ SAY @3 /* Do you have anything else you want to share? */
 Global("C#RtD_bddelanc_to_4","GLOBAL",0)~ + @1 /* I have no more information to share right now. */ + intermediate_4
 + ~GlobalGT("bd_plot","global",304)
 GlobalLT("bd_plot","global",350)
-AreaCheck("bd3000")~ + @1 /* I have no more information to share right now. */ + 31
+AreaCheck("bd3000")
+!Global("C#RtD_bddelanc_to_4","GLOBAL",1)~ + @1 /* I have no more information to share right now. */ + 31
 + ~OR(2)
 Global("bd_plot","global",392)
 Global("bd_plot","global",393)

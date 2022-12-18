@@ -450,6 +450,14 @@ https://www.gibberlings3.net/forums/topic/1649-community-filename-prefix-reserva
 
 HISTORY
 
+Version 0.8 Beta
+- Updated Themed Tweaks "Add stat-based observations and options" component to TT v0.4: Info about fallen paladin Dauston should be available if Corwin joins the party at first camp, too; Edwin's dialogue about scrying pool scene should close propely.
+- Dialogue with officers in bd3000.are should not skip parts if PC has nothing to report, and thre should be no doubled reply options.
+- Viconia's or Glint's interjection into PC's self-talk about crusader camp "blessing" should not break the dialogue.
+- Marshal Nederlok should be aware there were already two fiend wars at Dragonspear Castle.
+- Sir Deggernaut's dialogue should not double reply options.
+- Optimized variable triggers for PC's conclusions regarding Caelar's plans.
+
 Version 0.7 Beta
 - added Italian version by improb@bile
 - refined variable triggers for conclusion that Caelar is no child of Bhaal.

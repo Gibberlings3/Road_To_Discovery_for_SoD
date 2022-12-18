@@ -167,6 +167,14 @@
 @290  = ~[Corporal Bence Duncan]Und nun?~
 @291  = ~[Corporal Bence Duncan]Gibt es weitere Informationen über Caelars Pläne, die Ihr uns berichten könnt?~
 
+
+
+/* new for v0.8 (Beta) */
+
+/* @292 also used in "include_reply_options.tph" */
+
+@292  = ~[PC Reply]Ich wurde durch Zufall Zeuge einer Szene die den verstörenden Schluss zulässt, dass Ifearnan irgendwie mit einem Teufel im Bunde ist!~
+
 @500    = ~[PC reply]Ja, ich glaube, ich weiß, was da passiert ist.~
 @501    = ~[PC rely]Ich werde Euch nicht helfen, ein Portal nach Avernus zu öffnen, Caelar. Das ist Wahnsinn.~
 @502    = ~[PC reply]Ich glaube, dass Caelars wahres Ziel darin besteht, ihren Onkel Aun zu befreien, der wegen ihr in Avernus gefangen war.~
@@ -221,7 +229,7 @@
 @1516   = ~[Torsin De Lancie]Das könnte ein Hinweis darauf sein, warum Caelar ein solches Interesse daran hat, Euch lebend in die Finger zu bekommen.~
 @1517   = ~[Torsin De Lancie]Wir wissen auch, wofür sie Euch braucht – Euer Blut, um genau zu sein. Sie braucht Euer Blut, um das Portal nach Avernus unter Burg Drachenspeer zu öffnen!~
 @1518   = ~[Torsin De Lancie]Dies ist eine wichtige Nachricht, denn sie verdeutlicht Caelars Beweggründe in Bezug auf Euch, <CHARNAME>. Es ist offensichtlich, dass sie Euer Blut braucht, um das Portal nach Avernus unterhalb Burg Drachenspeer zu öffnen!~
-@1519   = ~[Marshal Nederlok]Die neuen Informationen geben unserem Kampf gegen Caelar und ihren Kreuzzug eine völlig neue Bedeutung. Hier geht es nicht darum, eine plündernde Bande zu stoppen. Hier geht es darum, einen zweiten Krieg gegen Teufel zu verhindern!~
+@1519   = ~[Marshal Nederlok]Die neuen Informationen geben unserem Kampf gegen Caelar und ihren Kreuzzug eine völlig neue Bedeutung. Hier geht es nicht darum, eine plündernde Bande zu stoppen. Hier geht es darum, einen dritten Krieg gegen Teufel zu verhindern!~
 @1520   = ~[Torsin De Lancie]Daher ist es für Caelars Kreuzzug unerlässlich, Zugriff auf Euch zu erlangen – und zwar lebend. Und damit stehen wir vor einem eklatanten Problem, jetzt da Ihr hier seid, <CHARNAME>.~
 @1521   = ~[Torsin De Lancie]Es scheint, dass nicht nur die Moral durch Euer Bhaal-Erbe erschüttert wurde. Es stellt auch eine echte Gefahr für uns alle dar, wenn es wahr ist, was wir über das inaktive Portal unter Burg Drachenspeer wissen!~
 @1522   = ~[Torsin De Lancie]Wenn die Kreuzzügler Euch in die Finger kriegen … Es war Wahnsinn, Euch hierher kommen zu lassen! Wir müssen Euch im Lager halten, weg von den Augen der Leute … oder Euch weit weg schicken!~

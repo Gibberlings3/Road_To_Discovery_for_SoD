@@ -31,6 +31,14 @@ END
 ////////////////////////////////////////////////////////////////////////////////////////
 // Have Corwin have a message from Eltan for you if you speak with her more than once //
 ////////////////////////////////////////////////////////////////////////////////////////
+EXTEND_BOTTOM BDCORWIN 4
+	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",2)~ THEN DO ~SetGlobal("#L_BDCORWIN_TRACKER","MYAREA",4)~ GOTO MESSAGE_FOR_YOU_SIR
+END
+
+EXTEND_BOTTOM BDCORWIN 13
+	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",2)~ THEN DO ~SetGlobal("#L_BDCORWIN_TRACKER","MYAREA",13)~ GOTO MESSAGE_FOR_YOU_SIR
+END
+
 EXTEND_BOTTOM BDCORWIN 17
 	IF ~Global("#L_SoDStat_DaustonTalk","GLOBAL",2)~ THEN DO ~SetGlobal("#L_BDCORWIN_TRACKER","MYAREA",17)~ GOTO MESSAGE_FOR_YOU_SIR
 END
@@ -118,6 +126,8 @@ APPEND BDCORWIN
 	
 	IF ~~ THEN BEGIN DAUSTON_MESSAGE_3
 		SAY @4035 /* ~Her uncle managed to get her out by sacrificing himself.  He is now a prisoner in Avernus...in her place.~ */
+		IF ~Global("#L_BDCORWIN_TRACKER","MYAREA",4)~ THEN REPLY @4036 /* ~How awful.  But that does explain a lot.~ */ DO ~SetGlobal("#L_SoDStat_DaustonTalk","GLOBAL",3)~ SOLVED_JOURNAL @3004 + DAUSTON_MESSAGE_4_4
+		IF ~Global("#L_BDCORWIN_TRACKER","MYAREA",13)~ THEN REPLY @4036 /* ~How awful.  But that does explain a lot.~ */ DO ~SetGlobal("#L_SoDStat_DaustonTalk","GLOBAL",3)~ SOLVED_JOURNAL @3004 + DAUSTON_MESSAGE_4_13
 		IF ~Global("#L_BDCORWIN_TRACKER","MYAREA",17)~ THEN REPLY @4036 /* ~How awful.  But that does explain a lot.~ */ DO ~SetGlobal("#L_SoDStat_DaustonTalk","GLOBAL",3)~ SOLVED_JOURNAL @3004 + DAUSTON_MESSAGE_4_17
 		IF ~Global("#L_BDCORWIN_TRACKER","MYAREA",20)~ THEN REPLY @4036 /* ~How awful.  But that does explain a lot.~ */ DO ~SetGlobal("#L_SoDStat_DaustonTalk","GLOBAL",3)~ SOLVED_JOURNAL @3004 + DAUSTON_MESSAGE_4_20
 		IF ~Global("#L_BDCORWIN_TRACKER","MYAREA",27)~ THEN REPLY @4036 /* ~How awful.  But that does explain a lot.~ */ DO ~SetGlobal("#L_SoDStat_DaustonTalk","GLOBAL",3)~ SOLVED_JOURNAL @3004 + DAUSTON_MESSAGE_4_27
@@ -135,6 +145,16 @@ APPEND BDCORWIN
 		IF ~Global("#L_BDCORWIN_TRACKER","MYAREA",54)~ THEN REPLY @4036 /* ~How awful.  But that does explain a lot.~ */ DO ~SetGlobal("#L_SoDStat_DaustonTalk","GLOBAL",3)~ SOLVED_JOURNAL @3004 + DAUSTON_MESSAGE_4_54
 		IF ~Global("#L_BDCORWIN_TRACKER","MYAREA",55)~ THEN REPLY @4036 /* ~How awful.  But that does explain a lot.~ */ DO ~SetGlobal("#L_SoDStat_DaustonTalk","GLOBAL",3)~ SOLVED_JOURNAL @3004 + DAUSTON_MESSAGE_4_55
 		IF ~Global("#L_BDCORWIN_TRACKER","MYAREA",56)~ THEN REPLY @4036 /* ~How awful.  But that does explain a lot.~ */ DO ~SetGlobal("#L_SoDStat_DaustonTalk","GLOBAL",3)~ SOLVED_JOURNAL @3004 + DAUSTON_MESSAGE_4_56
+	END
+	
+	IF ~~ THEN BEGIN DAUSTON_MESSAGE_4_4
+		SAY #%eet_2%42104 /* ~All right then.~ */
+		COPY_TRANS BDCORWIN 4
+	END
+	
+	IF ~~ THEN BEGIN DAUSTON_MESSAGE_4_13
+		SAY #%eet_2%42104 /* ~All right then.~ */
+		COPY_TRANS BDCORWIN 13
 	END
 	
 	IF ~~ THEN BEGIN DAUSTON_MESSAGE_4_17
@@ -227,6 +247,8 @@ END
 // Track if PC knows about Hephernaan being an agent of the Umbral Accord (1=knows face, 2=knows face and name) //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 REPLACE_ACTION_TEXT BDSCRY ~SetGlobal("bd_sddd12_hood","LOCALS",1)~ ~SetGlobal("#L_SoDStat_HephUmbral","GLOBAL",1) SetGlobal("bd_sddd12_hood","LOCALS",1)~
+
+/* - deprecated - will be checked via Edwin's script.
 ALTER_TRANS BDSCRY
 	BEGIN 3 END
 	BEGIN 0 END
@@ -234,6 +256,9 @@ ALTER_TRANS BDSCRY
 EXTEND_BOTTOM BDSCRY 3
 	IF ~IsValidForPartyDialogue("EDWIN")~ THEN DO ~SetGlobal("BD_SDDD12_CLOUDY","MYAREA",1) SetGlobal("bd_sddd12_hood","LOCALS",1) SetGlobal("#L_SoDStat_HephUmbral","GLOBAL",1) ActionOverride("EDWIN",SetGlobal("#L_SoDStat_HephUmbral","LOCALS",1)) StartCutSceneMode() StartCutSceneEx("bdscry05",FALSE)~ EXIT
 END
+*/
+
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Track if PC learned that Hephernaan is Caelar's advisor (1=knows name, 2=knows both name and face) //
@@ -281,12 +306,16 @@ APPEND BDEDWINJ
 	
 	IF ~~ THEN BEGIN OF_COURSE_1
 		SAY @2066 /* ~Of course I have.  I always am.~ */
-		IF ~~ THEN DO ~SetGlobal("#L_SoDStat_HephUmbral","GLOBAL",2) SetGlobal("#L_SodStat_HephAdvisor","GLOBAL",2)~ EXIT
+		IF ~~ THEN DO ~SetGlobal("#L_SoDStat_HephUmbral","GLOBAL",2) 
+SetGlobal("#L_SoDStat_HephUmbral","LOCALS",2)
+SetGlobal("#L_SodStat_HephAdvisor","GLOBAL",2)~ EXIT
 	END
 	
 	IF ~~ THEN BEGIN OF_COURSE_2
 		SAY @2068 /* ~Of course.  You expected anything less from me? (I should hope not!)~ */
-		IF ~~ THEN DO ~SetGlobal("#L_SoDStat_HephUmbral","GLOBAL",2) SetGlobal("#L_SodStat_HephAdvisor","GLOBAL",2)~ EXIT
+		IF ~~ THEN DO ~SetGlobal("#L_SoDStat_HephUmbral","GLOBAL",2)
+SetGlobal("#L_SoDStat_HephUmbral","LOCALS",2)
+ SetGlobal("#L_SodStat_HephAdvisor","GLOBAL",2)~ EXIT
 	END
 END
 

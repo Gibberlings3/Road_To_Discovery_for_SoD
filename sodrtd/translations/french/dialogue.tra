@@ -169,6 +169,10 @@
 @290 = ~[Caporal Bence Duncan]Et maintenant, qu'allons-nous faire ?~
 @291 = ~[Caporal Bence Duncan]Avez-vous d'autres informations à nous fournir concernant les projets de Caelar ?~ 
 
+/* new for v0.8 (Beta) */
+/* @292 also used in "include_reply_options.tph" */
+@292  = ~[PC Reply]J'ai vu quelque chose d'inquiétant qui me fait penser que Hephernaan, le conseiller de Caelar, est peut-être de mèche avec un démon.~
+
 
 /* add_consistency_replyoptions.d */
 @500  = ~[PC Reply]Oui, je pense savoir ce qui s'est passé là-bas.~
@@ -229,7 +233,7 @@
 @1516 = ~[Torsin De Lancie]Ceci pourrait être un indice sur la raison pour laquelle Caelar désire tant mettre la main sur vous - vivant.~ ~Ceci pourrait être un indice sur la raison pour laquelle Caelar désire tant mettre la main sur vous - vivante.~
 @1517 = ~[Torsin De Lancie]Nous savons aussi pourquoi elle a besoin de vous - et plus spécifiquement de votre sang. Son objectif est d'ouvrir un portail vers Avernus, sous le château Paldragon !~
 @1518 = ~[Torsin De Lancie]C'est une nouvelle de la plus haute importance, elle clarifie les intentions de Caelar à votre égard, <CHARNAME>. Il est évident que l'ouverture du portail vers Avernus, nécessite votre sang !~
-@1519 = ~[Marshal Nederlok]Ces informations renouvellent notre détermination à combattre Caelar et sa croisade. Il ne s'agit plus d'arrêter une troupe de pillards - mais d'empêcher une seconde guerre contre les démons !~
+@1519 = ~[Marshal Nederlok]Ces informations renouvellent notre détermination à combattre Caelar et sa croisade. Il ne s'agit plus d'arrêter une troupe de pillards - mais d'empêcher une troisième guerre contre les démons !~
 @1520 = ~[Torsin De Lancie]De plus, il est impératif pour Caelar de vous récupérer - vivant. Ce qui nous amène aux complications que provoque votre présence, <CHARNAME>.~ ~De plus, il est impératif pour Caelar de vous récupérer - vivante. Ce qui nous amène aux complications que provoque votre présence, <CHARNAME>.~
 @1521 = ~[Torsin De Lancie]Il semble que votre héritage ne soit plus seulement dangereux pour le moral des troupes. La menace qui pèse sur nous aujourd'hui est bien plus grande, si ce que nous avons appris à propos de ce portail en sommeil sous le château Paldragon est vrai !~
 @1522 = ~[Torsin De Lancie]Et si la croisade mettait la main sur vous... Quelle folie de vous laisser nous rejoindre ici ! Nous devons vous confiner dans le camp, à l'abri des regards... ou vous envoyer le plus loin possible !~

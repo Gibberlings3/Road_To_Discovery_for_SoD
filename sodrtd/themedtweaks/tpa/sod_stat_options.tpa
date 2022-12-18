@@ -67,3 +67,6 @@ DEFINE_ACTION_FUNCTION sod_stat_options BEGIN
 	EXTEND_BOTTOM ~BD0102.BCS~ ~%mod_root%/scripts/sod_stat_options_bd0102.baf~ USING ~%tra_loc%/%s/sod_stat_other.tra~	// Prompt PC to talk to Eltan about Dauston
 	EXTEND_BOTTOM ~BD1200.BCS~ ~%mod_root%/scripts/sod_stat_options_bd1200.baf~ USING ~%tra_loc%/%s/sod_stat_other.tra~ // Have Edwin expose Hephernaan
 END
+
+	//patch Edwin't script
+	EXTEND_BOTTOM ~BDEDWIN.BCS~ ~%mod_root%/scripts/sod_stat_edwin.baf~

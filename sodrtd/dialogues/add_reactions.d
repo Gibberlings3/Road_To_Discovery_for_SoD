@@ -146,7 +146,7 @@ GlobalGT("C#RtD_CoalCaelarKidnap","GLOBAL",0)~ THEN @1516 /* [Torsin De Lancie]T
 == bddelanc IF ~OR(2)
 Global("C#RtD_CoalKnowsPortalBlood","GLOBAL",3)
 Global("C#RtD_CoalKnowsPortalBlood","GLOBAL",4)~ THEN @1518 /* [Torsin De Lancie]This is important news, as it clears Caelar's motivation with regard to you, <CHARNAME>. It is evident she needs your blood to open the portal to Avernus beneath Dragonspear Castle! */ DO ~SetGlobal("C#RtD_CoalKnowsPortalBlood","GLOBAL",6)~ 
-== bdnederl IF ~GlobalGT("C#RtD_CoalKnowsPortalBlood","GLOBAL",2)~ THEN @1519 /* [Marshal Nederlok]The new intel gives our fight against Caelar and her crusade a completely new meaning. This is not about stopping a ransacking crusade - this is about preventing a second fiend war! */
+== bdnederl IF ~GlobalGT("C#RtD_CoalKnowsPortalBlood","GLOBAL",2)~ THEN @1519 /* [Marshal Nederlok]The new intel gives our fight against Caelar and her crusade a completely new meaning. This is not about stopping a ransacking crusade - this is about preventing a third fiend war! */
 
 /* know about Bhaal blood needed to open portal */
 /* they have maximum knowledge about the portal, will get general follow up after bdnederl 28 */
@@ -329,7 +329,7 @@ END //APPEND
 CHAIN
 IF WEIGHT #-1
 ~AreaCheck("c#rtd1")~ THEN bdnederl update_delancie_gather_officers_02
-@1519 /* [Marshal Nederlok]The new intel gives our fight against Caelar and her crusade a completely new meaning. This is not about stopping a ransacking crusade - this is about preventing a second fiend war! */
+@1519 /* [Marshal Nederlok]The new intel gives our fight against Caelar and her crusade a completely new meaning. This is not about stopping a ransacking crusade - this is about preventing a third fiend war! */
 == bddelanc @1554 /* [Torsin De Lancie]It is evident she needs your blood to open the portal to Avernus beneath Dragonspear Castle! It is imperative for Caelar's crusade to get to <CHARNAME> - alive. And this leaves us with a glaring problem having you here, <CHARNAME>! */
 END
 IF ~~ THEN EXTERN bddelanc hysterics 
