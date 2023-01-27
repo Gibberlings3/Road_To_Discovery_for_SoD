@@ -114,6 +114,8 @@ Le composant 9 ajoute un personnage personnalisé, Sir Deggernaut, qui se dépla
 Sir Deggernaut peut être trouvé près des tentes des deux premiers camps, et près de Mizhena dans le grand camp de la coalition.
 Ce composant est facultatif et nécessite également les composants 4 "Les officiers sont plus attentifs.", ainsi que 6 "Le PC peut informer les officiers." 
 
+Remarque : cette fonctionnalité a été conçue pour faciliter la communication avec les officiers, en particulier dans les deux premiers camps où Bence Duncan n'est pas toujours présent, mais étant donné que le dialogue de Sir Deggernaut est focalisé sur les informations relatives à la croisade, sa présence peut donner l'impression d'être une fonctionnalité de débogage plutôt qu'un véritable personnage du jeu.
+
 
 Compatibilité
 
@@ -233,13 +235,14 @@ PC's knowledge:
 0 - PC couldn't connect face and name of Hephernaan yet or didn't meet/hear about him at all
 1 - PC knows Hephernaan by name and face and that he is Caelar's advisor
 
--PC heard Hephernaan's Name ("C#RtD_HephernaanName"):
+--PC heard Hephernaan's Name ("C#RtD_HephernaanName"):
 0 - PC never heard Hephernaan's name
 1 - PC heard Hephernaan's name in connection with Caelar
 
---PC saw Hephernaan's Face ("C#RtD_HephernaanVisual"):
+--PC saw Hephernaan's Face in scrypool scene / knows he is working for Umbral Accord ("C#RtD_HephernaanVisual"):
 0 - PC never saw Hephernaan's face
 1 - PC knows that [a man looking like] Hephernaan is working with Umbral/a fiend
+2 - PC knows that Hephernaan [who is Caelar's advisor] is working with Umbral Accord
 
 --Aun's and Caelar's Story ("C#RtD_KnowsAunArgent"):
 0 - No knowledge that Caelar had an uncle named Aun and something happened 
@@ -340,6 +343,10 @@ Caelar being betrayed? ("C#RtD_CoalCaelarBetrayal"):
 --Who is "Hephernaan"? ("C#RtD_CoalHephernaanIdentity"):
 1 - Dukes and officers know Hephernaan by name and face and that he is Caelar's advisor - heard it elsewhere
 
+--Hephernaan's Face working for Umbral Accord ("C#RtD_CoalHephernaanVisual"):
+1 - Dukes and officers know that Hephernaan [who is Caelar's advisor] is working with Umbral Accord - PC told them
+2 - Dukes and officers know that Hephernaan [who is Caelar's advisor] is working with Umbral Accord - heard it elsewhere 
+
 --Aun's and Caelar's Story ("C#RtD_CoalKnowsAunArgent"):
 1 - Dukes and officers heard rumors about Caelar being disgraced from Aster Order at the same time as Aun vanished - PC told them
 2 - Dukes and officers heard rumors about Caelar being disgraced from Aster Order at the same time as Aun vanished - heard it elsewhere 
@@ -403,9 +410,10 @@ Using the variables with the postfix "_SET" ensures that knowledge is not lost: 
 
 CREDITS
 
+Frenzgyn - Italian translation (new lines v1)
 improb@bile - Italian translation (v0.7 Beta)
 jastey - author, main mod head
-JohnBob - French translation (v0.5 Beta)
+JohnBob - French translation (v1)
 Lauriel - author of component 1, ideas, design help, proofreading English (v0.1 Beta) 
 Machiavélique - proofreading French (v0.4 Beta)
 Shai Hulud - German translation (v0.2 Beta)
@@ -449,6 +457,14 @@ https://www.gibberlings3.net/forums/topic/1649-community-filename-prefix-reserva
 
 
 HISTORY
+
+Version 1.0
+- Scrypool Scene with Hephernaan will no longer lead to hints about fiend master. PC can tell officers about "Umbral Accord" instead.
+- Scrypool Scene will no longer lead to conclusion that Hephrnaan is betraying Caelar.
+- Sir Deggernaut will have appropriate scripts in camps.
+- Added extra reply option to Daeros dialogue to learn about fiend master. Hearing about "dark creature in mirror" will no longer lead to this knowledge directly.
+- Variable "C#RtD_HephernaanVisual" has value of 2: "PC knows that Hephernaan [who is Caelar's advisor] is working with Umbral Accord"; added "C#RtD_CoalHephernaanVisual" accordingly; updated readme and docs with description.
+- Updated links in sodrtd.ini.
 
 Version 0.8 Beta
 - Updated Themed Tweaks "Add stat-based observations and options" component to TT v0.4: Info about fallen paladin Dauston should be available if Corwin joins the party at first camp, too; Edwin's dialogue about scrying pool scene should close propely.

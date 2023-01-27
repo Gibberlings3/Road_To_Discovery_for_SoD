@@ -3,7 +3,7 @@ BACKUP ~sodrtd/backup~
 AUTHOR ~https://baldurs-gate.de/index.php?resources/road-to-discovery-for-sod.59/~ 
 
 
-VERSION ~0.8 (Beta)~
+VERSION ~1.0~
 
 
 README ~sodrtd/readme.sodrtd.%LANGUAGE%.txt~ ~sodrtd/readme.sodrtd.english.txt~
@@ -110,7 +110,7 @@ BEGIN @100005 /* ~Main Component: Tracking System~ */
 <<<<<<<< .../inlined/journal_0.tph
 >>>>>>>>
 OUTER_SET strref_journal = eet_200000 + 31270 //59718 //59722 //59732 //66700 //67432 //59615
-APPEND_OUTER - ~.../inlined/journal_0.tph~ "ADD_JOURNAL EXISTING TITLE (#%strref_journal%) @10000 @10001 @10002 @10003 @10004 @10005 @10006 @10007 @10008 @10009 @10010 @10011 @10012 @10013 @10014 @10015 @10016 @10017 @10018 @10019 @10020 @10021 @10022 @10023 @10024 @10025 @10026 @10027 @10028 @10029 @10030 @10031 @10037 USING ~sodrtd/translations/%LANGUAGE%/game.tra~"
+APPEND_OUTER - ~.../inlined/journal_0.tph~ "ADD_JOURNAL EXISTING TITLE (#%strref_journal%) @10000 @10001 @10002 @10003 @10004 @10005 @10006 @10007 @10008 @10009 @10010 @10011 @10012 @10013 @10014 @10015 @10016 @10017 @10018 @10019 @10020 @10021 @10022 @10023 @10024 @10025 @10026 @10027 @10028 @10029 @10030 @10031 @10037 @10038 USING ~sodrtd/translations/%LANGUAGE%/game.tra~"
 INCLUDE ~.../inlined/journal_0.tph~
 
 
@@ -201,6 +201,7 @@ EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting_coalition/caelarwan
 EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting_coalition/hephernaanbetrayal_coalition.baf~ EVALUATE_BUFFER
 EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting_coalition/hephernaanfiendmaster_coalition.baf~ EVALUATE_BUFFER
 EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting_coalition/hephernaanidentity_coalition.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting_coalition/hephernaanvisual_coalition.baf~ EVALUATE_BUFFER
 EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting_coalition/knowsaunargent_coalition.baf~ EVALUATE_BUFFER
 EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting_coalition/knowshoodedman_coalition.baf~ EVALUATE_BUFFER
 EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting_coalition/knowsportalblood_coalition.baf~ EVALUATE_BUFFER
@@ -299,6 +300,11 @@ END
 
 >>>>>>>>
 EXTEND_BOTTOM ~bd1000.bcs~ ~...inlined/bd1000_add.baf~ EVALUATE_BUFFER
+
+
+/* PC will recognize Hephernaan if they already met them before watching scry pool scene. */
+EXTEND_BOTTOM ~BD1200.BCS~ ~sodrtd/scripts/hephernaanvisual_bd1200.baf~ 
+	EVALUATE_BUFFER
 
 
 /* bd3000.bcs */
@@ -1048,6 +1054,7 @@ IF
 THEN
 	RESPONSE #100
 		CreateCreature("C#RtDdeg",[622.3442],0)
+		ActionOverride("C#RtDdeg",ChangeAIScript("bdfist",CLASS))
 		SetGlobal("C#RtD_SpawnDeggernaut","bd1000",1)
 END
 
@@ -1068,6 +1075,7 @@ IF
 THEN
 	RESPONSE #100
 		CreateCreature("C#RtDdeg",[2000.1506],6)
+		ActionOverride("C#RtDdeg",ChangeAIScript("bdasc2",CLASS))
 		SetGlobal("C#RtD_SpawnDeggernaut","bd3000",1)
 		Continue()
 END
@@ -1108,6 +1116,7 @@ IF
 THEN
 	RESPONSE #100
 		CreateCreature("C#RtDdeg",[373.3390],12)
+		ActionOverride("C#RtDdeg",ChangeAIScript("bdfist",CLASS))
 		SetGlobal("C#RtD_SpawnDeggernaut","bd7100",1)
 END
 IF

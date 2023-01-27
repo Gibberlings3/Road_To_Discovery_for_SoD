@@ -104,12 +104,6 @@ bddaeros: tells about portal, blood of a godly descendant, Hephernaan's fiend ma
 ADD_TRANS_ACTION BDDAEROS BEGIN 2 END BEGIN END ~SetGlobal("C#RtD_CaelarPlan_SET","GLOBAL",4)
 SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~
 
-/* bddaeros 3
-  SAY #61357 /* ~Hephernaan got madder than a hornet in a helmet. He stormed off with Caelar trailing after him. When he came back, I saw him use that altar there to speak with some dark creature. The fiend spotted me—Hephernaan bound me right quick. I've been trapped ever since.~ [BD61357] */
-*/
-ADD_TRANS_ACTION BDDAEROS BEGIN 3 END BEGIN END ~SetGlobal("C#RtD_HephernaanFiend_SET","GLOBAL",1)
-SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~
-
 /* bddaeros 5
   SAY #61367 /* ~I don't know. Probably. I overheard Hephernaan say Caelar's blood was too weak, too diluted by generations. A god's direct descendent? Open a vein and that portal could pop right open.~ [BD61367] */
 */
@@ -526,7 +520,7 @@ SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~
 /* bdireni 78
   SAY #63940 /* ~Perhaps you are right. Perhaps not. You do not speak for the Accord—and I do not bow to the demands of some broken fiend's lickspittle.~ [BD63940] */
 */
-/* scrying pool (Hooded man scene): knows that [a man looking like] Hephernaan is working with Umbral/a fiend */
+/* scrying pool (Hooded man scene): knows that [a man looking like] Hephernaan is working with Umbral Accord */
 ADD_TRANS_ACTION BDIRENI BEGIN 78 END BEGIN END ~SetGlobal("C#RtD_HephernaanVisual_SET","GLOBAL",1)
 SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~
 

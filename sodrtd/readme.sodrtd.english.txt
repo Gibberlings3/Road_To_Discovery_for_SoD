@@ -113,6 +113,9 @@ This component is optional.
 Component 9 adds a custom character, Sir Deggernaut, who moves along the campaign from camp to camp for direct communication so the PC can always tell their findings independent on avilability of original game officers due to campaign progress. His dialogue features also a possibility to ask him about the status of the officers' knowledge, where he will list everything the officers are aware of at this point - which might be more than the PC found out depending on campaign progress. 
 Sir Deggernaut can be found by the camp tents in the first two camps, and near Mizhena in the big coalition camp.
 This component is optional and also needs components 4 "Officers Are Aware", as well as 6 "PC can tell the officers". 
+Please note: This was meant as a feature to simplify reporting to the officers, especially in the first two camps where Bence Duncan is not always present, but due to how Sir Deggernaut's dialogue is focussed on the status of information about the crusade, his presence could feel more like a debug feature, and less like a real ingame character.
+
+ 
 
 
 COMPATIBILITY NOTE
@@ -230,13 +233,14 @@ PC's knowledge:
 0 - PC couldn't connect face and name of Hephernaan yet or didn't meet/hear about him at all
 1 - PC knows Hephernaan by name and face and that he is Caelar's advisor
 
--PC heard Hephernaan's Name ("C#RtD_HephernaanName"):
+--PC heard Hephernaan's Name ("C#RtD_HephernaanName"):
 0 - PC never heard Hephernaan's name
 1 - PC heard Hephernaan's name in connection with Caelar
 
---PC saw Hephernaan's Face ("C#RtD_HephernaanVisual"):
+--PC saw Hephernaan's Face in scrypool scene / knows he is working for Umbral Accord ("C#RtD_HephernaanVisual"):
 0 - PC never saw Hephernaan's face
 1 - PC knows that [a man looking like] Hephernaan is working with Umbral/a fiend
+2 - PC knows that Hephernaan [who is Caelar's advisor] is working with Umbral Accord
 
 --Aun's and Caelar's Story ("C#RtD_KnowsAunArgent"):
 0 - No knowledge that Caelar had an uncle named Aun and something happened 
@@ -337,6 +341,11 @@ Caelar being betrayed? ("C#RtD_CoalCaelarBetrayal"):
 --Who is "Hephernaan"? ("C#RtD_CoalHephernaanIdentity"):
 1 - Dukes and officers know Hephernaan by name and face and that he is Caelar's advisor - heard it elsewhere
 
+--Hephernaan's Face working for Umbral Accord ("C#RtD_CoalHephernaanVisual"):
+1 - Dukes and officers know that Hephernaan [who is Caelar's advisor] is working with Umbral Accord - PC told them
+2 - Dukes and officers know that Hephernaan [who is Caelar's advisor] is working with Umbral Accord - heard it elsewhere 
+
+
 --Aun's and Caelar's Story ("C#RtD_CoalKnowsAunArgent"):
 1 - Dukes and officers heard rumors about Caelar being disgraced from Aster Order at the same time as Aun vanished - PC told them
 2 - Dukes and officers heard rumors about Caelar being disgraced from Aster Order at the same time as Aun vanished - heard it elsewhere 
@@ -400,9 +409,10 @@ Using the variables with the postfix "_SET" ensures that knowledge is not lost: 
 
 CREDITS
 
+Frenzgyn - Italian translation (new lines v1)
 improb@bile - Italian translation (v0.7 Beta)
 jastey - author, main mod head
-JohnBob - French translation (v0.5 Beta)
+JohnBob - French translation (v1)
 Lauriel - author of component 1, ideas, design help, proofreading English (v0.1 Beta) 
 Machiavélique - proofreading French (v0.4 Beta)
 Shai Hulud - German translation (v0.2 Beta)
@@ -446,6 +456,14 @@ https://www.gibberlings3.net/forums/topic/1649-community-filename-prefix-reserva
 
 
 HISTORY
+
+Version 1.0
+- Scrypool Scene with Hephernaan will no longer lead to hints about fiend master. PC can tell officers about "Umbral Accord" instead.
+- Scrypool Scene will no longer lead to conclusion that Hephrnaan is betraying Caelar.
+- Sir Deggernaut will have appropriate scripts in camps.
+- Added extra reply option to Daeros dialogue to learn about fiend master. Hearing about "dark creature in mirror" will no longer lead to this knowledge directly.
+- Variable "C#RtD_HephernaanVisual" has value of 2: "PC knows that Hephernaan [who is Caelar's advisor] is working with Umbral Accord"; added "C#RtD_CoalHephernaanVisual" accordingly; updated readme and docs with description.
+- Updated links in sodrtd.ini.
 
 Version 0.8 Beta
 - Updated Themed Tweaks "Add stat-based observations and options" component to TT v0.4: Info about fallen paladin Dauston should be available if Corwin joins the party at first camp, too; Edwin's dialogue about scrying pool scene should close propely.

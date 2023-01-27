@@ -113,8 +113,8 @@ Sono stato testimone del rituale della benedizione nell'accampamento dei crociat
 @10037 = ~Eventi importanti
 
 Chi l'avrebbe mai detto. La grande e potente Caelar è stata disonorata dal suo Ordine di paladini, per giunta da bambina. Anche uno dei suoi zii è scomparso misteriosamente in quel periodo.~
-/*
-@10038  = 
-@10039  = 
-@10040  = 
-*/
+
+/* new in v1 */
+@10038 = ~Eventi Importanti
+
+Hephernaan ha i propri, oscuri piani. Lo abbiamo visto di persona dire di essere al servizio della "Fosca Alleanza" - chi o cosa si celi dietro tale nome, posso solo immaginarlo.~

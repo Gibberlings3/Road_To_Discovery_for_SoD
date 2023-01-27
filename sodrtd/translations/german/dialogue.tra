@@ -74,6 +74,11 @@
 @68     = ~[Marshal Nederlok]Ja, ihre Anhänger bereiten sich sicherlich darauf vor. Wir wissen immer noch nicht, wie sie das überhaupt erreichen will. Lasst es uns wissen, sobald Ihr mehr Informationen dazu habt.~
 @69     = ~[Marshal Nederlok]Nun, das haben wir schon vermutet. Ich danke Euch für die Bestätigung.~
 @70     = ~[PC reply]Ich habe mehr Informationen über Caelars Pläne, die wir jetzt besprechen sollten.~
+
+/* new in v1 */
+@71   = ~[Torsin De Lancie]Hmm, den Namen habe ich noch nie gehört, aber es wäre klug, unsere Weisen und Berater um Informationen zu ersuchen. Wenn wir es mit einer geheimen Organisation zu tun haben, sollten wir so bald wie möglich wissen, gegen wen wir da antreten.~
+@72   = ~[Marshal Nederlok]Ich bin wenig überrascht, einen Namen von einer Geheimorganisation zu hören, die mit unseren Feinden in Verbindung steht. Die Frage ist, wie groß die Gefahr ist, die sie in der gegenwärtigen Situation für uns darstellen. Wir müssen so viele Informationen über diese "Schattenübereinkunft" sammeln wie möglich.~
+
 @200    = ~[Sir Deggernaut (male)]Seid gegrüßt, ich bin Sir Deggernaut. Die Herzöge haben beschlossen, mich mit Euch zu schicken, um die Fortschritte der Bündniskräfte zu überwachen und die Herzöge sowie unsere Verbündeten jederzeit umfassend zu informieren. Ich werde hier sein, wenn Ihr den Herzögen oder den anderen Bündnisoffizieren etwas mitteilen wollt.~
 @201    = ~[Sir Deggernaut (male)]Gibt es etwas, das Ihr uns über Caelars Kreuzzug mitteilen wollt?~
 @202    = ~[PC reply]Ich weiß etwas über die Pläne des Kreuzzuges, das die Offiziere wissen sollten.~
@@ -175,6 +180,10 @@
 
 @292  = ~[PC Reply]Ich wurde durch Zufall Zeuge einer Szene die den verstörenden Schluss zulässt, dass Ifearnan irgendwie mit einem Teufel im Bunde ist!~
 
+/* new for v1 */
+@293  = ~[PC Reply]Ich habe gewichtige Gründe zu glauben, dass Ifearnan eigene, unerfreuliche Pläne hat. Er scheint für eine Organisation namens "Schattenübereinkunft" zu arbeiten, und diese scheint mächtig zu sein.~
+@294  = ~[Sir Deggernaut (male)]Ifearnan ist auch mit einer geheimen Organisation namens Schattenübereinkunft in Verbindung. Wir haben bisher keine weiteren Informationen, wofür der Name steht.~
+
 @500    = ~[PC reply]Ja, ich glaube, ich weiß, was da passiert ist.~
 @501    = ~[PC rely]Ich werde Euch nicht helfen, ein Portal nach Avernus zu öffnen, Caelar. Das ist Wahnsinn.~
 @502    = ~[PC reply]Ich glaube, dass Caelars wahres Ziel darin besteht, ihren Onkel Aun zu befreien, der wegen ihr in Avernus gefangen war.~
@@ -210,6 +219,14 @@
 @1020   = ~[PC selftalk](Ihr habt die Reaktion von <PLAYER4> auf die Aufführung bemerkt und braucht keine weiteren Informationen, um zu wissen, dass dieser „Segen“ nichts Besonderes ist. Schon gar nicht ist er ein Schutz durch „die Götter“, wie der das Ritual durchführende Priester verkündet hatte.)~
 @1021   = ~[PC selftalk](Ihr habt die Reaktion von <PLAYER5> auf die Aufführung bemerkt und braucht keine weiteren Informationen, um zu wissen, dass dieser „Segen“ nichts Besonderes ist. Schon gar nicht ist er ein Schutz durch „die Götter“, wie der das Ritual durchführende Priester verkündet hatte.)~
 @1022   = ~[PC selftalk](Ihr habt die Reaktion von <PLAYER6> auf die Aufführung bemerkt und braucht keine weiteren Informationen, um zu wissen, dass dieser „Segen“ nichts Besonderes ist. Schon gar nicht ist er ein Schutz durch „die Götter“, wie der das Ritual durchführende Priester verkündet hatte.)~
+
+/* new for v1 */
+@1023 = ~[Daeros]Es war ein Teufel, und Ifearnan versprach, ein Portal zu öffnen, damit er zum Prime zurückkehren kann. Da Caelars Blut nicht ausreichet, sprachen sie darüber, nach einem anderen, weniger "verdünnten" Nachkommen eines Gottes zu suchen.~
+@1024 = ~[PC Reply]Ein *Teufel*, der darauf wartet, dass ein Portal geöffnet wird. Das erklärt eine Menge...~
+@1025 = ~[Daeros]Oja, das tut es. Ich bin überrascht, dass er mich nicht umgebracht oder verbannt hat, nachdem ich das gehört habe. Ich schätze, er hat nicht erwartet, dass hier jemand reinkommt und Fragen stellt.~
+@1026 = ~[PC Reply]Ifearnan sprach mit einem dunklen Wesen - konntet Ihr erkennen, was es genau war? Worüber haben sie gesprochen?~
+
+
 @1500   = ~[Captain Corwin]Und wir alle wissen, was passieren würde, wenn der Kreuzzug Euch in die Finger bekäme. Ich gebe zu, das ist ebenfalls eine starke Motivation, für Eure Sicherheit zu sorgen, <CHARNAME>.~
 @1501   = ~[Marshal Nederlok]Das Wissen um das Portal unter der Burg und Euer Blut, das man braucht, um es zu öffnen, hat uns in höchste Alarmbereitschaft versetzt, <CHARNAME>. Kommt bald zum Zelt der Kommandierenden!~
 @1502   = ~[Torsin De Lancie]Jetzt, da Ihr hier seid, müssen wir Caelar aufhalten – jetzt mehr denn je.~

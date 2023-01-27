@@ -72,6 +72,10 @@
 @69   = ~[Marshal Nederlok]Eh bien, nous nous attendions à une menace de cette ampleur. Merci pour la confirmation.~
 @70   = ~[PC reply]J'ai des nouvelles informations sur les plans de Caelar. Nous devons en discuter de toute urgence.~
 
+/* new in v1 */
+ @71 = ~[Torsin De Lancie]Humm, jamais entendu parler, mais il serait judicieux de contacter nos sages et nos supérieurs pour obtenir des renseignements à ce sujet. Si nous sommes confrontés à une organisation secrète, il est impératif d'en savoir plus et le plus tôt possible.~ 
+@72   = ~[Marshal Nederlok]Apprendre que notre ennemi est lié à une organisation secrète ne m'étonne pas le moins du monde. La vraie question est de connaître son implication dans la situation actuelle et le danger qu'elle représente. Nous devons rassembler autant d'informations que possible sur ce mystérieux « Accord de l'Ombre ».~
+
 /* add_sir_deggernaut.d */
 @200  = ~[Sir Deggernaut (male)]Salutations, je suis le Seigneur Deggernaut. Les Ducs ont décidé de m'envoyer en renfort pour superviser la progression de nos forces et les tenir informés, ainsi que nos alliés, à tout moment. Je serai là si vous avez quelque chose à leur transmettre.~
 @201  = ~[Sir Deggernaut (male)]Y a-t-il quelque chose dont vous voulez nous faire part à propos de la croisade de Caelar ?~
@@ -173,6 +177,10 @@
 /* @292 also used in "include_reply_options.tph" */
 @292  = ~[PC Reply]J'ai vu quelque chose d'inquiétant qui me fait penser que Hephernaan, le conseiller de Caelar, est peut-être de mèche avec un démon.~
 
+/* new for v1 */
+@293 = ~[PC Reply]Je soupçonne Hephernaan d'avoir des ambitions personnelles bien plus obscures. Il est apparemment en relation avec « l'Accord de l'Ombre », une organisation qui pourrait bien s'avérer être un adversaire de taille.~ 
+@294  = ~[Sir Deggernaut (male)]Hephernaan est également en accointances avec une organisation mystérieuse dénommée « Accord de l'Ombre ». À ce jour, nous n'avons pas d'autres précisions sur l'origine de ce nom.~
+
 
 /* add_consistency_replyoptions.d */
 @500  = ~[PC Reply]Oui, je pense savoir ce qui s'est passé là-bas.~
@@ -212,6 +220,12 @@
 @1020 = ~[PC Selftalk](Vous remarquez la réaction de <PLAYER4> et n'avez pas besoin d'en savoir plus pour comprendre que cette « bénédiction » n'a rien d'extraordinaire. Et qu'elle n'octroie absolument aucunes des vertus « divines » promises par ce prêtre.)~
 @1021 = ~[PC Selftalk](Vous remarquez la réaction de <PLAYER5> et n'avez pas besoin d'en savoir plus pour comprendre que cette « bénédiction » n'a rien d'extraordinaire. Et qu'elle n'octroie absolument aucunes des vertus « divines » promises par ce prêtre.)~
 @1022 = ~[PC Selftalk](Vous remarquez la réaction de <PLAYER6> et n'avez pas besoin d'en savoir plus pour comprendre que cette « bénédiction » n'a rien d'extraordinaire. Et qu'elle n'octroie absolument aucunes des vertus « divines » promises par ce prêtre.)~
+
+/* new for v1 */
+@1023 = ~[Daeros]Il s'agissait d'un être démoniaque, Hephernaan promettait d'ouvrir un portail pour lui permettre de revenir sur le Plan Primaire. Comme le sang de Caelar n'était pas une ressource suffisante, ils ont parlé de chercher la progéniture d'un autre dieu, un rejeton dont le sang serait moins « dilué ».~
+@1024 = ~[PC Reply]Un *démon*, attendant l'ouverture d'un portail. Cela éclaircit beaucoup de choses...~
+@1025 = ~[Daeros]Oui, en effet. Je suis étonné de ne pas avoir été éliminé ou banni après les avoir entendus. J'imagine qu'ils ne s'attendaient pas vraiment à ce que quelqu'un se balade par ici et pose des questions.~
+@1026 = ~[PC Reply]Hephernaan est de mèche avec une sombre entité. Avez-vous pu discerner sa nature ? De quoi ont-ils parlé ?~ 
 
 /* add_reactions.d */
 @1500 = ~[Captain Corwin]Et - nous savons tous ce qu'il adviendrait si la croisade vous mettait la main dessus. Je suppose que c'est une autre bonne raison d'assurer votre sécurité, <CHARNAME>.~

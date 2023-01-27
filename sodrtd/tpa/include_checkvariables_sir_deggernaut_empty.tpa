@@ -6,6 +6,7 @@ OUTER_SPRINT ~CheckHephernaanIdentity_1~ ~~
 OUTER_SPRINT ~CheckCaelarBetrayal_1_OR_2~ ~~
 OUTER_SPRINT ~CheckHephernaanBetrayal_1_OR_2~ ~~
 OUTER_SPRINT ~CheckHephernaanFiend_GT_0~ ~~
+OUTER_SPRINT ~CheckHephernaanVisual_GT_0~ ~~
 OUTER_SPRINT ~CheckCaelarGodBless_1~ ~~
 OUTER_SPRINT ~CheckCaelarGodBless_2_OR_3~ ~~
 OUTER_SPRINT ~CheckCaelarBhaalChild_1~ ~~

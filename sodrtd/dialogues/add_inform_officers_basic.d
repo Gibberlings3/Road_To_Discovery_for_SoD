@@ -428,6 +428,11 @@ SAY @67 /* ~We feared as much... cursed be that madwoman.~ */
 IF ~~ THEN + update_delancie_01
 END
 
+IF ~~ THEN update_delancie_17
+SAY @71 /* Hmm, I heard that name, but it will be wise to contact our sages and advisors for information. If we are up against a secret organisation, we should know about what we will have to face as soon as possible.~  */
+IF ~~ THEN + update_delancie_01
+END
+
 END //APPEND
 
 
@@ -625,6 +630,11 @@ END
 
 IF ~~ THEN update_nederlok_17
 SAY @69 /* ~[Marshal Nederlok]Well, we suspected as much. Thank you for the confirmation.~ */
+IF ~~ THEN + update_nederlok_00
+END
+
+IF ~~ THEN update_nederlok_18
+SAY @72 /* ~[Marshal Nederlok]I am less surprised to hear a name from a secret organisation connected to our foes. The question is how much danger they pose to us in teh current situation. We need to gather as many information about this "Umbral Accord" as possible.~ */
 IF ~~ THEN + update_nederlok_00
 END
 

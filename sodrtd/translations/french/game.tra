@@ -115,8 +115,12 @@ J'ai assisté au rituel de « bénédiction » dans les camps de la croisade, av
 @10037  = ~Événements importants
 
 Qui l'eût cru. La grande et puissante Caelar fut renvoyée de son Ordre de paladins - à un très jeune âge. Son oncle Aun Argent, semble avoir disparu à la même période.~
+
+/* new in v1 */
+ @10038  = ~Événements importants
+
+Hephernaan a de sombres intentions. Nous avons assisté à une discussion mentionnant son allégeance à « l'Accord de l'Ombre »... la personne ou la chose qui se cache derrière ce nom, est pure spéculation.~ 
 /*
-@10038  = 
 @10039  = 
 @10040  = 
 */

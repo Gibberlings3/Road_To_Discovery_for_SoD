@@ -40,9 +40,9 @@ SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~
 Global("C#RtD_CoalHephernaanBetrayal","GLOBAL",1)
 Global("C#RtD_CoalHephernaanBetrayal","GLOBAL",2)~ THEN @236 /* We know that her advisor Hephernaan is betraying her. */
 DO ~%Set_CheckHephernaanBetrayal_1_OR_2% SetGlobal("C#RtD_HephernaanBetrayal_SET","GLOBAL",1)
+SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~
 
 /* "C#RtD_CoalHephernaanFiend" */
-SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~
 == C#RtDdeg IF ~%CheckHephernaanFiend_GT_0% GlobalGT("C#RtD_CoalHephernaanFiend","GLOBAL",0)
 //OR(2)
 //Global("C#RtD_CoalHephernaanFiend","GLOBAL",1)
@@ -57,6 +57,12 @@ Global("C#RtD_CoalHephernaanFiend","GLOBAL",4)~ THEN ~Hephernaan is working for 
 DO ~SetGlobal("##_SET","GLOBAL",1)
 SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~
 */
+
+/* "C#RtD_CoalHephernaanVisual" */
+== C#RtDdeg IF ~%CheckHephernaanVisual_GT_0% GlobalGT("C#RtD_CoalHephernaanVisual","GLOBAL",0)
+~ THEN@294 /* Hephernaan is also in liege with a secret organization called Umbral Accord. We do not have any further information what the name stands for so far. */
+DO ~%Set_CheckHephernaanVisual_GT_0% SetGlobal("C#RtD_HephernaanVisual_SET","GLOBAL",1)
+SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~
 
 /* "C#RtD_CoalCaelarGodBless" */
 == C#RtDdeg IF ~%CheckCaelarGodBless_1% Global("C#RtD_CoalCaelarGodBless","GLOBAL",1)~ THEN @238 /* We heard rumors about Caelar being divinely blessed, but we do not know how exactly. */
