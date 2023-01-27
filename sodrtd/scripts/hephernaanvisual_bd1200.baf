@@ -1,0 +1,23 @@
+/* PC will recognize Hephernaan if they already met them before watching scry pool scene. */
+
+/* Check variable: PC knew Hephernaan before watching the scry pool scene */
+IF
+	Global("C#RtD_HephernaanVisual","GLOBAL",0)
+	Global("C#RtD_HephernaanIdentity","GLOBAL",1)
+	Global("C#RtD_HephernaanVisHelper","MYAREA",0)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_HephernaanVisHelper","MYAREA",1)
+		Continue()
+
+END
+
+IF
+	Global("C#RtD_HephernaanVisual","GLOBAL",1)
+	Global("C#RtD_HephernaanVisHelper","MYAREA",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_HephernaanVisual","GLOBAL",2)
+		SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)
+		Continue()
+END

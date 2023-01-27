@@ -302,6 +302,11 @@ END
 EXTEND_BOTTOM ~bd1000.bcs~ ~...inlined/bd1000_add.baf~ EVALUATE_BUFFER
 
 
+/* PC will recognize Hephernaan if they already met them before watching scry pool scene. */
+EXTEND_BOTTOM ~BD1200.BCS~ ~sodrtd/scripts/hephernaanvisual_bd1200.baf~ 
+	EVALUATE_BUFFER
+
+
 /* bd3000.bcs */
 <<<<<<<< ...inlined/bd3000_add.baf
 /* Coalition camp bd3000.are. */
