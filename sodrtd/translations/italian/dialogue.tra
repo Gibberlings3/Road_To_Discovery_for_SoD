@@ -73,8 +73,8 @@
 @70 = ~[Risposta del giocatore]Ho nuove informazioni sui piani di Caelar. Dobbiamo discuterne con urgenza.~
 
 /* new in v1 */
-@71   = ~[Torsin De Lancie]Hmm, I never heard that name, but it will be wise to contact our sages and advisors for information. If we are up against a secret organisation, we should know about what we will have to face as soon as possible.~
-@72   = ~[Marshal Nederlok]I am less surprised to hear a name from a secret organisation connected to our foes. The question is how much danger they pose to us in teh current situation. We need to gather as many information about this "Umbral Accord" as possible.~
+@71   = ~[Torsin De Lancie]Hmm, questo nome mi è nuovo, ma sarà opportuno contattare i nostri saggi e i nostri consiglieri per chiedere informazioni. Se abbiamo contro un'organizzazione segreta, dobbiamo sapere il prima possibile ciò che saremo chiamati ad affrontare.~
+@72   = ~[Maresciallo Nederlok]Non mi sorprende che salti fuori il nome di un'organizzazione segreta tra legami dei nostri avversari. La vera domanda è che pericolo rappresenti per noi nella nostra attuale situazione. Dobbiamo raccogliere quante più informazioni possibili su questa "Fosca Alleanza".~
 
 /* add_sir_deggernaut.d */
 @200  = ~[Sir Deggernaut (maschio)]Salve, sono Sir Deggernaut. I Duchi hanno deciso di inviarmi come rinforzo per supervisionare i progressi delle nostre forze e tenere sempre informati loro e i nostri alleati. Sarò sempre presente se avrai qualcosa da comunicare.~
@@ -179,8 +179,8 @@
 @292  = ~[PC Reply]Ho visto qualcosa di inquietante che mi fa pensare che Hephernaan, il consigliere di Caelar, possa essere in qualche modo in combutta con un demone.~
 
 /* new for v1 */
-@293  = ~[PC Reply]I have reasons to believe that Hephernaan has own, darker plans. He seems in liege with some organisation called "Umbral Accord", and they seem to be powerful.~
-@294  = ~[Sir Deggernaut (male)]Hephernaan is also in liege with a secret organization called Umbral Accord. We do not have any further information what the name stands for so far.~
+@293  = ~[Risposta del giocatore]Ho ragione di credere che Hephernaan abbia i propri, oscuri piani. Sembra che sia al servizio di una qualche organizzazione chiamata "Fosca Alleanza", e pare che questa sia molto potente.~
+@294  = ~[Sir Deggernaut (maschio)]Hephernaan è anche al servizio di un'organizzazione segreta chiamata Fosca Alleanza. Per ora non abbiamo ulteriori informazioni su chi e cosa ci sia dietro questo nome.~
 
 /* add_consistency_replyoptions.d */
 @500 = ~[Risposta del giocatore]Sì, credo di sapere cosa sia successo lì.~
@@ -222,10 +222,10 @@
 @1022 = ~[Frasi automatiche](Hai notato la reazione di <PLAYER6> al rituale e non ti servono altre informazioni per sapere che questa benedizione non è affatto speciale, e sicuramente non è una protezione concessa degli Dèi, come proclamato dal sacerdote officiante).~
 
 /* new for v1 */
-@1023 = ~[Daeros]It was a fiend, and Hephernaan was promising to open a portal so it could return to the Prime. Since Caelar's blood wouldn't suffice, they talked about looking for another, less "diluted" offspring of a god.~
-@1024 = ~[PC Reply]A *fiend*, waiting for a portal to be opened. This explains a lot...~
-@1025 = ~[Daeros]Aye, it does. I'm surprised he didn't kill or banished me after I heard that. I guess he didn't expect anyone walking in here, asking questions.~
-@1026 = ~[PC Reply]Hephernaan spoke with a dark creature - could you see what it was, exactly? What did they discuss?~
+@1023 = ~[Daeros]Era un demone, ed Hephernaan gli stava promettendo che avrebbe aperto un portale in modo che potesse tornare al Primo Piano Materiale. Dato che il sangue di Caelar non sarebbe stato sufficiente, discutevano di cercare un'altra progenie divina dal sangue meno "diluito".~
+@1024 = ~[PC Reply]Un *demone*, in attesa che venisse aperto un portale. Questo spiega molte cose...~
+@1025 = ~[Daeros]Già. Sono sorpreso che non mi abbia ucciso o esiliato dopo quello che ho ascoltato. Immagino non si aspettasse che qualcuno entrasse qui, a fare domande.~
+@1026 = ~[PC Reply]Hephernaan ha parlato con una creatura oscura - sei riuscito a vedere di preciso cosa fosse? Di cosa hanno discusso?~
 
 /* add_reactions.d */
 @1500 = ~[Capitano Corwin]E... sappiamo tutti cosa accadrebbe se la crociata mettesse le mani su di te. Ammetto che questa è una forte motivazione per garantire anche la tua sicurezza, <CHARNAME>.~
