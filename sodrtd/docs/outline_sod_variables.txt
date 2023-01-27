@@ -128,7 +128,12 @@ Overall trigger variables - ONLY to be used as triggers in other mods:
 1 - PC heard Hephernaan's name in connection with Caelar
 
 "C#RtD_HephernaanVisual"
-1 - PC knows that [a man looking like] Hephernaan is working with Umbral/a fiend
+1 - PC knows that [a man looking like] Hephernaan is working with Umbral Accord
+2 - PC knows that Hephernaan [who is Caelar's advisor] is working with Umbral Accord
+
+"C#RtD_CoalHephernaanVisual"
+1 - Dukes and officers know that Hephernaan [who is Caelar's advisor] is working with Umbral Accord - PC told them
+2 - Dukes and officers know that Hephernaan [who is Caelar's advisor] is working with Umbral Accord - heard it elsewhere 
 
 "C#RtD_KnowsAunArgent"
 1 - PC knows that Caelar had an uncle named Aun and something happened

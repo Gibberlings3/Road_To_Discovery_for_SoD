@@ -198,21 +198,6 @@ END
 
 
 ////////////////////////////////////////////////////////////////////////
-/* "C#RtD_HephernaanFiend" -> 2 
-2 - knows that Hephernaan [who is Caelar's advisor] is working for a fiend to open the portal */
-
-/* for the rare case that the PC already told the officers that Hephernaan is betraying Caelar but witnesses the pool scene afterwards */
-IF
-	GlobalLT("C#RtD_HephernaanFiend","GLOBAL",2)
-	Global("C#RtD_HephernaanVisual","GLOBAL",1)
-	Global("C#RtD_HephernaanIdentity","GLOBAL",1)
-	Global("C#RtD_HephernaanBetrayal","GLOBAL",2)
-THEN
-	RESPONSE #100
-		SetGlobal("C#RtD_HephernaanFiend","GLOBAL",2)
-END
-
-////////////////////////////////////////////////////////////////////////
 /* "C#RtD_HephernaanBetrayal" -> 2
 2 - knows that Hephernaan [who is Caelar's advisor] is betraying Caelar */
 

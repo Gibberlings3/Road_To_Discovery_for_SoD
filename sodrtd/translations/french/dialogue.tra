@@ -72,6 +72,10 @@
 @69   = ~[Marshal Nederlok]Eh bien, nous nous attendions à une menace de cette ampleur. Merci pour la confirmation.~
 @70   = ~[PC reply]J'ai des nouvelles informations sur les plans de Caelar. Nous devons en discuter de toute urgence.~
 
+/* new in v1 */
+@71   = ~[Torsin De Lancie]Hmm, I never heard that name, but it will be wise to contact our sages and advisors for information. If we are up against a secret organisation, we should know about what we will have to face as soon as possible.~
+@72   = ~[Marshal Nederlok]I am less surprised to hear a name from a secret organisation connected to our foes. The question is how much danger they pose to us in teh current situation. We need to gather as many information about this "Umbral Accord" as possible.~
+
 /* add_sir_deggernaut.d */
 @200  = ~[Sir Deggernaut (male)]Salutations, je suis le Seigneur Deggernaut. Les Ducs ont décidé de m'envoyer en renfort pour superviser la progression de nos forces et les tenir informés, ainsi que nos alliés, à tout moment. Je serai là si vous avez quelque chose à leur transmettre.~
 @201  = ~[Sir Deggernaut (male)]Y a-t-il quelque chose dont vous voulez nous faire part à propos de la croisade de Caelar ?~
@@ -173,6 +177,10 @@
 /* @292 also used in "include_reply_options.tph" */
 @292  = ~[PC Reply]J'ai vu quelque chose d'inquiétant qui me fait penser que Hephernaan, le conseiller de Caelar, est peut-être de mèche avec un démon.~
 
+/* new for v1 */
+@293  = ~[PC Reply]I have reasons to believe that Hephernaan has own, darker plans. He seems in liege with some organisation called "Umbral Accord", and they seem to be powerful.~
+@294  = ~[Sir Deggernaut (male)]Hephernaan is also in liege with a secret organization called Umbral Accord. We do not have any further information what the name stands for so far.~
+
 
 /* add_consistency_replyoptions.d */
 @500  = ~[PC Reply]Oui, je pense savoir ce qui s'est passé là-bas.~
@@ -212,6 +220,12 @@
 @1020 = ~[PC Selftalk](Vous remarquez la réaction de <PLAYER4> et n'avez pas besoin d'en savoir plus pour comprendre que cette « bénédiction » n'a rien d'extraordinaire. Et qu'elle n'octroie absolument aucunes des vertus « divines » promises par ce prêtre.)~
 @1021 = ~[PC Selftalk](Vous remarquez la réaction de <PLAYER5> et n'avez pas besoin d'en savoir plus pour comprendre que cette « bénédiction » n'a rien d'extraordinaire. Et qu'elle n'octroie absolument aucunes des vertus « divines » promises par ce prêtre.)~
 @1022 = ~[PC Selftalk](Vous remarquez la réaction de <PLAYER6> et n'avez pas besoin d'en savoir plus pour comprendre que cette « bénédiction » n'a rien d'extraordinaire. Et qu'elle n'octroie absolument aucunes des vertus « divines » promises par ce prêtre.)~
+
+/* new for v1 */
+@1023 = ~[Daeros]It was a fiend, and Hephernaan was promising to open a portal so it could return to the Prime. Since Caelar's blood wouldn't suffice, they talked about looking for another, less "diluted" offspring of a god.~
+@1024 = ~[PC Reply]A *fiend*, waiting for a portal to be opened. This explains a lot...~
+@1025 = ~[Daeros]Aye, it does. I'm surprised he didn't kill or banished me after I heard that. I guess he didn't expect anyone walking in here, asking questions.~
+@1026 = ~[PC Reply]Hephernaan spoke with a dark creature - could you see what it was, exactly? What did they discuss?~
 
 /* add_reactions.d */
 @1500 = ~[Captain Corwin]Et - nous savons tous ce qu'il adviendrait si la croisade vous mettait la main dessus. Je suppose que c'est une autre bonne raison d'assurer votre sécurité, <CHARNAME>.~

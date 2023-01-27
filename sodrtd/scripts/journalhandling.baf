@@ -301,9 +301,21 @@ THEN
 END
 */
 
+/* "C#RtD_HephernaanVisual" */
+/* 2 - PC knows that Hephernaan [who is Caelar's advisor] is working with Umbral Accord */
+IF
+	GlobalLT("C#RtD_HephernaanVisual_Journal","GLOBAL",2)
+	Global("C#RtD_HephernaanVisual","GLOBAL",2)
+THEN
+	RESPONSE #100
+//		EraseJournalEntry(##HephernaanVisual_1) 
+		AddJournalEntry(@10038,QUEST)
+		SetGlobal("C#RtD_HephernaanVisual_Journal","GLOBAL",2)
+END
+
 /* no journal entry
 /* "C#RtD_HephernaanVisual" */
-/* 1 - knows that [a man looking like] Hephernaan is working with Umbral/a fiend */
+/* 1 - knows that [a man looking like] Hephernaan is working with Umbral Accord */
 IF
 	Global("C#RtD_HephernaanVisual_Journal","GLOBAL",0)
 	Global("C#RtD_HephernaanVisual","GLOBAL",1)

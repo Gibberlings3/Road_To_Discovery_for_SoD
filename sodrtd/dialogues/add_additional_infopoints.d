@@ -1,3 +1,27 @@
+/* additional possibility to learn about Hephernaan's master */
+/* bddaeros 3
+  SAY #61357 /* ~Hephernaan got madder than a hornet in a helmet. He stormed off with Caelar trailing after him. When he came back, I saw him use that altar there to speak with some dark creature. The fiend spotted me—Hephernaan bound me right quick. I've been trapped ever since.~ [BD61357] */
+*/
+APPEND bddaeros 
+IF ~~ THEN hephernaan_fiend
+SAY @1023 /* ~[Daeros]It was a fiend, and Hephernaan was promising to open a portal so it could return to the Prime. Since Caelar's blood wouldn't suffice, they talked about looking for another, less "diluted" offspring of a god.~ */
+++ @1024 /* ~[PC Reply]A *fiend*, waiting for a portal to be opened. This explains a lot...~ */ + hephernaan_fiend_01
+COPY_TRANS bddaeros 3
+END
+
+IF ~~ THEN hephernaan_fiend_01
+SAY @1025 /* ~[Daeros]Aye, it does. I'm surprised he didn't kill or banished me after I heard that. I guess he didn't expect anyone walking in here, asking questions.~ */
+COPY_TRANS bddaeros 3
+END
+END //APPEND
+
+EXTEND_BOTTOM bddaeros 3
++ ~Global("C#RtD_HephernaanFiend","GLOBAL",0)~ + @1026 /* [PC Reply]Hephernaan spoke with a dark creature - could you see what it was, exactly? What did they discuss?~ */ DO ~SetGlobal("C#RtD_HephernaanIdentity_SET","GLOBAL",1)
+SetGlobal("C#RtD_HephernaanFiend_SET","GLOBAL",2)
+SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + hephernaan_fiend
+END
+
+
 /* additional possibilities to inquiry about the crusade's motives 
 SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1) */
 

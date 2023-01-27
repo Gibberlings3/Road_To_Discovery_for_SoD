@@ -113,8 +113,8 @@ Sono stato testimone del rituale della benedizione nell'accampamento dei crociat
 @10037 = ~Eventi importanti
 
 Chi l'avrebbe mai detto. La grande e potente Caelar è stata disonorata dal suo Ordine di paladini, per giunta da bambina. Anche uno dei suoi zii è scomparso misteriosamente in quel periodo.~
-/*
-@10038  = 
-@10039  = 
-@10040  = 
-*/
+
+/* new in v1 */
+@10038  = ~Important Events
+
+Hephernaan has his own, dark plans. We witnessed him talking about serving the "Umbral Accord" - who or what is behind this name, I can only guess.~

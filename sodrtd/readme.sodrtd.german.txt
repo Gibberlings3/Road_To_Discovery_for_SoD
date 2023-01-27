@@ -1,4 +1,4 @@
-﻿------------------------------------------------
+------------------------------------------------
 --- Road to Discovery für BG:SoD und EET:SoD ---
 ------------------------------------------------
 
@@ -108,11 +108,13 @@ Diese Komponente ist optional und benötigt außerdem die Komponenten 4 „Offiz
 Komponente 8 fügt ein paar weitere Möglichkeiten hinzu, um Informationen über Caelars Pläne zu sammeln, die in Komponente 1 „Stat-basierte Beobachtungen und Quest-Optionen von ‚Lauriel's Themed Tweaks Mod‘“ nicht berücksichtigt wurden. Zum Beispiel können die Kreuzzügler im Burglager genauer nach den Plänen des Kreuzzuges befragt werden und das „Segnungsritual“ im Lager an der Eberfellbrücke kann analysiert werden, sofern ein Kleriker oder Paladin in der Gruppe ist.
 Diese Komponente ist optional.
 
-9 Zusätzliche Offiziersreaktionen
+9 Zusätzliche Kommunikation mit Offizieren
 ---------------------------------------------
 Komponente 9 fügt einen benutzerdefinierten Charakter, Sir Deggernaut, hinzu, der sich während der Kampagne von Lager zu Lager bewegt, um eine direkte Kommunikation zu ermöglichen, sodass der HC seine Erkenntnisse immer mitteilen kann, unabhängig von der Erreichbarkeit der Offiziere des Originalspiels aufgrund des Kampagnenfortschritts. Sein Dialog bietet auch die Möglichkeit, ihn nach dem Wissensstand der Offiziere zu befragen, wobei er alles auflistet, was die Offiziere zu diesem Zeitpunkt wissen – was je nach Kampagnenfortschritt mehr sein kann, als der HC herausgefunden hat. 
 Sir Deggernaut ist bei den Lagerzelten in den ersten beiden Lagern und in der Nähe von Mizhena im großen Bündnislager zu finden.
-Diese Komponente ist optional und benötigt außerdem die Komponenten 4 „Offiziere wissen Bescheid“ und 6 „HC kann den Offizieren berichten“. 
+Diese Komponente ist optional und benötigt außerdem die Komponenten 4 „Offiziere wissen Bescheid“ und 6 „HC kann den Offizieren berichten“.
+
+Hinweis: Dies war als Erleichterung für das schnelle Berichten an die Offiziere gedacht, vor allem in den ersten beiden Lager, in denen Bence Duncan nicht immer anwesend ist. Durch den schematischen aufbau seines Dialoges kann es aber sein, dass Sir Deggernaut eher wie ein "Debug-Feature" wirkt als wie ein echter Spielcharakter.
 
 
 KOMPATIBILITÄTSHINWEIS
@@ -226,17 +228,18 @@ HCs Wissen:
 2 - HC weiß, dass Ifearnan [der Caelars Berater ist] für einen Teufel arbeitet, um das Portal zu öffnen 
 3 - HC weiß, dass Ifearnan [der Caelars Berater ist] für Belhifet arbeitet.
 
--Wer ist „Ifearnan“? ("C#RtD_HephernaanIdentity"):
+--Wer ist „Ifearnan“? ("C#RtD_HephernaanIdentity"):
 0 - HC konnte Gesicht und Namen von Ifearnan noch nicht zuordnen oder hat ihn noch nicht getroffen/gehört
 1 - HC kennt Ifearnan mit Namen und Gesicht und weiß, dass er Caelars Berater ist
 
--HC hat Ifearnans Namen gehört ("C#RtD_HephernaanName"):
+--HC hat Ifearnans Namen gehört ("C#RtD_HephernaanName"):
 0 - HC hat Ifearnans Namen nie gehört
 1 - HC hat Ifearnans Namen in Verbindung mit Caelar gehört
 
--HC sah Ifearnans Gesicht ("C#RtD_HephernaanVisual"):
+--HC sah Ifearnans Gesicht in Scrypool-Szene / weiß, dass er mit der Schattenübereinkunft zusammenarbeitet ("C#RtD_HephernaanVisual"):
 0 - HC hat das Gesicht von Ifearnan nie gesehen
-1 - HC weiß, dass [ein Mann, der aussieht wie] Ifearnan mit der Schattenübereinkunft/einem Teufel zusammenarbeitet
+1 - HC weiß, dass [ein Mann, der aussieht wie] Ifearnan mit der Schattenübereinkunft zusammenarbeitet
+2 - HC weiß, dass Ifearnan [der Caelars Berater ist] mit der Schattenübereinkunft zusammenarbeitet
 
 --Auns und Caelars Geschichte ("C#RtD_KnowsAunArgent"):
 0 - Keine Kenntnis, dass Caelar einen Onkel namens Aun hatte und etwas passiert ist 
@@ -250,7 +253,7 @@ HCs Wissen:
 1 - HC weiß, dass der vermummte Mann den HC wegen seines Bhaal-Erbes verfolgt
 2 - HC weiß, dass der vermummte Mann Skie getötet hat
 
--Portal unter Burg Drachenspeer und wie man es öffnet ("C#RtD_KnowsPortalBlood"):
+--Portal unter Burg Drachenspeer und wie man es öffnet ("C#RtD_KnowsPortalBlood"):
 0 - Keinerlei Wissen über das Portal
 1 - HC hat von einem Portal/Spalt in Burg Drachenspeer gehört
 2 - HC weiß, dass das Blut eines Bhaal-Kindes notwendig/ausreichend ist, um das Portal nach Avernus unter der Burg zu öffnen
@@ -335,7 +338,11 @@ Wird Caelar verraten? ("C#RtD_CoalCaelarBetrayal"):
 4 - Herzöge und Offiziere wissen, dass Ifearnan [der Caelars Brater ist] für Belhifet arbeitet – sie haben es woanders gehört 
 
 -Wer ist „Ifearnan“? ("C#RtD_CoalHephernaanIdentity"):
-1 - Herzöge und Offiziere kennen Ifearnan mit Namen und Gesicht und wissen, dass er Caelars Berater ist – habe es an anderer Stelle gehört
+1 - Herzöge und Offiziere kennen Ifearnan mit Namen und Gesicht und wissen, dass er Caelars Berater ist – sie haben es woanders gehört
+
+--Ifearnan arbeitet mit der Schattenübereinkunft zusammen ("C#RtD_CoalHephernaanVisual"):
+1 - Herzöge und Offiziere wissen, dass Ifearnan [der Caelars Brater ist] für Schattenübereinkunft arbeitet - der HC hat es ihnen gesagt
+2 - Herzöge und Offiziere wissen, dass Ifearnan [der Caelars Brater ist] für Schattenübereinkunft arbeitet - sie haben es woanders gehört 
 
 -Auns und Caelars Geschichte ("C#RtD_CoalKnowsAunArgent"):
 1 - Herzöge und Offiziere hörten Gerüchte über die Entlassung Caelars aus dem Orden der Aster zur gleichen Zeit, als Aun verschwand – HC erzählte es ihnen
@@ -446,6 +453,14 @@ https://www.gibberlings3.net/forums/topic/1649-community-filename-prefix-reserva
 
 
 ÄNDERUNGSHISTORIE
+
+Version 1.0
+- Scrypool Scene with Hephernaan will no longer lead to hints about fiend master. PC can tell officers about "Umbral Accord" instead.
+- Scrypool Scene will no longer lead to conclusion that Hephrnaan is betraying Caelar.
+- Sir Deggernaut will have appropriate scripts in camps.
+- Added extra reply option to Daeros dialogue to learn about fiend master. Hearing about "dark creature in mirror" will no longer lead to this knowledge directly.
+- Variable "C#RtD_HephernaanVisual" has value of 2: "PC knows that Hephernaan [who is Caelar's advisor] is working with Umbral Accord"; added "C#RtD_CoalHephernaanVisual" accordingly; updated readme and docs with description.
+- Updated links in sodrtd.ini.
 
 Version 0.8 Beta
 - Updated Themed Tweaks "Add stat-based observations and options" component to TT v0.4: Info about fallen paladin Dauston should be available if Corwin joins the party at first camp, too; Edwin's dialogue about scrying pool scene should close propely.

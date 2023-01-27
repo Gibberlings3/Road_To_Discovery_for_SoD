@@ -72,6 +72,10 @@
 @69   = ~[Marshal Nederlok]Well, we suspected as much. Thank you for the confirmation.~
 @70    = ~[PC reply]I have more information concerning Caelar's plans we need to discuss right now.~
 
+/* new in v1 */
+@71   = ~[Torsin De Lancie]Hmm, I never heard that name, but it will be wise to contact our sages and advisors for information. If we are up against a secret organisation, we should know about what we will have to face as soon as possible.~
+@72   = ~[Marshal Nederlok]I am less surprised to hear a name from a secret organisation connected to our foes. The question is how much danger they pose to us in teh current situation. We need to gather as many information about this "Umbral Accord" as possible.~
+
 /* add_sir_deggernaut.d */
 @200  = ~[Sir Deggernaut (male)]Greetings, I am Sir Deggernaut. The Dukes decided to send me with you to monitor the progress of the coalition forces and keep the Dukes as well as our allies completely informed at all times. I will be here if you have anything you want the Dukes or the other coalition officers to know.~
 @201  = ~[Sir Deggernaut (male)]Is there anything you want to inform us about Caelar's crusade?~
@@ -174,6 +178,10 @@
 /* @292 also used in "include_reply_options.tph" */
 @292  = ~[PC Reply]I saw something disturbing that lets me think that Hephernaan, Caelar's advisor, might be in league with a fiend somehow.~
 
+/* new for v1 */
+@293  = ~[PC Reply]I have reasons to believe that Hephernaan has own, darker plans. He seems in liege with some organisation called "Umbral Accord", and they seem to be powerful.~
+@294  = ~[Sir Deggernaut (male)]Hephernaan is also in liege with a secret organization called Umbral Accord. We do not have any further information what the name stands for so far.~
+
 /* add_consistency_replyoptions.d */
 @500  = ~[PC Reply]Yes, I think I know what happened there.~
 @501  = ~[PC Reply]I will not help you open a portal to Avernus, Caelar. This is madness.~
@@ -212,6 +220,12 @@
 @1020 = ~[PC Selftalk](You noticed <PLAYER4>'s reaction to the performance and do not need any more information to know that this "blessing" is nothing special at all, and definitely not a protection by "the gods" as proclaimed by the priest carrying out the ritual.)~
 @1021 = ~[PC Selftalk](You noticed <PLAYER5>'s reaction to the performance and do not need any more information to know that this "blessing" is nothing special at all, and definitely not a protection by "the gods" as proclaimed by the priest carrying out the ritual.)~
 @1022 = ~[PC Selftalk](You noticed <PLAYER6>'s reaction to the performance and do not need any more information to know that this "blessing" is nothing special at all, and definitely not a protection by "the gods" as proclaimed by the priest carrying out the ritual.)~
+
+/* new for v1 */
+@1023 = ~[Daeros]It was a fiend, and Hephernaan was promising to open a portal so it could return to the Prime. Since Caelar's blood wouldn't suffice, they talked about looking for another, less "diluted" offspring of a god.~
+@1024 = ~[PC Reply]A *fiend*, waiting for a portal to be opened. This explains a lot...~
+@1025 = ~[Daeros]Aye, it does. I'm surprised he didn't kill or banished me after I heard that. I guess he didn't expect anyone walking in here, asking questions.~
+@1026 = ~[PC Reply]Hephernaan spoke with a dark creature - could you see what it was, exactly? What did they discuss?~
 
 /* add_reactions.d */
 @1500 = ~[Captain Corwin]And - we all know what would happen if the crusade would get their hands on you. I admit that's a strong motivation to ensure your safety as well, <CHARNAME>.~

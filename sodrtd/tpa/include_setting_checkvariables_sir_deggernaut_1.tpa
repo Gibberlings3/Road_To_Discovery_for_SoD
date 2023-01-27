@@ -8,6 +8,7 @@ OUTER_SPRINT ~Set_CheckHephernaanIdentity_1~ ~SetGlobal("C#RtD_SD_HI1","LOCALS",
 OUTER_SPRINT ~Set_CheckCaelarBetrayal_1_OR_2~ ~SetGlobal("C#RtD_SD_CB1_2","LOCALS",1)~
 OUTER_SPRINT ~Set_CheckHephernaanBetrayal_1_OR_2~ ~SetGlobal("C#RtD_SD_HB1_2","LOCALS",1)~
 OUTER_SPRINT ~Set_CheckHephernaanFiend_GT_0~ ~SetGlobal("C#RtD_SD_HF_GT0","LOCALS",1)~
+OUTER_SPRINT ~Set_CheckHephernaanVisual_GT_0~ ~SetGlobal("C#RtD_SD_HV_GT0","LOCALS",1)~
 OUTER_SPRINT ~Set_CheckCaelarGodBless_1~ ~SetGlobal("C#RtD_SD_GB1","LOCALS",1)~
 OUTER_SPRINT ~Set_CheckCaelarGodBless_2_OR_3~ ~SetGlobal("C#RtD_SD_GB2_3","LOCALS",1)~
 OUTER_SPRINT ~Set_CheckCaelarBhaalChild_1~ ~SetGlobal("C#RtD_SD_CBC1","LOCALS",1)~

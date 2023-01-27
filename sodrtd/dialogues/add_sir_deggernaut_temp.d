@@ -149,8 +149,25 @@ GlobalGT("C#RtD_CoalKnowsPortalBlood","GLOBAL",4)
 /* not considered. Just because it's nothing the PC would need to tell the officers. */
 /* "C#RtD_HephernaanName" = 1 - PC heard Hephernaan's name in connection with Caelar */
 /* not considered. Just because it's nothing the PC would need to tell the officers. */
-/* "C#RtD_HephernaanVisual" = 1 - PC knows that [a man looking like] Hephernaan is working with Umbral/a fiend */
+/* "C#RtD_HephernaanVisual" */
+/* 1 - PC knows that [a man looking like] Hephernaan is working with Umbral/a fiend */
 /* not considered. Just because it's nothing the PC would need to tell the officers. */
+/* Global("C#RtD_HephernaanVisual","GLOBAL",1): PC knows that [a man looking like] Hephernaan is working with Umbral Accord
+Global("C#RtD_HephernaanIdentity","GLOBAL",1) knows who Hephernaan is. */
+/* this reply option includes a variable change for the PC's knowledge */
++ ~Global("C#RtD_HephernaanVisual","GLOBAL",1)
+Global("C#RtD_HephernaanIdentity","GLOBAL",1)
+Global("C#RtD_CoalHephernaanVisual","GLOBAL",0)~ + @293 /* ~I have reasons to believe that Hephernaan has own, darker plans. He seems in liege with some organisation called "Umbral Accord", and they seem to be powerful.~ */ DO 
+~%Set_CheckHephernaanVisual_GT_0%
+SetGlobal("C#RtD_HephernaanVisual","GLOBAL",2) //no _SET
+SetGlobal("C#RtD_CoalHephernaanVisual","GLOBAL",1) 
+SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + information_05
+/* "C#RtD_HephernaanVisual" = 2 - PC knows that Hephernaan [who is Caelar's advisor] is working with Umbral Accord */
++ ~Global("C#RtD_HephernaanVisual","GLOBAL",2)
+Global("C#RtD_CoalHephernaanVisual","GLOBAL",0)~ + @293 /* ~I have reasons to believe that Hephernaan has own, darker plans. He seems in liege with some organisation called "Umbral Accord", and they seem to be powerful.~ */ DO
+~%Set_CheckHephernaanVisual_GT_0%
+SetGlobal("C#RtD_CoalHephernaanVisual","GLOBAL",1) 
+SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + information_05
 /* "C#RtD_CaelarBetrayal" 
 1 - PC knows that Caelar is betrayed by someone in her crusade, that there is a deeper level to the crusade's purpose she has no influence on */
 /* not considered as an own reply option. Is dealt with via "C#RtD_HephernaanBetrayal" */
@@ -176,14 +193,10 @@ Global("C#RtD_HephernaanBetrayal","GLOBAL",1)
 Global("C#RtD_CoalHephernaanBetrayal","GLOBAL",0)~ + @212 /* I have reasons to believe that Caelar's advisor Hephernaan is betraying Caelar. He has his own, dark plans with this crusade. */ DO ~%Set_CheckHephernaanBetrayal_1_OR_2% %Set_CheckCaelarBetrayal_1_OR_2% SetGlobal("C#RtD_CoalHephernaanBetrayal","GLOBAL",1) SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + information_01
 /* "C#RtD_HephernaanFiend" = 1 - PC knows that [a man being called] Hephernaan is working for a fiend to open the portal */
 /* not considered. Just because it's nothing the PC would need to tell the officers. */
-/* Global("C#RtD_HephernaanVisual","GLOBAL",1): After seeing the scry pool scene
-Global("C#RtD_HephernaanFiend","GLOBAL",1): PC knows that [a man being called] Hephernaan is working for a fiend to open the portal
+/* Global("C#RtD_HephernaanFiend","GLOBAL",1): PC knows that [a man being called] Hephernaan is working for a fiend to open the portal
 Global("C#RtD_HephernaanIdentity","GLOBAL",1) knows who Hephernaan is. */
 /* this reply option includes a variable change for the PC's knowledge */
-//## !Global("C#RtD_CoalHephernaanFiend","GLOBAL",1)
-+ ~OR(2) Global("C#RtD_HephernaanVisual","GLOBAL",1) 
-	 Global("C#RtD_HephernaanFiend","GLOBAL",1)
-GlobalLT("C#RtD_HephernaanFiend","GLOBAL",2)
++ ~Global("C#RtD_HephernaanFiend","GLOBAL",1)
 Global("C#RtD_HephernaanIdentity","GLOBAL",1)
 !Global("C#RtD_CoalHephernaanFiend","GLOBAL",1)~ + @292 /* ~I saw something disturbing that lets me think that Hephernaan, Caelar's advisor, might be in liege with a fiend of sorts.~ */ DO ~%Set_CheckHephernaanFiend_GT_0%
 %Set_CheckHephernaanBetrayal_1_OR_2% %Set_CheckCaelarBetrayal_1_OR_2%
