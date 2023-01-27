@@ -114,7 +114,7 @@ Le composant 9 ajoute un personnage personnalisé, Sir Deggernaut, qui se dépla
 Sir Deggernaut peut être trouvé près des tentes des deux premiers camps, et près de Mizhena dans le grand camp de la coalition.
 Ce composant est facultatif et nécessite également les composants 4 "Les officiers sont plus attentifs.", ainsi que 6 "Le PC peut informer les officiers." 
 
-Please note: This was meant as a feature to simplify reporting to the officers, especially in the first two camps where Bence Duncan is not always present, but due to how Sir Deggernaut's dialogue is focussed on the status of information about the crusade, his presence could feel more like a debug feature, and less like a real ingame character.
+Remarque : cette fonctionnalité a été conçue pour faciliter la communication avec les officiers, en particulier dans les deux premiers camps où Bence Duncan n'est pas toujours présent, mais étant donné que le dialogue de Sir Deggernaut est focalisé sur les informations relatives à la croisade, sa présence peut donner l'impression d'être une fonctionnalité de débogage plutôt qu'un véritable personnage du jeu.
 
 
 Compatibilité
@@ -410,9 +410,10 @@ Using the variables with the postfix "_SET" ensures that knowledge is not lost: 
 
 CREDITS
 
+Frenzgyn - Italian translation (new lines v1)
 improb@bile - Italian translation (v0.7 Beta)
 jastey - author, main mod head
-JohnBob - French translation (v0.5 Beta)
+JohnBob - French translation (v1)
 Lauriel - author of component 1, ideas, design help, proofreading English (v0.1 Beta) 
 Machiavélique - proofreading French (v0.4 Beta)
 Shai Hulud - German translation (v0.2 Beta)

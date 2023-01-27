@@ -407,9 +407,10 @@ Die Verwendung der Variablen mit dem Postfix „_SET“ stellt sicher, dass das 
 
 DANKSAGUNGEN
 
+Frenzgyn - Italian translation (new lines v1)
 improb@bile - italienische Übersetzung (v0.7 beta)
 jastey - Autor, Hauptverantwortliche für die Mod
-JohnBob - französische Übersetzung (v0.5 Beta)
+JohnBob - französische Übersetzung (v1)
 Lauriel - Autor von Komponente 1, Ideen, Designhilfe, Korrekturleser (v0.1 Beta)
 Machiavélique - Korrekturleser (französisch, v0.4 Beta)
 Shai Hulud - deutsche Übersetzung (v0.2 Beta)
