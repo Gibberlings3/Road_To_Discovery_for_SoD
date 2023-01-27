@@ -520,7 +520,7 @@ SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~
 /* bdireni 78
   SAY #63940 /* ~Perhaps you are right. Perhaps not. You do not speak for the Accord—and I do not bow to the demands of some broken fiend's lickspittle.~ [BD63940] */
 */
-/* scrying pool (Hooded man scene): knows that [a man looking like] Hephernaan is working with Umbral/a fiend */
+/* scrying pool (Hooded man scene): knows that [a man looking like] Hephernaan is working with Umbral Accord */
 ADD_TRANS_ACTION BDIRENI BEGIN 78 END BEGIN END ~SetGlobal("C#RtD_HephernaanVisual_SET","GLOBAL",1)
 SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~
 

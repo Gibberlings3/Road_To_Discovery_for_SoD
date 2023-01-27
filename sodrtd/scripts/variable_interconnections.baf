@@ -196,6 +196,27 @@ THEN
 		SetGlobal("C#RtD_KnowsPortalBlood","GLOBAL",3)
 END
 
+////////////////////////////////////////////////////////////////////////
+/* "C#RtD_HephernaanFiend" -> 2
+2 - PC knows that Hephernaan [who is Caelar's advisor] is working for a fiend to open the portal  */
+
+/*
+1 - knows Hephernaan by name and face and that he is Caelar's advisor 
+"C#RtD_HephernaanIdentity" = 1
+1 - PC knows that [a man being called] Hephernaan is working for a fiend to open the portal
+"C#RtD_HephernaanFiend" = 1
+THEN
+2 - knows that Hephernaan [who is Caelar's advisor] is betraying Caelar 
+"C#RtD_HephernaanFiend" -> 2
+*/
+IF
+	Global("C#RtD_HephernaanIdentity","GLOBAL",1)
+	Global("C#RtD_HephernaanFiend","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_HephernaanFiend","GLOBAL",2)
+END
+
 
 ////////////////////////////////////////////////////////////////////////
 /* "C#RtD_HephernaanBetrayal" -> 2
@@ -219,6 +240,34 @@ THEN
 		SetGlobal("C#RtD_HephernaanBetrayal","GLOBAL",2)
 END
 
+
+
+////////////////////////////////////////////////////////////////////////
+/* "C#RtD_HephernaanBetrayal" -> 2
+2 - knows that Hephernaan [who is Caelar's advisor] is betraying Caelar */
+
+/*
+1 - knows Hephernaan by name and face and that he is Caelar's advisor 
+"C#RtD_HephernaanIdentity" = 1
+1 - PC knows that [a man called] Hephernaan is betraying Caelar.
+"C#RtD_HephernaanBetrayal" = 1
+THEN
+2 - knows that Hephernaan [who is Caelar's advisor] is betraying Caelar 
+"C#RtD_HephernaanBetrayal" -> 2
+*/
+IF
+	Global("C#RtD_HephernaanIdentity","GLOBAL",1)
+	Global("C#RtD_HephernaanBetrayal","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C#RtD_HephernaanBetrayal","GLOBAL",2)
+END
+
+
+
+////////////////////////////////////////////////////////////////////////
+/* "C#RtD_CaelarBetrayal" -> 1
+1 - knows that Caelar is betrayed by someone in her crusade, that there is a deeper level to the crusade's purpose */
 /* 
 IF
 2 - knows that Hephernaan [who is Caelar's advisor] is working for a fiend to open the portal 
@@ -248,13 +297,6 @@ END
 ///////////////////////////////////////////////////////////////
 /* "C#RtD_CaelarPlan" -> 4 */
 /* 4 - knows that they are planning on opening a portal at Dragonspear Castle to enter Avernus */
-
-/* no automated interconnection; all handled via dialogue */
-
-
-////////////////////////////////////////////////////////////////////////
-/* "C#RtD_HephernaanBetrayal" -> 2
-2 - knows that Hephernaan [who is Caelar's advisor] is betraying Caelar */
 
 /* no automated interconnection; all handled via dialogue */
 
