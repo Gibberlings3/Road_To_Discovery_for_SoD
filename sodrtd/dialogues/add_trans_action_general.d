@@ -471,16 +471,6 @@ SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~
 ADD_TRANS_ACTION BDHEPHER BEGIN 29 END BEGIN END ~SetGlobal("C#RtD_KnowsHoodedMan_SET","GLOBAL",1)
 SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~
 
-/* BDHORMOR */
-
-/* get the blessing of the gods */
-/* BDHORMOR 3
-  SAY #42749 /* ~That path will take us to the darkest place. The most hideous of devils we will face, but we know no devil shall harm us.~ [BD42749] */
-*/
-ADD_TRANS_ACTION BDHORMOR BEGIN 3 END BEGIN END ~SetGlobal("C#RtD_CaelarProtection_SET","GLOBAL",3)
-SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~
-
-
 /* BDIRENI */
 
 /* bdireni 21
@@ -727,7 +717,7 @@ SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~
 /* bdtristi 22
   SAY #51398 /* ~I have healing magic as well, but that's not my primary use. The fiends of the Nine Hells are orderly, regimented. It will take all our skill to outmaneuver them.~ [BD51398] */
 */
-ADD_TRANS_ACTION BDHORMOR BEGIN 3 END BEGIN END ~SetGlobal("C#RtD_CaelarProtection_SET","GLOBAL",3)
+ADD_TRANS_ACTION BDHORMOR BEGIN 3 END BEGIN END ~SetGlobal("C#RtD_CaelarPlan_SET","GLOBAL",3)
 SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~
 
 

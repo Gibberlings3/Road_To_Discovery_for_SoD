@@ -196,6 +196,9 @@
 @510  = ~[PC Reply]The murderer of Skie - it was the hooded man I was telling you of before.~
 @511  = ~[PC Reply]The murderer of Skie - it was a hooded man who stalked me for a while because of my Bhaal heritage.~
 
+/* new for v1.1 */
+@512  = ~[PC Reply]Yes, we know the story about Sir Aun sacrificing himself for Caelar.~
+
 /* add_additional_infopoints.d */
 @1000 = ~[Female Crusader (bddamarr)]Oh, I don't know the details. But Caelar will open up a way for us to enter, and from what I understand it will happen at Dragonspear Castle itself!~
 @1001 = ~[PC Reply]I know Caelar is preparing to lead everyone into Avernus, but - how exactly will this happen? I didn't quite get the "enter Avernus" part, to be honest.~
@@ -309,3 +312,9 @@
 @1578 = ~[General Stonehand]And don't you let yourself be caught in there no matter what the crusaders plans are for you, you hear me? We want to *win* this war.~
 @1579 = ~[General Stonehand]And don't make me regret I let the one who is wanted for <PRO_HISHER> blood go down there, you hear?~
 @1580 = ~[Torsin De Lancie]It was your blood that opened this hell hole, <CHARNAME> - if there is anyone who is best fit to close it, it would be you!~
+
+/* new for v1.1 */
+@1581 = ~[Marshal Nederlok]The accusations against your advisor Hephernaan are serious, Caelar. Heed our warning. We have reason to believe that he is answering to a fiend master who is trying to cross over to the Material Prime!~
+@1582 = ~[Hephernaan]I stand united with my commander, Caelar Argent, in our attempt to reach for the trapped souls in Avernus! Your accusations are rediculous.~
+@1583 = ~[Torsin De Lancie]No, they are severe, you traitor! Heed our warning, Caelar. Part with the traitor and stop what you are doing - now! Or you will give the very same thing to Dragonspear Castle what you set out to right - another fiend war!~
+

@@ -196,6 +196,9 @@
 @510  = ~[PC Reply]L'assassin de Skie - c'est l'homme à la capuche, je vous en ai parlé tout à l'heure.~
 @511  = ~[PC Reply]L'assassin de Skie - c'est l'homme à la capuche, celui qui semblait très intéressé par mes origines divines.~
 
+/* new for v1.1 */
+@512  = ~[PC Reply]Yes, we know the story about Sir Aun sacrificing himself for Caelar.~
+
 /* add_additional_infopoints.d */
 @1000 = ~[Female Crusader (bddamarr)]Oh, je ne connais pas les détails. Mais Caelar va ouvrir un passage qui nous permettra d'entrer, et d'après ce que j'ai entendu, cela se passera au château Paldragon !~
 @1001 = ~[PC Reply]Je sais que Caelar se prépare à tous nous emmener en Avernus, mais - comment va-t-elle y arriver ? Je n'ai pas vraiment compris la partie « entrer dans l'Avernus », pour tout vous dire.~
@@ -309,3 +312,10 @@
 @1578 = ~[General Stonehand]Et ne vous laissez pas prendre, quelles que soient les intentions de la croisade à votre égard, vous m'entendez ? Nous voulons *gagner* cette guerre.~
 @1579 = ~[General Stonehand]Et ne me faites pas regretter d'avoir laissé celui dont le sang est si convoité se rendre dans cet endroit, vous entendez ?~ ~Et ne me faites pas regretter d'avoir laissé celle dont le sang est si convoité se rendre dans cet endroit, vous entendez ?~
 @1580 = ~[Torsin De Lancie]C'est votre sang qui a ouvert ce portail infernal, <CHARNAME> - s'il y a quelqu'un d'indiqué pour le refermer, c'est bien vous !~
+
+/* new for v1.1 */
+@1581 = ~[Marshal Nederlok]The accusations against your advisor Hephernaan are serious, Caelar. Heed our warning. We have reason to believe that he is answering to a fiend master who is trying to cross over to the Material Prime!~
+@1582 = ~[Hephernaan]I stand united with my commander, Caelar Argent, in our attempt to reach for the trapped souls in Avernus! Your accusations are rediculous.~
+@1583 = ~[Torsin De Lancie]No, they are severe, you traitor! Heed our warning, Caelar. Part with the traitor and stop what you are doing - now! Or you will give the very same thing to Dragonspear Castle what you set out to right - another fiend war!~
+
+

@@ -184,6 +184,7 @@
 @293  = ~[PC Reply]Ich habe gewichtige Gründe zu glauben, dass Ifearnan eigene, unerfreuliche Pläne hat. Er scheint für eine Organisation namens "Schattenübereinkunft" zu arbeiten, und diese scheint mächtig zu sein.~
 @294  = ~[Sir Deggernaut (male)]Ifearnan ist auch mit einer geheimen Organisation namens Schattenübereinkunft in Verbindung. Wir haben bisher keine weiteren Informationen, wofür der Name steht.~
 
+/* add_consistency_replyoptions.d */
 @500    = ~[PC reply]Ja, ich glaube, ich weiß, was da passiert ist.~
 @501    = ~[PC rely]Ich werde Euch nicht helfen, ein Portal nach Avernus zu öffnen, Caelar. Das ist Wahnsinn.~
 @502    = ~[PC reply]Ich glaube, dass Caelars wahres Ziel darin besteht, ihren Onkel Aun zu befreien, der wegen ihr in Avernus gefangen war.~
@@ -196,6 +197,11 @@
 @509    = ~[Caelar]Wir stehen am Rande des Portals, das uns zu unserem Ziel bringen wird, und Ihr versucht, einen Keil zwischen mich und meinen Berater zu treiben? Ist Euch klar, dass Ihr verliert, <CHARNAME>?~
 @510    = ~[PC reply]Der Mörder von Skie – das war der vermummte Mann, von dem ich Euch vorhin erzählt habe.~
 @511    = ~[PC reply]Der Mörder von Skie – das war ein vermummter Mann, der mich wegen meines Bhaal-Erbes eine Zeit lang verfolgt hat.~
+
+/* new for v1.1 */
+@512  = ~[PC Reply]Ja, wir kennen die Geschichte von Sir Aun, der sich für Caelar geopfert hat.~
+
+/* add_additional_infopoints.d */
 @1000   = ~[Female Crusader (bddamarr)]Oh, ich kenne die Details nicht. Aber Caelar wird uns einen Weg öffnen, um hineinzugelangen. Und soweit ich weiß, wird das in Burg Drachenspeer selbst geschehen!~
 @1001   = ~[PC reply]Ich weiß, dass Caelar sich darauf vorbereitet, alle nach Avernus zu führen, aber … wie genau wird das geschehen? Um ehrlich zu sein, habe ich den Teil mit dem „Betreten von Avernus“ nicht ganz verstanden.~
 @1002   = ~[Male Crusader (C#RtDblc)]Psssst! Es ist Zeit für Caelars Segen des Pantheons!~
@@ -308,3 +314,10 @@
 @1578   = ~[General Stonehand]Und lasst Euch da nicht hineinziehen, egal, was die Kreuzzügler mit Euch vorhaben, habt Ihr verstanden? Wir wollen diesen Krieg GEWINNEN.~
 @1579   = ~[General Stonehand]Und lasst mich nicht bedauern, dass ich denjenigen, der für sein Blut gesucht wird, dort hinunter gehen lasse, hört Ihr?~ ~[General Stonehand]Und lasst mich nicht bedauern, dass ich diejenige, die für ihr Blut gesucht wird, dort hinunter gehen lasse, hört Ihr?~
 @1580   = ~[Torsin De Lancie]Es war Euer Blut, das dieses Höllenloch geöffnet hat, <CHARNAME>. Wenn es jemanden gibt, der am besten geeignet ist, es zu schließen, dann wärt Ihr es!~
+
+/* new for v1.1 */
+@1581 = ~[Marshal Nederlok]Die Anschuldigungen gegen Euren Berater Ifearnan sind schwerwiegend, Caelar. Lasst Euch warnen! Wir haben Grund zu der Annahme, dass er einem Teufelsmeister unterstellt ist, der versucht, auf die Materielle Ebene zu gelangen!~
+@1582 = ~[Hephernaan]Ich stehe an der Seite meiner Anführerin, Caelar Argent, in unserem Bestreben, die gefangenen Seelen in Avernus zu erreichen! Eure Anschuldigungen sind lächerlich.~
+@1583 = ~[Torsin De Lancie]Nein, sie sind schwerwiegend, Ihr Verräter! Hört auf unsere Warnung, Caelar. Trennt Euch von dem Verräter und hört auf mit dem, was Ihr tut - sofort! Oder Ihr werdet der Burg Drachenspeer genau das bescheren, was Ihr Euch vorgenommen habt wiedergut zu machen- einen weiteren Krieg der Teufel!~
+
+

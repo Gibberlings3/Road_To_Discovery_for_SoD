@@ -1,12 +1,13 @@
 /* add reply options according to the PC's status of knowledge. - SetGlobal from sodrtd.d need to be integrated! */
 
-/* PC knows what exactly happened with Caelar, Aun and the Order */
-/* bddelanc 34
-  IF ~~ THEN REPLY #43940 /* ~Do we know anything of this incident?~ */ GOTO 36
--> disabled for GlobalLT("C#RtD_KnowsAunArgent","GLOBAL",2)
-*/
-EXTEND_BOTTOM bddelanc 34
-+ ~GlobalGT("C#RtD_KnowsAunArgent","GLOBAL",1)~ + @500 /* [PC Reply]Yes, I think I know what happened there. */ + 36
+
+/* Duke Belt in prison: PC knows it's the Hooded Man that killed Skie. */
+
+EXTEND_BOTTOM bdbelt 30
++ ~Global("C#RtD_KnowsHoodedMan","GLOBAL",2)
+!Global("C#RtD_CoalMetHoodedMan","GLOBAL",0)~ + @510 /* [PC Reply]The murderer of Skie - it was the hooded man I was telling you before. */ DO ~SetGlobal("C#RtD_CoalKnowsHoodedMan","GLOBAL",3)~ + 31
++ ~Global("C#RtD_KnowsHoodedMan","GLOBAL",2)
+Global("C#RtD_CoalMetHoodedMan","GLOBAL",0)~ + @511 /* [PC Reply]The murderer of Skie - it was a hooded man who stalked me for a while because of my Bhaal heritage. */ DO ~SetGlobal("C#RtD_CoalMetHoodedMan","GLOBAL",3) SetGlobal("C#RtD_CoalKnowsHoodedMan","GLOBAL",3)~ + 31
 END
 
 
@@ -23,41 +24,6 @@ END
 EXTEND_BOTTOM bdcaelar 39
 + ~GlobalGT("C#RtD_CaelarPlan","GLOBAL",3)~ + @501 /* [PC Reply]I will not help you open a portal to Avernus, Caelar. This is madness. */ DO ~%C#RtD_CoalCaelarPlan_SET_3%
 SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ EXTERN bddelanc 49
-END
-
-
-/* bdhalat */
-
-/* bdhalat 6
-IF ~~ THEN BEGIN 6 // from: 5.3
-  SAY #50335 /* ~What purpose is that? ~ */
-*/
-EXTEND_BOTTOM bdhalat 6
-+ ~GlobalGT("C#RtD_CaelarPlan","GLOBAL",4)~ + @502 /* [PC Reply]I do think that Caelar's true aim is to free her uncle Aun who was trapped in Avernus because of her. */ + 9
-+ ~GlobalGT("C#RtD_HephernaanBetrayal","GLOBAL",0)~ + @503 /* [PC Reply]Caelar might plan to free souls from Avernus, but her advisor Hephernaan surely has very dark plans. */ + 8
-END
-
-
-/* bdhalat 8
-IF ~~ THEN BEGIN 8 // from: 3.3 5.2 12.0
-  SAY #50347 /* ~A man—if man he truly be—named Hephernaan. He is a creature of deception, a worm wrapped in rose petals. His evil is insidious. He is a sickness growing inside a healthy body, destroying it unawares until it is too late. Be wary of him.~ [BD50347] */
-*/
-EXTEND_BOTTOM bdhalat 8
-+ ~GlobalGT("C#RtD_HephernaanBetrayal","GLOBAL",0)~ + @504 /* [PC Reply]Yes, I know that Hephernaan is betraying Caelar. Thank you for the warning nontheless. */ DO ~SetGlobal("C#RtD_HephernaanName_SET","GLOBAL",1)
-//SetGlobal("C#RtD_HephernaanBetrayal_SET","GLOBAL",1)
-SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + 11
-END
-
-
-
-/* parley at Dead Man's Pass: add more reply options to exit dialogue state so it's not only one in case more variables are set. The str-ref ones are falsed-out original ones from bddelanc and bdstoneh */
-EXTEND_BOTTOM BDNEDERL 46
-+ ~GlobalGT("C#RtD_CoalCaelarPlan","GLOBAL",3)~ + @505 /* [PC Reply]I'm glad even you saw sense in not handing me over to Caelar, de Lancie. */ DO ~SetGlobal("bd_plot","global",393)
-~ EXTERN bddelanc 53
-  IF ~~ THEN REPLY #%eet_2%37876 /* ~I'm worth more than every life you hold in your oily little hands, de Lancie. ~ */ DO ~SetGlobal("bd_plot","global",393)
-~ EXTERN bddelanc 55
-  IF ~~ THEN REPLY #%eet_2%37880 /* ~I'll die before that devil gets her claws into me.~ */ DO ~SetGlobal("bd_plot","global",393)
-~ EXTERN bdstoneh 39
 END
 
 
@@ -96,11 +62,60 @@ END
 END //APPEND
 
 
-/* Duke Belt in prison: PC knows it's the Hooded Man that killed Skie. */
 
-EXTEND_BOTTOM bdbelt 30
-+ ~Global("C#RtD_KnowsHoodedMan","GLOBAL",2)
-!Global("C#RtD_CoalMetHoodedMan","GLOBAL",0)~ + @510 /* [PC Reply]The murderer of Skie - it was the hooded man I was telling you before. */ DO ~SetGlobal("C#RtD_CoalKnowsHoodedMan","GLOBAL",3)~ + 31
-+ ~Global("C#RtD_KnowsHoodedMan","GLOBAL",2)
-Global("C#RtD_CoalMetHoodedMan","GLOBAL",0)~ + @511 /* [PC Reply]The murderer of Skie - it was a hooded man who stalked me for a while because of my Bhaal heritage. */ DO ~SetGlobal("C#RtD_CoalMetHoodedMan","GLOBAL",3) SetGlobal("C#RtD_CoalKnowsHoodedMan","GLOBAL",3)~ + 31
+
+/* PC knows what exactly happened with Caelar, Aun and the Order */
+/* bddelanc 34
+  IF ~~ THEN REPLY #43940 /* ~Do we know anything of this incident?~ */ GOTO 36
+-> disabled for GlobalLT("C#RtD_KnowsAunArgent","GLOBAL",2)
+*/
+EXTEND_BOTTOM bddelanc 34
++ ~GlobalGT("C#RtD_KnowsAunArgent","GLOBAL",1)~ + @500 /* [PC Reply]Yes, I think I know what happened there. */ + 36
+END
+
+
+
+/* bdhalat */
+
+/* bdhalat 6
+IF ~~ THEN BEGIN 6 // from: 5.3
+  SAY #50335 /* ~What purpose is that? ~ */
+*/
+EXTEND_BOTTOM bdhalat 6
++ ~GlobalGT("C#RtD_CaelarPlan","GLOBAL",4)~ + @502 /* [PC Reply]I do think that Caelar's true aim is to free her uncle Aun who was trapped in Avernus because of her. */ + 9
++ ~GlobalGT("C#RtD_HephernaanBetrayal","GLOBAL",0)~ + @503 /* [PC Reply]Caelar might plan to free souls from Avernus, but her advisor Hephernaan surely has very dark plans. */ + 8
+END
+
+
+/* bdhalat 8
+IF ~~ THEN BEGIN 8 // from: 3.3 5.2 12.0
+  SAY #50347 /* ~A man—if man he truly be—named Hephernaan. He is a creature of deception, a worm wrapped in rose petals. His evil is insidious. He is a sickness growing inside a healthy body, destroying it unawares until it is too late. Be wary of him.~ [BD50347] */
+*/
+EXTEND_BOTTOM bdhalat 8
++ ~GlobalGT("C#RtD_HephernaanBetrayal","GLOBAL",0)~ + @504 /* [PC Reply]Yes, I know that Hephernaan is betraying Caelar. Thank you for the warning nontheless. */ DO ~SetGlobal("C#RtD_HephernaanName_SET","GLOBAL",1)
+//SetGlobal("C#RtD_HephernaanBetrayal_SET","GLOBAL",1)
+SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + 11
+END
+
+/* bdhepher 19
+IF ~~ THEN BEGIN 19 // from: 18.0
+  SAY #39123 /* ~This is the secret of Caelar's crusade, <CHARNAME>. There is only one soul in Avernus Caelar has ever cared for. Her uncle, Aun Argent—the man who sacrificed all to save her.~ [BD39123] */
+  IF ~~ THEN REPLY #39124 /* ~Is this true, Caelar?~ */ EXTERN ~BDCAELAR~ 59
+  IF ~~ THEN REPLY #39128 /* ~The crusade, the carnage it wrought, the death and destruction it left in its wake—it was all for one man?~ */ GOTO 21
+  IF ~~ THEN REPLY #39125 /* ~I thought Caelar threw the Sword Coast into chaos. Now, the true villain stands revealed, and he will answer for his perfidy.~ */ GOTO 22
+  IF ~~ THEN REPLY #39127 /* ~Wait, wait. Slow down. Aun sacrificed himself for Caelar?~ */ EXTERN ~BDBELHIF~ 2
+END
+*/
+EXTEND_BOTTOM bdhepher 19
++ ~GlobalGT("C#RtD_KnowsAunArgent","GLOBAL",3)~ + @512 /* ~Yes, we know the story about Sir Aun sacrificing himself for Caelar.~ */ EXTERN ~BDBELHIF~ 2
+END
+
+/* parley at Dead Man's Pass: add more reply options to exit dialogue state so it's not only one in case more variables are set. The str-ref ones are falsed-out original ones from bddelanc and bdstoneh */
+EXTEND_BOTTOM BDNEDERL 46
++ ~GlobalGT("C#RtD_CoalCaelarPlan","GLOBAL",3)~ + @505 /* [PC Reply]I'm glad even you saw sense in not handing me over to Caelar, de Lancie. */ DO ~SetGlobal("bd_plot","global",393)
+~ EXTERN bddelanc 53
+  IF ~~ THEN REPLY #%eet_2%37876 /* ~I'm worth more than every life you hold in your oily little hands, de Lancie. ~ */ DO ~SetGlobal("bd_plot","global",393)
+~ EXTERN bddelanc 55
+  IF ~~ THEN REPLY #%eet_2%37880 /* ~I'll die before that devil gets her claws into me.~ */ DO ~SetGlobal("bd_plot","global",393)
+~ EXTERN bdstoneh 39
 END

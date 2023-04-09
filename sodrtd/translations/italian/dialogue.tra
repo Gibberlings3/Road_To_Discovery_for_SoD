@@ -196,6 +196,9 @@
 @510 = ~[Risposta del giocatore]L'assassino di Skie... era l'uomo incappucciato di cui ti parlavo prima.~
 @511 = ~[Risposta del giocatore]L'assassino di Skie... era un uomo incappucciato che mi ha perseguitato per un po' a causa del mio retaggio divino, quello di Bhaal.~
 
+/* new for v1.1 */
+@512  = ~[PC Reply]Yes, we know the story about Sir Aun sacrificing himself for Caelar.~
+
 /* add_additional_infopoints.d */
 @1000 = ~[Female Crusader (bddamarr)]Oh, non conosco i dettagli. Ma Caelar ci aprirà una strada per entrare, e da quello che ho capito avverrà proprio al Castello Dragonspear!~
 @1001 = ~[Risposta del giocatore]So che Caelar si sta preparando a condurre tutti ad Avernus, ma... come avverrà esattamente? Non ho capito bene la parte "entrare ad Avernus", a dire il vero.~
@@ -309,3 +312,10 @@
 @1578 = ~[General Stonehand]E non lasciarti catturare, qualunque sia il piano dei crociati per te, mi hai capito? Vogliamo *vincere* questa guerra.~
 @1579 = ~[General Stonehand]E non farmi rimpiangere di aver lasciato andare la persona ricercata per il sangue divino, capito?~
 @1580 = ~[Torsin De Lancie]È stato il tuo sangue ad aprire questo abisso infernale, <CHARNAME>... se c'è qualcuno che adatto a chiuderlo, quello sei tu!~
+
+/* new for v1.1 */
+@1581 = ~[Marshal Nederlok]The accusations against your advisor Hephernaan are serious, Caelar. Heed our warning. We have reason to believe that he is answering to a fiend master who is trying to cross over to the Material Prime!~
+@1582 = ~[Hephernaan]I stand united with my commander, Caelar Argent, in our attempt to reach for the trapped souls in Avernus! Your accusations are rediculous.~
+@1583 = ~[Torsin De Lancie]No, they are severe, you traitor! Heed our warning, Caelar. Part with the traitor and stop what you are doing - now! Or you will give the very same thing to Dragonspear Castle what you set out to right - another fiend war!~
+
+

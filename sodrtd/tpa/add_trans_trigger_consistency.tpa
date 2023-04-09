@@ -186,6 +186,38 @@ BUT_ONLY
 
 COMPILE EVAL ~.../inlined/sodrtd_bdhalat.d~
 
+/* bdhepher */
+<<<<<<<< .../inlined/sodrtd_bdhepher.d
+/* #39127 /* ~Wait, wait. Slow down. Aun sacrificed himself for Caelar?~ */ */
+ADD_TRANS_TRIGGER bdhepher 19 ~GlobalLT("C#RtD_KnowsAunArgent","GLOBAL",4)~ DO %responses_19% //3
+>>>>>>>>
+  
+OUTER_SET strref_39127 = eet_200000 + 39127
+
+COPY_EXISTING ~bdhepher.DLG~ ~override~
+  LPF GET_RESPONSE_STRREFS
+    INT_VAR state = 19
+    RET strrefs
+    RET_ARRAY strrefs
+  END
+
+  // assembling response list
+  TEXT_SPRINT responses_19 ~~
+  FOR (i = 0; i < strrefs; ++i) BEGIN
+    PATCH_IF ($strrefs(~%i%~) = strref_39127) BEGIN
+      TEXT_SPRINT responses_19 ~%responses_19% %i%~
+    PATCH_PRINT ~Variable %state%: %indices%~ 
+    END
+  END
+
+  // safety measure if no matching responses are found
+  PATCH_IF (~%responses_19%~ STR_EQ ~~) BEGIN
+    TEXT_SPRINT responses_19 "IF ~False()~"
+  END
+BUT_ONLY
+
+COMPILE EVAL ~.../inlined/sodrtd_bdhepher.d~
+
 
 /* bdimoen */
 /* bdimoen 67 */

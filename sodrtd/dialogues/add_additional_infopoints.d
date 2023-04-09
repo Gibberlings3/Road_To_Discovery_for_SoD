@@ -72,7 +72,7 @@ IF ~~ THEN blc_02
 SAY @1005 /* [C#RtDblc Male Crusader]They do it at dusk only, so better be here when it happens. I wouldn't miss it for the world - it's dangerous out there without the divine protection. */
 IF ~~ THEN DO ~SetGlobal("C#RtD_CrusaderBlessing","bd2000",1)
 SetGlobal("C#RtD_CaelarProtection_SET","GLOBAL",2)
-SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ UNSOLVED_JOURNAL @32 EXIT
+SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ UNSOLVED_JOURNAL @10032 EXIT
 END
 
 IF ~Global("C#RtD_CrusaderBlessing","bd2000",1)~ THEN blc_03
@@ -112,7 +112,7 @@ OR(2) !IsValidForPartyDialogue("VICONIA") !Class("VICONIA",CLERIC_ALL)~ THEN @10
 END
 IF ~~ THEN DO ~SetGlobal("C#RtD_CrusaderBlessingQuest","GLOBAL",4) 
 SetGlobal("C#RtD_CaelarProtection_SET","GLOBAL",4)
-SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)EraseJournalEntry(@32) EraseJournalEntry(@33) AddJournalEntry(@35,QUEST_DONE)~ EXIT
+SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)EraseJournalEntry(@10032) EraseJournalEntry(@10033) AddJournalEntry(@10035,QUEST_DONE)~ EXIT
 IF ~IsValidForPartyDialogue(Player2)
 OR(2)
 Class(Player2,CLERIC_ALL)
@@ -161,7 +161,7 @@ IF ~~ THEN glint_noticed
 SAY @1015 /* [Glint]Nah, how can he say it was granted by "the gods"... blasphemy is what that was, nothing more. */
 IF ~~ THEN DO ~SetGlobal("C#RtD_CrusaderBlessingQuest","GLOBAL",4) 
 SetGlobal("C#RtD_CaelarProtection_SET","GLOBAL",4)
-SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)EraseJournalEntry(@32) EraseJournalEntry(@33) AddJournalEntry(@35,QUEST_DONE)~ EXIT
+SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)EraseJournalEntry(@10032) EraseJournalEntry(@10033) AddJournalEntry(@10035,QUEST_DONE)~ EXIT
 END
 END
 
@@ -170,7 +170,7 @@ IF ~~ THEN viconia_noticed
 SAY @1016 /* [Viconia]This blessing from "the gods" might have been good for the morale of Caelar's followers, but that was all there is to it. */
 IF ~~ THEN DO ~SetGlobal("C#RtD_CrusaderBlessingQuest","GLOBAL",4) 
 SetGlobal("C#RtD_CaelarProtection_SET","GLOBAL",4)
-SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)EraseJournalEntry(@32) EraseJournalEntry(@33) AddJournalEntry(@35,QUEST_DONE)~ EXIT
+SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)EraseJournalEntry(@10032) EraseJournalEntry(@10033) AddJournalEntry(@10035,QUEST_DONE)~ EXIT
 END
 END
 
@@ -180,35 +180,35 @@ IF ~~ THEN player2
 SAY @1018 /* [PC Selftalk](You noticed <PLAYER2>'s reaction to the performance and do not need any more information to know that this "blessing" is nothing special at all, and definitely not a protection by "the gods" as proclaimed by the priest carrying out the ritual.) */
 IF ~~ THEN DO ~SetGlobal("C#RtD_CrusaderBlessingQuest","GLOBAL",4) 
 SetGlobal("C#RtD_CaelarProtection_SET","GLOBAL",4)
-SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)EraseJournalEntry(@32) EraseJournalEntry(@33) AddJournalEntry(@35,QUEST_DONE)~ EXIT
+SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)EraseJournalEntry(@10032) EraseJournalEntry(@10033) AddJournalEntry(@10035,QUEST_DONE)~ EXIT
 END
 
 IF ~~ THEN player3
 SAY @1019 /* [PC Selftalk](You noticed <PLAYER3>'s reaction to the performance and do not need any more information to know that this "blessing" is nothing special at all, and definitely not a protection by "the gods" as proclaimed by the priest carrying out the ritual.) */
 IF ~~ THEN DO ~SetGlobal("C#RtD_CrusaderBlessingQuest","GLOBAL",4) 
 SetGlobal("C#RtD_CaelarProtection_SET","GLOBAL",4)
-SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)EraseJournalEntry(@32) EraseJournalEntry(@33) AddJournalEntry(@35,QUEST_DONE)~ EXIT
+SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)EraseJournalEntry(@10032) EraseJournalEntry(@10033) AddJournalEntry(@10035,QUEST_DONE)~ EXIT
 END
 
 IF ~~ THEN player4
 SAY @1020 /* [PC Selftalk](You noticed <PLAYER4>'s reaction to the performance and do not need any more information to know that this "blessing" is nothing special at all, and definitely not a protection by "the gods" as proclaimed by the priest carrying out the ritual.) */
 IF ~~ THEN DO ~SetGlobal("C#RtD_CrusaderBlessingQuest","GLOBAL",4) 
 SetGlobal("C#RtD_CaelarProtection_SET","GLOBAL",4)
-SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)EraseJournalEntry(@32) EraseJournalEntry(@33) AddJournalEntry(@35,QUEST_DONE)~ EXIT
+SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)EraseJournalEntry(@10032) EraseJournalEntry(@10033) AddJournalEntry(@10035,QUEST_DONE)~ EXIT
 END
 
 IF ~~ THEN player5
 SAY @1021 /* [PC Selftalk](You noticed <PLAYER5>'s reaction to the performance and do not need any more information to know that this "blessing" is nothing special at all, and definitely not a protection by "the gods" as proclaimed by the priest carrying out the ritual.) */
 IF ~~ THEN DO ~SetGlobal("C#RtD_CrusaderBlessingQuest","GLOBAL",4) 
 SetGlobal("C#RtD_CaelarProtection_SET","GLOBAL",4)
-SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)EraseJournalEntry(@32) EraseJournalEntry(@33) AddJournalEntry(@35,QUEST_DONE)~ EXIT
+SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)EraseJournalEntry(@10032) EraseJournalEntry(@10033) AddJournalEntry(@10035,QUEST_DONE)~ EXIT
 END
 
 IF ~~ THEN player6
 SAY @1022 /* [PC Selftalk](You noticed <PLAYER6>'s reaction to the performance and do not need any more information to know that this "blessing" is nothing special at all, and definitely not a protection by "the gods" as proclaimed by the priest carrying out the ritual.) */
 IF ~~ THEN DO ~SetGlobal("C#RtD_CrusaderBlessingQuest","GLOBAL",4) 
 SetGlobal("C#RtD_CaelarProtection_SET","GLOBAL",4)
-SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)EraseJournalEntry(@32) EraseJournalEntry(@33) AddJournalEntry(@35,QUEST_DONE)~ EXIT
+SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)EraseJournalEntry(@10032) EraseJournalEntry(@10033) AddJournalEntry(@10035,QUEST_DONE)~ EXIT
 END
 
 END //APPEND
