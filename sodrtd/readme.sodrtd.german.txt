@@ -456,7 +456,7 @@ https://www.gibberlings3.net/forums/topic/1649-community-filename-prefix-reserva
 ÄNDERUNGSHISTORIE
 
 Version 1.1
-- Sir Deggernaut should not be in the campand in front of the castle both.
+- Sir Deggernaut should not be in the camp and in front of the castle both.
 - Added reactions from officers to the knowledge of Hephernaan's plans to the meeting at Dead Man's Pass.
 - minor corrections.
 
