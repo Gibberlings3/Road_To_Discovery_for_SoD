@@ -123,6 +123,16 @@ GlobalGT("C#RtD_CoalCaelarPlan","GLOBAL",1)~ + @209 /* I have information about 
 /* "C#RtD_KnowsPortalBlood" = 2 - PC knows that blood of Bhaal child is needed/sufficient to open portal to Avernus under DC */
 /* only important if PC also knows that Caelar wants to reach into Avernus [GlobalGT("C#RtD_CaelarPlan","GLOBAL",1)] */
 /* this reply option includes a variable change for the PC's knowledge */
++ ~Global("C#RtD_KnowsPortalBlood","GLOBAL",1)
+Global("C#RtD_FoundTreatise","GLOBAL",1)
+GlobalGT("C#RtD_CaelarPlan","GLOBAL",1)
+GlobalGT("C#RtD_CoalCaelarPlan","GLOBAL",1)
+!Global("C#RtD_CoalKnowsPortalBlood","GLOBAL",5)~ + @210 /* Oh yes. I have information about a portal to Avernus beneath Dragonspear Castle which can be opened with blood of a god's direct decendant - my Bhaal child blood, for example. I am sure that's what she's going for! */ DO ~%Set_CheckKnowsPortalBlood_5_OR_6%
+SetGlobal("C#RtD_KnowsPortalBlood","GLOBAL",3) //no _SET
+//SetGlobal("C#RtD_WantBhaalBlood_SET","GLOBAL",2) will be set by script
+SetGlobal("C#RtD_CoalKnowsPortalBlood","GLOBAL",5) 
+SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~ + information_03
+/* this reply option includes a variable change for the PC's knowledge */
 + ~Global("C#RtD_KnowsPortalBlood","GLOBAL",2)
 GlobalGT("C#RtD_CaelarPlan","GLOBAL",1)
 GlobalGT("C#RtD_CoalCaelarPlan","GLOBAL",1)

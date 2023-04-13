@@ -455,6 +455,11 @@ https://www.gibberlings3.net/forums/topic/1649-community-filename-prefix-reserva
 
 ÄNDERUNGSHISTORIE
 
+Version 1.1
+- Sir Deggernaut should not be in the camp and in front of the castle both.
+- Added reactions from officers to the knowledge of Hephernaan's plans to the meeting at Dead Man's Pass.
+- minor corrections.
+
 Version 1.0
 - Scrypool Scene with Hephernaan will no longer lead to hints about fiend master. PC can tell officers about "Umbral Accord" instead.
 - Scrypool Scene will no longer lead to conclusion that Hephrnaan is betraying Caelar.

@@ -3,7 +3,7 @@ BACKUP ~sodrtd/backup~
 AUTHOR ~https://baldurs-gate.de/index.php?resources/road-to-discovery-for-sod.59/~ 
 
 
-VERSION ~1.0~
+VERSION ~1.1~
 
 
 README ~sodrtd/readme.sodrtd.%LANGUAGE%.txt~ ~sodrtd/readme.sodrtd.english.txt~
@@ -241,11 +241,12 @@ COMPILE EVALUATE_BUFFER ~sodrtd/dialogues/add_trans_action_general.d~ USING ~sod
 IF
 	PartyHasItem("BDBook11")
 	Global("#L_SoDStat_TreatiseFound","GLOBAL",0)
-	GlobalLT("C#RtD_KnowsPortalBlood_SET","GLOBAL",2)
-	GlobalLT("C#RtD_KnowsPortalBlood","GLOBAL",2)
+	GlobalLT("C#RtD_KnowsPortalBlood_SET","GLOBAL",1)
+	Global("C#RtD_KnowsPortalBlood","GLOBAL",0)
 THEN
 	RESPONSE #100
-		SetGlobal("C#RtD_KnowsPortalBlood_SET","GLOBAL",2)
+		SetGlobal("C#RtD_FoundTreatise","GLOBAL",1)
+		SetGlobal("C#RtD_KnowsPortalBlood_SET","GLOBAL",1)
 		SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)
 END
 >>>>>>>>
@@ -1093,6 +1094,7 @@ EXTEND_TOP ~bd3000.bcs~ ~...inlined/bd3000_deggernaut.baf~ EVALUATE_BUFFER
 /* bd4000.bcs */
 <<<<<<<< ...inlined/bd4000_deggernaut.baf
 IF
+	GlobalGT("bd_plot","global",409)
 	Global("C#RtD_SpawnDeggernaut","bd4000",0)
 THEN
 	RESPONSE #100
