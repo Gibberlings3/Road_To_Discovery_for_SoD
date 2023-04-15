@@ -197,7 +197,7 @@
 @511  = ~[PC Reply]L'assassin de Skie - c'est l'homme à la capuche, celui qui semblait très intéressé par mes origines divines.~
 
 /* new for v1.1 */
-@512  = ~[PC Reply]Yes, we know the story about Sir Aun sacrificing himself for Caelar.~
+@512  = ~[PC Reply]Oui, nous avons déjà connaissance du récit selon lequel Sir Aun s'est sacrifié pour protéger Caelar.~
 
 /* add_additional_infopoints.d */
 @1000 = ~[Female Crusader (bddamarr)]Oh, je ne connais pas les détails. Mais Caelar va ouvrir un passage qui nous permettra d'entrer, et d'après ce que j'ai entendu, cela se passera au château Paldragon !~
@@ -314,8 +314,8 @@
 @1580 = ~[Torsin De Lancie]C'est votre sang qui a ouvert ce portail infernal, <CHARNAME> - s'il y a quelqu'un d'indiqué pour le refermer, c'est bien vous !~
 
 /* new for v1.1 */
-@1581 = ~[Marshal Nederlok]The accusations against your advisor Hephernaan are serious, Caelar. Heed our warning. We have reason to believe that he is answering to a fiend master who is trying to cross over to the Material Prime!~
-@1582 = ~[Hephernaan]I stand united with my commander, Caelar Argent, in our attempt to reach for the trapped souls in Avernus! Your accusations are rediculous.~
-@1583 = ~[Torsin De Lancie]No, they are severe, you traitor! Heed our warning, Caelar. Part with the traitor and stop what you are doing - now! Or you will give the very same thing to Dragonspear Castle what you set out to right - another fiend war!~
+@1581 = ~[Marshal Nederlok]Les accusations à l'encontre de votre conseiller Hephernaan sont très sérieuses, Caelar. Entendez nos craintes, il semble plus que probable qu'il réponde aux ordres d'un démon supérieur impatient de pénétrer sur le Plan Primaire !~
+@1582 = ~[Hephernaan]Je suis fidèle à Caelar Argent, et sous son commandement nous atteindrons les âmes qui sont restées prisonnières en Avernus ! Vos allégations sont grotesques.~
+@1583 = ~[Torsin De Lancie]Non, elles sont gravissimes, félon ! Tenez compte de notre mise en garde, Caelar. Affranchissez-vous de ce traître et cessez cette folie... sur-le-champ ! Dans le cas contraire, vous apporterez la damnation sur le château Paldragon, celle-là même que vous essayez d'amender : une nouvelle guerre contre les démons !~
 
 
