@@ -131,8 +131,8 @@ HINWEIS AN ALLE ÜBERSETZER UND SPIELER DER DEUTSCHEN VERSION
 
 Übersetzer: Beachtet bitte, dass die tra-Dateien bereits in utf-8 vorliegen, und nicht wie sonst in meinen Mods üblich in ANSI. Beachtet bitte auch was in der Datei "sodrtd/docs/note_to_translators.txt" steht.
 
-Die deutsche Modversion orientiert sich an der deutschen Fanübersetzung "Deutsche Übersetzung für SoD". Dies bedeutet, dass die im Spiel verwendeten Eigennamen und Übersetzungen der Örtlichkeiten etc. mit der Fanübersetzung konsistent sind und zur offiziellen SoD-Übersetzung Diskrepanzen bestehen, vor allem bei den Namen der Spielcharaktere. Installiert die Fanübersetzung für ein konsistentes Spielerlebnis.
-Download Link: https://baldurs-gate.de/index.php?resources/deutsche-%C3%9Cbersetzung-f%C3%BCr-sod.49/
+Die deutsche Modversion orientiert sich an der deutschen Fanübersetzung "Shai Huluds Text-Patch". Dies bedeutet, dass die im Spiel verwendeten Eigennamen und Übersetzungen der Örtlichkeiten etc. mit der Fanübersetzung konsistent sind und zur offiziellen SoD-Übersetzung Diskrepanzen bestehen, vor allem bei den Namen der Spielcharaktere. Installiert die Fanübersetzung für ein konsistentes Spielerlebnis.
+Download Link: https://www.baldurs-gate.de/index.php?threads/shai-huluds-text-patch.45417/
 
 
 INSTALLATION
@@ -454,6 +454,9 @@ https://www.gibberlings3.net/forums/topic/1649-community-filename-prefix-reserva
 
 
 ÄNDERUNGSHISTORIE
+
+Version 1.3
+- Link correction: "Shai Huluds Text-Patch".
 
 Version 1.2
 - French version completed, by JohnBob.
