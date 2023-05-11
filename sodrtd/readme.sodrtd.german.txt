@@ -60,7 +60,6 @@ Wenn die Komponente über „Themed Tweaks“ installiert wird, wird sie hier ü
 Diese Komponente ist optional. 
 Hinweis: Diese Komponente funktioniert auch ohne eine der anderen Komponenten. 
 Die Komponente 2 „Hauptkomponente“ stellt auch die benötigten grundlegenden Tracking-Variablen für die hier aufgelisteten Ereignisse im Spiel bereit, falls diese Komponente nicht installiert ist. 
-Die Installation von Komponente 1 (oder der gleichen Komponente von „Themed Tweaks“) wird für das gesamte Spielerlebnis empfohlen.
 
 2 Hauptkomponente: Tracking-System
 ---------------------------------------------
@@ -457,6 +456,7 @@ https://www.gibberlings3.net/forums/topic/1649-community-filename-prefix-reserva
 
 Version 1.3
 - Link correction: "Shai Huluds Text-Patch".
+- Removed recommendation to install Themed Tweak's "Add Stat-Based Observations and Quest Options" because personally, I prefer a more subtle approach.
 
 Version 1.2
 - French version completed, by JohnBob.

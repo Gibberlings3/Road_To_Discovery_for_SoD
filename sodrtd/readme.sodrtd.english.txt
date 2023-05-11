@@ -60,7 +60,6 @@ If the component is installed via Themed Tweaks, it will be skipped here.
 This component is optional. 
 Note: This component works without any of the other components. 
 Component 2 "Main Component" will also provide the needed basic tracking variables for the listed ingame occurrences in case this component is not installed. 
-Installing component 1 (or the same component of Themed Tweaks) is recommended for the whole ingame experience.
 
 2 Main Component: Tracking System
 ---------------------------------------------
@@ -459,6 +458,7 @@ HISTORY
 
 Version 1.3
 - Link correction: "Shai Huluds Text-Patch".
+- Removed recommendation to install Themed Tweak's "Add Stat-Based Observations and Quest Options" because personally, I prefer a more subtle approach.
 
 Version 1.2
 - French version completed, by JohnBob.

@@ -59,7 +59,6 @@ Si ce composant est déjà installé via Themed Tweaks, il sera ignoré.
 Ce composant est facultatif. 
 Remarque : Ce composant peut fonctionner sans aucun des autres composants. 
 Le composant 2 "Composant principal" fournira également les variables de suivi nécessaires pour les occurrences en jeu énumérées précédemment au cas où ce composant ne serait pas installé. 
-L'installation du composant 1 (ou du même composant de Themed Tweaks) est recommandée pour une expérience en jeu complète.
 
 2 Composant principal : Système de Pistage.
 ---------------------------------------------
@@ -460,6 +459,7 @@ HISTORY
 
 Version 1.3
 - Link correction: "Shai Huluds Text-Patch".
+- Removed recommendation to install Themed Tweak's "Add Stat-Based Observations and Quest Options" because personally, I prefer a more subtle approach.
 
 Version 1.2
 - French version completed, by JohnBob.
