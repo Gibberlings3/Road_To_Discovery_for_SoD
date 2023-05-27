@@ -60,7 +60,6 @@ Wenn die Komponente über „Themed Tweaks“ installiert wird, wird sie hier ü
 Diese Komponente ist optional. 
 Hinweis: Diese Komponente funktioniert auch ohne eine der anderen Komponenten. 
 Die Komponente 2 „Hauptkomponente“ stellt auch die benötigten grundlegenden Tracking-Variablen für die hier aufgelisteten Ereignisse im Spiel bereit, falls diese Komponente nicht installiert ist. 
-Die Installation von Komponente 1 (oder der gleichen Komponente von „Themed Tweaks“) wird für das gesamte Spielerlebnis empfohlen.
 
 2 Hauptkomponente: Tracking-System
 ---------------------------------------------
@@ -131,8 +130,8 @@ HINWEIS AN ALLE ÜBERSETZER UND SPIELER DER DEUTSCHEN VERSION
 
 Übersetzer: Beachtet bitte, dass die tra-Dateien bereits in utf-8 vorliegen, und nicht wie sonst in meinen Mods üblich in ANSI. Beachtet bitte auch was in der Datei "sodrtd/docs/note_to_translators.txt" steht.
 
-Die deutsche Modversion orientiert sich an der deutschen Fanübersetzung "Deutsche Übersetzung für SoD". Dies bedeutet, dass die im Spiel verwendeten Eigennamen und Übersetzungen der Örtlichkeiten etc. mit der Fanübersetzung konsistent sind und zur offiziellen SoD-Übersetzung Diskrepanzen bestehen, vor allem bei den Namen der Spielcharaktere. Installiert die Fanübersetzung für ein konsistentes Spielerlebnis.
-Download Link: https://baldurs-gate.de/index.php?resources/deutsche-%C3%9Cbersetzung-f%C3%BCr-sod.49/
+Die deutsche Modversion orientiert sich an der deutschen Fanübersetzung "Shai Huluds Text-Patch". Dies bedeutet, dass die im Spiel verwendeten Eigennamen und Übersetzungen der Örtlichkeiten etc. mit der Fanübersetzung konsistent sind und zur offiziellen SoD-Übersetzung Diskrepanzen bestehen, vor allem bei den Namen der Spielcharaktere. Installiert die Fanübersetzung für ein konsistentes Spielerlebnis.
+Download Link: https://www.baldurs-gate.de/index.php?threads/shai-huluds-text-patch.45417/
 
 
 INSTALLATION
@@ -454,6 +453,11 @@ https://www.gibberlings3.net/forums/topic/1649-community-filename-prefix-reserva
 
 
 ÄNDERUNGSHISTORIE
+
+Version 1.3
+- Fixed a looping scriptblock in the journal handling script.
+- Link correction: "Shai Huluds Text-Patch".
+- Removed recommendation to install Themed Tweak's "Add Stat-Based Observations and Quest Options" because personally, I prefer a more subtle approach.
 
 Version 1.2
 - French version completed, by JohnBob.

@@ -262,7 +262,7 @@ THEN
 	RESPONSE #100
 //		EraseJournalEntry(##HephernaanBetrayal_1) 
 		AddJournalEntry(@10018,QUEST)
-		SetGlobal("C#RtD_HephernaanBetrayal","GLOBAL",2)
+		SetGlobal("C#RtD_HephernaanBetrayal_Journal","GLOBAL",2)
 END
 
 /* no journal entry

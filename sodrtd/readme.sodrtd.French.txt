@@ -59,7 +59,6 @@ Si ce composant est déjà installé via Themed Tweaks, il sera ignoré.
 Ce composant est facultatif. 
 Remarque : Ce composant peut fonctionner sans aucun des autres composants. 
 Le composant 2 "Composant principal" fournira également les variables de suivi nécessaires pour les occurrences en jeu énumérées précédemment au cas où ce composant ne serait pas installé. 
-L'installation du composant 1 (ou du même composant de Themed Tweaks) est recommandée pour une expérience en jeu complète.
 
 2 Composant principal : Système de Pistage.
 ---------------------------------------------
@@ -131,8 +130,8 @@ NOTE TO ALL TRANSLATORS AND GERMAN PLAYERS
 
 Translators: please note that all tra-files are in utf8 conversion. Also, please refer to the "note_to_translators.txt" inside sodrtd/docs.
 
-The German version is consistent to the fan-made "Deutsche Übersetzung für SoD". This means, that names and terms could differ from the official German version shipped with the game. Install "Deutsche Übersetzung für SoD" for a consistent game experience.
-Download Link: https://baldurs-gate.de/index.php?resources/deutsche-%C3%9Cbersetzung-f%C3%BCr-sod.49/
+The German version is consistent to the fan-made "Shai Huluds Text-Patch". This means, that names and terms could differ from the official German version shipped with the game. Install the fan made SoD translation for a consistent game experience.
+Download Link: https://www.baldurs-gate.de/index.php?threads/shai-huluds-text-patch.45417/
 
 
 Installation
@@ -457,6 +456,11 @@ https://www.gibberlings3.net/forums/topic/1649-community-filename-prefix-reserva
 
 
 HISTORY
+
+Version 1.3
+- Fixed a looping scriptblock in the journal handling script.
+- Link correction: "Shai Huluds Text-Patch".
+- Removed recommendation to install Themed Tweak's "Add Stat-Based Observations and Quest Options" because personally, I prefer a more subtle approach.
 
 Version 1.2
 - French version completed, by JohnBob.
