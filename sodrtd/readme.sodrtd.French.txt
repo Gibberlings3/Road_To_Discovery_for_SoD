@@ -458,6 +458,7 @@ https://www.gibberlings3.net/forums/topic/1649-community-filename-prefix-reserva
 HISTORY
 
 Version 1.3
+- Fixed a looping scriptblock in the journal handling script.
 - Link correction: "Shai Huluds Text-Patch".
 - Removed recommendation to install Themed Tweak's "Add Stat-Based Observations and Quest Options" because personally, I prefer a more subtle approach.
 
