@@ -3,7 +3,7 @@ BACKUP ~sodrtd/backup~
 AUTHOR ~https://baldurs-gate.de/index.php?resources/road-to-discovery-for-sod.59/~ 
 
 
-VERSION ~1.3~
+VERSION ~2.0~
 
 
 README ~sodrtd/readme.sodrtd.%LANGUAGE%.txt~ ~sodrtd/readme.sodrtd.english.txt~
@@ -60,6 +60,11 @@ LANGUAGE ~Italian~
          ~italian~   
          ~sodrtd/translations/italian/setup.tra~
 	 ~sodrtd/translations/italian/game.tra~
+
+LANGUAGE ~Spanish~
+         ~spanish~   
+         ~sodrtd/translations/spanish/setup.tra~
+	 ~sodrtd/translations/spanish/game.tra~
 
 
 
@@ -492,8 +497,36 @@ INCLUDE ~sodrtd/tpa/add_trans_trigger_consistency_weakpoison.tpa~
 ACTION_IF MOD_IS_INSTALLED ~c#sodtweaks.tp2~ ~5~ THEN BEGIN
 PRINT @100024
 
+/* deprecated
 WITH_TRA ~c#sodtweaks/translations/autotra/%s/DIALOGUE_CHOICES.TRA~ BEGIN
   OUTER_SET strref1 = RESOLVE_STR_REF(@54)
+END
+*/
+
+/* fetch language in which the tweak pack is installed in - thanks to argent77 */
+// Language folder names listed in the order of LANGUAGE definitions in the mod.
+ACTION_DEFINE_ARRAY languages BEGIN
+  "english" "german" "russian" "french" "polish"
+END
+
+// Fetching language index from the WeiDU.log
+OUTER_SET language_number = "-1"
+COPY "WeiDU.log" "WeiDU.log"
+  REPLACE_EVALUATE CASE_INSENSITIVE
+    "^~.*c#sodtweaks\.tp2~ #\([0-9]+\) #5\b"
+    BEGIN
+      PATCH_IF (IS_AN_INT "MATCH1") BEGIN
+        SET language_number = MATCH1
+      END
+    END
+    "%MATCH0%"
+BUT_ONLY IF_EXISTS
+
+ACTION_IF (language_number >= 0) BEGIN
+  OUTER_SPRINT mod_language $languages("%language_number%")
+  WITH_TRA "c#sodtweaks/translations/autotra/%mod_language%/DIALOGUE_CHOICES.TRA" BEGIN
+    OUTER_SET strref1 = RESOLVE_STR_REF(@54)
+  END
 END
 
 <<<<<<<< .../inlined/tt_caelar.d
