@@ -1,0 +1,68 @@
+// PC learns it's a weak poison that was used
+@100	= ~¿Utilizaron un veneno débil? Eso hace que no... no estaban tratando de matarme. Trataban de capturarme.~
+@101	= ~Hmm, puede que tengáis razón.~
+
+// Final conversation with the Dukes before leaving the palace for Dragonspear
+@102 = ~Antes de irme, necesito señalar que los secuaces de Caelar no estaban aquí para matarme.~
+@103 = ~Sí, el veneno que usaron era demasiado débil para lograr eso.~
+@104 = ~Su propósito era capturarme. No tengo ni idea de por qué.~
+@105 = ~Esas son noticias inquietantes.~
+@106 = ~Aún más inquietante fue el visitante que tuve. Parece que un misterioso encapuchado me acecha.~
+@107 = ~Antes de irme, tengo noticias inquietantes. Recibí una visita aquí en el palacio. Parece que un misterioso encapuchado me está acechando.~
+@108 = ~¿Podría ser el mismo que encargó el robo de la espada de Sarevok?~
+@109 = ~Bueno, ciertamente encaja en la descripción. Misterioso... espeluznante se acerca más a la verdad. Y ominoso.~
+@110 = ~Debo disculparme, <CHARNAME>. Parece que la seguridad de nuestro palacio nunca deja de fallaros.~
+
+// Conversation with Eltan
+@111 = ~Aún no me acostumbro a que la gente me ataque sin motivo aparente, pero podría estar peor.~
+@112 = ~No por mucho tiempo. Caelar trató de envenenarme. Responderá por ello.~
+
+// Corwin while in town
+@113	= ~Alguien intentó envenenarme esta noche y estoy en una taberna. Maldición, no es posible, esto nunca terminará.~
+
+// Corwin while in the group
+@114	= ~Creedme, aunque sólo sea esto: Caelar Argéntea intentó envenenarme y yo le devolveré el favor. Si queréis ver caer a la Dama Radiante, entonces somos aliados, independientemente de nuestra historia o linaje.~
+
+// Corwin while in the camps
+@115	= ~Caelar me atacó y casi mata a mi amiga Imoen. Eso no se puede tolerar.~
+
+// Dynaheir while in town
+@116 = ~Ella trató de envenenarme. Casi mata a alguien que me importa mucho. No puedo permitirlo.~
+@117 = ~Tengo pocas opciones en el asunto. Envió asesinos para intentar envenenarme esta mañana.~
+@118 = ~Caelar la Dama Radiante trató de envenenarme. No puedo permitirlo.~
+@119 = ~Yo también. Desafortunadamente, todo lo que sé de ella es que ha expulsado a miles de sus hogares y que nos atacó a mí y a Imoen.~
+@120 = ~Ella me atacó a mí y a Imoen, y pagará por ese error. Eso es todo lo que necesitais saber.~
+
+// Garrick while in town
+@121 = ~Todavía no nos conocemos, pero conozco a Caelar demasiado bien. Agentes a su servicio me atacaron.~
+@122 = ~Lo sé, sí, pero no lo suficiente. Asesinos con la marca de Caelar me atacaron en el Palacio Ducal, nada menos.~
+@123 = ~¿Ella atacó al héroe de Puerta de Baldur? Un movimiento audaz, pero arriesgado. Un fracaso seguramente os arrastraría al conflicto...~ ~¿Ella atacó a la heroína de Puerta de Baldur? Un movimiento audaz, pero arriesgado. Un fracaso seguramente os arrastraría al conflicto...~
+
+
+// Rasaad while in town
+@124 = ~Unos agentes de Caelar Argéntea nos atacaron a mí y a Imoen, en el Palacio Ducal.~
+@125 = ~Unos asesinos nos atacaron a mí y a Imoen hace unas horas. Aunque hay que decir que resulté menos dañado de lo que habría pensado.~
+@126 = ~Cualquier día que podáis desayunar sin asesinos tratando de envenenaros es un buen día. O eso he oído.~
+@127 = ~La primera comida del día es importante. Establece el tono para lo que está por venir... Esperad. ¿Estáis diciendo que alguien trató de envenenaros?~
+@128 = ~Uno asesinos al servicio de Caelar Argéntea penetraron en el Palacio Ducal e intentaron envenenarme.~
+@129 = ~Como esos desgraciados, mi vida también se ha visto afectada por su maligna influencia. Hace un momento sus asesinos intentaron envenenarme. Casi lo consiguen.~
+@130 = ~¿Ha enviado múltiples asesinos para envenenar a alguno de ellos? Porque eso es lo que me hizo a mí.~
+@131 = ~Estas personas han huido de sus problemas. Yo pretendo enfrentar los míos. Caelar intentó envenenarme esta mañana.~
+@132 = ~¿Dices que Caelar Argéntea os atacó? ¿Pero por qué?~
+@133 = ~Imoen estuvo a punto de morir esta tarde. Pero no lo fue, así que considerando todas las cosas creo que lo estoy haciendo bien.~
+
+// Safana while in town
+@134	= ~Esta noche, unos asesinos penetraron en el Palacio Ducal e intentaron envenenarme. Fueron enviados por Caelar Argéntea.~
+
+// Edwin while in first camp
+@135 = ~Una vez más, me veo arrastrado a los acontecimientos. Caelar Argéntea busca capturarme.~ ~Una vez más, me veo arrastrada a los acontecimientos. Caelar Argéntea busca capturarme.~
+@136 = ~Caelar Argéntea trató de envenenarme, y ahora estoy tratando de hacerla pagar. Infantil, sí, pero en mi defensa, ella empezó.~
+@137 = ~No sé por qué, pero Caelar Argéntea intentó envenenarme. Falló. Ahora debe pagar por su error.~
+@138 = ~Por razones en las que no quiero entrar, Caelar Argéntea intentó envenenarme. Falló. Ahora debe pagar por su error.~
+@139 = ~Yo soy <CHARNAME>. La Dama Radiante trató de envenenarme. Obviamente, falló, y lo lamentará cuando la encuentre en el castillo Dragasta.~
+@140 = ~La Dama Radiante me atacó. Ahora es mi turno.~
+@141 = ~Soy <CHARNAME>. No sé por qué, pero la Dama Radiante me ha atacado. Pagará un alto precio por ese error.~
+@142 = ~Yo soy <CHARNAME>. Por razones en las que no quiero entrar, la Dama Radiante me ha elegido como objetivo. Ella pagará un alto precio por ese error.~
+
+
+

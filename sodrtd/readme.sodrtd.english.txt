@@ -408,6 +408,7 @@ Using the variables with the postfix "_SET" ensures that knowledge is not lost: 
 
 CREDITS
 
+ElGamerViejuno - Spanish translation (v2.0)
 Frenzgyn - Italian translation (new lines v1)
 improb@bile - Italian translation (v0.7 Beta)
 jastey - author, main mod head
@@ -455,6 +456,10 @@ https://www.gibberlings3.net/forums/topic/1649-community-filename-prefix-reserva
 
 
 HISTORY
+
+Version 2.0
+- Spanish version, by ElGamerViejuno.
+- Fixed install error in case Jastey's SoD Tweaks were installed in other language.
 
 Version 1.3
 - Fixed a looping scriptblock in the journal handling script.
