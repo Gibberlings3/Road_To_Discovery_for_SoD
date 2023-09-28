@@ -11,6 +11,6 @@ THEN
 	MultiPlayerSync()
 	FadeFromColor([20.0],0)
         Wait(1)
-	DisplayStringHead(Player1,~You rested until dusk. Caelar's priest should perform the blessing ritual any minute near the great fire place.~)
+	DisplayStringHead(Player1,@50000)
 	EndCutSceneMode()
 END

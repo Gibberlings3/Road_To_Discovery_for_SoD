@@ -118,3 +118,7 @@ Chi l'avrebbe mai detto. La grande e potente Caelar è stata disonorata dal suo 
 @10038 = ~Eventi Importanti
 
 Hephernaan ha i propri, oscuri piani. Lo abbiamo visto di persona dire di essere al servizio della "Fosca Alleanza" - chi o cosa si celi dietro tale nome, posso solo immaginarlo.~
+
+/* new in v3 */
+/* scripts */
+@50000  = ~You rested until dusk. Caelar's priest should perform the blessing ritual any minute near the great fire place.~
