@@ -3,7 +3,7 @@ BACKUP ~sodrtd/backup~
 AUTHOR ~https://baldurs-gate.de/index.php?resources/road-to-discovery-for-sod.59/~ 
 
 
-VERSION ~2.0~
+VERSION ~3.0~
 
 
 README ~sodrtd/readme.sodrtd.%LANGUAGE%.txt~ ~sodrtd/readme.sodrtd.english.txt~
@@ -65,6 +65,11 @@ LANGUAGE ~Spanish~
          ~spanish~   
          ~sodrtd/translations/spanish/setup.tra~
 	 ~sodrtd/translations/spanish/game.tra~
+
+LANGUAGE ~Russian~
+         ~russian~   
+         ~sodrtd/translations/russian/setup.tra~
+	 ~sodrtd/translations/russian/game.tra~
 
 
 
