@@ -120,3 +120,7 @@ Wer hätte das gedacht? Die hochmütige Caelar ist in ihrem Paladinorden in Ungn
 @10038  = ~Wichtige Ereignisse
 
 Ifearnan hat seine eigenen, dunklen Pläne. Wir wurden Zeuge, wie er davon sprach, einer "Schattenübereinkunft" zu dienen - wer order was dahinter steckt, kann ich nur vermuten.~
+
+/* new in v3 */
+/* scripts */
+@50000  = ~Ihr habt bis zur Abenddämmerung geruht. Caelars Kleriker sollte jeden Moment das Segnungsritual am großen Feuer durchführen.~
