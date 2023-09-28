@@ -408,6 +408,7 @@ Using the variables with the postfix "_SET" ensures that knowledge is not lost: 
 
 CREDITS
 
+Arkie: Russian translation (v3.0)
 ElGamerViejuno - Spanish translation (v2.0)
 Frenzgyn - Italian translation (new lines v1)
 improb@bile - Italian translation (v0.7 Beta)
@@ -456,6 +457,10 @@ https://www.gibberlings3.net/forums/topic/1649-community-filename-prefix-reserva
 
 
 HISTORY
+
+Version 3.0
+-Russian translation, by Arkie.
+-All lines in scripts should be trified.
 
 Version 2.0
 - Spanish version, by ElGamerViejuno.
