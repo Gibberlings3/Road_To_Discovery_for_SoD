@@ -455,6 +455,10 @@ https://www.gibberlings3.net/forums/topic/1649-community-filename-prefix-reserva
 
 ÄNDERUNGSHISTORIE
 
+Version 3.0
+-Russian translation, by Arkie.
+-All lines in scripts should be traified.
+
 Version 2.0
 - Spanish version, by ElGamerViejuno.
 - Fixed install error in case Jastey's SoD Tweaks were installed in other language.
