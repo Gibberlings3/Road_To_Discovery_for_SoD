@@ -460,7 +460,7 @@ HISTORY
 
 Version 3.0
 -Russian translation, by Arkie.
--All lines in scripts should be trified.
+-All lines in scripts should be traified.
 
 Version 2.0
 - Spanish version, by ElGamerViejuno.
