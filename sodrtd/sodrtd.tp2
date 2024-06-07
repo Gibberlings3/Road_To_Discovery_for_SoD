@@ -3,7 +3,7 @@ BACKUP ~sodrtd/backup~
 AUTHOR ~https://baldurs-gate.de/index.php?resources/road-to-discovery-for-sod.59/~ 
 
 
-VERSION ~3.0~
+VERSION ~4.0~
 
 
 README ~sodrtd/readme.sodrtd.%LANGUAGE%.txt~ ~sodrtd/readme.sodrtd.english.txt~
@@ -451,7 +451,7 @@ EXTEND_BOTTOM ~bd4700.bcs~ ~...inlined/bd4700_add.baf~ EVALUATE_BUFFER
 /* FF camp Troll Forest bd7100 */
 <<<<<<<< ...inlined/bd7100_add.baf
 /* Crusader Tract bdmisc63 #67371 
-~(Scrawled notation: We know too little about this Hephernaan. Caelar relies fully on him, but does he serve her interests or his own? When I return to Berdusk, IÂ’ll see what information I can dig up.)~ */
+~(Scrawled notation: We know too little about this Hephernaan. Caelar relies fully on him, but does he serve her interests or his own? When I return to Berdusk, I’ll see what information I can dig up.)~ */
 IF
 	Global("C#RtD_HephernaanName_SET","GLOBAL",0)
 	PartyHasItem("bdmisc63")

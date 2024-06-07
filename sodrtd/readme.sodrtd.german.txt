@@ -413,7 +413,10 @@ jastey - Autor, Hauptverantwortliche für die Mod
 JohnBob - französische Übersetzung (v1)
 Lauriel - Autor von Komponente 1, Ideen, Designhilfe, Korrekturleser (v0.1 Beta)
 Machiavélique - Korrekturleser (französisch, v0.4 Beta)
+MephistoSatanDevil: setup.tra format corrections for Chinese (simplified) (v4.0)
 Shai Hulud - deutsche Übersetzung (v0.2 Beta)
+yoshimo0417: Chinese (simplified) (v4.0)
+
 
 Danke an BioWare, Black Isle und Wizards of the Coast für Baldur's Gate 1, 2 und die Infinity-Engine, und BeamDog für die Wiederbelebung der Spiele einschließlich der SoD-Kampagne.
 Danke an das Kerzenburgforum und GibberlingsThree für die Bereitstellung eines Ortes für den Austausch von Ideen und technischen Ratschlägen.
@@ -454,6 +457,9 @@ https://www.gibberlings3.net/forums/topic/1649-community-filename-prefix-reserva
 
 
 ÄNDERUNGSHISTORIE
+
+Version 4.0
+-Simplified Chinese translation added, by yoshimo0417, setup.tra format corrections by MephistoSatanDevil
 
 Version 3.0
 -Russian translation, by Arkie.
