@@ -218,7 +218,7 @@ Global("C#RtD_bdplot_175_check","bd1000",18)~ + @1 /* I have no more information
 + ~AreaCheck("bd7100")
 Global("C#RtD_bdplot_201_check","bd7100",200)~ + @1 /* I have no more information to share right now. */ DO ~SetGlobal("C#RtD_bdplot_201_check","bd7100",0)~ + camp_bd7100_transition_201_200
 + ~Global("C#RtD_bdplot_293_check","MYAREA",300)~ + @1 /* I have no more information to share right now. */ DO ~SetGlobal("C#RtD_bdplot_293_check","MYAREA",0)~ + camp_bd7100_transition_293_300
-+ ~Global("C#RtD_bdplot_293_check","MYAREA",301)~ + @1 /* I have no more information to share right now. */ DO ~SetGlobal("C#RtD_bdplot_293_check","MYAREA",0)~ + camp_bd7100_transition_293_301
++ ~Global("C#RtD_bdplot_293_check","MYAREA",310)~ + @1 /* I have no more information to share right now. */ DO ~SetGlobal("C#RtD_bdplot_293_check","MYAREA",0)~ + camp_bd7100_transition_293_301
 END
 
 IF ~~ THEN update_bence_01
