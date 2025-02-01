@@ -460,6 +460,11 @@ https://www.gibberlings3.net/forums/topic/1649-community-filename-prefix-reserva
 
 HISTORY
 
+Version 5.0
+-update chinese translation, by yoshimo0417
+-fix NVLOR in Bence's dialogue at Boareskyr Bridge if Bridgfort was not saved
+-fix install error if SoD Tweakpack is installed in Spanish or SChinese
+
 Version 4.0
 -Simplified Chinese translation added, by yoshimo0417, setup.tra format corrections by MephistoSatanDevil
 
