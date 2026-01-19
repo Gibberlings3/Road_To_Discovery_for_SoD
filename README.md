@@ -46,9 +46,9 @@ The following lists the information from the SoD campaign this mod is considerin
 
 The mod consists of 8 components, most of them optional. Please refer to the mod's readme for more details:
 
-[English](https://raw.githubusercontent.com/Gibberlings3/Road_To_Discovery_for_SoD/main/sodrtd/readme.sodrtd.english.txt)
-[French](https://raw.githubusercontent.com/Gibberlings3/Road_To_Discovery_for_SoD/main/sodrtd/readme.sodrtd.French.txt)
-[German](https://raw.githubusercontent.com/Gibberlings3/Road_To_Discovery_for_SoD/main/sodrtd/readme.sodrtd.german.txt)
+[English](https://raw.githubusercontent.com/Gibberlings3/Road_To_Discovery_for_SoD/main/sodrtd/readme.sodrtd.english.txt) ;
+[French](https://raw.githubusercontent.com/Gibberlings3/Road_To_Discovery_for_SoD/main/sodrtd/readme.sodrtd.French.txt) ;
+[German](https://raw.githubusercontent.com/Gibberlings3/Road_To_Discovery_for_SoD/main/sodrtd/readme.sodrtd.german.txt) ;
 
 
 ## NOTE TO COMPATIBILITY WITH THEMED TWEAKS
