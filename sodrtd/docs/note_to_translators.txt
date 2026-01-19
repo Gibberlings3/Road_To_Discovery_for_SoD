@@ -1,12 +1,3 @@
 Notes to translators:
 
 All tra files are in utf-8 without BOM.
-
-The files "sod_stat_other.tra" and "sod_stat_weak_poison.tra" are from and therefore also in Lauriel's mod "Themed Tweaks".
-
-
-New for v1 (all languages complete):
--Additions of variable descriptions and note for component 9 in readme
-
--in dialogue.tra: lines @71, @72, @293, @294, @1023 - @1026
--in game.tra: line @10038
