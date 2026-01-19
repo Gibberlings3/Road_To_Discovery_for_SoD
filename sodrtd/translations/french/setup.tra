@@ -1,6 +1,7 @@
 @100000  = ~SoD - Observations basees sur des statistiques et options de quete tirees du mod Themed Tweaks de Lauriel~
 @100001  = ~Ce mod est compatible avec SoD et EET uniquement.~
-@100002  = ~Ce composant est deja installe par Themed Tweaks~
+//
+@100025  = ~This component has been deprecated.~@100002  = ~Ce composant est deja installe par Themed Tweaks~
 @100003  = ~Ce composant doit etre installe avant le composant principal de RtD.~
 @100004  = ~Ce mod doit etre installe avant EET_End.~
 @100005  = ~Composant principal : Systeme de Pistage~
@@ -11,8 +12,8 @@
 @100010  = ~Donnez au PC des options de reponse avisee~
 @100011  = ~Vous avez besoin du composant "Changements dans les dialogues du jeu pour plus de coherence" pour ce composant.~
 @100012  = ~Le PC peut informer les officiers~
-@100013  = ~Composant du mod Themed Tweaks detecte.~
-@100014  = ~Composant du mod Themed Tweaks a ete installe via RtD : Correction des dialogues.~
+//@100013  = ~Composant du mod Themed Tweaks detecte.~
+//@100014  = ~Composant du mod Themed Tweaks a ete installe via RtD : Correction des dialogues.~
 @100015  = ~Composant du mod Themed Tweaks a ete installe via Themed Tweaks: Correction des dialogues.~
 @100016  = ~Ajouter des interactions aux officiers~
 @100017  = ~Vous avez besoin du composant "Les officiers sont plus attentifs" pour ce composant.~
@@ -23,6 +24,7 @@
 @100022  = ~Ajouter de nouvelles discussions avec les officiers~
 @100023  = ~Seigneur Deggernaut~
 @100024  = ~Jastey's Tweakpack "Plus de choix de dialogue et eviter les situations sans issue" detecte.~
+@100025  = ~Ce composant est obsolete.~
 
 
 

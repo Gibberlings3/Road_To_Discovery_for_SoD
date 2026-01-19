@@ -531,7 +531,7 @@ IF ~~ THEN + hysterics_01
 2 - know that they want to free souls from Dragonspear War from Avernus - PC told them
 3 - know that they want to free souls from Dragonspear War from Avernus - heard it elsewhere
 */
-I_C_T3 BDNEDERL 41 C#RtD_BDNEDERL_41_KnowsAvernusSouls
+I_C_T3 BDNEDERL 41 C#RtD_bdnederl_41
 == BDNEDERL IF ~OR(2) Global("C#RtD_CoalCaelarPlan","GLOBAL",4) Global("C#RtD_CoalCaelarPlan","GLOBAL",5)~ THEN @1571 /* [Marshal Nederlok]We know the purpose of your crusade is to free souls from Avernus by marching your followers into there, Caelar - and you want the Bhaal Spawn for this? We will not consider any of this unless you tell us exactly what it is you are planning. How in the nine hells are you so convinced you will succeed?! */
 == BDDELANC IF ~OR(2) Global("C#RtD_CoalCaelarProtection","GLOBAL",5) Global("C#RtD_CoalCaelarProtection","GLOBAL",6)~ THEN @1572 /* [Torsin De Lancie]We do know your proclaimed "protection by all the gods" is a scam. Do your followers know you are fooling them with your priests' "blessings"? */
 == BDDELANC IF ~OR(2) Global("C#RtD_CoalHephernaanBetrayal","GLOBAL",1) Global("C#RtD_CoalHephernaanBetrayal","GLOBAL",2)~ THEN @1573 /* [Torsin De Lancie]And we see the treacherous snake at your side, Caelar - are you aware your "trusted advisor" is betraying you? */
@@ -543,7 +543,7 @@ END
 
 /* they know Caelar will open a portal to Avernus - they will not consider letting CHARNAME join */
 
-INTERJECT bddelanc 49 c#RtD_BDDELANC_49_KnowsAvernusSouls
+INTERJECT bddelanc 49 C#RtD_bddelanc_49
 == bddelanc IF ~OR(2) Global("C#RtD_CoalCaelarPlan","GLOBAL",4) Global("C#RtD_CoalCaelarPlan","GLOBAL",5)~ THEN @1575 /* [Torsin De Lancie]But not here, not today. There is no easy way out this time - this is madness that has to be stopped, by all means. */
 END
 IF ~~ THEN + 50

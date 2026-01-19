@@ -3,12 +3,12 @@
 ------------------------------------------------
 
 by jastey
-with one component from Lauriel
 
 LIST OF CONTENTS
 --CONTENTS
 --DESCRIPTION OF COMPONENTS
---COMPATIBILITY NOTE
+--NOTE TO COMPATIBILITY TO THEMED TWEAKS
+--GENERAL COMPATIBILITY NOTE
 --NOTE TO ALL TRANSLATORS AND GERMAN PLAYERS
 --INSTALLATION
 --OVERVIEW ON TRACKED KNOWLEDGE
@@ -45,48 +45,34 @@ The following lists the information from the SoD campaign this mod is considerin
 
 DESCRIPTION OF COMPONENTS 
 
-The mod consists of 9 components, most of them optional.
+The mod consists of 8 components, most of them optional.
 
-1 Add Stat-Based Observations and Quest Options from Lauriel's Themed Tweaks Mod
----------------------------------------------
-
-This imports the component "Add Stat-Based Observations and Quest Options" from Lauriel's Themed Tweaks Mod. Install this if you want more depth and consistent reactions to the following ingame occurrences with regard to making the gained information aware to the group:
-- Duke Jannath's info about weak poison of Caelar's palace assassins (and all later reply options about Caelar trying to have the PC killed in the palace): PC realizes the attack was not meant to kill;
-- treatise about portal below Dragonspear Castle: reactions from NPCs to the revelations about the portal beneath Dragonspear Castle and how to open it;
-- have Edwin identify Hephernaan (including his plans) in the scry pool before having met him in persona;
-- make the Dukes question the fallen paladin Dauston to learn more about Caelar's background - and motives.
--The component also adds some more reply options at appropriate places to reflect the PC's experiences, e.g. tell the Dukes after meeting the Hooded Man inside the palace.
-If the component is installed via Themed Tweaks, it will be skipped here.
-This component is optional. 
-Note: This component works without any of the other components. 
-Component 2 "Main Component" will also provide the needed basic tracking variables for the listed ingame occurrences in case this component is not installed. 
-
-2 Main Component: Tracking System
+1 Main Component: Tracking System
 ---------------------------------------------
 Component 2 is the main component of Road to Discovery which inserts the variable-based tracking system as well as journal entry handling for the level of knowledge this mod is tracking as described below.
 This component adds no reactions or reply options, on its own it has no effect for players.
 Note: This component is required for all following components and would be the base for any other mods that want to make use of the information tracking system.
 
-3 Consistency Changes to Game Dialogues
+2 Consistency Changes to Game Dialogues
 ---------------------------------------------
 Component 3 disables reply options from the original game that do not make sense any more if the PC has more in-depth knowledge about the ongoings. For example, having met Hephernaan at Coast Way Crossing, it doesn't make sense to have a reply option that lets the PC ask "Hepher-who?" when talking to Edwin, or let them say "What could [Caelar] want with me?" after the parley at Dead Man's Pass if they already know exactly what Caelar needs the PC for. This component does not add new content / reply options, this is done in component 5 "Give PC Informed Reply Options".
 This component is optional.
 Note: any references to Caelar's assassins trying to "kill" the PC although the weakness of the poison is known are not changed by this component. Install Lauriel's "Add Stat-Based Observations and Quest Options" component for this, either via RtD or Themed Tweaks.
 
-4 Officers Are Aware
+3 Officers Are Aware
 ---------------------------------------------
 Component 4 adds my view on what the officers would know when along the campaign without the PC telling them. From the first meeting at the big coalition camp we know they interrogate captured crusaders, for example, and the original dialogue with De Lancie reveals their own investigations about Caelar. 
 Nevertheless, this component focusses on keeping officers' knowledge of the crusade's goals and secrets at an absolute minimum not to spoil the ingame experience of the PC being the one revealing the really crucial intel.
 Note: This component does *not* add any reactions to the officers, it just adds the level of their knowledge and awareness so it can be used in the later components.
 This component is optional but needed for component 7 "Add Officers Reactions".
 
-5 Give PC Informed Reply Options
+4 Give PC Informed Reply Options
 ---------------------------------------------
 This component adds consistent reply options to relevant game dialogues which reflect the PC's status of knowledge. For one it adds according reply options where component 3 "Consistency Changes to Game Dialogues" removed the unfitting ones except for the mentioned instances with regard to the weak poison that is content of Lauriel's "Add Stat-Based Observations and Quest Options from Themed Tweaks Mod". Component 5 also adds informed reply options at places where the PC talks about the ongoings with ingame characters, but it adds no options to inform the officers about the PC's findings, this is done in component 6 "PC Can Tell the Officers".
 This component is optional.
 It requires component 3 "Consistency Changes to Game Dialogues" and needs to be installed after component 4 "Officers Are Aware" if component 4 is installed.
 
-6 PC Can Tell the Officers
+5 PC Can Tell the Officers
 ---------------------------------------------
 This component adds the possibility for the PC to inform the Dukes and officers about the gathered information throughout the campaign with regard to the tracked information (e.g. Caelar's deeper plans, Hephernaan's betrayal, the portal and the needed Bhaal blood, and the Hooded Man). Officers will aknowledge the information and give short remarks as a reply. Apart from that, there is no changes to dialogues or other additions. For further, in-depth reactions of the officers, install component 7 "Add Officers Reactions".
 Characters the PC can tell about Caelar's plans with this component are:
@@ -96,28 +82,42 @@ Characters the PC can tell about Caelar's plans with this component are:
 -Marshal Nederlok in the big coalition camp (bd3000).
 This component is optional but needed for component 7 "Add Officers Reactions".
 
-7 Add Officers Reactions
+6 Add Officers Reactions
 ---------------------------------------------
 This component is my view on how the officers should react to the crusade's main purpose depending on how much they know.
 Component 7 adds reactions of the officers to the threat in dialogues depending on how much information they got about the ongoings regarding the crusade and the other instances considered as described below: There will be new dialogue lines at the gathering of the three officers General Stonehand, Marshal Nederlok, and Torsin De Lancie in the big coalition camp, reactions of the three upong hearing about the portal and the PC's role to open it, the officers will ask the PC to look out for more detailed knowledge about Caelar's plans, the parley with Caelar will go differently if the officers know about what Caelar needs the Bhaal blood for, etc.
 This component is optional and also needs components 4 "Make Officers Aware", as well as 6 "PC can tell the officers". 
 
-8 Additional Info Points
+7 Additional Info Points
 ---------------------------------------------
 Component 8 adds a few more possibilities to gather information about Caelar's plans not considered in component 1 "Add Stat-Based Observations and Quest Options from Lauriel's Themed Tweaks Mod". For example, crusaders in the castle encampment can be asked more explicitely about the crusade's plans, and the "blessing ritual" in the camp at Boareskyr Bridge can be analysed if a cleric or paladin is in the group.
 This component is optional.
 
-9 Add Additional Communication with Officers
+8 Add Additional Communication with Officers
 ---------------------------------------------
 Component 9 adds a custom character, Sir Deggernaut, who moves along the campaign from camp to camp for direct communication so the PC can always tell their findings independent on avilability of original game officers due to campaign progress. His dialogue features also a possibility to ask him about the status of the officers' knowledge, where he will list everything the officers are aware of at this point - which might be more than the PC found out depending on campaign progress. 
 Sir Deggernaut can be found by the camp tents in the first two camps, and near Mizhena in the big coalition camp.
 This component is optional and also needs components 4 "Officers Are Aware", as well as 6 "PC can tell the officers". 
 Please note: This was meant as a feature to simplify reporting to the officers, especially in the first two camps where Bence Duncan is not always present, but due to how Sir Deggernaut's dialogue is focussed on the status of information about the crusade, his presence could feel more like a debug feature, and less like a real ingame character.
 
- 
+
+NOTE TO COMPATIBILITY WITH THEMED TWEAKS
+
+The component "1 Add Stat-Based Observations and Quest Options from Lauriel's Themed Tweaks Mod" was removed as of version 6.0.
+
+Still, the actual component "Add Stat-Based Observations and Quest Options" from Themed Tweaks will still be considered as before, even though the component itself is no longer doubled inside Road to Discovery mod ressources.
+
+Install this component from the Themed Tweaks mod if you want more depth and consistent reactions to the following ingame occurrences with regard to making the gained information aware to the group:
+- Duke Jannath's info about weak poison of Caelar's palace assassins (and all later reply options about Caelar trying to have the PC killed in the palace): PC realizes the attack was not meant to kill;
+- treatise about portal below Dragonspear Castle: reactions from NPCs to the revelations about the portal beneath Dragonspear Castle and how to open it;
+- have Edwin identify Hephernaan (including his plans) in the scry pool before having met him in persona;
+- make the Dukes question the fallen paladin Dauston to learn more about Caelar's background - and motives.
+-The component also adds some more reply options at appropriate places to reflect the PC's experiences, e.g. tell the Dukes after meeting the Hooded Man inside the palace.
+
+Note: Road to Discovery "Main Component: Tracking System" will also provide the needed basic tracking variables for the listed ingame occurrences in case this component from Themed Tweaks is not installed.
 
 
-COMPATIBILITY NOTE
+GENERAL COMPATIBILITY NOTE
 
 Install Road to Discovery very late in install order. This mod should be installed AFTER the following mods:
 -Themed Tweaks
@@ -459,6 +459,12 @@ https://www.gibberlings3.net/forums/topic/1649-community-filename-prefix-reserva
 
 
 HISTORY
+
+Version 6.0
+-Component "Add Stat-Based Observations and Quest Options from Lauriel's Themed Tweaks Mod" removed. Recognition and integration remains the same; install it via Lauriel's Themed Tweaks mod.
+-Fixed install error if component "Add Stat-Based Observations and Quest Options" from Lauriel's Themed Tweaks Mod was installed.
+-typo corrections, by basicals.
+-variable names should not be too long (no ingame bug).
 
 Version 5.0
 -update chinese translation, by yoshimo0417

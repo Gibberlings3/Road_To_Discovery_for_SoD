@@ -5,7 +5,7 @@
 
 @100000 = ~SoD - Stat-basierte Beobachtungen und Quest-Optionen von "Lauriel's Themed Tweaks Mod"~
 @100001 = ~Diese Mod ist nur mit SoD und EET kompatibel.~
-@100002 = ~Komponente ist bereits ueber "Themed Tweaks" installiert~
+//@100002 = ~Komponente ist bereits ueber "Themed Tweaks" installiert~
 @100003 = ~Diese Komponente muss vor der Hauptkomponente von RtD installiert werden.~
 @100004 = ~Diese Mod muss vor EET_End installiert werden.~
 @100005 = ~Hauptkomponente: Tracking-System~
@@ -16,8 +16,8 @@
 @100010 = ~HC erhaelt umfangreichere Antwortmoeglichkeiten~
 @100011 = ~Fuer diese Komponente benoetigst du die Mod-Komponente "Konsistenzaenderungen an Spieldialogen".~
 @100012 = ~HC kann den Offizieren berichten~
-@100013 = ~"Themed Tweaks"-Komponente entdeckt.~
-@100014 = ~Komponente "Themed Tweaks" wurde via RtD installiert: Dialoge aktualisieren.~
+//@100013 = ~"Themed Tweaks"-Komponente entdeckt.~
+//@100014 = ~Komponente "Themed Tweaks" wurde via RtD installiert: Dialoge aktualisieren.~
 @100015 = ~Komponente "Themed Tweaks" wurde ueber "Themed Tweaks" installiert: Dialoge aktualisieren.~
 @100016 = ~Zusaetzliche Offiziersreaktionen~
 @100017 = ~Fuer diese Komponente benoetigst du die Mod-Komponente "Offiziere wissen Bescheid".~
@@ -28,3 +28,4 @@
 @100022 = ~Zusaetzliche Kommunikation mit Offizieren~
 @100023 = ~Sir Deggernaut~
 @100024  = ~Jasteys Tweakpack "Weitere Dialogoptionen und keine Sackgassen im Questverlauf" erkannt.~
+@100025  = ~Diese Komponente ist nicht mehr erhaeltlich.~
