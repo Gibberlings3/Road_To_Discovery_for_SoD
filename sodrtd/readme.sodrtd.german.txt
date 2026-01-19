@@ -50,55 +50,55 @@ Die Mod besteht aus 8 Komponenten, von denen die meisten optional sind.
 
 1 Hauptkomponente: Tracking-System
 ---------------------------------------------
-Komponente 2 ist die Hauptkomponente von „Road to Discovery“, die das auf Variablen basierende Verfolgungssystem sowie die Handhabung von Tagebucheinträgen für den Wissensstand einfügt, den diese Mod wie unten beschrieben verfolgt.
+Diese Komponente ist die Hauptkomponente von „Road to Discovery“, die das auf Variablen basierende Verfolgungssystem sowie die Handhabung von Tagebucheinträgen für den Wissensstand einfügt, den diese Mod wie unten beschrieben verfolgt.
 Diese Komponente fügt keine Reaktionen oder Antwortoptionen hinzu, sie hat für sich genommen keine Auswirkungen auf die Spieler.
 Hinweis: Diese Komponente wird für alle folgenden Komponenten benötigt und wäre die Basis für alle anderen Mods, die das Informationsverfolgungssystem nutzen wollen.
 
 2 Konsistenzänderungen an Spieldialogen
 ---------------------------------------------
-Komponente 3 deaktiviert Antwortoptionen aus dem Originalspiel, die keinen Sinn mehr machen, wenn der HC über ein tieferes Wissen über die Geschehnisse verfügt. Wenn der HC zum Beispiel Ifearnan an der Küstenwegquerung getroffen hat, macht es keinen Sinn, eine Antwortoption zu haben, die den HC „Ifeawer?“ fragen lässt, wenn er mit Edwin spricht, oder ihn „Was könnte [Caelar] von mir wollen?“ nach der Unterredung am Totmannpass sagen zu lassen, wenn er bereits genau weiß, wofür Caelar den HC braucht. Diese Komponente fügt keine neuen Inhalte/Antwortoptionen hinzu, dies wird in Komponente 5 "HC erhält umfangreichere Antwortmöglichkeiten" erledigt.
+Diese Komponente deaktiviert Antwortoptionen aus dem Originalspiel, die keinen Sinn mehr machen, wenn der HC über ein tieferes Wissen über die Geschehnisse verfügt. Wenn der HC zum Beispiel Ifearnan an der Küstenwegquerung getroffen hat, macht es keinen Sinn, eine Antwortoption zu haben, die den HC „Ifeawer?“ fragen lässt, wenn er mit Edwin spricht, oder ihn „Was könnte [Caelar] von mir wollen?“ nach der Unterredung am Totmannpass sagen zu lassen, wenn er bereits genau weiß, wofür Caelar den HC braucht. Diese Komponente fügt keine neuen Inhalte/Antwortoptionen hinzu, dies wird in Komponente "HC erhält umfangreichere Antwortmöglichkeiten" erledigt.
 Diese Komponente ist optional.
-Hinweis: Alle Hinweise darauf, dass Caelars Attentäter versuchen, den HC zu „töten“, obwohl die Schwäche des Giftes bekannt ist, werden durch diese Komponente nicht verändert. Installiere dafür Lauriels Komponente „Stat-basierte Beobachtungen und Quest-Optionen“, entweder über RtD oder „Themed Tweaks“.
+Hinweis: Alle Hinweise darauf, dass Caelars Attentäter versuchen, den HC zu „töten“, obwohl die Schwäche des Giftes bekannt ist, werden durch diese Komponente nicht verändert. Installiere dafür die Komponente „Stat-basierte Beobachtungen und Quest-Optionen“ von Lauriels „Themed Tweaks“.
 
 3 Offiziere wissen Bescheid
 ---------------------------------------------
-Komponente 4 fügt meine Ansicht darüber hinzu, was die Offiziere im Laufe der Kampagne wissen würden, ohne dass der HC es ihnen sagt. Aus dem ersten Treffen im großen Bündnislager wissen wir, dass sie zum Beispiel gefangene Kreuzzügler verhören, und der ursprüngliche Dialog mit De Lancie verrät ihre eigenen Nachforschungen über Caelar. 
+Diese Komponente fügt meine Ansicht darüber hinzu, was die Offiziere im Laufe der Kampagne wissen würden, ohne dass der HC es ihnen sagt. Aus dem ersten Treffen im großen Bündnislager wissen wir, dass sie zum Beispiel gefangene Kreuzzügler verhören, und der ursprüngliche Dialog mit De Lancie verrät ihre eigenen Nachforschungen über Caelar.
 Nichtsdestotrotz konzentriert sich diese Komponente darauf, das Wissen der Offiziere über die Ziele und Geheimnisse des Kreuzzuges auf ein absolutes Minimum zu beschränken, um die Spielerfahrung nicht zu beeinträchtigen, dass der HC derjenige ist, der die wirklich entscheidenden Informationen zusammenträgt.
 Hinweis: Diese Komponente fügt KEINE Reaktionen der Offiziere hinzu, sondern nur den Grad ihres Wissens und ihrer Aufmerksamkeit, damit sie in den späteren Komponenten verwendet werden kann.
-Diese Komponente ist optional, wird aber für Komponente 7 „Neue Reaktionen der Offiziere“ benötigt.
+Diese Komponente ist optional, wird aber für Komponente „Neue Reaktionen der Offiziere“ benötigt.
 
 4 HC erhält umfangreichere Antwortmöglichkeiten
 ---------------------------------------------
-Diese Komponente fügt konsistente Antwortoptionen zu relevanten Spieldialogen hinzu, die den Wissensstand des HCs widerspiegeln. Zum einen fügt sie entsprechende Antwortoptionen hinzu, wo Komponente 3 „Konsistenzänderungen an Spieldialogen“ die unpassenden entfernt hat, mit Ausnahme der erwähnten Fälle in Bezug auf das schwache Gift, das Inhalt von Lauriels „Stat-basierte Beobachtungen und Quest-Optionen“ ist. Komponente 5 fügt auch Optionen für umfangreichere Antworten an Stellen hinzu, an denen der HC mit Spielcharakteren über die Geschehnisse spricht, aber sie fügt keine Optionen hinzu, um die Offiziere über die Erkenntnisse des HCs zu informieren, dies wird in Komponente 6 „HC kann den Offizieren berichten“ gemacht.
+Diese Komponente fügt konsistente Antwortoptionen zu relevanten Spieldialogen hinzu, die den Wissensstand des HCs widerspiegeln. Zum einen fügt sie entsprechende Antwortoptionen hinzu, wo Komponente „Konsistenzänderungen an Spieldialogen“ die unpassenden entfernt hat, mit Ausnahme der erwähnten Fälle in Bezug auf das schwache Gift, das Inhalt von Lauriels „Stat-basierte Beobachtungen und Quest-Optionen“ ist. Komponente fügt auch Optionen für umfangreichere Antworten an Stellen hinzu, an denen der HC mit Spielcharakteren über die Geschehnisse spricht, aber sie fügt keine Optionen hinzu, um die Offiziere über die Erkenntnisse des HCs zu informieren, dies wird in Komponente „HC kann den Offizieren berichten“ gemacht.
 Diese Komponente ist optional.
-Sie erfordert Komponente 3 „Konsistenzänderungen an Spieldialogen“ und muss nach Komponente 4 „Offiziere wissen Bescheid“ installiert werden, wenn Komponente 4 installiert ist.
+Sie erfordert Komponente „Konsistenzänderungen an Spieldialogen“ und muss nach der Komponente „Offiziere wissen Bescheid“ installiert werden, wenn diese installiert ist.
 
 5 HC kann den Offizieren berichten
 ---------------------------------------------
-Diese Komponente fügt die Möglichkeit für den HC hinzu, die Herzöge und Offiziere über die gesammelten Informationen während der Kampagne in Bezug auf die verfolgten Informationen zu informieren (z. B. Caelars tiefere Pläne, Ifearnans Verrat, das Portal und das benötigte Bhaal-Blut und der vermummte Mann). Die Offiziere nehmen die Informationen zur Kenntnis und geben kurze Kommentare als Antwort. Abgesehen davon gibt es keine Änderungen an den Dialogen oder andere Ergänzungen. Für weitere, ausführliche Reaktionen der Offiziere, installiere Komponente 7 „Neue Reaktionen der Offiziere“.
+Diese Komponente fügt die Möglichkeit für den HC hinzu, die Herzöge und Offiziere über die gesammelten Informationen während der Kampagne in Bezug auf die verfolgten Informationen zu informieren (z. B. Caelars tiefere Pläne, Ifearnans Verrat, das Portal und das benötigte Bhaal-Blut und der vermummte Mann). Die Offiziere nehmen die Informationen zur Kenntnis und geben kurze Kommentare als Antwort. Abgesehen davon gibt es keine Änderungen an den Dialogen oder andere Ergänzungen. Für weitere, ausführliche Reaktionen der Offiziere, installiere Komponente „Neue Reaktionen der Offiziere“.
 Charaktere, denen der HC mit dieser Komponente von Caelars Plänen erzählen kann, sind:
 - Hauptmann Corwin vor dem Angriff auf die Burg (d. h. die ersten drei Lagerbereiche), sofern sie nicht in der Gruppe ist.
 - Korporal Bence Duncan in den ersten beiden Lagern (Küstenwegquerung und Trollklauenwälder), sofern er verfügbar ist.
 - Torsin De Lancie, sofern er verfügbar ist.
 - Marschall Nederlock im großen Bündnislager (bd3000).
-Diese Komponente ist optional, wird aber für Komponente 7 „Neue Reaktionen der Offiziere“ benötigt.
+Diese Komponente ist optional, wird aber für Komponente „Neue Reaktionen der Offiziere“ benötigt.
 
 6 Neue Reaktionen der Offiziere
 ---------------------------------------------
 Diese Komponente ist meine Ansicht darüber, wie die Offiziere auf das Hauptziel des Kreuzzuges reagieren sollten, je nachdem, wie viel sie wissen.
-Komponente 7 fügt die Reaktionen der Offiziere auf die Bedrohung in Dialogen hinzu, je nachdem, wie viele Informationen sie über die Vorgänge im Zusammenhang mit dem Kreuzzug und den anderen, unten beschriebenen Fällen erhalten haben: Es gibt neue Dialogzeilen bei der Zusammenkunft der drei Offiziere Generalin Steinhand, Marschall Nederlock und Torsin De Lancie im großen Bündnislager, sowie Reaktionen der drei, als sie von dem Portal und der Rolle des HCs, es zu öffnen, erfahren. Zudem werden die Offiziere den HC bitten, nach detaillierteren Informationen über Caelars Pläne Ausschau zu halten. Das Gespräch mit Caelar wird anders verlaufen, wenn die Offiziere wissen, wofür Caelar das Bhaal-Blut braucht, und vieles mehr.
-Diese Komponente ist optional und benötigt außerdem die Komponenten 4 „Offiziere wissen Bescheid“ und 6 „HC kann den Offizieren berichten“.
+Diese Komponente fügt die Reaktionen der Offiziere auf die Bedrohung in Dialogen hinzu, je nachdem, wie viele Informationen sie über die Vorgänge im Zusammenhang mit dem Kreuzzug und den anderen, unten beschriebenen Fällen erhalten haben: Es gibt neue Dialogzeilen bei der Zusammenkunft der drei Offiziere Generalin Steinhand, Marschall Nederlock und Torsin De Lancie im großen Bündnislager, sowie Reaktionen der drei, als sie von dem Portal und der Rolle des HCs, es zu öffnen, erfahren. Zudem werden die Offiziere den HC bitten, nach detaillierteren Informationen über Caelars Pläne Ausschau zu halten. Das Gespräch mit Caelar wird anders verlaufen, wenn die Offiziere wissen, wofür Caelar das Bhaal-Blut braucht, und vieles mehr.
+Diese Komponente ist optional und benötigt außerdem die Komponenten „Offiziere wissen Bescheid“ und „HC kann den Offizieren berichten“.
 
 7 Zusätzliche Informationsquellen
 ---------------------------------------------
-Komponente 8 fügt ein paar weitere Möglichkeiten hinzu, um Informationen über Caelars Pläne zu sammeln, die in Komponente 1 „Stat-basierte Beobachtungen und Quest-Optionen von ‚Lauriel's Themed Tweaks Mod‘“ nicht berücksichtigt wurden. Zum Beispiel können die Kreuzzügler im Burglager genauer nach den Plänen des Kreuzzuges befragt werden und das „Segnungsritual“ im Lager an der Eberfellbrücke kann analysiert werden, sofern ein Kleriker oder Paladin in der Gruppe ist.
+Diese Komponente fügt ein paar weitere Möglichkeiten hinzu, um Informationen über Caelars Pläne zu sammeln, die in „Stat-basierte Beobachtungen und Quest-Optionen“ von Lauriel's Themed Tweaks Mod nicht berücksichtigt wurden. Zum Beispiel können die Kreuzzügler im Burglager genauer nach den Plänen des Kreuzzuges befragt werden und das „Segnungsritual“ im Lager an der Eberfellbrücke kann analysiert werden, sofern ein Kleriker oder Paladin in der Gruppe ist.
 Diese Komponente ist optional.
 
 8 Zusätzliche Kommunikation mit Offizieren
 ---------------------------------------------
-Komponente 9 fügt einen benutzerdefinierten Charakter, Sir Deggernaut, hinzu, der sich während der Kampagne von Lager zu Lager bewegt, um eine direkte Kommunikation zu ermöglichen, sodass der HC seine Erkenntnisse immer mitteilen kann, unabhängig von der Erreichbarkeit der Offiziere des Originalspiels aufgrund des Kampagnenfortschritts. Sein Dialog bietet auch die Möglichkeit, ihn nach dem Wissensstand der Offiziere zu befragen, wobei er alles auflistet, was die Offiziere zu diesem Zeitpunkt wissen – was je nach Kampagnenfortschritt mehr sein kann, als der HC herausgefunden hat. 
+Diese Komponente fügt einen benutzerdefinierten Charakter, Sir Deggernaut, hinzu, der sich während der Kampagne von Lager zu Lager bewegt, um eine direkte Kommunikation zu ermöglichen, sodass der HC seine Erkenntnisse immer mitteilen kann, unabhängig von der Erreichbarkeit der Offiziere des Originalspiels aufgrund des Kampagnenfortschritts. Sein Dialog bietet auch die Möglichkeit, ihn nach dem Wissensstand der Offiziere zu befragen, wobei er alles auflistet, was die Offiziere zu diesem Zeitpunkt wissen – was je nach Kampagnenfortschritt mehr sein kann, als der HC herausgefunden hat.
 Sir Deggernaut ist bei den Lagerzelten in den ersten beiden Lagern und in der Nähe von Mizhena im großen Bündnislager zu finden.
-Diese Komponente ist optional und benötigt außerdem die Komponenten 4 „Offiziere wissen Bescheid“ und 6 „HC kann den Offizieren berichten“.
+Diese Komponente ist optional und benötigt außerdem die Komponenten „Offiziere wissen Bescheid“ und „HC kann den Offizieren berichten“.
 
 Hinweis: Dies war als Erleichterung für das schnelle Berichten an die Offiziere gedacht, vor allem in den ersten beiden Lager, in denen Bence Duncan nicht immer anwesend ist. Durch den schematischen aufbau seines Dialoges kann es aber sein, dass Sir Deggernaut eher wie ein "Debug-Feature" wirkt als wie ein echter Spielcharakter.
 

@@ -49,56 +49,56 @@ Le mod est constitué de 8 éléments, dont la plupart sont facultatifs.
 
 1 Composant principal : Système de Pistage.
 ---------------------------------------------
-Le composant 2 est le composant principal de Road to Discovery. Il intègre un système de suivi basé sur des variables ainsi que le traitement des entrées de journal pour les connaissances pistées/suivies grâce à ce module, comme décrit ci-dessous.
+Ce composant est le composant principal de Road to Discovery. Il intègre un système de suivi basé sur des variables ainsi que le traitement des entrées de journal pour les connaissances pistées/suivies grâce à ce module, comme décrit ci-dessous.
 Ce composant n'ajoute aucune réaction ou option de réponse, à lui seul il n'a aucun effet sur les joueurs.
 Note : Ce composant est requis pour tous les composants suivants et sera la base pour tous les autres mods qui veulent utiliser le système de pistage des informations.
 
 2 Changements dans les dialogues du jeu pour plus de cohérence.
 ---------------------------------------------
-Le composant 3 désactive les options de réponse du jeu original qui n'ont plus de sens si le PC a une connaissance plus approfondie de ce qui se passe. Par exemple, après avoir rencontré Hephernaan au Pont de la Voie Côtière, il n'est pas utile d'avoir une option de réponse qui permette au PC de demander "Hepher-qui ?" lorsqu'il parle à Edwin, ou de le laisser dire "Que pourrait me vouloir Caelar ?" après les pourparlers au Défilé du Trépassé s'il sait déjà exactement ce que Caelar veut. Ce composant n'ajoute pas de nouveaux contenus / options de réponse, ceci est fait dans le composant 5 "Donner au PC des options de réponse informée".
+Ce composant désactive les options de réponse du jeu original qui n'ont plus de sens si le PC a une connaissance plus approfondie de ce qui se passe. Par exemple, après avoir rencontré Hephernaan au Pont de la Voie Côtière, il n'est pas utile d'avoir une option de réponse qui permette au PC de demander "Hepher-qui ?" lorsqu'il parle à Edwin, ou de le laisser dire "Que pourrait me vouloir Caelar ?" après les pourparlers au Défilé du Trépassé s'il sait déjà exactement ce que Caelar veut. Ce composant n'ajoute pas de nouveaux contenus / options de réponse, ceci est fait dans le composant "Donner au PC des options de réponse informée".
 Ce composant est facultatif.
-Note : toute référence aux assassins de Caelar essayant de "tuer" le PC bien que la faiblesse du poison soit connue n'est pas modifiée par ce composant. Installez le composant "Observations basées sur des statistiques et options de quête" tiré du mod Themed Tweaks de Lauriel pour cela, soit via RtD ou Themed Tweaks.
+Note : toute référence aux assassins de Caelar essayant de "tuer" le PC bien que la faiblesse du poison soit connue n'est pas modifiée par ce composant. Installez le composant "Observations basées sur des statistiques et options de quête" tiré du mod Themed Tweaks de Lauriel pour cela, du Themed Tweaks.
 
 3 Les officiers sont plus attentifs.
 ---------------------------------------------
-Le composant 4 ajoute mon point de vue sur ce que les officiers pourraient savoir au cours de la campagne sans que le PC ne le leur ait dit. Dès la première rencontre au camp de commandement de la coalition, nous savons qu'ils interrogent les croisés capturés, et le dialogue original avec De Lancie révèle leurs propres enquêtes sur Caelar. 
+Ce composant ajoute mon point de vue sur ce que les officiers pourraient savoir au cours de la campagne sans que le PC ne le leur ait dit. Dès la première rencontre au camp de commandement de la coalition, nous savons qu'ils interrogent les croisés capturés, et le dialogue original avec De Lancie révèle leurs propres enquêtes sur Caelar. 
 Néanmoins, ce composant se concentre sur la connaissance des officiers concernant les objectifs et les secrets de la croisade mais dans une mesure minimale pour ne pas gâcher l'expérience de jeu du PC qui est celui qui révélera les informations vraiment cruciales.
 Note : Ce composant n'ajoute *pas* de nouvelles réactions aux officiers, il ajoute simplement le niveau de leurs connaissances et de leur conscience afin qu'ils puissent être utilisés dans les composants ultérieurs.
-Ce composant est facultatif mais nécessaire pour le composant 7 "Ajouter des interactions aux officiers.".
+Ce composant est facultatif mais nécessaire pour le composant "Ajouter des interactions aux officiers.".
 
 4 Donnez au PC des options de réponse avisée.
 ---------------------------------------------
-Ce composant ajoute des options de réponse cohérentes aux dialogues de jeu qui reflètent l'état des connaissances du PC. D'une part, il ajoute des options de réponse appropriées là où le composant 3 "Changements dans les dialogues du jeu pour plus de cohérence" a supprimé celles qui ne convenaient pas, à l'exception des exemples mentionnés concernant le poison faible qui est le contenu du composant "Observations basées sur des statistiques et options de quête" tiré du mod Themed Tweaks de Lauriel.
-Le composant 5 ajoute également des options de réponse avisée aux endroits où le PC parle de ce qui se passe avec des personnages du jeu, mais il n'ajoute aucune option pour informer les officiers des conclusions du PC, ce qui est fait dans le composant 6 "Le PC peut informer les officiers".
+Ce composant ajoute des options de réponse cohérentes aux dialogues de jeu qui reflètent l'état des connaissances du PC. D'une part, il ajoute des options de réponse appropriées là où le composant "Changements dans les dialogues du jeu pour plus de cohérence" a supprimé celles qui ne convenaient pas, à l'exception des exemples mentionnés concernant le poison faible qui est le contenu du composant "Observations basées sur des statistiques et options de quête" tiré du mod Themed Tweaks de Lauriel.
+Ce composant ajoute également des options de réponse avisée aux endroits où le PC parle de ce qui se passe avec des personnages du jeu, mais il n'ajoute aucune option pour informer les officiers des conclusions du PC, ce qui est fait dans le composant "Le PC peut informer les officiers".
 Ce composant est facultatif.
-Il nécessite le composant 3 "Changements dans les dialogues du jeu pour plus de cohérence" et doit être installé après le composant 4 "Les officiers sont plus attentifs" si le composant 4 est installé.
+Il nécessite le composant "Changements dans les dialogues du jeu pour plus de cohérence" et doit être installé après le composant "Les officiers sont plus attentifs" si l'est installé.
 
 5 Le PC peut informer les officiers.
 ---------------------------------------------
-Ce composant ajoute la possibilité pour le PC d'informer les Ducs et les officiers des informations recueillies tout au long de la campagne en ce qui concerne les informations suivies ( les plans plus secrets de Caelar, la trahison d'Hephernaan, le portail, le sang de Bhaal et l'Homme à la Capuche). Les agents prendront connaissance des informations et donneront de brèves remarques en guise de réponse. En dehors de cela, il n'y a pas de modification des dialogues ou d'autres ajouts. Pour des réactions plus approfondies des officiers, installez le composant 7 "Ajouter les réactions des officiers".
+Ce composant ajoute la possibilité pour le PC d'informer les Ducs et les officiers des informations recueillies tout au long de la campagne en ce qui concerne les informations suivies ( les plans plus secrets de Caelar, la trahison d'Hephernaan, le portail, le sang de Bhaal et l'Homme à la Capuche). Les agents prendront connaissance des informations et donneront de brèves remarques en guise de réponse. En dehors de cela, il n'y a pas de modification des dialogues ou d'autres ajouts. Pour des réactions plus approfondies des officiers, installez le composant "Ajouter les réactions des officiers".
 Les personnages que le PC peut informer des plans de Caelar avec ce composant sont :
 -Capitaine Corwin avant l'assaut du château (c'est-à-dire les trois premiers camps), si elle n'est pas dans le groupe.
 -Le Caporal Bence Duncan dans les deux premiers camps (Pont de la Voie Côtière et Bois des Griffes de Troll) quand il est disponible.
 -Torsin De Lancie lorsqu'il est disponible.
 -Le Maréchal Nederlok dans le grand camp de la coalition (bd3000).
-Ce composant est facultatif mais nécessaire pour le composant 7 "Ajouter des réactions d'officiers".
+Ce composant est facultatif mais nécessaire pour le composant "Ajouter des réactions d'officiers".
 
 6 Ajouter des interactions aux officiers.
 ---------------------------------------------
 Ce composant reflète mon point de vue sur la façon dont les officiers devraient réagir à l'objectif principal de la croisade, en fonction de ce qu'ils savent.
-Le composant 7 ajoute les réactions des officiers, face à la menace, dans les dialogues, en fonction des informations qu'ils ont obtenues sur les événements concernant la croisade et les autres instances considérées comme décrites ci-dessous : Il y aura de nouvelles lignes de dialogue lors de la réunion des trois officiers, le Général Stonehand, le Maréchal Nederlok et Torsin De Lancie, dans le grand camp de la coalition. Les réactions des trois officiers en entendant parler du portail et du rôle du PC pour l'ouvrir, les officiers demanderont au PC de chercher des informations plus détaillées sur les plans de Caelar, les pourparlers avec Caelar se dérouleront différemment si les officiers savent pourquoi Caelar a besoin du sang de Bhaal, etc.
-Ce composant est facultatif et nécessite également les composants 4 "Les officiers sont plus attentifs.", ainsi que 6 "Le PC peut informer les officiers."
+Ce composant ajoute les réactions des officiers, face à la menace, dans les dialogues, en fonction des informations qu'ils ont obtenues sur les événements concernant la croisade et les autres instances considérées comme décrites ci-dessous : Il y aura de nouvelles lignes de dialogue lors de la réunion des trois officiers, le Général Stonehand, le Maréchal Nederlok et Torsin De Lancie, dans le grand camp de la coalition. Les réactions des trois officiers en entendant parler du portail et du rôle du PC pour l'ouvrir, les officiers demanderont au PC de chercher des informations plus détaillées sur les plans de Caelar, les pourparlers avec Caelar se dérouleront différemment si les officiers savent pourquoi Caelar a besoin du sang de Bhaal, etc.
+Ce composant est facultatif et nécessite également les composants "Les officiers sont plus attentifs.", ainsi que "Le PC peut informer les officiers."
 
 7 Points d'information supplémentaires.
 ---------------------------------------------
-Le composant 8 ajoute quelques possibilités supplémentaires pour recueillir des informations sur les plans de Caelar et qui n'ont pas été prises en compte dans le composant 1 "Observations basées sur des statistiques et options de quête tirées du mod Themed Tweaks de Lauriel." Par exemple, les soldats qui se trouvent dans le château peuvent être interrogés de manière plus explicite sur les plans de la croisade, et le "rituel de bénédiction" dans le camp du pont de Boarskyr peut être analysé si un clerc ou un paladin se trouve dans le groupe.
+Ce composant ajoute quelques possibilités supplémentaires pour recueillir des informations sur les plans de Caelar et qui n'ont pas été prises en compte dans le composant "Observations basées sur des statistiques et options de quête tirées" du mod Themed Tweaks de Lauriel. Par exemple, les soldats qui se trouvent dans le château peuvent être interrogés de manière plus explicite sur les plans de la croisade, et le "rituel de bénédiction" dans le camp du pont de Boarskyr peut être analysé si un clerc ou un paladin se trouve dans le groupe.
 Ce composant est facultatif.
 
 8 Ajouter de nouvelles discussions avec les officiers.
 ---------------------------------------------
-Le composant 9 ajoute un personnage personnalisé, Sir Deggernaut, qui se déplace tout au long de la campagne, de camp en camp, pour une communication directe, afin que le PC puisse toujours raconter ses découvertes, indépendamment de la disponibilité des officiers du jeu d'origine en raison de la progression de la campagne. Dans son dialogue, il est également possible de l'interroger sur l'état des connaissances des officiers. Il énumérera tout ce que les officiers savent à ce stade - ce qui peut être plus que ce que le PC a découvert en fonction de la progression de la campagne. 
+Ce composant ajoute un personnage personnalisé, Sir Deggernaut, qui se déplace tout au long de la campagne, de camp en camp, pour une communication directe, afin que le PC puisse toujours raconter ses découvertes, indépendamment de la disponibilité des officiers du jeu d'origine en raison de la progression de la campagne. Dans son dialogue, il est également possible de l'interroger sur l'état des connaissances des officiers. Il énumérera tout ce que les officiers savent à ce stade - ce qui peut être plus que ce que le PC a découvert en fonction de la progression de la campagne. 
 Sir Deggernaut peut être trouvé près des tentes des deux premiers camps, et près de Mizhena dans le grand camp de la coalition.
-Ce composant est facultatif et nécessite également les composants 4 "Les officiers sont plus attentifs.", ainsi que 6 "Le PC peut informer les officiers." 
+Ce composant est facultatif et nécessite également les composants "Les officiers sont plus attentifs.", ainsi que "Le PC peut informer les officiers." 
 
 Remarque : cette fonctionnalité a été conçue pour faciliter la communication avec les officiers, en particulier dans les deux premiers camps où Bence Duncan n'est pas toujours présent, mais étant donné que le dialogue de Sir Deggernaut est focalisé sur les informations relatives à la croisade, sa présence peut donner l'impression d'être une fonctionnalité de débogage plutôt qu'un véritable personnage du jeu.
 
@@ -107,7 +107,7 @@ REMARQUE CONCERNANT LA COMPATIBILITÉ AVEC TO THEMED TWEAKS
 
 Le composant "1 Observations basées sur des statistiques et options de quête tirées du mod Themed Tweaks de Lauriel." a été supprimé à partir de la version 6.0.
 
-Cependant, le composant "Observations basées sur des statistiques et options" du mod Themed Tweaks réel sera toujours considéré comme auparavant, même si le composant lui-même n'est plus doublé dans les ressources du mod Road to Discovery.
+Cependant, le composant "Observations basées sur des statistiques et options de quête tirées" du mod Themed Tweaks réel sera toujours considéré comme auparavant, même si le composant lui-même n'est plus doublé dans les ressources du mod Road to Discovery.
 
 Installez ce composant si vous voulez des réactions plus approfondies et cohérentes aux événements du jeu, en faisant attention à ce que les informations obtenues soient communiquées au groupe :
 - Les  informations de la Duchesse Jannath sur le poison trop faible, utilisé par les assassins de Caelar (et toutes les options de réponse ultérieures sur Caelar essayant de faire tuer le PC dans le palais) : Le PC réalise que l'attaque n'était pas destinée à tuer ;
