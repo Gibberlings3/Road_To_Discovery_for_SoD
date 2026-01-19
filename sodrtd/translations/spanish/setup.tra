@@ -1,6 +1,6 @@
 @100000 = ~Observaciones basadas en estadisticas y opciones de busqueda del mod "Lauriel's Themed Tweaks"~
 @100001 = ~Este mod solo es compatible con SoD y EET.~
-@100002 = ~El componente ya esta instalado a traves de Themed Tweaks~
+//@100002 = ~El componente ya esta instalado a traves de Themed Tweaks~
 @100003 = ~Este componente debe instalarse antes que el componente principal de RtD.~
 @100004 = ~Este mod debe instalarse antes que EET_End.~
 @100005 = ~Componente principal: Sistema de seguimiento~
@@ -11,8 +11,8 @@
 @100010 = ~Dar opciones de respuesta informada al PJ~
 @100011 = ~Necesita el componente mod "Cambios de consistencia en los dialogos del juego" para este conponente.~
 @100012 = ~El PJ puede informar a los oficiales~
-@100013 = ~Componente "Themed Tweaks" detectado.~
-@100014 = ~El componente "Themed Tweaks" se instalo mediante RtD: parcheando diálogos.~
+//@100013 = ~Componente "Themed Tweaks" detectado.~
+//@100014 = ~El componente "Themed Tweaks" se instalo mediante RtD: parcheando diálogos.~
 @100015 = ~El componente "Themed Tweaks" se instalo a traves de "Themed Tweaks": parcheando dialogos.~
 @100016 = ~Reacciones de los oficiales~
 @100017 = ~Necesita el componente mod "Los oficiales están enterados" para este componente.~
@@ -23,3 +23,4 @@
 @100022 = ~Comunicacion adicional con los oficiales~
 @100023 = ~Sir Deggernaut~
 @100024 = ~Jastey's Tweakpack "Mas opciones de dialogo y evitar callejones sin salida" detectado.~
+@100025  = ~Este componente esta desactualizado.~

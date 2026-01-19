@@ -3,7 +3,7 @@ BACKUP ~sodrtd/backup~
 AUTHOR ~https://baldurs-gate.de/index.php?resources/road-to-discovery-for-sod.59/~ 
 
 
-VERSION ~5.0~
+VERSION ~6.0~
 
 
 README ~sodrtd/readme.sodrtd.%LANGUAGE%.txt~ ~sodrtd/readme.sodrtd.english.txt~
@@ -68,7 +68,7 @@ LANGUAGE ~Spanish~
 
 LANGUAGE ~Russian~
          ~russian~   
-         ~sodrtd/translations/russian/setup.tra~
+         ~sodrtd/translations/english/setup.tra~
 	 ~sodrtd/translations/russian/game.tra~
 
 LANGUAGE ~Simplified Chinese~
@@ -79,7 +79,7 @@ LANGUAGE ~Simplified Chinese~
 
 
 ///////////////////////////////////////////////////
-// ADD STAT-BASED OBSERVATIONS AND QUEST OPTIONS //
+// DEPRECATED - ADD STAT-BASED OBSERVATIONS AND QUEST OPTIONS //
 ///////////////////////////////////////////////////
 /* from Lauriel's Themed Tweaks:
 - weak poison of Caelar's palace assassins: Duke Jannath's info and all reply options
@@ -90,22 +90,7 @@ LANGUAGE ~Simplified Chinese~
 BEGIN @100000 /* ~SoD - Stat-based observations and quest options from Lauriel's Themed Tweaks Mod~ */
 	DESIGNATED 80
 	LABEL "#L-SOD-STAT_BASED_OPTIONS"
-	REQUIRE_PREDICATE (GAME_INCLUDES ~sod~) @100001 /* ~This mod is only compatible with SoD and EET.~ */
-	FORBID_COMPONENT ~themed_tweaks.tp2~ ~80~ @100002 /* ~Component is already installed via Themed Tweaks~ */
-	FORBID_COMPONENT ~sodrtd.tp2~ ~0~ @100003 /* ~This component needs to be installed before RtD main component.~ */
-	FORBID_COMPONENT ~EET_end.tp2~ ~0~ @100004 /* ~This mod needs to be installed before EET_End.~ */
-	FORBID_COMPONENT ~EET_end.tp2~ ~1~ @100004 /* ~This mod needs to be installed before EET_End.~ */
-
-
-	OUTER_SPRINT "BAELOTH_BCS" "BAELOTH"
-	OUTER_SPRINT "BAELOTH_JOINED" "BAELOTHJ"
-	OUTER_SPRINT "BAELOTH_POST" "BAELOTHP" 
-
-	OUTER_SPRINT ~mod_root~ ~sodrtd/themedtweaks~
-	OUTER_SPRINT ~tra_loc~ ~sodrtd/translations~
-
-	INCLUDE ~sodrtd/themedtweaks/tpa/sod_stat_options.tpa~
-	LAF sod_stat_options END
+	DEPRECATED @100025
 
 
 ///////////////////////////////////////////////////
@@ -129,7 +114,7 @@ INCLUDE ~.../inlined/journal_0.tph~
 
 
 /* consider variable interactions with Lauriel's Themed Tweaks */
-ACTION_IF (MOD_IS_INSTALLED ~sodrtd.tp2~ ~80~) OR (MOD_IS_INSTALLED ~themed_tweaks.tp2~ ~80~) THEN BEGIN
+ACTION_IF MOD_IS_INSTALLED ~themed_tweaks.tp2~ ~80~ THEN BEGIN
 PRINT @100006 /* ~Themed Tweaks component detected. Patching scripts.~ */
 /* inter-variables: set overal variables from Lauriel's */
 	EXTEND_TOP ~BDBALDUR.BCS~ ~sodrtd/scripts/interconnections_bdbaldur.baf~
@@ -199,7 +184,7 @@ EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variablesetting/weakpoison.baf~ EVA
 EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/variable_interconnections.baf~ EVALUATE_BUFFER
 EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/journalhandling.baf~ EVALUATE_BUFFER
 
-ACTION_IF (MOD_IS_INSTALLED ~sodrtd.tp2~ ~80~) OR (MOD_IS_INSTALLED ~themed_tweaks.tp2~ ~80~) THEN BEGIN
+ACTION_IF MOD_IS_INSTALLED ~themed_tweaks.tp2~ ~80~ THEN BEGIN
 	PRINT @100006 /* ~Themed Tweaks component detected. Patching scripts.~ */
 	EXTEND_BOTTOM ~c#rtd_ve.bcs~ ~sodrtd/scripts/interconnections_stattweaks.baf~ 	EVALUATE_BUFFER
 END
@@ -820,9 +805,8 @@ COMPILE EVALUATE_BUFFER ~sodrtd/dialogues/add_inform_officers_basic.d~
 END
 
 /* consider variable interactions with Lauriel's Themed Tweaks */
-ACTION_IF (MOD_IS_INSTALLED ~sodrtd.tp2~ ~80~) OR (MOD_IS_INSTALLED ~themed_tweaks.tp2~ ~80~) THEN BEGIN
-
-PRINT @100013 /* ~Themed Tweaks component detected.~ */
+ACTION_IF (MOD_IS_INSTALLED ~themed_tweaks.tp2~ ~80~) THEN BEGIN
+PRINT @100015 /* ~Themed Tweaks component was installed via Themed Tweaks: patching dialogues.~ */
 
 /* PC can tell about the Hooded Man to Duke Entar */
 
@@ -831,23 +815,34 @@ PRINT @100013 /* ~Themed Tweaks component detected.~ */
 BDBELT %state_105% mod added reply option we want to catch:
 @106 /* ~Even more disturbing was the visitor I had.  It seems a mysterious hooded man is stalking me.~ */*/
 
-/* need to grab the corrent installed language of Themed Tweaks component: differentiation whether the component was installed via Themed Tweaks or Road to Discovery */
-ACTION_IF (MOD_IS_INSTALLED ~sodrtd.tp2~ ~80~) THEN BEGIN
-PRINT @100014 /* ~Themed Tweaks component was installed via RtD: patching dialogues.~ */
-WITH_TRA ~sodrtd/translations/%s/sod_stat_weak_poison.tra~ BEGIN
+// Language folder names listed in the order of LANGUAGE definitions in the Themed Tweaks mod.
+ACTION_DEFINE_ARRAY languages BEGIN
+  "american" "french" /* "german" "italian" "russian" "schinese" "spanish" */
+END
+
+// Fetching language index from the WeiDU.log
+OUTER_SET language_number = "-1"
+COPY "WeiDU.log" "WeiDU.log"
+  REPLACE_EVALUATE CASE_INSENSITIVE
+    "^~.*themed_tweaks\.tp2~ #\([0-9]+\) #80\b"
+    BEGIN
+      PATCH_IF (IS_AN_INT "MATCH1") BEGIN
+        SET language_number = MATCH1
+      END
+    END
+    "%MATCH0%"
+BUT_ONLY IF_EXISTS
+
+/* weidu_external/workspace/themed_tweaks/languages/
+*/
+ACTION_IF (language_number >= 0) BEGIN
+  OUTER_SPRINT mod_language $languages("%language_number%")
+  WITH_TRA "weidu_external/workspace/themed_tweaks/languages/%mod_language%/sod_stat_weak_poison.tra" BEGIN
   OUTER_SET strref1 = RESOLVE_STR_REF(@107)
   OUTER_SET strref2 = RESOLVE_STR_REF(@106)
-  OUTER_SET state_105 = STATE_WHICH_SAYS 105 IN ~sodrtd/translations/%s/sod_stat_weak_poison.tra~ FROM ~bdbelt~
+  END
 END
-END
-ACTION_IF (MOD_IS_INSTALLED ~themed_tweaks.tp2~ ~80~) THEN BEGIN
-PRINT @100015 /* ~Themed Tweaks component was installed via Themed Tweaks: patching dialogues.~ */
-WITH_TRA ~themed_tweaks/languages/%s/sod_stat_weak_poison.tra~ ~sodrtd/translations/%s/sod_stat_weak_poison.tra~ BEGIN
-  OUTER_SET strref1 = RESOLVE_STR_REF(@107)
-  OUTER_SET strref2 = RESOLVE_STR_REF(@106)
-  OUTER_SET state_105 = STATE_WHICH_SAYS 105 IN ~themed_tweaks/languages/%s/sod_stat_weak_poison.tra~ FROM ~bdbelt~
-END
-END
+OUTER_SET state_105 = STATE_WHICH_SAYS 105 IN ~weidu_external/workspace/themed_tweaks/languages/%s/sod_stat_weak_poison.tra~ FROM ~bdbelt~
 
 /* I'll do this via calling the function separately for every state. I am sure this could be unified into one call but I lack the knowledge to write the needed code. 
 Thank you to argent77 for his endless patience to provide me with the needed functions and examples. */

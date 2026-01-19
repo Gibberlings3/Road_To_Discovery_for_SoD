@@ -1,6 +1,6 @@
 @100000  = ~SoD - Stat-based observations and quest options from Lauriel's Themed Tweaks Mod~
 @100001  = ~This mod is only compatible with SoD and EET.~
-@100002  = ~Component is already installed via Themed Tweaks~
+//@100002  = ~Component is already installed via Themed Tweaks~
 @100003  = ~This component needs to be installed before RtD main component.~
 @100004  = ~This mod needs to be installed before EET_End.~
 @100005  = ~Main Component: Tracking System~
@@ -11,8 +11,8 @@
 @100010  = ~Give PC Informed Reply Options~
 @100011  = ~You need the mod component "Consistency Changes to Game Dialogues" for this conponent.~
 @100012  = ~PC Can Tell the Officers~
-@100013  = ~Themed Tweaks component detected.~
-@100014  = ~Themed Tweaks component was installed via RtD: patching dialogues.~
+//@100013  = ~Themed Tweaks component detected.~
+//@100014  = ~Themed Tweaks component was installed via RtD: patching dialogues.~
 @100015  = ~Themed Tweaks component was installed via Themed Tweaks: patching dialogues.~
 @100016  = ~Add Officers Reactions~
 @100017  = ~You need the mod component "Make Officers Aware" for this conponent.~
@@ -23,3 +23,4 @@
 @100022  = ~Add Additional Communication with Officers~
 @100023  = ~Sir Deggernaut~
 @100024  = ~Jastey's Tweakpack "More Dialogue Choices & Prevent Dead Ends" detected.~
+@100025  = ~This component has been deprecated.~
